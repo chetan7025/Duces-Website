@@ -3,295 +3,209 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Business Loans & Mortgage Assistance UAE | DUCES</title>
-<meta name="description" content="Explore business loans, working capital, trade finance, residential and commercial mortgages in the UAE with DUCES Consultancy Services.">
-<meta name="theme-color" content="#123B70">
+<title>UAE Business Banking Assistance | DUCES Consultancy Services</title>
+<meta name="description" content="Explore UAE business banking options, prepare company documents and review banking requirements with DUCES Consultancy Services.">
 
 <link rel="stylesheet" href="css/style.css">
 <script src="js/script.js" defer></script>
 
 <style>
-:root {
-  --royal-blue:#123B70;
-  --navy:#0B2850;
-  --ocean-blue:#1976B9;
-  --gold:#D9AD55;
-  --charcoal:#263445;
-  --grey:#64748B;
-  --white:#FFFFFF;
-  --cloud:#F8FAFC;
-  --mist:#EDF2F7;
-  --slate:#DCE4ED;
-
-  --loan-blue:#E9F0F8;
-  --butter-yellow:#FFF1B8;
-  --fresh-green:#DDF0D5;
-  --sky-blue:#D9EBFA;
-  --peach:#F3DDC5;
-  --lavender:#E9DFF5;
-  --champagne:#F7F0E3;
+.banking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
 }
 
-.loan-hero {
-  background:linear-gradient(120deg,var(--navy),var(--royal-blue) 65%,var(--ocean-blue));
-  color:var(--white);
-  padding:85px 0;
-}
-.loan-hero h1 {
-  max-width:820px;
-  font-size:clamp(32px,5vw,52px);
-  line-height:1.15;
-  margin:12px 0 20px;
-}
-.loan-hero p {
-  max-width:740px;
-  line-height:1.8;
-}
-.loan-hero .text-gold {color:var(--gold);}
-.loan-hero .btn {margin:8px 8px 0 0;}
-
-.loan-section {
-  padding:65px 0;
-}
-.loan-section-heading {
-  text-align:center;
-  max-width:850px;
-  margin:0 auto 32px;
-}
-.loan-section-heading h2 {
-  color:var(--royal-blue);
-  margin-bottom:10px;
-}
-.loan-section-heading p {
-  color:var(--grey);
-  line-height:1.7;
+.banking-card {
+  padding: 24px;
+  border: 1px solid #E5EBF1;
+  border-radius: 10px;
+  height: 100%;
+  transition: 0.25s ease;
+  box-shadow: 0 5px 20px rgba(18,59,112,0.05);
 }
 
-.loan-solutions {background:var(--loan-blue);}
-.loan-eligibility {background:var(--cloud);}
-.loan-evaluation {background:var(--sky-blue);}
-.loan-documents {background:var(--mist);}
-.loan-process-section {background:var(--butter-yellow);}
-.loan-calculator-section {background:#DCEAF7;}
-.loan-faq-section {background:var(--cloud);}
-
-.loan-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
-  gap:22px;
-}
-.loan-card {
-  background:var(--white);
-  border:1px solid rgba(18,59,112,.10);
-  border-radius:12px;
-  padding:25px;
-  height:100%;
-  box-shadow:0 5px 18px rgba(11,40,80,.05);
-  transition:transform .25s ease,box-shadow .25s ease;
-}
-.loan-card:hover {
-  transform:translateY(-4px);
-  box-shadow:0 12px 28px rgba(11,40,80,.10);
-}
-.loan-card h3 {
-  color:var(--royal-blue);
-  margin:0 0 12px;
-}
-.loan-card p {
-  color:var(--charcoal);
-  line-height:1.7;
-}
-.loan-card ul {
-  padding-left:20px;
-  margin:14px 0;
-}
-.loan-card li {
-  color:var(--charcoal);
-  margin:8px 0;
-  line-height:1.6;
-}
-.loan-card a {
-  color:var(--royal-blue);
-  font-weight:700;
-  text-decoration:none;
-}
-.loan-card a:hover {color:var(--ocean-blue);}
-
-.loan-business-card {background:var(--white);}
-.loan-trade-card {background:var(--butter-yellow);}
-.loan-property-card {background:var(--champagne);}
-.loan-eligibility-card {background:var(--white);}
-.loan-evaluation-card {background:var(--white);}
-.loan-doc-card {background:var(--white);}
-
-.loan-highlight {
-  border-top:4px solid var(--gold);
-}
-.loan-card-label {
-  display:inline-block;
-  color:var(--royal-blue);
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:.5px;
-  text-transform:uppercase;
-  margin-bottom:10px;
+.banking-card h3 {
+  color: #123B70;
+  margin-bottom: 12px;
 }
 
-.loan-note {
-  background:var(--peach);
-  border-left:4px solid var(--gold);
-  padding:20px 22px;
-  border-radius:8px;
-  margin-top:25px;
-  color:var(--charcoal);
-  line-height:1.7;
+.banking-card p,
+.banking-card li {
+  color: #263445;
+  line-height: 1.7;
 }
 
-.loan-process {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(175px,1fr));
-  gap:17px;
-}
-.loan-step {
-  padding:22px;
-  background:var(--white);
-  border:1px solid rgba(18,59,112,.10);
-  border-radius:10px;
-  height:100%;
-}
-.loan-step strong {
-  color:var(--ocean-blue);
-  font-size:25px;
-}
-.loan-step h3 {
-  color:var(--royal-blue);
-  margin:10px 0;
-}
-.loan-step p {
-  color:var(--charcoal);
-  line-height:1.7;
+.banking-card ul {
+  padding-left: 20px;
+  margin: 12px 0;
 }
 
-.calculator {
-  max-width:880px;
-  margin:auto;
-  padding:30px;
-  background:var(--white);
-  border:1px solid var(--slate);
-  border-radius:14px;
-  box-shadow:0 10px 30px rgba(11,40,80,.10);
-}
-.calculator-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-  gap:18px;
-  margin-bottom:22px;
-}
-.calculator label {
-  display:block;
-  font-weight:600;
-  margin-bottom:8px;
-  color:var(--charcoal);
-}
-.calculator input {
-  width:100%;
-  min-height:46px;
-  padding:12px;
-  border:1px solid #CBD5E1;
-  border-radius:7px;
-  font:inherit;
-  color:var(--charcoal);
-  background:var(--white);
-}
-.calculator input:focus {
-  outline:2px solid var(--gold);
-  outline-offset:2px;
-}
-.calculator button {margin:5px 7px 5px 0;}
-
-.calculator-note {
-  color:var(--grey);
-  font-size:13px;
-  line-height:1.7;
-  margin-top:18px;
-}
-.emi-result {
-  display:none;
-  margin-top:25px;
-  padding:22px;
-  border-radius:10px;
-  background:var(--champagne);
-  border:1px solid var(--gold);
-}
-.emi-result h3 {color:var(--royal-blue);}
-.emi-main {
-  color:var(--royal-blue);
-  font-size:clamp(25px,5vw,34px);
-  font-weight:700;
-  margin:8px 0 18px;
-}
-.emi-breakdown {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:12px;
-}
-.emi-item {
-  background:var(--white);
-  padding:14px;
-  border-radius:8px;
-  border:1px solid var(--slate);
-}
-.emi-item span {
-  display:block;
-  font-size:13px;
-  color:var(--grey);
-}
-.emi-item strong {
-  display:block;
-  margin-top:6px;
-  color:var(--charcoal);
-  overflow-wrap:anywhere;
+.banking-card a {
+  color: #1976B9;
+  font-weight: 600;
 }
 
-.loan-faq details {
-  padding:18px;
-  margin:12px 0;
-  border:1px solid var(--slate);
-  border-radius:9px;
-  background:var(--white);
-}
-.loan-faq summary {
-  font-weight:700;
-  color:var(--royal-blue);
-  cursor:pointer;
-  line-height:1.6;
-}
-.loan-faq details p {
-  margin-top:12px;
-  line-height:1.7;
-  color:var(--charcoal);
+.banking-card:hover {
+  border-color: #D9AD55;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(18,59,112,0.10);
 }
 
-.loan-disclaimer {
-  font-size:13px;
-  line-height:1.7;
-  color:var(--grey);
+/* INDIVIDUAL BANKING SERVICE COLOURS */
+
+.banking-mainland {
+  background: #F3EBDD;
 }
 
-@media(max-width:600px) {
-  .loan-hero {padding:55px 0;}
-  .loan-section {padding:48px 0;}
-  .calculator {padding:19px;}
-  .loan-hero .btn {
-    display:block;
-    text-align:center;
-    margin:10px 0;
+.banking-freezone {
+  background: #EFF4E7;
+}
+
+.banking-offshore {
+  background: #EAF1F8;
+}
+
+.banking-personal {
+  background: #F7F0E3;
+}
+
+.banking-nri {
+  background: #F5F7FA;
+}
+
+.banking-readiness {
+  background: #EAF1F8;
+}
+
+/* BANKING CHECKER */
+
+.banking-checker {
+  max-width: 850px;
+  margin: auto;
+  padding: 28px;
+  background: #FFFFFF;
+  border: 1px solid #E5EBF1;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(18,59,112,0.05);
+}
+
+.banking-checker label {
+  display: block;
+  font-weight: 600;
+  color: #263445;
+  margin: 15px 0 7px;
+}
+
+.banking-checker input,
+.banking-checker select {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 13px;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  background: #FFFFFF;
+  color: #263445;
+  font: inherit;
+}
+
+.banking-checker input:focus,
+.banking-checker select:focus {
+  outline: 2px solid #D9AD55;
+  outline-offset: 2px;
+  border-color: #123B70;
+}
+
+.banking-checker button {
+  margin-top: 20px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.banking-result {
+  margin-top: 28px;
+  padding: 24px;
+  background: #F7F0E3;
+  border: 1px solid #D9AD55;
+  border-radius: 9px;
+}
+
+.banking-result[hidden] {
+  display: none;
+}
+
+.banking-result h3,
+.banking-result h4 {
+  color: #0B2850;
+  margin-bottom: 12px;
+}
+
+.banking-result li {
+  margin: 9px 0;
+  line-height: 1.6;
+}
+
+.banking-summary {
+  padding: 15px;
+  margin: 15px 0;
+  background: #FFFFFF;
+  border-radius: 7px;
+  line-height: 1.8;
+}
+
+.banking-note {
+  font-size: 13px;
+  color: #64748B;
+  line-height: 1.7;
+  margin-top: 18px;
+}
+
+.banking-section-note {
+  max-width: 850px;
+  margin: 22px auto 0;
+  text-align: center;
+  color: #64748B;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* FAQ */
+
+.faq-list details {
+  padding: 17px;
+  margin: 11px 0;
+  border: 1px solid #E5EBF1;
+  border-radius: 8px;
+  background: #FFFFFF;
+}
+
+.faq-list summary {
+  font-weight: 600;
+  color: #123B70;
+  cursor: pointer;
+  line-height: 1.6;
+}
+
+.faq-list details p {
+  margin-top: 12px;
+  line-height: 1.7;
+  color: #263445;
+}
+
+@media (max-width: 600px) {
+  .banking-checker {
+    padding: 17px;
   }
-  .calculator button {
-    width:100%;
-    margin:7px 0;
+
+  .banking-card {
+    padding: 19px;
+  }
+
+  .banking-checker button {
+    width: 100%;
+    margin-right: 0;
   }
 }
 </style>
@@ -321,9 +235,10 @@
           <a href="company-formation.html">Business Setup ▾</a>
           <ul class="dropdown-menu">
             <li><a href="company-formation.html#mainland">Mainland</a></li>
-            <li><a href="company-formation.html#free-zone">Free Zone</a></li>
+            <li><a href="company-formation.html#freezone">Free Zone</a></li>
             <li><a href="company-formation.html#offshore">Offshore</a></li>
-            <li><a href="company-formation.html#compare-options">Jurisdiction Comparison</a></li>
+            <li><a href="company-formation.html#jurisdictions">Free Zone Options</a></li>
+            <li><a href="company-formation.html#process">Setup Process</a></li>
           </ul>
         </li>
 
@@ -333,7 +248,7 @@
         <li><a href="pro-visa-services.html">PRO & VISA</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -342,286 +257,335 @@
 <main>
 
 <!-- HERO -->
-<section class="loan-hero">
-  <div class="container">
-    <p class="text-gold"><strong>UAE BUSINESS FINANCE & MORTGAGE ASSISTANCE</strong></p>
+<section class="hero">
+  <div class="container hero-content">
+    <p class="text-gold"><strong>UAE BUSINESS BANKING CONSULTANCY</strong></p>
 
-    <h1>Finance Your Next Business Move with the Right Guidance.</h1>
+    <h1>Business Banking Assistance in the UAE</h1>
 
     <p>
-      Explore business finance, working capital, trade finance and
-      property financing options. DUCES helps you understand
-      requirements, organise documentation and navigate the
-      application process.
+      Prepare your company profile, understand banking requirements
+      and explore suitable UAE business banking options with DUCES.
     </p>
 
-    <a class="btn btn-primary" href="contact.html">Discuss Your Requirement</a>
-    <a class="btn btn-outline" href="#finance-solutions">Explore Finance Solutions</a>
+    <a class="btn btn-primary" href="#banking-checker">
+      Check Banking Readiness
+    </a>
+
+    <a class="btn btn-outline" href="contact.html">
+      Request Consultation
+    </a>
   </div>
 </section>
 
-<!-- FINANCE SOLUTIONS -->
-<section class="loan-section loan-solutions" id="finance-solutions">
-  <div class="container loan-section-heading">
-    <h2>Our Finance Assistance Services</h2>
+<!-- BANKING SERVICES -->
+<section class="section section-light" id="banking-options">
+  <div class="container section-heading">
+    <h2>Our Banking Assistance Services</h2>
     <p>
-      Explore financing categories according to your business,
-      working capital, trade or property requirements.
+      Banking consultancy and documentation assistance for businesses
+      and individuals exploring financial services in the UAE.
     </p>
   </div>
 
-  <div class="container loan-grid">
+  <div class="container banking-grid">
 
-    <article class="loan-card loan-business-card">
-      <span class="loan-card-label">Business Finance</span>
-      <h3>Business Loans</h3>
-      <p>
-        Assistance for established businesses exploring suitable
-        business financing options.
-      </p>
+    <article class="banking-card banking-mainland">
+      <h3>Mainland Business Banking</h3>
+      <p>Assistance for eligible UAE mainland companies.</p>
       <ul>
-        <li>Business profile assessment</li>
-        <li>Turnover and banking review</li>
-        <li>Financial document checklist</li>
-        <li>Application preparation support</li>
+        <li>Company profile assessment</li>
+        <li>Business activity review</li>
+        <li>Bank document checklist</li>
+        <li>Application preparation</li>
       </ul>
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card loan-business-card">
-      <span class="loan-card-label">Cash Flow</span>
-      <h3>Working Capital Finance</h3>
-      <p>
-        Explore funding options for daily operations and
-        business cash-flow requirements.
-      </p>
+    <article class="banking-card banking-freezone">
+      <h3>Free Zone Business Banking</h3>
+      <p>Banking assistance for UAE Free Zone entities.</p>
       <ul>
-        <li>Operational funding assessment</li>
-        <li>Cash-flow profile review</li>
-        <li>Inventory and receivables requirements</li>
-        <li>Finance option discussion</li>
+        <li>Free Zone licence review</li>
+        <li>Shareholder and UBO details</li>
+        <li>Business activity explanation</li>
+        <li>Documentation assistance</li>
       </ul>
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card loan-trade-card">
-      <span class="loan-card-label">Trade Finance</span>
-      <h3>Letter of Credit</h3>
-      <p>
-        Understand trade finance options for eligible import
-        and export transactions.
-      </p>
+    <article class="banking-card banking-offshore">
+      <h3>Offshore Business Banking</h3>
+      <p>Guidance on banking considerations for eligible offshore entities.</p>
       <ul>
-        <li>Trade transaction review</li>
-        <li>Buyer and supplier documentation</li>
-        <li>Letter of Credit requirements</li>
-        <li>Application coordination</li>
+        <li>Entity structure review</li>
+        <li>Jurisdiction information</li>
+        <li>Source of funds documents</li>
+        <li>Bank policy considerations</li>
       </ul>
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card loan-trade-card">
-      <span class="loan-card-label">Trade Finance</span>
-      <h3>Bank Guarantee</h3>
-      <p>
-        Explore bank guarantee requirements for eligible
-        contracts and business transactions.
-      </p>
+    <article class="banking-card banking-personal">
+      <h3>Personal Banking Assistance</h3>
+      <p>Support for individuals exploring personal banking options.</p>
       <ul>
-        <li>Contract requirement review</li>
-        <li>Guarantee type discussion</li>
-        <li>Financial profile assessment</li>
-        <li>Supporting document preparation</li>
+        <li>Account type requirements</li>
+        <li>Identification documents</li>
+        <li>Income and employment details</li>
+        <li>Application preparation</li>
       </ul>
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card loan-property-card">
-      <span class="loan-card-label">Property Finance</span>
-      <h3>Residential Mortgage</h3>
-      <p>
-        Assistance exploring residential property finance
-        options in the UAE.
-      </p>
+    <article class="banking-card banking-nri">
+      <h3>NRI Banking Assistance</h3>
+      <p>Guidance for Non-Resident Indians with cross-border banking needs.</p>
       <ul>
-        <li>Applicant profile review</li>
-        <li>Income documentation</li>
-        <li>Down payment considerations</li>
-        <li>Mortgage application guidance</li>
-      </ul>
-      <a href="contact.html">Enquire Now →</a>
-    </article>
-
-    <article class="loan-card loan-property-card">
-      <span class="loan-card-label">Property Finance</span>
-      <h3>Commercial Mortgage</h3>
-      <p>
-        Explore financing options for eligible commercial
-        property purchases.
-      </p>
-      <ul>
-        <li>Commercial property assessment</li>
-        <li>Business financial profile</li>
-        <li>Property documentation</li>
-        <li>Financing requirement review</li>
-      </ul>
-      <a href="contact.html">Enquire Now →</a>
-    </article>
-
-    <article class="loan-card loan-property-card">
-      <span class="loan-card-label">Property Finance</span>
-      <h3>Loan Against Property</h3>
-      <p>
-        Understand financing possibilities against eligible
-        property assets.
-      </p>
-      <ul>
-        <li>Property ownership review</li>
-        <li>Existing liability assessment</li>
-        <li>Income and repayment profile</li>
+        <li>NRI banking requirements</li>
+        <li>Residency considerations</li>
         <li>Documentation guidance</li>
+        <li>Relevant banking options</li>
       </ul>
       <a href="contact.html">Enquire Now →</a>
+    </article>
+
+    <article class="banking-card banking-readiness">
+      <h3>Banking Readiness Assessment</h3>
+      <p>Identify information and documentation gaps before applying.</p>
+      <ul>
+        <li>Company age and activity</li>
+        <li>Turnover and transactions</li>
+        <li>Shareholder information</li>
+        <li>Source of funds preparation</li>
+      </ul>
+      <a href="#banking-checker">Check Now →</a>
     </article>
 
   </div>
 </section>
 
-<!-- ELIGIBILITY -->
-<section class="loan-section loan-eligibility">
-  <div class="container loan-section-heading">
-    <h2>Who Can Explore Finance Options?</h2>
+<!-- BANKING INSTITUTIONS -->
+<section class="section">
+  <div class="container section-heading">
+    <h2>Explore UAE Banking Institutions</h2>
     <p>
-      Eligibility varies according to the lender, product,
-      applicant profile and supporting documents.
+      Explore banking institutions and discuss which options may be
+      relevant to your company profile and requirements.
     </p>
   </div>
 
-  <div class="container loan-grid">
+  <div class="container banking-grid">
 
-    <article class="loan-card loan-eligibility-card loan-highlight">
-      <h3>Established Businesses</h3>
-      <p>
-        Companies with operating history, regular business
-        transactions and financial records.
-      </p>
+    <article class="banking-card" style="background:#F5F7FA">
+      <h3>Wio Bank</h3>
+      <p>Digital business banking options and account requirements.</p>
     </article>
 
-    <article class="loan-card loan-eligibility-card loan-highlight">
-      <h3>Growing Businesses</h3>
-      <p>
-        Businesses exploring funding for expansion,
-        inventory, equipment or operations.
-      </p>
+    <article class="banking-card" style="background:#F5F7FA">
+      <h3>First Abu Dhabi Bank</h3>
+      <p>Business banking products and documentation considerations.</p>
     </article>
 
-    <article class="loan-card loan-eligibility-card loan-highlight">
-      <h3>Property Applicants</h3>
-      <p>
-        Eligible individuals and businesses exploring
-        residential or commercial property finance.
-      </p>
+    <article class="banking-card" style="background:#F5F7FA">
+      <h3>Mashreq</h3>
+      <p>Business account options and application requirements.</p>
+    </article>
+
+    <article class="banking-card" style="background:#F5F7FA">
+      <h3>RAKBANK</h3>
+      <p>Business banking products and eligibility considerations.</p>
+    </article>
+
+    <article class="banking-card" style="background:#F5F7FA">
+      <h3>Emirates Islamic</h3>
+      <p>Islamic banking solutions for eligible businesses.</p>
+    </article>
+
+    <article class="banking-card" style="background:#F5F7FA">
+      <h3>ADIB</h3>
+      <p>Islamic banking options and business account requirements.</p>
     </article>
 
   </div>
 
   <div class="container">
-    <div class="loan-note">
-      <strong>Important:</strong>
-      A new company may not qualify for every business finance
-      product. Some lenders require an established operating
-      history, regular account activity and financial records.
+    <p class="banking-section-note">
+      DUCES is an independent consultancy. Listing a banking institution
+      does not imply a partnership, endorsement or guaranteed account
+      access. Banks independently assess all applications.
+    </p>
+  </div>
+</section>
+
+<!-- BANKING READINESS CHECKER -->
+<section class="section bg-banking" id="banking-checker">
+
+  <div class="container section-heading">
+    <h2>Business Banking Readiness Checker</h2>
+    <p>
+      Share basic information about your company to generate a
+      personalised document preparation checklist.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="banking-checker">
+
+      <form id="bankingReadinessForm">
+
+        <label for="companyAge">Company age</label>
+        <select id="companyAge" required>
+          <option value="">Select company age</option>
+          <option value="New / Not yet established">New / Not yet established</option>
+          <option value="Less than 1 year">Less than 1 year</option>
+          <option value="1–2 years">1–2 years</option>
+          <option value="More than 2 years">More than 2 years</option>
+        </select>
+
+        <label for="jurisdiction">Company jurisdiction</label>
+        <select id="jurisdiction" required>
+          <option value="">Select jurisdiction</option>
+          <option>Mainland</option>
+          <option>Dubai Free Zone</option>
+          <option>Sharjah Free Zone</option>
+          <option>Other UAE Free Zone</option>
+          <option>Offshore</option>
+        </select>
+
+        <label for="activity">Business activity</label>
+        <input id="activity" type="text"
+          placeholder="e.g. Trading, Consultancy, Services" required>
+
+        <label for="turnover">Annual turnover (AED)</label>
+        <select id="turnover" required>
+          <option value="">Select turnover</option>
+          <option value="No turnover yet">No turnover yet</option>
+          <option>Below AED 250,000</option>
+          <option>AED 250,000–500,000</option>
+          <option>AED 500,000–1 million</option>
+          <option>Above AED 1 million</option>
+        </select>
+
+        <label for="balance">Average monthly bank balance (AED)</label>
+        <select id="balance" required>
+          <option value="">Select balance</option>
+          <option>Below AED 5,000</option>
+          <option>AED 5,000–10,000</option>
+          <option>AED 10,000–25,000</option>
+          <option>Above AED 25,000</option>
+          <option value="No business account yet">No business account yet</option>
+        </select>
+
+        <label for="vatStatus">VAT registration status</label>
+        <select id="vatStatus" required>
+          <option value="">Select VAT status</option>
+          <option>VAT registered</option>
+          <option>Not registered / Not currently required</option>
+          <option>Registration in progress</option>
+          <option>Not sure</option>
+        </select>
+
+        <label for="transactions">Main transaction countries</label>
+        <input id="transactions" type="text"
+          placeholder="e.g. UAE, India, Saudi Arabia" required>
+
+        <label for="accountType">Banking requirement</label>
+        <select id="accountType" required>
+          <option value="">Select requirement</option>
+          <option>New business account</option>
+          <option>Additional business account</option>
+          <option>Existing account support</option>
+          <option>Account review / alternatives</option>
+        </select>
+
+        <button class="btn btn-primary" type="submit">
+          Generate My Preparation Report
+        </button>
+
+        <button class="btn btn-blue" type="reset">
+          Reset
+        </button>
+
+      </form>
+
+      <div id="bankingResult" class="banking-result" hidden>
+
+        <h3>Your Banking Preparation Report</h3>
+
+        <p>
+          Based on the information you provided, here is a summary
+          to help organise your banking application documents.
+        </p>
+
+        <div id="bankingSummary" class="banking-summary"></div>
+
+        <h4>Recommended Preparation Checklist</h4>
+
+        <ul id="readinessChecklist"></ul>
+
+        <p class="banking-note">
+          This is an indicative document preparation assessment only.
+          It does not calculate bank eligibility, recommend guaranteed
+          approval or predict the outcome of an application. Each bank
+          independently applies its own KYC, compliance, due diligence
+          and risk requirements.
+        </p>
+
+        <a id="bankingWhatsApp" class="btn btn-primary"
+          href="#" target="_blank" rel="noopener">
+          Discuss My Requirements on WhatsApp
+        </a>
+
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- LENDER EVALUATION -->
-<section class="loan-section loan-evaluation" id="lender-evaluation">
-  <div class="container loan-section-heading">
-    <h2>What May Lenders Evaluate?</h2>
-    <p>
-      Each lender has its own credit policy, eligibility
-      requirements and approval process.
-    </p>
-  </div>
-
-  <div class="container loan-grid">
-
-    <article class="loan-card loan-evaluation-card">
-      <h3>Business Performance</h3>
-      <ul>
-        <li>Business operating history</li>
-        <li>Annual turnover</li>
-        <li>Profitability and cash flow</li>
-        <li>Business activity and industry</li>
-      </ul>
-    </article>
-
-    <article class="loan-card loan-evaluation-card">
-      <h3>Banking & Financial Records</h3>
-      <ul>
-        <li>Business bank statements</li>
-        <li>Financial statements</li>
-        <li>VAT returns, where applicable</li>
-        <li>Existing loan obligations</li>
-      </ul>
-    </article>
-
-    <article class="loan-card loan-evaluation-card">
-      <h3>Applicant & Security</h3>
-      <ul>
-        <li>Shareholder and UBO details</li>
-        <li>Personal identification</li>
-        <li>Credit profile, where applicable</li>
-        <li>Collateral or guarantees, if required</li>
-      </ul>
-    </article>
-
-  </div>
-</section>
-
 <!-- DOCUMENT CHECKLIST -->
-<section class="loan-section loan-documents">
-  <div class="container loan-section-heading">
-    <h2>Common Document Checklist</h2>
+<section class="section section-light">
+
+  <div class="container section-heading">
+    <h2>Common Business Banking Documents</h2>
     <p>
-      The final checklist depends on the financing product
-      and the lender's requirements.
+      Prepare relevant company, shareholder and financial information.
+      Actual requirements vary by bank and company structure.
     </p>
   </div>
 
-  <div class="container loan-grid">
+  <div class="container banking-grid">
 
-    <article class="loan-card loan-doc-card">
-      <h3>Business Documents</h3>
+    <article class="banking-card">
+      <h3>Company Documents</h3>
       <ul>
         <li>Valid trade licence</li>
-        <li>MOA and amendments, if applicable</li>
-        <li>Company ownership and UBO details</li>
-        <li>Business bank statements</li>
+        <li>MOA and incorporation documents, where applicable</li>
+        <li>Lease or facility agreement, if required</li>
+        <li>Shareholder and UBO information</li>
+        <li>Establishment or registration documents, where applicable</li>
+      </ul>
+    </article>
+
+    <article class="banking-card">
+      <h3>Business Profile</h3>
+      <ul>
+        <li>Business model and activity explanation</li>
+        <li>Products or services offered</li>
+        <li>Supplier and customer information</li>
+        <li>Expected transaction countries</li>
+        <li>Business website or company profile, if available</li>
+      </ul>
+    </article>
+
+    <article class="banking-card">
+      <h3>Financial Information</h3>
+      <ul>
+        <li>Expected annual turnover</li>
+        <li>Source of funds and wealth evidence</li>
+        <li>Bank statements, if available</li>
+        <li>Invoices and supporting contracts</li>
         <li>VAT returns, where applicable</li>
-      </ul>
-    </article>
-
-    <article class="loan-card loan-doc-card">
-      <h3>Financial Documents</h3>
-      <ul>
-        <li>Financial statements</li>
-        <li>Management accounts, if requested</li>
-        <li>Existing loan statements</li>
-        <li>Cash-flow details</li>
-        <li>Purpose and amount of finance required</li>
-      </ul>
-    </article>
-
-    <article class="loan-card loan-doc-card">
-      <h3>Property Finance Documents</h3>
-      <ul>
-        <li>Applicant identification</li>
-        <li>Income and employment evidence</li>
-        <li>Property details and valuation, if required</li>
-        <li>Existing mortgage details</li>
-        <li>Down payment information</li>
       </ul>
     </article>
 
@@ -629,203 +593,93 @@
 </section>
 
 <!-- PROCESS -->
-<section class="loan-section loan-process-section">
-  <div class="container loan-section-heading">
-    <h2>Our Finance Assistance Process</h2>
+<section class="section bg-offshore">
+
+  <div class="container section-heading">
+    <h2>How DUCES Supports Your Banking Application</h2>
     <p>
-      Structured support from initial discussion
-      to application coordination.
+      A structured consultancy and documentation assistance process.
     </p>
   </div>
 
-  <div class="container loan-process">
+  <div class="container banking-grid">
 
-    <article class="loan-step">
-      <strong>01</strong>
-      <h3>Understand</h3>
-      <p>
-        Discuss your financing requirement,
-        business activity and funding purpose.
-      </p>
+    <article class="banking-card" style="background:#FFFFFF">
+      <h3>01. Initial Discussion</h3>
+      <p>Understand your company structure, business activity and banking requirements.</p>
     </article>
 
-    <article class="loan-step">
-      <strong>02</strong>
-      <h3>Assess</h3>
-      <p>
-        Review your business profile,
-        financial records and existing obligations.
-      </p>
+    <article class="banking-card" style="background:#FFFFFF">
+      <h3>02. Profile Assessment</h3>
+      <p>Review available documents, financial information and business activity.</p>
     </article>
 
-    <article class="loan-step">
-      <strong>03</strong>
-      <h3>Explore</h3>
-      <p>
-        Identify potentially relevant financing
-        categories and lender requirements.
-      </p>
+    <article class="banking-card" style="background:#FFFFFF">
+      <h3>03. Banking Options</h3>
+      <p>Discuss potentially relevant institutions and available account types.</p>
     </article>
 
-    <article class="loan-step">
-      <strong>04</strong>
-      <h3>Prepare</h3>
-      <p>
-        Organise the required information
-        and supporting documentation.
-      </p>
+    <article class="banking-card" style="background:#FFFFFF">
+      <h3>04. Documentation</h3>
+      <p>Organise application information and supporting documents for submission.</p>
     </article>
 
-    <article class="loan-step">
-      <strong>05</strong>
-      <h3>Coordinate</h3>
-      <p>
-        Support application communication and follow-up
-        where authorised and permitted.
-      </p>
+    <article class="banking-card" style="background:#FFFFFF">
+      <h3>05. Application Coordination</h3>
+      <p>Assist with communication and follow-up where authorised and permitted.</p>
     </article>
 
-  </div>
-</section>
-
-<!-- EMI CALCULATOR -->
-<section class="loan-section loan-calculator-section" id="emi-calculator">
-  <div class="container loan-section-heading">
-    <h2>Loan EMI Calculator</h2>
-    <p>
-      Estimate monthly instalments, total interest
-      and indicative processing costs.
-    </p>
-  </div>
-
-  <div class="container">
-    <div class="calculator">
-
-      <div class="calculator-grid">
-
-        <div>
-          <label for="loanAmount">Loan Amount (AED)</label>
-          <input type="number" id="loanAmount"
-            value="500000" min="1" step="1000">
-        </div>
-
-        <div>
-          <label for="interestRate">Annual Interest Rate (%)</label>
-          <input type="number" id="interestRate"
-            value="8" min="0" max="100" step="0.1">
-        </div>
-
-        <div>
-          <label for="loanYears">Loan Tenure (Years)</label>
-          <input type="number" id="loanYears"
-            value="5" min="1" max="30" step="1">
-        </div>
-
-        <div>
-          <label for="processingFee">Processing Fee (%)</label>
-          <input type="number" id="processingFee"
-            value="1" min="0" max="100" step="0.1">
-        </div>
-
-      </div>
-
-      <button class="btn btn-primary"
-        type="button" id="calculateEmiBtn">
-        Calculate EMI
-      </button>
-
-      <button class="btn btn-outline"
-        type="button" id="resetEmiBtn">
-        Reset Calculator
-      </button>
-
-      <div id="emiResult"
-        class="emi-result" aria-live="polite"></div>
-
-      <p class="calculator-note">
-        This calculator provides an illustrative reducing-balance
-        estimate. It does not represent a lender quotation or
-        approval. Actual rates, fees, insurance, taxes and
-        repayment structures may differ.
-      </p>
-
-    </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="loan-section loan-faq-section">
-  <div class="container loan-section-heading">
+<section class="section section-light">
+
+  <div class="container section-heading">
     <h2>Frequently Asked Questions</h2>
-    <p>
-      Common questions about business finance
-      and mortgage assistance in the UAE.
-    </p>
+    <p>Common questions about business banking in the UAE.</p>
   </div>
 
-  <div class="container loan-faq">
+  <div class="container faq-list">
 
     <details>
-      <summary>Can a newly established company get a business loan?</summary>
-      <p>
-        Eligibility depends on the lender and product.
-        Many financing options require an operating history
-        and supporting financial information.
-      </p>
+      <summary>Does a UAE trade licence guarantee a business bank account?</summary>
+      <p>No. Banks independently assess applications based on KYC, compliance, business activity, risk and other internal criteria. A trade licence alone does not guarantee account opening.</p>
     </details>
 
     <details>
-      <summary>What turnover is required for a business loan?</summary>
-      <p>
-        There is no single turnover requirement across all
-        lenders. Minimum criteria vary by product, lender
-        and business profile.
-      </p>
+      <summary>Can a newly established company apply for a bank account?</summary>
+      <p>Some banks consider newly established businesses. Requirements and acceptance depend on the institution, company structure and applicant profile.</p>
     </details>
 
     <details>
-      <summary>Can a Free Zone company apply for business finance?</summary>
-      <p>
-        Some lenders consider eligible Free Zone companies.
-        Acceptance depends on lender policies and the
-        company's profile.
-      </p>
+      <summary>Can a Free Zone company open a UAE business account?</summary>
+      <p>Free Zone companies may apply to banks that accept their structure and activity. Approval remains subject to the bank's independent assessment.</p>
     </details>
 
     <details>
-      <summary>Can I apply for working capital finance?</summary>
-      <p>
-        Eligible businesses may explore working capital
-        products. Lenders assess business activity,
-        cash flow, turnover and repayment capacity.
-      </p>
+      <summary>What documents should I prepare?</summary>
+      <p>Common documents include the trade licence, incorporation documents, shareholder identification, business profile and supporting financial or transaction evidence.</p>
     </details>
 
     <details>
-      <summary>Can DUCES guarantee loan approval?</summary>
-      <p>
-        No. DUCES provides consultancy and application
-        assistance. All financing decisions remain
-        with the relevant lender.
-      </p>
+      <summary>How long does business account opening take?</summary>
+      <p>Timelines vary according to bank processes, document completeness, compliance checks and additional information requests.</p>
     </details>
 
     <details>
-      <summary>Can I explore residential or commercial mortgages?</summary>
-      <p>
-        DUCES can help you understand requirements and
-        explore relevant mortgage application routes,
-        subject to lender eligibility and applicable permissions.
-      </p>
+      <summary>Can DUCES guarantee bank account approval?</summary>
+      <p>No. DUCES provides consultancy and documentation assistance. The bank independently decides whether to approve or decline an application.</p>
     </details>
 
     <details>
-      <summary>Does the EMI calculator include all loan charges?</summary>
-      <p>
-        The calculator includes the processing fee percentage
-        entered by the user. It does not automatically include
-        insurance, valuation charges, taxes or other lender fees.
-      </p>
+      <summary>Does DUCES work with only one bank?</summary>
+      <p>DUCES provides independent consultancy on banking options. The relevant institution depends on the company profile, requirements and the bank's current policies.</p>
+    </details>
+
+    <details>
+      <summary>Can I apply for an account before starting business operations?</summary>
+      <p>Some institutions consider applications from newly established companies. They may request a business plan, expected transaction details, source of funds and other supporting documents.</p>
     </details>
 
   </div>
@@ -834,19 +688,24 @@
 <!-- CTA -->
 <section class="cta-section">
   <div class="container">
-    <h2>Planning Your Next Business or Property Move?</h2>
+
+    <h2>Need Help with Your UAE Business Bank Account?</h2>
+
     <p>
-      Share your funding requirement with DUCES
-      and discuss possible next steps.
+      Tell us about your company and banking requirements.
+      Our UAE team can assist with the next steps.
     </p>
 
-    <a class="btn btn-primary" href="contact.html">Submit an Enquiry</a>
+    <a class="btn btn-primary" href="contact.html">
+      Submit an Enquiry
+    </a>
 
     <a class="btn btn-outline"
-      href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20need%20finance%20assistance."
+      href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20need%20business%20banking%20assistance."
       target="_blank" rel="noopener">
       WhatsApp DUCES
     </a>
+
   </div>
 </section>
 
@@ -854,11 +713,12 @@
 
 <!-- FOOTER -->
 <footer class="site-footer">
+
   <div class="container footer-grid">
 
     <div>
       <h3>DUCES Consultancy Services</h3>
-      <p>Business consultancy and support services in the UAE.</p>
+      <p>Business consultancy and support services in the United Arab Emirates.</p>
       <p class="text-gold"><strong>START • MANAGE • GROW</strong></p>
     </div>
 
@@ -882,177 +742,180 @@
         <li><a href="privacy-policy.html">Privacy Policy</a></li>
         <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
       </ul>
-    </div>
 
-    <div>
       <h4>Contact</h4>
-      <p><a href="tel:+971505356966">+971 50 535 6966</a></p>
-      <p>
-        <a href="https://wa.me/971505356966"
-          target="_blank" rel="noopener">WhatsApp DUCES</a>
-      </p>
-      <p><a href="contact.html">Send an Enquiry</a></p>
+      <ul>
+        <li><a href="tel:+971505356966">+971 50 535 6966</a></li>
+        <li><a href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp DUCES</a></li>
+      </ul>
     </div>
 
   </div>
 
   <div class="container">
-    <p class="loan-disclaimer">
-      DUCES provides consultancy and application assistance.
-      Financing is subject to lender eligibility, assessment,
-      due diligence and approval. No loan or mortgage approval
-      is guaranteed. Services are subject to applicable laws
-      and permissions.
+
+    <p class="banking-note">
+      Disclaimer: DUCES is an independent consultancy.
+      Banking applications are subject to each bank's KYC,
+      compliance, due diligence and approval process.
+      No account opening or approval is guaranteed.
     </p>
 
-    <p>
+    <div class="footer-bottom">
       © <span data-current-year>2026</span>
       DUCES Consultancy Services. All rights reserved.
-    </p>
+    </div>
+
   </div>
 </footer>
 
 <a class="whatsapp-float"
-  href="https://wa.me/971505356966"
-  target="_blank" rel="noopener">WhatsApp</a>
+   href="https://wa.me/971505356966"
+   target="_blank" rel="noopener">
+  WhatsApp
+</a>
 
-<!-- EMI CALCULATOR -->
+<!-- BANKING CHECKER SCRIPT -->
 <script>
 (function () {
-  const amountInput = document.getElementById("loanAmount");
-  const rateInput = document.getElementById("interestRate");
-  const yearsInput = document.getElementById("loanYears");
-  const feeInput = document.getElementById("processingFee");
-  const result = document.getElementById("emiResult");
-  const calculateBtn = document.getElementById("calculateEmiBtn");
-  const resetBtn = document.getElementById("resetEmiBtn");
+  const form = document.getElementById("bankingReadinessForm");
 
-  if (
-    !amountInput || !rateInput || !yearsInput ||
-    !feeInput || !result || !calculateBtn || !resetBtn
-  ) return;
+  if (!form) return;
 
-  function formatAED(value) {
-    return "AED " + value.toLocaleString("en-AE", {
-      minimumFractionDigits:2,
-      maximumFractionDigits:2
-    });
-  }
+  const field = function (id) {
+    return document.getElementById(id).value.trim();
+  };
 
-  function calculateEMI() {
-    const principal = Number(amountInput.value);
-    const annualRate = Number(rateInput.value);
-    const years = Number(yearsInput.value);
-    const feeRate = Number(feeInput.value);
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-    const valid =
-      amountInput.value !== "" &&
-      rateInput.value !== "" &&
-      yearsInput.value !== "" &&
-      feeInput.value !== "" &&
-      Number.isFinite(principal) &&
-      Number.isFinite(annualRate) &&
-      Number.isFinite(years) &&
-      Number.isFinite(feeRate) &&
-      principal > 0 &&
-      annualRate >= 0 && annualRate <= 100 &&
-      years >= 1 && years <= 30 &&
-      feeRate >= 0 && feeRate <= 100;
+    if (!form.reportValidity()) return;
 
-    result.style.display = "block";
+    const age = field("companyAge");
+    const jurisdiction = field("jurisdiction");
+    const activity = field("activity");
+    const turnover = field("turnover");
+    const balance = field("balance");
+    const vat = field("vatStatus");
+    const countries = field("transactions");
+    const account = field("accountType");
 
-    if (!valid) {
-      result.textContent =
-        "Please enter valid values. Loan amount must be positive, interest 0–100%, tenure 1–30 years and processing fee 0–100%.";
-      return;
-    }
-
-    const months = Math.round(years * 12);
-    const monthlyRate = annualRate / 1200;
-
-    let emi;
-
-    if (monthlyRate === 0) {
-      emi = principal / months;
-    } else {
-      const factor = Math.pow(1 + monthlyRate, months);
-      emi = principal * monthlyRate * factor / (factor - 1);
-    }
-
-    const totalRepayment = emi * months;
-    const totalInterest = totalRepayment - principal;
-    const processingFeeAmount = principal * feeRate / 100;
-    const totalEstimatedCost = totalRepayment + processingFeeAmount;
-
-    result.replaceChildren();
-
-    const heading = document.createElement("h3");
-    heading.textContent = "Estimated Monthly Instalment";
-    result.appendChild(heading);
-
-    const main = document.createElement("div");
-    main.className = "emi-main";
-    main.textContent = formatAED(emi);
-    result.appendChild(main);
-
-    const breakdown = document.createElement("div");
-    breakdown.className = "emi-breakdown";
-
-    const items = [
-      ["Loan Amount",formatAED(principal)],
-      ["Total Interest",formatAED(totalInterest)],
-      ["Total Repayment",formatAED(totalRepayment)],
-      ["Processing Fee",formatAED(processingFeeAmount)],
-      ["Estimated Total Cost",formatAED(totalEstimatedCost)],
-      ["Loan Tenure",months + " Months"]
+    const checklist = [
+      "Valid trade licence and incorporation documents, where applicable",
+      "Shareholder identification and UBO information",
+      "Clear business model and activity explanation",
+      "Customer, supplier and transaction-country details",
+      "Source of funds and source of wealth supporting evidence"
     ];
 
-    items.forEach(function (item) {
-      const box = document.createElement("div");
-      box.className = "emi-item";
+    if (
+      age === "New / Not yet established" ||
+      age === "Less than 1 year"
+    ) {
+      checklist.push(
+        "Business plan, expected turnover and initial funding evidence"
+      );
+    } else {
+      checklist.push(
+        "Available business bank statements and financial records"
+      );
+    }
 
-      const label = document.createElement("span");
-      label.textContent = item[0];
+    if (turnover !== "No turnover yet") {
+      checklist.push(
+        "Invoices, contracts or other evidence supporting reported turnover"
+      );
+    }
 
-      const value = document.createElement("strong");
-      value.textContent = item[1];
+    if (vat === "VAT registered") {
+      checklist.push(
+        "VAT registration certificate and available VAT returns"
+      );
+    } else if (vat === "Registration in progress") {
+      checklist.push(
+        "VAT registration application status and supporting records"
+      );
+    } else if (vat === "Not sure") {
+      checklist.push(
+        "Review whether VAT registration is required for your business"
+      );
+    }
 
-      box.appendChild(label);
-      box.appendChild(value);
-      breakdown.appendChild(box);
+    if (balance === "No business account yet") {
+      checklist.push(
+        "Prepare evidence explaining expected opening deposits and funding"
+      );
+    } else {
+      checklist.push(
+        "Available bank statements showing business account activity, if applicable"
+      );
+    }
+
+    const summary = document.getElementById("bankingSummary");
+    summary.replaceChildren();
+
+    const summaryItems = [
+      ["Company age", age],
+      ["Jurisdiction", jurisdiction],
+      ["Business activity", activity],
+      ["Annual turnover", turnover],
+      ["Average monthly balance", balance],
+      ["VAT status", vat],
+      ["Transaction countries", countries],
+      ["Banking requirement", account]
+    ];
+
+    summaryItems.forEach(function (item) {
+      const line = document.createElement("p");
+      const label = document.createElement("strong");
+
+      label.textContent = item[0] + ": ";
+      line.appendChild(label);
+      line.appendChild(document.createTextNode(item[1]));
+      summary.appendChild(line);
     });
 
-    result.appendChild(breakdown);
+    const list = document.getElementById("readinessChecklist");
+    list.replaceChildren();
 
-    const note = document.createElement("p");
-    note.className = "calculator-note";
-    note.textContent =
-      "Processing fee is shown separately and is not included in the EMI. This estimate assumes a fixed rate and equal monthly repayments. Other lender charges may apply.";
-
-    result.appendChild(note);
-  }
-
-  function resetCalculator() {
-    amountInput.value = "500000";
-    rateInput.value = "8";
-    yearsInput.value = "5";
-    feeInput.value = "1";
-    result.style.display = "none";
-    result.replaceChildren();
-  }
-
-  calculateBtn.addEventListener("click",calculateEMI);
-  resetBtn.addEventListener("click",resetCalculator);
-
-  [amountInput,rateInput,yearsInput,feeInput].forEach(function (input) {
-    input.addEventListener("input",function () {
-      if (result.style.display === "block") {
-        calculateEMI();
-      }
+    checklist.forEach(function (item) {
+      const li = document.createElement("li");
+      li.textContent = item;
+      list.appendChild(li);
     });
+
+    const message = [
+      "Hello DUCES, I completed the Business Banking Readiness Checker.",
+      "",
+      "Company age: " + age,
+      "Jurisdiction: " + jurisdiction,
+      "Business activity: " + activity,
+      "Annual turnover: " + turnover,
+      "Average monthly balance: " + balance,
+      "VAT status: " + vat,
+      "Transaction countries: " + countries,
+      "Banking requirement: " + account,
+      "",
+      "Please assist me with reviewing my banking requirements."
+    ].join("\n");
+
+    document.getElementById("bankingWhatsApp").href =
+      "https://wa.me/971505356966?text=" + encodeURIComponent(message);
+
+    const result = document.getElementById("bankingResult");
+    result.hidden = false;
+
+    result.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
+
+  form.addEventListener("reset", function () {
+    document.getElementById("bankingResult").hidden = true;
   });
 })();
 </script>
 
 </body>
-</html>
+                                              </html>
