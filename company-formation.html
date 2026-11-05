@@ -1,717 +1,699 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UAE Company Formation | Mainland, Free Zone & Offshore | DUCES</title>
-<meta name="description" content="Explore UAE mainland, free zone and offshore company formation with DUCES Consultancy Services. Compare jurisdictions and estimate your business setup budget.">
-<meta name="theme-color" content="#123B70">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/script.js" defer></script>
+/* =========================================
+   DUCES CONSULTANCY SERVICES
+   FINAL APPROVED DESIGN SYSTEM
+   ========================================= */
 
-<style>
-.setup-calculator {
-  max-width: 900px;
-  margin: auto;
-  padding: 28px;
-  background: #fff;
-  border: 1px solid #E5EBF1;
-  border-radius: 12px;
-  box-shadow: 0 8px 28px rgba(11,40,80,.06);
+:root {
+  --primary: #123B70;
+  --primary-dark: #0B2850;
+  --ocean: #1976B9;
+  --gold: #D9AD55;
+  --gold-soft: #F7F0E3;
+
+  --white: #FFFFFF;
+  --ice: #F5F7FA;
+  --charcoal: #263445;
+  --silver: #E5EBF1;
+  --muted: #64748B;
+
+  /* Service backgrounds */
+  --mainland-bg: #F3EBDD;
+  --freezone-bg: #EFF4E7;
+  --offshore-bg: #EAF1F8;
+  --banking-bg: #F7F0E3;
+  --loans-bg: #E9F0F8;
+  --tax-bg: #F0F0EB;
+  --visa-bg: #F5EBE7;
+
+  --shadow: 0 12px 35px rgba(18, 59, 112, 0.10);
+  --shadow-soft: 0 5px 20px rgba(18, 59, 112, 0.05);
+  --radius: 10px;
 }
-.setup-calculator h3 {
-  color: #123B70;
-}
-.setup-calculator label {
-  display: block;
-  margin: 14px 0 7px;
-  font-weight: 600;
-  color: #263445;
-}
-.setup-calculator input,
-.setup-calculator select {
-  display: block;
-  width: 100%;
+
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  padding: 12px;
-  border: 1px solid #CBD5E1;
-  border-radius: 7px;
-  background: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white);
+  color: var(--charcoal);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--ocean);
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+button,
+input,
+select,
+textarea {
   font: inherit;
 }
-.setup-calculator input:focus,
-.setup-calculator select:focus {
-  outline: 2px solid #48C9B0;
-  border-color: #1976B9;
+
+.container {
+  width: min(1160px, 92%);
+  margin: auto;
 }
-.setup-grid {
-  display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 0 18px;
+
+/* TOP BAR */
+
+.top-bar {
+  background: var(--primary-dark);
+  color: var(--white);
+  padding: 9px 0;
+  font-size: 13px;
 }
-.setup-result {
-  display: none;
-  margin-top: 25px;
-  padding: 22px;
-  background: #F1F7FC;
-  border-radius: 10px;
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
-.setup-result h2 {
-  color: #123B70;
-  font-size: 30px;
+
+.top-bar a {
+  color: var(--white);
 }
-.setup-result table {
-  width: 100%;
-  border-collapse: collapse;
+
+/* HEADER */
+
+.site-header,
+header {
+  background: var(--white);
+  position: relative;
+  z-index: 100;
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.06);
 }
-.setup-result td {
-  padding: 10px 4px;
-  border-bottom: 1px solid #DCE5EE;
+
+.nav-container {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
 }
-.setup-result td:last-child {
-  text-align: right;
+
+.logo,
+.site-logo {
+  color: var(--primary);
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo span,
+.site-logo span {
+  color: var(--gold);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  list-style: none;
+}
+
+.nav-menu a {
+  color: var(--primary);
+  font-size: 14px;
   font-weight: 600;
 }
-.setup-note {
+
+.nav-menu a:hover {
+  color: var(--ocean);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 235px;
+  padding: 12px 0;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  list-style: none;
+}
+
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 9px 17px;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background: var(--ice);
+}
+
+/* HERO */
+
+.hero {
+  background: linear-gradient(
+    120deg,
+    var(--primary-dark),
+    var(--primary)
+  );
+  color: var(--white);
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.15;
+  margin-bottom: 22px;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #E7F0FA;
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.hero .highlight {
+  color: var(--gold);
+}
+
+/* INNER PAGE BANNER */
+
+.page-banner {
+  background: var(--primary-dark);
+  padding: 62px 0;
+  color: var(--white);
+  text-align: center;
+}
+
+.page-banner h1 {
+  font-size: clamp(30px, 4vw, 44px);
+  margin-bottom: 12px;
+}
+
+.page-banner p {
+  color: #E7F0FA;
+  max-width: 760px;
+  margin: auto;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+  padding: 13px 25px;
+  border-radius: 7px;
+  font-weight: 700;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.25s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--primary-dark);
+}
+
+.btn-primary:hover {
+  background: var(--white);
+  color: var(--primary);
+}
+
+.btn-outline {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--primary);
+}
+
+.btn-blue {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.btn-blue:hover {
+  background: var(--ocean);
+  color: var(--white);
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 75px 0;
+}
+
+.section-light {
+  background: var(--ice);
+}
+
+.section-heading {
+  max-width: 750px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  color: var(--primary);
+  font-size: clamp(27px, 4vw, 38px);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+/* SERVICE BACKGROUNDS */
+
+.bg-mainland { background: var(--mainland-bg); }
+.bg-freezone { background: var(--freezone-bg); }
+.bg-offshore { background: var(--offshore-bg); }
+.bg-banking { background: var(--banking-bg); }
+.bg-loans { background: var(--loans-bg); }
+.bg-tax { background: var(--tax-bg); }
+.bg-visa { background: var(--visa-bg); }
+
+/* SERVICE CARDS */
+
+.service-grid,
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card,
+.card {
+  background: var(--white);
+  padding: 28px;
+  border: 1px solid var(--silver);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  transition: 0.25s ease;
+}
+
+.service-card:hover,
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--gold);
+}
+
+.service-card h3,
+.card h3 {
+  color: var(--primary);
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.service-card p,
+.card p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+/* CONTENT */
+
+.content-section {
+  padding: 55px 0;
+}
+
+.content-section h2,
+.content-section h3 {
+  color: var(--primary);
+  margin: 22px 0 12px;
+}
+
+.content-section p {
+  margin-bottom: 16px;
+}
+
+.content-section ul {
+  padding-left: 22px;
+  margin-bottom: 20px;
+}
+
+/* CALCULATORS AND FORMS */
+
+.calculator,
+.contact-form,
+.form-container {
+  background: var(--white);
+  padding: 32px;
+  border: 1px solid var(--silver);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  max-width: 850px;
+  margin: 25px auto;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--primary);
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #CBD5E1;
+  border-radius: 7px;
+  background: var(--white);
+  color: var(--charcoal);
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--ocean);
+  box-shadow: 0 0 0 3px rgba(25, 118, 185, 0.10);
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.result-box {
+  background: var(--gold-soft);
+  border-left: 4px solid var(--gold);
+  padding: 20px;
+  border-radius: 7px;
+  margin-top: 20px;
+}
+
+/* CTA */
+
+.cta-section {
+  background: var(--primary);
+  color: var(--white);
+  padding: 65px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.cta-section p {
+  color: #E7F0FA;
+  margin-bottom: 25px;
+}
+
+/* FOOTER */
+
+.site-footer,
+footer {
+  background: var(--primary-dark);
+  color: var(--white);
+  padding: 55px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 35px;
+  margin-bottom: 35px;
+}
+
+.site-footer h3,
+.site-footer h4,
+footer h3,
+footer h4 {
+  color: var(--white);
+  margin-bottom: 15px;
+}
+
+.site-footer p,
+footer p {
+  color: #C8D7E8;
+}
+
+.site-footer ul,
+footer ul {
+  list-style: none;
+}
+
+.site-footer li,
+footer li {
+  margin-bottom: 9px;
+}
+
+.site-footer a,
+footer a {
+  color: #DCE8F5;
+}
+
+.site-footer a:hover,
+footer a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  padding-top: 18px;
+  text-align: center;
+  color: #C8D7E8;
   font-size: 13px;
-  color: #526274;
-  line-height: 1.7;
-  margin-top: 18px;
 }
-.setup-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 18px;
+
+/* WHATSAPP */
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  background: var(--primary-dark);
+  color: var(--white);
+  padding: 13px 18px;
+  border-radius: 50px;
+  font-weight: 700;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
 }
-@media(max-width:600px) {
-  .setup-grid {
+
+.whatsapp-float:hover {
+  color: var(--white);
+  background: var(--ocean);
+  transform: translateY(-3px);
+}
+
+/* TABLES */
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  background: var(--white);
+}
+
+th,
+td {
+  padding: 13px 15px;
+  border: 1px solid var(--silver);
+  text-align: left;
+}
+
+th {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* UTILITIES */
+
+.text-center { text-align: center; }
+.text-blue { color: var(--primary); }
+.text-gold { color: var(--gold); }
+
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+
+/* ACCESSIBILITY */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(217, 173, 85, 0.55);
+  outline-offset: 2px;
+}
+
+/* MOBILE NAVIGATION */
+
+.menu-toggle {
+  display: none;
+  background: var(--primary);
+  color: var(--white);
+  border: 0;
+  border-radius: 7px;
+  padding: 9px 14px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .service-grid,
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-container {
+    min-height: 75px;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    padding: 12px 0;
+    gap: 12px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-container nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    background: var(--white);
+    padding: 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    box-shadow: var(--shadow);
+    border-radius: 0 0 10px 10px;
+    max-height: 75vh;
+    overflow-y: auto;
+  }
+
+  .nav-menu.is-open {
+    display: flex;
+  }
+
+  .nav-menu li,
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    width: 100%;
+    min-width: 0;
+    margin-top: 8px;
+    box-shadow: none;
+    border: 1px solid var(--silver);
+  }
+
+  .dropdown:hover > .dropdown-menu {
+    display: none;
+  }
+
+  .dropdown.open > .dropdown-menu,
+  .dropdown:focus-within > .dropdown-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 650px) {
+  .top-bar .container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .service-grid,
+  .card-grid,
+  .footer-grid {
     grid-template-columns: 1fr;
   }
-  .setup-calculator {
-    padding: 18px;
+
+  .calculator,
+  .contact-form,
+  .form-container {
+    padding: 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 26px;
+  }
+
+  .page-banner {
+    padding: 45px 0;
   }
 }
-</style>
-</head>
-
-<body>
-
-<div class="top-bar">
-  <div class="container">
-    <span>START • MANAGE • GROW</span>
-    <a href="tel:+971505356966">Call: +971 50 535 6966</a>
-  </div>
-</div>
-
-<header class="site-header">
-  <div class="container nav-container">
-    <a class="site-logo" href="index.html">DUC<span>ES</span></a>
-
-    <button class="menu-toggle" id="menuToggle"
-      aria-label="Open navigation menu" aria-expanded="false">☰</button>
-
-    <nav>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="company-formation.html">Business Setup ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="#mainland">Mainland</a></li>
-            <li><a href="#freezone">Free Zone</a></li>
-            <li><a href="#offshore">Offshore</a></li>
-            <li><a href="#jurisdictions">UAE Free Zone Options</a></li>
-            <li><a href="#setup-cost-estimator">Setup Cost Calculator</a></li>
-            <li><a href="#process">Setup Process</a></li>
-          </ul>
-        </li>
-        <li><a href="business-banking.html">Business Banking</a></li>
-        <li><a href="business-loan.html">Business Loans</a></li>
-        <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
-        <li><a href="pro-visa-services.html">PRO & VISA</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-<section class="hero">
-  <div class="container hero-content">
-    <p class="text-gold"><strong>UAE COMPANY FORMATION CONSULTANCY</strong></p>
-    <h1>Start Your UAE Business with the Right Structure.</h1>
-    <p>
-      Explore Mainland, Free Zone and Offshore company formation.
-      Understand licensing options, documentation and business
-      setup requirements before making a decision.
-    </p>
-    <a class="btn btn-primary"
-      href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20want%20to%20discuss%20UAE%20company%20formation."
-      target="_blank" rel="noopener">Discuss Your Business</a>
-    <a class="btn btn-outline" href="#options">Explore Options</a>
-  </div>
-</section>
-
-<section class="section" id="options">
-  <div class="container section-heading">
-    <h2>Choose Your UAE Business Structure</h2>
-    <p>
-      Your business activity, target customers, ownership and
-      operating requirements help determine the appropriate jurisdiction.
-    </p>
-  </div>
-
-  <div class="container service-grid">
-
-    <article class="service-card" id="mainland">
-      <h3>Mainland Company Formation</h3>
-      <p>
-        Explore UAE mainland licensing for businesses planning
-        to operate in the local market or undertake activities
-        subject to mainland licensing.
-      </p>
-      <ul>
-        <li>Business activity selection</li>
-        <li>Trade name and approvals</li>
-        <li>Licence application coordination</li>
-        <li>Office and tenancy requirements</li>
-        <li>MOA and ownership documentation</li>
-      </ul>
-      <a href="contact.html">Discuss Mainland Setup →</a>
-    </article>
-
-    <article class="service-card" id="freezone">
-      <h3>Free Zone Company Formation</h3>
-      <p>
-        Compare UAE Free Zones for consulting, trading,
-        professional services and other eligible activities.
-      </p>
-      <ul>
-        <li>Free Zone authority comparison</li>
-        <li>Licence and activity selection</li>
-        <li>Shareholder documentation</li>
-        <li>Visa package considerations</li>
-        <li>Facility and renewal requirements</li>
-      </ul>
-      <a href="#jurisdictions">Explore Free Zones →</a>
-    </article>
-
-    <article class="service-card" id="offshore">
-      <h3>Offshore Company Formation</h3>
-      <p>
-        Understand eligible offshore structures for international
-        holding and ownership purposes, subject to jurisdiction rules.
-      </p>
-      <ul>
-        <li>Jurisdiction comparison</li>
-        <li>Holding structure considerations</li>
-        <li>Corporate documentation</li>
-        <li>Registered agent coordination</li>
-        <li>Compliance requirements</li>
-      </ul>
-      <a href="contact.html">Discuss Offshore Setup →</a>
-    </article>
-
-  </div>
-</section>
-
-<section class="section section-light" id="jurisdictions">
-  <div class="container section-heading">
-    <h2>UAE Free Zone Options</h2>
-    <p>
-      We help you compare jurisdictions according to your activity,
-      visa needs, budget and operational plans.
-    </p>
-  </div>
-
-  <div class="container card-grid">
-    <article class="card">
-      <h3>Dubai Free Zones</h3>
-      <ul>
-        <li>Meydan Free Zone</li>
-        <li>IFZA</li>
-        <li>Dubai South</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <h3>Sharjah Free Zones</h3>
-      <ul>
-        <li>SHAMS</li>
-        <li>SAIF Zone</li>
-        <li>SPC Free Zone</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <h3>Other UAE Free Zones</h3>
-      <ul>
-        <li>RAKEZ</li>
-        <li>Ajman Free Zone</li>
-        <li>Other suitable UAE authorities</li>
-      </ul>
-    </article>
-  </div>
-
-  <div class="container">
-    <p class="text-center">
-      <strong>Important:</strong> Availability, fees, visa allocations,
-      activities and approval conditions vary by authority and
-      individual application.
-    </p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container section-heading">
-    <h2>What Does Our Company Formation Support Include?</h2>
-    <p>
-      We coordinate the key stages of your company setup based
-      on the selected jurisdiction and agreed scope.
-    </p>
-  </div>
-
-  <div class="container card-grid">
-    <article class="card">
-      <h3>Activity & Structure</h3>
-      <p>Understand suitable business activities, legal structures and licensing routes.</p>
-    </article>
-    <article class="card">
-      <h3>Documentation</h3>
-      <p>Guidance on shareholder information, KYC documents, applications and supporting paperwork.</p>
-    </article>
-    <article class="card">
-      <h3>Licence Coordination</h3>
-      <p>Coordinate the application process with the relevant authority or authorised channel.</p>
-    </article>
-    <article class="card">
-      <h3>Visa & Establishment</h3>
-      <p>Understand establishment card and visa requirements through applicable authorised channels.</p>
-    </article>
-    <article class="card">
-      <h3>Banking Readiness</h3>
-      <p>Prepare business information and supporting documents for independent bank assessment.</p>
-    </article>
-    <article class="card">
-      <h3>Tax & Accounting</h3>
-      <p>Discuss bookkeeping, VAT and Corporate Tax compliance requirements for your business.</p>
-    </article>
-  </div>
-</section>
-
-<section class="section section-light" id="process">
-  <div class="container section-heading">
-    <h2>Your Company Formation Journey</h2>
-    <p>A structured process from initial discussion to post-licensing support.</p>
-  </div>
-
-  <div class="container card-grid">
-    <article class="card">
-      <h3>01. Consultation</h3>
-      <p>Share your business idea, activity, ownership and operational requirements.</p>
-    </article>
-    <article class="card">
-      <h3>02. Comparison</h3>
-      <p>Review suitable jurisdictions, licence types, facilities and estimated costs.</p>
-    </article>
-    <article class="card">
-      <h3>03. Documentation</h3>
-      <p>Prepare the required shareholder information and application documents.</p>
-    </article>
-    <article class="card">
-      <h3>04. Application</h3>
-      <p>Coordinate submission through the relevant authority or authorised service channel.</p>
-    </article>
-    <article class="card">
-      <h3>05. Next Steps</h3>
-      <p>Discuss visas, banking readiness, accounting and ongoing compliance requirements.</p>
-    </article>
-  </div>
-</section>
-
-<!-- BUSINESS SETUP COST ESTIMATOR -->
-<section class="section" id="setup-cost-estimator">
-  <div class="container section-heading">
-    <h2>UAE Business Setup Cost Estimator</h2>
-    <p>
-      Build an indicative setup budget by entering the quoted fees
-      for your preferred jurisdiction and package.
-    </p>
-  </div>
-
-  <div class="container">
-    <div class="setup-calculator">
-      <h3>Calculate Your Setup Budget</h3>
-
-      <form id="setupCostForm">
-        <div class="setup-grid">
-
-          <div>
-            <label for="setupJurisdiction">Company Jurisdiction *</label>
-            <select id="setupJurisdiction" required>
-              <option value="">Select jurisdiction</option>
-              <option>Mainland</option>
-              <option>Dubai Free Zone</option>
-              <option>Sharjah Free Zone</option>
-              <option>Other UAE Free Zone</option>
-              <option>Offshore</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="setupAuthority">Authority / Package</label>
-            <input id="setupAuthority" type="text"
-              placeholder="e.g. IFZA, Meydan, RAKEZ">
-          </div>
-
-          <div>
-            <label for="setupLicence">Licence & Formation Fee (AED) *</label>
-            <input id="setupLicence" type="number"
-              min="0" step="0.01" placeholder="Enter quoted amount" required>
-          </div>
-
-          <div>
-            <label for="setupVisaCount">Number of Visas</label>
-            <input id="setupVisaCount" type="number"
-              min="0" step="1" value="0" required>
-          </div>
-
-          <div>
-            <label for="setupVisaCost">Cost Per Visa (AED)</label>
-            <input id="setupVisaCost" type="number"
-              min="0" step="0.01" value="0">
-          </div>
-
-          <div>
-            <label for="setupFacility">Office / Flexi-desk / Facility (AED)</label>
-            <input id="setupFacility" type="number"
-              min="0" step="0.01" value="0">
-          </div>
-
-          <div>
-            <label for="setupGovernment">Government & Authority Fees (AED)</label>
-            <input id="setupGovernment" type="number"
-              min="0" step="0.01" value="0">
-          </div>
-
-          <div>
-            <label for="setupOther">Additional Charges (AED)</label>
-            <input id="setupOther" type="number"
-              min="0" step="0.01" value="0">
-          </div>
-
-        </div>
-
-        <div class="setup-actions">
-          <button type="submit" class="btn btn-primary">
-            Calculate Setup Budget
-          </button>
-          <button type="reset" class="btn btn-outline">
-            Reset
-          </button>
-        </div>
-      </form>
-
-      <div id="setupCostResult" class="setup-result" aria-live="polite">
-        <h3>Indicative Setup Budget</h3>
-        <h2 id="setupTotal">AED 0.00</h2>
-        <div id="setupBreakdown"></div>
-        <p id="setupSummary"></p>
-        <a id="setupWhatsApp" class="btn btn-primary"
-          href="#" target="_blank" rel="noopener">
-          Discuss This Estimate on WhatsApp
-        </a>
-      </div>
-
-      <p class="setup-note">
-        This calculator uses the amounts entered by you. It does not
-        contain live authority prices or automatically updated package
-        fees. Actual costs depend on the activity, jurisdiction,
-        shareholders, visa allocation, facility, government charges,
-        VAT and package exclusions. Confirm the final itemised quotation
-        before making payment. This estimate is not an official quotation.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container section-heading">
-    <h2>Documents Generally Required</h2>
-    <p>
-      Exact requirements depend on the jurisdiction, activity,
-      shareholder profile and authority.
-    </p>
-  </div>
-
-  <div class="container card-grid">
-    <article class="card">
-      <h3>Shareholder Information</h3>
-      <ul>
-        <li>Passport copy</li>
-        <li>Contact details</li>
-        <li>Residential address information</li>
-        <li>Existing UAE visa or Emirates ID, if applicable</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <h3>Business Information</h3>
-      <ul>
-        <li>Proposed business activities</li>
-        <li>Company name preferences</li>
-        <li>Shareholding details</li>
-        <li>Business contact information</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <h3>Additional Documents</h3>
-      <ul>
-        <li>Business plan, if required</li>
-        <li>External approvals, if applicable</li>
-        <li>Corporate documents for entity shareholders</li>
-        <li>Other authority-specific documents</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<section class="section section-light">
-  <div class="container section-heading">
-    <h2>Frequently Asked Questions</h2>
-  </div>
-
-  <div class="container">
-    <details>
-      <summary>What is the difference between Mainland and Free Zone?</summary>
-      <p>They operate under different licensing frameworks. The right choice depends on your activity, customer base, location and applicable regulations.</p>
-    </details>
-
-    <details>
-      <summary>Can a foreign national own 100% of a UAE company?</summary>
-      <p>Many activities permit full foreign ownership, subject to the applicable legal structure, activity and regulatory requirements.</p>
-    </details>
-
-    <details>
-      <summary>Can I open a business bank account after getting a licence?</summary>
-      <p>You can apply, but each bank conducts its own KYC, compliance and risk assessment. A trade licence does not guarantee account approval.</p>
-    </details>
-
-    <details>
-      <summary>Can I establish a company without a visa?</summary>
-      <p>Some packages may offer licence-only options. Availability and visa eligibility depend on the selected authority and package.</p>
-    </details>
-
-    <details>
-      <summary>How much does company formation cost?</summary>
-      <p>Costs depend on jurisdiction, activities, visa allocation, facilities, government charges and other requirements. Use the estimator above as a budget planning tool and request an itemised quotation.</p>
-    </details>
-
-    <details>
-      <summary>How long does company formation take?</summary>
-      <p>Processing times vary by authority, activity, document readiness and external approvals. Timelines are confirmed after reviewing the application.</p>
-    </details>
-  </div>
-</section>
-
-<section class="cta-section">
-  <div class="container">
-    <h2>Let's Find the Right Setup for Your Business.</h2>
-    <p>
-      Tell us your activity, budget and requirements.
-      We will help you compare suitable options.
-    </p>
-    <a class="btn btn-primary" href="contact.html">Request a Consultation</a>
-    <a class="btn btn-outline"
-      href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20need%20company%20formation%20guidance."
-      target="_blank" rel="noopener">WhatsApp DUCES</a>
-  </div>
-</section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-grid">
-
-    <div>
-      <h3>DUCES Consultancy Services</h3>
-      <p>Business consultancy and support services in the United Arab Emirates.</p>
-      <p class="text-gold"><strong>START • MANAGE • GROW</strong></p>
-    </div>
-
-    <div>
-      <h4>Our Services</h4>
-      <ul>
-        <li><a href="company-formation.html">Business Setup</a></li>
-        <li><a href="business-banking.html">Business Banking</a></li>
-        <li><a href="business-loan.html">Business Loans</a></li>
-        <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
-        <li><a href="pro-visa-services.html">PRO & VISA</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-      </ul>
-
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="tel:+971505356966">+971 50 535 6966</a></li>
-        <li><a href="https://wa.me/971505356966"
-          target="_blank" rel="noopener">WhatsApp DUCES</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="container">
-    <p>
-      Disclaimer: Information is general and subject to the rules
-      of the relevant authorities. Services are subject to applicable
-      licensing and authorisations. Licence, visa, bank account and
-      financing approvals are not guaranteed.
-    </p>
-
-    <div class="footer-bottom">
-      © <span data-current-year>2026</span> DUCES Consultancy Services. All rights reserved.
-    </div>
-  </div>
-</footer>
-
-<a class="whatsapp-float" href="https://wa.me/971505356966"
-  target="_blank" rel="noopener">WhatsApp</a>
-
-<script>
-(function () {
-  const form = document.getElementById("setupCostForm");
-
-  if (!form) return;
-
-  const money = amount => "AED " + amount.toLocaleString("en-AE", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  });
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const getNumber = id => {
-      const field = document.getElementById(id);
-      return Number(field.value || 0);
-    };
-
-    const jurisdiction = document.getElementById("setupJurisdiction").value;
-    const authority = document.getElementById("setupAuthority").value.trim() || "Not specified";
-
-    const licence = getNumber("setupLicence");
-    const visaCount = getNumber("setupVisaCount");
-    const visaUnit = getNumber("setupVisaCost");
-    const facility = getNumber("setupFacility");
-    const government = getNumber("setupGovernment");
-    const other = getNumber("setupOther");
-
-    const numericValues = [
-      licence, visaCount, visaUnit, facility, government, other
-    ];
-
-    if (
-      !jurisdiction ||
-      numericValues.some(value => !Number.isFinite(value) || value < 0) ||
-      !Number.isInteger(visaCount)
-    ) {
-      alert("Please enter valid amounts and setup details.");
-      return;
-    }
-
-    const visaTotal = visaCount * visaUnit;
-    const total = licence + visaTotal + facility + government + other;
-
-    if (!Number.isFinite(total)) {
-      alert("The total is too large to calculate. Please check the amounts.");
-      return;
-    }
-
-    document.getElementById("setupTotal").textContent = money(total);
-
-    const rows = [
-      ["Licence and formation", licence],
-      ["Visa charges (" + visaCount + ")", visaTotal],
-      ["Office / facility", facility],
-      ["Government and authority fees", government],
-      ["Additional charges", other],
-      ["Total indicative budget", total]
-    ];
-
-    const table = document.createElement("table");
-    const tbody = document.createElement("tbody");
-
-    rows.forEach(function (item) {
-      const tr = document.createElement("tr");
-      const label = document.createElement("td");
-      const amount = document.createElement("td");
-
-      label.textContent = item[0];
-      amount.textContent = money(item[1]);
-
-      tr.appendChild(label);
-      tr.appendChild(amount);
-      tbody.appendChild(tr);
-    });
-
-    table.appendChild(tbody);
-
-    const breakdown = document.getElementById("setupBreakdown");
-    breakdown.replaceChildren(table);
-
-    document.getElementById("setupSummary").textContent =
-      "Jurisdiction: " + jurisdiction +
-      " | Authority / Package: " + authority +
-      ". Please confirm final charges, VAT and exclusions with DUCES.";
-
-    const message = [
-      "Hello DUCES Consultancy Services,",
-      "",
-      "I used the Business Setup Cost Estimator.",
-      "Jurisdiction: " + jurisdiction,
-      "Authority / Package: " + authority,
-      "Licence and formation: " + money(licence),
-      "Number of visas: " + visaCount,
-      "Visa charges: " + money(visaTotal),
-      "Office / facility: " + money(facility),
-      "Government fees: " + money(government),
-      "Additional charges: " + money(other),
-      "Indicative total: " + money(total),
-      "",
-      "Please help me confirm the final quotation."
-    ].join("\n");
-
-    document.getElementById("setupWhatsApp").href =
-      "https://wa.me/971505356966?text=" + encodeURIComponent(message);
-
-    document.getElementById("setupCostResult").style.display = "block";
-    document.getElementById("setupCostResult").scrollIntoView({
-      behavior: "smooth",
-      block: "nearest"
-    });
-  });
-
-  form.addEventListener("reset", function () {
-    document.getElementById("setupCostResult").style.display = "none";
-    document.getElementById("setupBreakdown").replaceChildren();
-  });
-})();
-</script>
-
-</body>
-</html>
