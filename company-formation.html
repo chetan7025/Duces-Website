@@ -2,14 +2,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UAE Company Formation | Mainland, Free Zone & Offshore | DUCES</title>
-  <meta name="description" content="Explore UAE mainland, free zone and offshore company formation with DUCES Consultancy Services. Compare jurisdictions and discuss your business requirements.">
-  <meta name="theme-color" content="#123B70">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UAE Company Formation | Mainland, Free Zone & Offshore | DUCES</title>
+<meta name="description" content="Explore UAE mainland, free zone and offshore company formation with DUCES Consultancy Services. Compare jurisdictions and estimate your business setup budget.">
+<meta name="theme-color" content="#123B70">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+
+<style>
+.setup-calculator {
+  max-width: 900px;
+  margin: auto;
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #E5EBF1;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(11,40,80,.06);
+}
+.setup-calculator h3 {
+  color: #123B70;
+}
+.setup-calculator label {
+  display: block;
+  margin: 14px 0 7px;
+  font-weight: 600;
+  color: #263445;
+}
+.setup-calculator input,
+.setup-calculator select {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #CBD5E1;
+  border-radius: 7px;
+  background: #fff;
+  font: inherit;
+}
+.setup-calculator input:focus,
+.setup-calculator select:focus {
+  outline: 2px solid #48C9B0;
+  border-color: #1976B9;
+}
+.setup-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 0 18px;
+}
+.setup-result {
+  display: none;
+  margin-top: 25px;
+  padding: 22px;
+  background: #F1F7FC;
+  border-radius: 10px;
+}
+.setup-result h2 {
+  color: #123B70;
+  font-size: 30px;
+}
+.setup-result table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.setup-result td {
+  padding: 10px 4px;
+  border-bottom: 1px solid #DCE5EE;
+}
+.setup-result td:last-child {
+  text-align: right;
+  font-weight: 600;
+}
+.setup-note {
+  font-size: 13px;
+  color: #526274;
+  line-height: 1.7;
+  margin-top: 18px;
+}
+.setup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+@media(max-width:600px) {
+  .setup-grid {
+    grid-template-columns: 1fr;
+  }
+  .setup-calculator {
+    padding: 18px;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <div class="top-bar">
@@ -36,6 +122,7 @@
             <li><a href="#freezone">Free Zone</a></li>
             <li><a href="#offshore">Offshore</a></li>
             <li><a href="#jurisdictions">UAE Free Zone Options</a></li>
+            <li><a href="#setup-cost-estimator">Setup Cost Calculator</a></li>
             <li><a href="#process">Setup Process</a></li>
           </ul>
         </li>
@@ -246,6 +333,112 @@
   </div>
 </section>
 
+<!-- BUSINESS SETUP COST ESTIMATOR -->
+<section class="section" id="setup-cost-estimator">
+  <div class="container section-heading">
+    <h2>UAE Business Setup Cost Estimator</h2>
+    <p>
+      Build an indicative setup budget by entering the quoted fees
+      for your preferred jurisdiction and package.
+    </p>
+  </div>
+
+  <div class="container">
+    <div class="setup-calculator">
+      <h3>Calculate Your Setup Budget</h3>
+
+      <form id="setupCostForm">
+        <div class="setup-grid">
+
+          <div>
+            <label for="setupJurisdiction">Company Jurisdiction *</label>
+            <select id="setupJurisdiction" required>
+              <option value="">Select jurisdiction</option>
+              <option>Mainland</option>
+              <option>Dubai Free Zone</option>
+              <option>Sharjah Free Zone</option>
+              <option>Other UAE Free Zone</option>
+              <option>Offshore</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="setupAuthority">Authority / Package</label>
+            <input id="setupAuthority" type="text"
+              placeholder="e.g. IFZA, Meydan, RAKEZ">
+          </div>
+
+          <div>
+            <label for="setupLicence">Licence & Formation Fee (AED) *</label>
+            <input id="setupLicence" type="number"
+              min="0" step="0.01" placeholder="Enter quoted amount" required>
+          </div>
+
+          <div>
+            <label for="setupVisaCount">Number of Visas</label>
+            <input id="setupVisaCount" type="number"
+              min="0" step="1" value="0" required>
+          </div>
+
+          <div>
+            <label for="setupVisaCost">Cost Per Visa (AED)</label>
+            <input id="setupVisaCost" type="number"
+              min="0" step="0.01" value="0">
+          </div>
+
+          <div>
+            <label for="setupFacility">Office / Flexi-desk / Facility (AED)</label>
+            <input id="setupFacility" type="number"
+              min="0" step="0.01" value="0">
+          </div>
+
+          <div>
+            <label for="setupGovernment">Government & Authority Fees (AED)</label>
+            <input id="setupGovernment" type="number"
+              min="0" step="0.01" value="0">
+          </div>
+
+          <div>
+            <label for="setupOther">Additional Charges (AED)</label>
+            <input id="setupOther" type="number"
+              min="0" step="0.01" value="0">
+          </div>
+
+        </div>
+
+        <div class="setup-actions">
+          <button type="submit" class="btn btn-primary">
+            Calculate Setup Budget
+          </button>
+          <button type="reset" class="btn btn-outline">
+            Reset
+          </button>
+        </div>
+      </form>
+
+      <div id="setupCostResult" class="setup-result" aria-live="polite">
+        <h3>Indicative Setup Budget</h3>
+        <h2 id="setupTotal">AED 0.00</h2>
+        <div id="setupBreakdown"></div>
+        <p id="setupSummary"></p>
+        <a id="setupWhatsApp" class="btn btn-primary"
+          href="#" target="_blank" rel="noopener">
+          Discuss This Estimate on WhatsApp
+        </a>
+      </div>
+
+      <p class="setup-note">
+        This calculator uses the amounts entered by you. It does not
+        contain live authority prices or automatically updated package
+        fees. Actual costs depend on the activity, jurisdiction,
+        shareholders, visa allocation, facility, government charges,
+        VAT and package exclusions. Confirm the final itemised quotation
+        before making payment. This estimate is not an official quotation.
+      </p>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="container section-heading">
     <h2>Documents Generally Required</h2>
@@ -316,7 +509,7 @@
 
     <details>
       <summary>How much does company formation cost?</summary>
-      <p>Costs depend on jurisdiction, activities, visa allocation, facilities, government charges and other requirements. Request an itemised quotation.</p>
+      <p>Costs depend on jurisdiction, activities, visa allocation, facilities, government charges and other requirements. Use the estimator above as a budget planning tool and request an itemised quotation.</p>
     </details>
 
     <details>
@@ -375,7 +568,8 @@
       <h4>Contact</h4>
       <ul>
         <li><a href="tel:+971505356966">+971 50 535 6966</a></li>
-        <li><a href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp DUCES</a></li>
+        <li><a href="https://wa.me/971505356966"
+          target="_blank" rel="noopener">WhatsApp DUCES</a></li>
       </ul>
     </div>
 
@@ -397,6 +591,127 @@
 
 <a class="whatsapp-float" href="https://wa.me/971505356966"
   target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+(function () {
+  const form = document.getElementById("setupCostForm");
+
+  if (!form) return;
+
+  const money = amount => "AED " + amount.toLocaleString("en-AE", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const getNumber = id => {
+      const field = document.getElementById(id);
+      return Number(field.value || 0);
+    };
+
+    const jurisdiction = document.getElementById("setupJurisdiction").value;
+    const authority = document.getElementById("setupAuthority").value.trim() || "Not specified";
+
+    const licence = getNumber("setupLicence");
+    const visaCount = getNumber("setupVisaCount");
+    const visaUnit = getNumber("setupVisaCost");
+    const facility = getNumber("setupFacility");
+    const government = getNumber("setupGovernment");
+    const other = getNumber("setupOther");
+
+    const numericValues = [
+      licence, visaCount, visaUnit, facility, government, other
+    ];
+
+    if (
+      !jurisdiction ||
+      numericValues.some(value => !Number.isFinite(value) || value < 0) ||
+      !Number.isInteger(visaCount)
+    ) {
+      alert("Please enter valid amounts and setup details.");
+      return;
+    }
+
+    const visaTotal = visaCount * visaUnit;
+    const total = licence + visaTotal + facility + government + other;
+
+    if (!Number.isFinite(total)) {
+      alert("The total is too large to calculate. Please check the amounts.");
+      return;
+    }
+
+    document.getElementById("setupTotal").textContent = money(total);
+
+    const rows = [
+      ["Licence and formation", licence],
+      ["Visa charges (" + visaCount + ")", visaTotal],
+      ["Office / facility", facility],
+      ["Government and authority fees", government],
+      ["Additional charges", other],
+      ["Total indicative budget", total]
+    ];
+
+    const table = document.createElement("table");
+    const tbody = document.createElement("tbody");
+
+    rows.forEach(function (item) {
+      const tr = document.createElement("tr");
+      const label = document.createElement("td");
+      const amount = document.createElement("td");
+
+      label.textContent = item[0];
+      amount.textContent = money(item[1]);
+
+      tr.appendChild(label);
+      tr.appendChild(amount);
+      tbody.appendChild(tr);
+    });
+
+    table.appendChild(tbody);
+
+    const breakdown = document.getElementById("setupBreakdown");
+    breakdown.replaceChildren(table);
+
+    document.getElementById("setupSummary").textContent =
+      "Jurisdiction: " + jurisdiction +
+      " | Authority / Package: " + authority +
+      ". Please confirm final charges, VAT and exclusions with DUCES.";
+
+    const message = [
+      "Hello DUCES Consultancy Services,",
+      "",
+      "I used the Business Setup Cost Estimator.",
+      "Jurisdiction: " + jurisdiction,
+      "Authority / Package: " + authority,
+      "Licence and formation: " + money(licence),
+      "Number of visas: " + visaCount,
+      "Visa charges: " + money(visaTotal),
+      "Office / facility: " + money(facility),
+      "Government fees: " + money(government),
+      "Additional charges: " + money(other),
+      "Indicative total: " + money(total),
+      "",
+      "Please help me confirm the final quotation."
+    ].join("\n");
+
+    document.getElementById("setupWhatsApp").href =
+      "https://wa.me/971505356966?text=" + encodeURIComponent(message);
+
+    document.getElementById("setupCostResult").style.display = "block";
+    document.getElementById("setupCostResult").scrollIntoView({
+      behavior: "smooth",
+      block: "nearest"
+    });
+  });
+
+  form.addEventListener("reset", function () {
+    document.getElementById("setupCostResult").style.display = "none";
+    document.getElementById("setupBreakdown").replaceChildren();
+  });
+})();
+</script>
 
 </body>
 </html>
