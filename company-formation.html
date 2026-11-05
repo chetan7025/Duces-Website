@@ -1,0 +1,524 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore UAE mainland, free zone and offshore company formation with DUCES Consultancy Services.">
+<title>Company Formation in UAE | DUCES Consultancy Services</title>
+
+<style>
+:root {
+  --navy:#102b46;
+  --blue:#17618a;
+  --green:#15966d;
+  --light:#f4f8fb;
+  --white:#ffffff;
+  --text:#263746;
+  --muted:#667789;
+}
+* {box-sizing:border-box;margin:0;padding:0}
+body {
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  line-height:1.65;
+  background:#fff;
+}
+a {text-decoration:none;color:inherit}
+.container {width:min(1120px,92%);margin:auto}
+header {
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 2px 12px rgba(0,0,0,.07);
+}
+.nav {
+  min-height:76px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+.logo {
+  font-size:25px;
+  font-weight:800;
+  color:var(--navy);
+  letter-spacing:2px;
+}
+.logo span {color:var(--green)}
+nav {display:flex;gap:22px;align-items:center}
+nav a {font-size:14px;font-weight:600}
+nav a:hover {color:var(--green)}
+.btn {
+  display:inline-block;
+  padding:12px 21px;
+  border-radius:7px;
+  font-weight:700;
+  background:var(--green);
+  color:#fff;
+  border:0;
+}
+.btn:hover {background:#107c5a}
+.btn-outline {
+  background:transparent;
+  border:1px solid #fff;
+  color:#fff;
+}
+.hero {
+  background:linear-gradient(120deg,#102b46,#17618a);
+  color:#fff;
+  padding:85px 0;
+}
+.hero-content {max-width:760px}
+.eyebrow {
+  color:#8de2bd;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:13px;
+}
+h1 {font-size:clamp(34px,5vw,54px);line-height:1.15;margin:16px 0}
+.hero p {font-size:18px;color:#e2edf5;max-width:690px;margin-bottom:27px}
+.hero-actions {display:flex;gap:12px;flex-wrap:wrap}
+section {padding:65px 0}
+.section-title {text-align:center;max-width:760px;margin:0 auto 38px}
+.section-title h2 {font-size:32px;color:var(--navy);line-height:1.2;margin-bottom:12px}
+.section-title p {color:var(--muted)}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.card {
+  padding:27px;
+  border:1px solid #e3ebf1;
+  border-radius:13px;
+  background:#fff;
+  box-shadow:0 7px 24px rgba(16,43,70,.05);
+}
+.card h3 {color:var(--navy);font-size:21px;margin-bottom:10px}
+.card p {color:var(--muted);font-size:15px}
+.card ul {padding-left:19px;margin-top:14px;color:var(--muted);font-size:14px}
+.card li {margin:6px 0}
+.icon {
+  width:48px;height:48px;
+  border-radius:12px;
+  display:grid;place-items:center;
+  background:#e9f7f1;
+  color:var(--green);
+  font-size:23px;
+  margin-bottom:17px;
+}
+.soft {background:var(--light)}
+.jurisdiction {border-top:4px solid var(--green)}
+.steps {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:15px;
+}
+.step {
+  padding:20px;
+  background:#fff;
+  border-radius:12px;
+  border:1px solid #e5edf2;
+}
+.step-number {
+  width:34px;height:34px;
+  border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--green);
+  color:white;font-weight:700;
+  margin-bottom:12px;
+}
+.step h3 {font-size:16px;color:var(--navy);margin-bottom:8px}
+.step p {font-size:13px;color:var(--muted)}
+.info {
+  background:var(--navy);
+  color:white;
+  border-radius:15px;
+  padding:38px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:25px;
+}
+.info h2 {font-size:28px;margin-bottom:10px}
+.info p {color:#d5e3ee}
+.faq {max-width:850px;margin:auto}
+.faq details {
+  border-bottom:1px solid #e1e8ed;
+  padding:18px 5px;
+}
+.faq summary {font-weight:700;color:var(--navy);cursor:pointer}
+.faq details p {padding-top:12px;color:var(--muted)}
+.contact {
+  background:linear-gradient(120deg,#102b46,#17618a);
+  color:white;text-align:center;
+}
+.contact h2 {font-size:32px;margin-bottom:12px}
+.contact p {color:#e1edf4;margin-bottom:23px}
+footer {
+  background:#091e32;
+  color:#d2dce5;
+  padding:27px 0;
+  text-align:center;
+  font-size:13px;
+}
+footer a {color:#8de2bd}
+.disclaimer {font-size:12px;color:#aebdca;margin-top:12px}
+@media(max-width:850px) {
+  nav {gap:11px}
+  nav a {font-size:12px}
+  .grid {grid-template-columns:repeat(2,1fr)}
+  .steps {grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px) {
+  .nav {padding:15px 0;align-items:flex-start;flex-direction:column}
+  nav {width:100%;overflow-x:auto;padding-bottom:5px}
+  nav a {white-space:nowrap}
+  .hero {padding:60px 0}
+  section {padding:48px 0}
+  .grid,.steps {grid-template-columns:1fr}
+  .info {flex-direction:column;align-items:flex-start;padding:26px}
+  .section-title h2 {font-size:27px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="logo">DUC<span>ES</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#options">Setup Options</a>
+      <a href="#jurisdictions">Jurisdictions</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="eyebrow">DUCES Consultancy Services</div>
+    <h1>Start Your Business in the UAE with Confidence.</h1>
+    <p>
+      Explore company formation options across UAE mainland,
+      free zones and offshore jurisdictions with structured
+      guidance at every stage of your business journey.
+    </p>
+    <div class="hero-actions">
+      <a class="btn" href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20want%20to%20explore%20UAE%20company%20formation.">Discuss Your Business</a>
+      <a class="btn btn-outline" href="#options">Explore Setup Options</a>
+    </div>
+  </div>
+</section>
+
+<section id="options">
+  <div class="container">
+    <div class="section-title">
+      <h2>Choose the Right Business Structure</h2>
+      <p>
+        Your business activity, ownership requirements, customer
+        base and operational plans help determine the appropriate
+        company formation route.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="icon">🏢</div>
+        <h3>Mainland Company</h3>
+        <p>
+          Consider a mainland structure for businesses planning
+          to operate within the UAE local market, subject to
+          activity-specific requirements.
+        </p>
+        <ul>
+          <li>Business activity selection</li>
+          <li>Trade name and initial approvals</li>
+          <li>Licence documentation</li>
+          <li>Office and tenancy requirements</li>
+          <li>Ownership and MOA guidance</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="icon">🌐</div>
+        <h3>Free Zone Company</h3>
+        <p>
+          Explore free zone structures for entrepreneurs,
+          consultants, service providers and international
+          business operations.
+        </p>
+        <ul>
+          <li>Free zone comparison</li>
+          <li>Licence activity selection</li>
+          <li>Shareholder documentation</li>
+          <li>Visa package considerations</li>
+          <li>Banking readiness guidance</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="icon">🌍</div>
+        <h3>Offshore Company</h3>
+        <p>
+          Understand offshore company structures for eligible
+          international holding and ownership purposes.
+        </p>
+        <ul>
+          <li>Jurisdiction comparison</li>
+          <li>Holding structure guidance</li>
+          <li>Corporate documentation</li>
+          <li>Registered agent coordination</li>
+          <li>Compliance considerations</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="jurisdictions">
+  <div class="container">
+    <div class="section-title">
+      <h2>Explore UAE Business Jurisdictions</h2>
+      <p>
+        Different jurisdictions offer different activities,
+        facilities, visa options and regulatory requirements.
+        The right choice depends on your actual business needs.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card jurisdiction">
+        <h3>RAKEZ</h3>
+        <p>Explore business establishment options in Ras Al Khaimah.</p>
+      </article>
+      <article class="card jurisdiction">
+        <h3>IFZA</h3>
+        <p>Review Dubai-based free zone company formation options.</p>
+      </article>
+      <article class="card jurisdiction">
+        <h3>Ajman Free Zone</h3>
+        <p>Consider suitable business activity and licence structures.</p>
+      </article>
+      <article class="card jurisdiction">
+        <h3>Dubai Mainland</h3>
+        <p>Explore mainland licensing and operational requirements.</p>
+      </article>
+      <article class="card jurisdiction">
+        <h3>DMCC</h3>
+        <p>Understand the requirements of this Dubai free zone.</p>
+      </article>
+      <article class="card jurisdiction">
+        <h3>SHAMS / SPC</h3>
+        <p>Compare Sharjah free zone options for eligible activities.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Company Formation Support</h2>
+      <p>
+        Practical guidance and coordination for the key stages
+        of setting up and preparing your business.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="icon">📋</div>
+        <h3>Activity Selection</h3>
+        <p>Identify suitable activities based on your proposed business model and applicable licensing rules.</p>
+      </article>
+      <article class="card">
+        <div class="icon">📄</div>
+        <h3>Documentation</h3>
+        <p>Guidance on shareholder KYC, applications, MOA and required supporting documents.</p>
+      </article>
+      <article class="card">
+        <div class="icon">👥</div>
+        <h3>Visa Process</h3>
+        <p>Understand establishment, investor and employee visa requirements through authorised channels.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🏦</div>
+        <h3>Banking Readiness</h3>
+        <p>Prepare business profiles and documentation for independent bank assessment.</p>
+      </article>
+      <article class="card">
+        <div class="icon">📊</div>
+        <h3>Tax & Accounting</h3>
+        <p>Guidance and coordination for applicable VAT, corporate tax and bookkeeping requirements.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🤝</div>
+        <h3>Business Support</h3>
+        <p>Explore additional business support and document coordination requirements.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="process">
+  <div class="container">
+    <div class="section-title">
+      <h2>Your Business Setup Journey</h2>
+      <p>A clear process to help you understand the steps before making a commitment.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Consultation</h3>
+        <p>Discuss your business activity, objectives and ownership requirements.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Structure</h3>
+        <p>Compare suitable jurisdictions and licensing routes.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Documentation</h3>
+        <p>Prepare the required information and supporting documents.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Application</h3>
+        <p>Coordinate submission through the relevant authority or authorised provider.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">5</div>
+        <h3>Next Steps</h3>
+        <p>Discuss post-licensing, banking readiness and compliance needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="info">
+      <div>
+        <h2>Not Sure Which Setup Is Right for You?</h2>
+        <p>
+          Share your proposed business activity and requirements.
+          We can help you understand the available options.
+        </p>
+      </div>
+      <a class="btn" href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20please%20help%20me%20choose%20a%20UAE%20company%20formation%20option.">Talk to Our Team</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="soft">
+  <div class="container">
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+      <p>Some important points to consider before starting your UAE company.</p>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>What is the difference between Mainland and Free Zone?</summary>
+        <p>
+          Mainland and free zone companies operate under different
+          licensing frameworks. The appropriate structure depends
+          on your activities, intended market and applicable rules.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can a foreign national own a UAE company?</summary>
+        <p>
+          Many activities permit full foreign ownership, but
+          requirements and exceptions depend on the activity,
+          jurisdiction and regulatory framework.
+        </p>
+      </details>
+
+      <details>
+        <summary>Does a trade licence guarantee a business bank account?</summary>
+        <p>
+          No. Banks conduct their own compliance, KYC and risk
+          assessments. A trade licence does not guarantee account
+          approval.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can I start a company without taking a visa?</summary>
+        <p>
+          Visa eligibility and package options vary by jurisdiction
+          and licence structure. Confirm the applicable requirements
+          before selecting a package.
+        </p>
+      </details>
+
+      <details>
+        <summary>What documents are generally required?</summary>
+        <p>
+          Common requirements may include passport copies,
+          shareholder contact details, proposed business activities
+          and supporting documents. Additional requirements vary.
+        </p>
+      </details>
+
+      <details>
+        <summary>How much does UAE company formation cost?</summary>
+        <p>
+          Costs depend on jurisdiction, activity, licence type,
+          visa allocation, office requirements and additional
+          government or service fees. Request a quotation based
+          on your requirements.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Let's Build Your UAE Business Journey</h2>
+    <p>
+      Connect with DUCES Consultancy Services to discuss
+      your company formation requirements.
+    </p>
+    <a class="btn" href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20would%20like%20to%20discuss%20company%20formation.">
+      Contact DUCES on WhatsApp
+    </a>
+    <p style="margin-top:17px;margin-bottom:0">Call / WhatsApp: +971 50 535 6966</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>DUCES Consultancy Services</strong></p>
+    <p>Business Setup | Business Support | Consultancy</p>
+    <p class="disclaimer">
+      Information on this website is general in nature and subject
+      to the rules of the relevant authorities. Services are provided
+      only within the applicable licensed and authorised scope.
+      Licence issuance, visas, bank accounts and financing are
+      subject to independent approval by the relevant authorities
+      and institutions. No approval or outcome is guaranteed.
+    </p>
+    <p style="margin-top:15px">© 2026 DUCES Consultancy Services. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
