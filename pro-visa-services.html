@@ -22,11 +22,9 @@
   font-size:clamp(32px,5vw,52px);
   line-height:1.15;
 }
-.pro-hero p {
-  max-width:750px;
-  line-height:1.8;
-}
-.pro-gold {color:#F4B942;}
+.pro-hero p {max-width:750px;line-height:1.8;}
+.pro-gold {color:#D9AD55;}
+
 .pro-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -36,12 +34,13 @@
   background:#fff;
   padding:25px;
   border:1px solid #E5EBF1;
-  border-radius:12px;
+  border-radius:10px;
   box-shadow:0 5px 20px rgba(11,40,80,.05);
 }
 .pro-card h3 {color:#123B70;}
 .pro-card li {margin:8px 0;}
-.pro-highlight {border-left:4px solid #48C9B0;}
+.pro-highlight {border-left:4px solid #D9AD55;}
+
 .pro-process {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -60,7 +59,7 @@
 .pro-note {
   font-size:13px;
   line-height:1.7;
-  color:#64748b;
+  color:#64748B;
 }
 .pro-cta {
   background:#0B2850;
@@ -73,6 +72,23 @@
   margin:12px auto 22px;
   line-height:1.7;
 }
+.faq-list details {
+  background:#fff;
+  border:1px solid #E5EBF1;
+  border-radius:8px;
+  padding:18px 20px;
+  margin-bottom:12px;
+}
+.faq-list summary {
+  color:#123B70;
+  font-weight:600;
+  cursor:pointer;
+}
+.faq-list details p {
+  color:#64748B;
+  line-height:1.7;
+  margin-top:12px;
+}
 @media(max-width:600px) {
   .pro-hero {padding:55px 0;}
 }
@@ -81,16 +97,12 @@
 
 <body>
 
-<!-- TOP BAR -->
-
 <div class="top-bar">
   <div class="container">
     <span>START • MANAGE • GROW</span>
     <a href="tel:+971505356966">+971 50 535 6966</a>
   </div>
 </div>
-
-<!-- NAVIGATION -->
 
 <header class="site-header">
   <div class="container nav-container">
@@ -102,7 +114,6 @@
     <nav>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html">Home</a></li>
-
         <li class="dropdown">
           <a href="company-formation.html">Business Setup ▾</a>
           <ul class="dropdown-menu">
@@ -112,7 +123,6 @@
             <li><a href="company-formation.html#jurisdictions">Jurisdiction Comparison</a></li>
           </ul>
         </li>
-
         <li><a href="business-banking.html">Business Banking</a></li>
         <li><a href="business-loan.html">Business Loans</a></li>
         <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
@@ -127,27 +137,20 @@
 
 <main>
 
-<!-- HERO -->
-
 <section class="pro-hero">
   <div class="container">
     <p class="pro-gold"><strong>UAE PRO & VISA SERVICES</strong></p>
-
     <h1>Your Business and Residency Paperwork, Coordinated.</h1>
-
     <p>
       From employment and investor visa assistance to Emirates ID,
       medical coordination, establishment cards and document
       clearing, DUCES provides a single point of contact for
       your UAE service requirements.
     </p>
-
     <a class="btn btn-primary" href="contact.html">Request PRO Assistance</a>
     <a class="btn btn-outline" href="#pro-services">Explore Services</a>
   </div>
 </section>
-
-<!-- SERVICES -->
 
 <section class="section" id="pro-services">
   <div class="container section-heading">
@@ -256,8 +259,6 @@
   </div>
 </section>
 
-<!-- WHO WE SUPPORT -->
-
 <section class="section section-light">
   <div class="container section-heading">
     <h2>Who We Support</h2>
@@ -265,35 +266,22 @@
   </div>
 
   <div class="container pro-grid">
-
     <article class="pro-card pro-highlight">
       <h3>Business Owners</h3>
-      <p>
-        Investor and partner residency coordination,
-        establishment card and company-related PRO requirements.
-      </p>
+      <p>Investor and partner residency coordination, establishment card and company-related PRO requirements.</p>
     </article>
 
     <article class="pro-card pro-highlight">
       <h3>UAE Companies</h3>
-      <p>
-        Employee visa coordination, renewals, cancellations
-        and business documentation support.
-      </p>
+      <p>Employee visa coordination, renewals, cancellations and business documentation support.</p>
     </article>
 
     <article class="pro-card pro-highlight">
       <h3>Individuals & Families</h3>
-      <p>
-        Family residency, dependent visa, visit visa
-        and other eligible individual application assistance.
-      </p>
+      <p>Family residency, dependent visa, visit visa and other eligible individual application assistance.</p>
     </article>
-
   </div>
 </section>
-
-<!-- JURISDICTION SUPPORT -->
 
 <section class="section">
   <div class="container section-heading">
@@ -302,37 +290,22 @@
   </div>
 
   <div class="container pro-grid">
-
     <article class="pro-card">
       <h3>Mainland Companies</h3>
-      <p>
-        Assistance coordinating relevant employment,
-        immigration and company-related documentation
-        for eligible mainland establishments.
-      </p>
+      <p>Assistance coordinating relevant employment, immigration and company-related documentation for eligible mainland establishments.</p>
     </article>
 
     <article class="pro-card">
       <h3>Free Zone Companies</h3>
-      <p>
-        Coordination of visa and establishment-related
-        requirements according to the applicable Free Zone
-        authority's procedures.
-      </p>
+      <p>Coordination of visa and establishment-related requirements according to the applicable Free Zone authority's procedures.</p>
     </article>
 
     <article class="pro-card">
       <h3>Individual Applicants</h3>
-      <p>
-        Assistance understanding personal, family,
-        dependent and visit visa application requirements.
-      </p>
+      <p>Assistance understanding personal, family, dependent and visit visa application requirements.</p>
     </article>
-
   </div>
 </section>
-
-<!-- PROCESS -->
 
 <section class="section section-light">
   <div class="container section-heading">
@@ -341,7 +314,6 @@
   </div>
 
   <div class="container pro-process">
-
     <article class="pro-step">
       <strong>01</strong>
       <h3>Requirement</h3>
@@ -371,11 +343,8 @@
       <h3>Follow-up</h3>
       <p>We keep you informed about progress and any additional requirements.</p>
     </article>
-
   </div>
 </section>
-
-<!-- WHY DUCES -->
 
 <section class="section">
   <div class="container section-heading">
@@ -384,35 +353,22 @@
   </div>
 
   <div class="container pro-grid">
-
     <article class="pro-card">
       <h3>Single Point of Contact</h3>
-      <p>
-        Coordinate multiple business and residency requirements
-        through one consultancy contact.
-      </p>
+      <p>Coordinate multiple business and residency requirements through one consultancy contact.</p>
     </article>
 
     <article class="pro-card">
       <h3>Clear Service Scope</h3>
-      <p>
-        Understand the service, documents, charges and expected
-        steps before proceeding.
-      </p>
+      <p>Understand the service, documents, charges and expected steps before proceeding.</p>
     </article>
 
     <article class="pro-card">
       <h3>Business-Focused Support</h3>
-      <p>
-        Connect company setup, banking, accounting and PRO
-        requirements through one service journey.
-      </p>
+      <p>Connect company setup, banking, accounting and PRO requirements through one service journey.</p>
     </article>
-
   </div>
 </section>
-
-<!-- DOCUMENT PREPARATION -->
 
 <section class="section section-light">
   <div class="container section-heading">
@@ -421,7 +377,6 @@
   </div>
 
   <div class="container pro-grid">
-
     <article class="pro-card">
       <h3>Personal Documents</h3>
       <ul>
@@ -454,7 +409,6 @@
         <li>Attestation records, where applicable</li>
       </ul>
     </article>
-
   </div>
 
   <div class="container">
@@ -466,117 +420,70 @@
   </div>
 </section>
 
-<!-- FAQ -->
-
 <section class="section">
   <div class="container section-heading">
     <h2>Frequently Asked Questions</h2>
   </div>
 
   <div class="container faq-list">
-
     <details>
       <summary>Can DUCES arrange employment visas?</summary>
-      <p>
-        DUCES provides customer-facing service management and
-        coordination. Regulated applications and processing steps
-        are handled through the relevant authorised channels where required.
-      </p>
+      <p>DUCES provides customer-facing service management and coordination. Regulated applications and processing steps are handled through the relevant authorised channels where required.</p>
     </details>
 
     <details>
       <summary>Can you assist with investor and partner visas?</summary>
-      <p>
-        We can help explain requirements and coordinate the application
-        process for eligible applicants, subject to the relevant
-        authority's rules.
-      </p>
+      <p>We can help explain requirements and coordinate the application process for eligible applicants, subject to the relevant authority's rules.</p>
     </details>
 
     <details>
       <summary>Can you help with Emirates ID and medical appointments?</summary>
-      <p>
-        Yes. We can help coordinate the required steps and document
-        preparation. Medical examinations and official identity
-        processes take place through designated authorities and centres.
-      </p>
+      <p>Yes. We can help coordinate the required steps and document preparation. Medical examinations and official identity processes take place through designated authorities and centres.</p>
     </details>
 
     <details>
       <summary>Can you assist with Free Zone employee visas?</summary>
-      <p>
-        Yes. We can help coordinate requirements according to the
-        relevant Free Zone authority's procedures and applicable
-        permissions.
-      </p>
+      <p>Yes. We can help coordinate requirements according to the relevant Free Zone authority's procedures and applicable permissions.</p>
     </details>
 
     <details>
       <summary>Do you provide visa approval guarantees?</summary>
-      <p>
-        No. Visa and residency decisions are made by the relevant
-        UAE authorities. Processing times and outcomes depend on
-        their requirements and approvals.
-      </p>
+      <p>No. Visa and residency decisions are made by the relevant UAE authorities. Processing times and outcomes depend on their requirements and approvals.</p>
     </details>
 
     <details>
       <summary>Can you assist with document attestation?</summary>
-      <p>
-        We can review requirements and coordinate document
-        attestation through relevant authorised channels,
-        depending on the document and issuing country.
-      </p>
+      <p>We can review requirements and coordinate document attestation through relevant authorised channels, depending on the document and issuing country.</p>
     </details>
 
     <details>
       <summary>Can you assist with visa cancellation and renewal?</summary>
-      <p>
-        Yes. We can help organise the required documents and
-        coordinate renewal or cancellation processes according
-        to the relevant authority's procedures.
-      </p>
+      <p>Yes. We can help organise the required documents and coordinate renewal or cancellation processes according to the relevant authority's procedures.</p>
     </details>
 
     <details>
       <summary>Are government fees included in your service charges?</summary>
-      <p>
-        Any applicable government, authority, medical, insurance,
-        typing, delivery and third-party charges will be clarified
-        in the quotation according to the selected service.
-      </p>
+      <p>Any applicable government, authority, medical, insurance, typing, delivery and third-party charges will be clarified in the quotation according to the selected service.</p>
     </details>
-
   </div>
 </section>
-
-<!-- CTA -->
 
 <section class="pro-cta">
   <div class="container">
     <h2>Need PRO or Visa Assistance?</h2>
-    <p>
-      Share your requirement with DUCES. We will help you
-      understand the documents, service scope and next steps.
-    </p>
+    <p>Share your requirement with DUCES. We will help you understand the documents, service scope and next steps.</p>
 
     <a class="btn btn-primary" href="contact.html">Submit an Enquiry</a>
-
     <a class="btn btn-outline"
       href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20need%20PRO%20and%20visa%20assistance."
-      target="_blank" rel="noopener">
-      WhatsApp DUCES
-    </a>
+      target="_blank" rel="noopener">WhatsApp DUCES</a>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
-
 <footer class="site-footer">
   <div class="container footer-grid">
-
     <div>
       <h3>DUCES Consultancy Services</h3>
       <p>Business consultancy and support services in the UAE.</p>
@@ -608,13 +515,9 @@
     <div>
       <h4>Contact</h4>
       <p><a href="tel:+971505356966">+971 50 535 6966</a></p>
-      <p>
-        <a href="https://wa.me/971505356966"
-          target="_blank" rel="noopener">WhatsApp DUCES</a>
-      </p>
+      <p><a href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp DUCES</a></p>
       <p><a href="contact.html">Send an Enquiry</a></p>
     </div>
-
   </div>
 
   <div class="container">
@@ -624,13 +527,11 @@
       UAE authorities and authorised service providers.
       No approval is guaranteed.
     </p>
-
     <p>© <span data-current-year>2026</span> DUCES Consultancy Services. All rights reserved.</p>
   </div>
 </footer>
 
-<a class="whatsapp-float"
-  href="https://wa.me/971505356966"
+<a class="whatsapp-float" href="https://wa.me/971505356966"
   target="_blank" rel="noopener">WhatsApp</a>
 
 </body>
