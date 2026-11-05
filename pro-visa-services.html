@@ -2,481 +2,910 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PRO & VISA Services UAE | DUCES Consultancy Services</title>
-<meta name="description" content="UAE employment visa, investor visa, family visa, Emirates ID, medical, establishment card, visa renewal, cancellation and document clearing assistance by DUCES.">
-<meta name="theme-color" content="#123B70">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UAE PRO services, visa assistance, Emirates ID, medical fitness, establishment cards and immigration documentation support by DUCES Consultancy Services.">
+  <title>PRO & Visa Services UAE | DUCES Consultancy Services</title>
+  <link rel="stylesheet" href="css/style.css">
 
-<link rel="stylesheet" href="css/style.css">
-<script src="js/script.js" defer></script>
+  <style>
+    :root {
+      --royal:#123B70;
+      --navy:#0B2850;
+      --blue:#1976B9;
+      --gold:#D9AD55;
+      --charcoal:#263445;
+      --grey:#64748B;
+      --white:#FFFFFF;
+      --border:#E5EBF1;
 
-<style>
-.pro-hero {
-  background:linear-gradient(120deg,#0B2850,#123B70 65%,#1976B9);
-  color:#fff;
-  padding:85px 0;
-}
-.pro-hero h1 {
-  max-width:850px;
-  font-size:clamp(32px,5vw,52px);
-  line-height:1.15;
-}
-.pro-hero p {max-width:750px;line-height:1.8;}
-.pro-gold {color:#D9AD55;}
+      /* SERVICE-SPECIFIC PALETTE */
+      --employment:#F5E3DD;
+      --investor:#E9E1F0;
+      --family:#F3DDE5;
+      --visit:#E8E9F2;
+      --emirates:#F2E5D7;
+      --establishment:#E6E2DB;
+      --renewal:#EEDFE0;
 
-.pro-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:22px;
-}
-.pro-card {
-  background:#fff;
-  padding:25px;
-  border:1px solid #E5EBF1;
-  border-radius:10px;
-  box-shadow:0 5px 20px rgba(11,40,80,.05);
-}
-.pro-card h3 {color:#123B70;}
-.pro-card li {margin:8px 0;}
-.pro-highlight {border-left:4px solid #D9AD55;}
+      /* SEPARATE SUPPORTING PALETTE */
+      --documents:#F3E5B9;
+      --eligibility:#E3EAF5;
+      --process:#F4E5D5;
+      --important:#E7EBDD;
+      --faq:#E9E2F0;
+      --general:#F5F1E8;
+      --medical:#DCE9E8;
+    }
 
-.pro-process {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:18px;
-}
-.pro-step {
-  padding:22px;
-  background:#fff;
-  border:1px solid #E5EBF1;
-  border-radius:10px;
-}
-.pro-step strong {
-  color:#1976B9;
-  font-size:23px;
-}
-.pro-note {
-  font-size:13px;
-  line-height:1.7;
-  color:#64748B;
-}
-.pro-cta {
-  background:#0B2850;
-  color:#fff;
-  padding:55px 0;
-  text-align:center;
-}
-.pro-cta p {
-  max-width:650px;
-  margin:12px auto 22px;
-  line-height:1.7;
-}
-.faq-list details {
-  background:#fff;
-  border:1px solid #E5EBF1;
-  border-radius:8px;
-  padding:18px 20px;
-  margin-bottom:12px;
-}
-.faq-list summary {
-  color:#123B70;
-  font-weight:600;
-  cursor:pointer;
-}
-.faq-list details p {
-  color:#64748B;
-  line-height:1.7;
-  margin-top:12px;
-}
-@media(max-width:600px) {
-  .pro-hero {padding:55px 0;}
-}
-</style>
+    * { box-sizing:border-box; }
+
+    html { scroll-behavior:smooth; }
+
+    body {
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--charcoal);
+      background:#fff;
+      line-height:1.65;
+    }
+
+    a { color:inherit; }
+
+    .container {
+      width:min(1160px,92%);
+      margin:auto;
+    }
+
+    .site-header {
+      background:var(--navy);
+      color:white;
+      position:sticky;
+      top:0;
+      z-index:100;
+      box-shadow:0 3px 14px rgba(0,0,0,.12);
+    }
+
+    .nav-wrap {
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand {
+      color:white;
+      text-decoration:none;
+      font-size:25px;
+      font-weight:800;
+      letter-spacing:2px;
+    }
+
+    .brand span { color:var(--gold); }
+
+    .nav-links {
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:17px;
+    }
+
+    .nav-links a {
+      color:white;
+      text-decoration:none;
+      font-size:13px;
+      font-weight:600;
+    }
+
+    .nav-links a:hover { color:var(--gold); }
+
+    .nav-cta {
+      background:var(--gold);
+      color:var(--navy)!important;
+      padding:10px 16px;
+      border-radius:5px;
+    }
+
+    .hero {
+      background:linear-gradient(120deg,var(--navy),var(--royal));
+      color:white;
+      padding:78px 0;
+    }
+
+    .hero-content { max-width:800px; }
+
+    .eyebrow {
+      color:var(--gold);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    h1 {
+      font-size:clamp(34px,5vw,54px);
+      line-height:1.12;
+      margin:15px 0;
+    }
+
+    .hero p {
+      color:#E8EEF6;
+      max-width:700px;
+      font-size:17px;
+    }
+
+    .btn {
+      display:inline-block;
+      padding:13px 21px;
+      margin:10px 10px 0 0;
+      border-radius:5px;
+      text-decoration:none;
+      font-weight:700;
+      background:var(--gold);
+      color:var(--navy);
+    }
+
+    .btn-outline {
+      border:1px solid white;
+      background:transparent;
+      color:white;
+    }
+
+    .section { padding:64px 0; }
+
+    .section-heading {
+      max-width:800px;
+      margin-bottom:30px;
+    }
+
+    .section-heading h2 {
+      color:var(--navy);
+      font-size:clamp(26px,3.5vw,36px);
+      line-height:1.2;
+      margin:0 0 12px;
+    }
+
+    .section-heading p { color:#526174; }
+
+    /* SERVICE BACKGROUNDS */
+    .service-employment { background:var(--employment); }
+    .service-investor { background:var(--investor); }
+    .service-family { background:var(--family); }
+    .service-visit { background:var(--visit); }
+    .service-emirates { background:var(--emirates); }
+    .service-establishment { background:var(--establishment); }
+    .service-renewal { background:var(--renewal); }
+
+    /* SUPPORTING BACKGROUNDS */
+    .support-documents { background:var(--documents); }
+    .support-eligibility { background:var(--eligibility); }
+    .support-process { background:var(--process); }
+    .support-important { background:var(--important); }
+    .support-faq { background:var(--faq); }
+    .support-general { background:var(--general); }
+    .support-medical { background:var(--medical); }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .card {
+      background:rgba(255,255,255,.58);
+      border:1px solid rgba(18,59,112,.12);
+      border-radius:12px;
+      padding:23px;
+      height:100%;
+    }
+
+    .card h3 {
+      color:var(--navy);
+      font-size:19px;
+      margin:0 0 10px;
+    }
+
+    .card p { margin:0; }
+
+    .card ul {
+      padding-left:19px;
+      margin:12px 0 0;
+    }
+
+    .card li { margin:6px 0; }
+
+    .tag {
+      display:inline-block;
+      background:var(--navy);
+      color:white;
+      padding:5px 10px;
+      border-radius:30px;
+      font-size:11px;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+
+    .info-grid {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:16px;
+    }
+
+    .info-panel {
+      background:rgba(255,255,255,.55);
+      border:1px solid rgba(38,52,69,.12);
+      border-radius:10px;
+      padding:21px;
+    }
+
+    .info-panel strong {
+      display:block;
+      color:var(--navy);
+      font-size:17px;
+      margin-bottom:7px;
+    }
+
+    .process-grid {
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:16px;
+    }
+
+    .step {
+      background:rgba(255,255,255,.6);
+      border:1px solid rgba(18,59,112,.12);
+      padding:22px;
+      border-radius:10px;
+    }
+
+    .step-number {
+      width:38px;
+      height:38px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--royal);
+      color:white;
+      font-weight:800;
+      margin-bottom:13px;
+    }
+
+    .notice {
+      background:rgba(255,255,255,.58);
+      border:1px solid rgba(38,52,69,.14);
+      border-left:5px solid var(--gold);
+      border-radius:9px;
+      padding:22px;
+    }
+
+    .notice h3 { color:var(--navy); margin-top:0; }
+
+    .faq-list {
+      display:grid;
+      gap:12px;
+    }
+
+    details {
+      background:rgba(255,255,255,.65);
+      border:1px solid rgba(38,52,69,.12);
+      border-radius:8px;
+      padding:17px 20px;
+    }
+
+    summary {
+      color:var(--navy);
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    details p { margin-bottom:0; }
+
+    .cta {
+      background:var(--navy);
+      color:white;
+      padding:55px 0;
+      text-align:center;
+    }
+
+    .cta h2 { font-size:32px; margin:0 0 10px; }
+    .cta p { color:#E4EAF2; }
+
+    .site-footer {
+      background:#071C38;
+      color:#D8E1EC;
+      padding:35px 0;
+      font-size:13px;
+    }
+
+    .footer-grid {
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr;
+      gap:25px;
+    }
+
+    .site-footer a {
+      display:block;
+      color:#D8E1EC;
+      text-decoration:none;
+      margin:6px 0;
+    }
+
+    .site-footer h3 { color:white; }
+
+    @media(max-width:850px) {
+      .nav-wrap {
+        align-items:flex-start;
+        padding:16px 0;
+        flex-direction:column;
+      }
+
+      .nav-links { gap:12px; }
+
+      .grid,.info-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .process-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+
+    @media(max-width:580px) {
+      .grid,.info-grid,.process-grid,.footer-grid {
+        grid-template-columns:1fr;
+      }
+
+      .hero { padding:55px 0; }
+      .section { padding:48px 0; }
+
+      .nav-links { gap:10px; }
+      .nav-links a { font-size:12px; }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="top-bar">
-  <div class="container">
-    <span>START • MANAGE • GROW</span>
-    <a href="tel:+971505356966">+971 50 535 6966</a>
-  </div>
-</div>
-
 <header class="site-header">
-  <div class="container nav-container">
-    <a class="site-logo" href="index.html">DUC<span>ES</span></a>
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">DUC<span>ES</span></a>
 
-    <button class="menu-toggle" id="menuToggle"
-      aria-label="Open menu" aria-expanded="false">☰</button>
-
-    <nav>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="company-formation.html">Business Setup ▾</a>
-          <ul class="dropdown-menu">
-            <li><a href="company-formation.html#mainland">Mainland</a></li>
-            <li><a href="company-formation.html#freezone">Free Zone</a></li>
-            <li><a href="company-formation.html#offshore">Offshore</a></li>
-            <li><a href="company-formation.html#jurisdictions">Jurisdiction Comparison</a></li>
-          </ul>
-        </li>
-        <li><a href="business-banking.html">Business Banking</a></li>
-        <li><a href="business-loan.html">Business Loans</a></li>
-        <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
-        <li><a href="pro-visa-services.html">PRO & VISA</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="mainland.html">Mainland</a>
+      <a href="freezone.html">Free Zone</a>
+      <a href="business-banking.html">Business Banking</a>
+      <a href="business-loan.html">Business Loans</a>
+      <a href="taxation-accounting.html">Tax & Accounting</a>
+      <a href="pro-visa-services.html">PRO & Visa</a>
+      <a href="contact.html" class="nav-cta">Contact Us</a>
     </nav>
   </div>
 </header>
 
 <main>
 
-<section class="pro-hero">
-  <div class="container">
-    <p class="pro-gold"><strong>UAE PRO & VISA SERVICES</strong></p>
-    <h1>Your Business and Residency Paperwork, Coordinated.</h1>
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <span class="eyebrow">UAE PRO & Immigration Support</span>
+    <h1>PRO & Visa Services in the UAE</h1>
     <p>
-      From employment and investor visa assistance to Emirates ID,
-      medical coordination, establishment cards and document
-      clearing, DUCES provides a single point of contact for
-      your UAE service requirements.
+      Business documentation, visa process coordination and
+      administrative support for companies, investors, employees
+      and families across the UAE.
     </p>
-    <a class="btn btn-primary" href="contact.html">Request PRO Assistance</a>
-    <a class="btn btn-outline" href="#pro-services">Explore Services</a>
+    <a href="contact.html" class="btn">Request Assistance</a>
+    <a href="#services" class="btn btn-outline">Explore Services</a>
   </div>
 </section>
 
-<section class="section" id="pro-services">
-  <div class="container section-heading">
-    <h2>Our PRO & VISA Services</h2>
-    <p>Comprehensive coordination for individuals, business owners and companies in the UAE.</p>
-  </div>
-
-  <div class="container pro-grid">
-
-    <article class="pro-card">
-      <h3>Employment Visa</h3>
-      <p>Assistance coordinating employment visa processes for eligible employees.</p>
-      <ul>
-        <li>Employment visa requirement checklist</li>
-        <li>Employment document coordination</li>
-        <li>Work permit process coordination</li>
-        <li>Medical fitness process coordination</li>
-        <li>Emirates ID application coordination</li>
-      </ul>
-    </article>
-
-    <article class="pro-card">
-      <h3>Investor / Partner Visa</h3>
-      <p>Support for eligible company owners, investors and business partners.</p>
-      <ul>
-        <li>Investor eligibility discussion</li>
-        <li>Company document coordination</li>
-        <li>Application preparation support</li>
-        <li>Medical and Emirates ID coordination</li>
-        <li>Residency renewal assistance</li>
-      </ul>
-    </article>
-
-    <article class="pro-card">
-      <h3>Family / Dependent Visa</h3>
-      <p>Assistance organising family residency application requirements.</p>
-      <ul>
-        <li>Spouse and child visa requirements</li>
-        <li>Relationship document checklist</li>
-        <li>Sponsor document coordination</li>
-        <li>Supporting document preparation</li>
-        <li>Renewal assistance</li>
-      </ul>
-    </article>
-
-    <article class="pro-card">
-      <h3>Visit Visa Assistance</h3>
-      <p>Guidance on visit visa application requirements and available routes.</p>
-      <ul>
-        <li>Visit visa requirement discussion</li>
-        <li>Applicant document checklist</li>
-        <li>Application coordination</li>
-        <li>Status follow-up where permitted</li>
-        <li>Extension requirement guidance</li>
-      </ul>
-    </article>
-
-    <article class="pro-card">
-      <h3>Emirates ID & Medical</h3>
-      <p>Coordination support for required medical fitness and Emirates ID steps.</p>
-      <ul>
-        <li>Appointment requirement guidance</li>
-        <li>Document checklist</li>
-        <li>Medical process coordination</li>
-        <li>Biometrics appointment coordination</li>
-        <li>Emirates ID application follow-up</li>
-      </ul>
-    </article>
-
-    <article class="pro-card">
-      <h3>Establishment Card</h3>
-      <p>Assistance with establishment card applications and related company records.</p>
-      <ul>
-        <li>New establishment card process</li>
-        <li>Company information coordination</li>
-        <li>Renewal requirements</li>
-        <li>Record update assistance</li>
-        <li>Company establishment documentation</li>
-      </ul>
-    </article>
-
-    <article class="pro-card">
-      <h3>Visa Renewal & Cancellation</h3>
-      <p>Support coordinating residency and employment visa renewal or cancellation requirements.</p>
-      <ul>
-        <li>Visa renewal checklist</li>
-        <li>Employment cancellation documentation</li>
-        <li>Residency cancellation coordination</li>
-        <li>Application coordination</li>
-        <li>Status follow-up</li>
-      </ul>
-    </article>
-
-    <article class="pro-card">
-      <h3>Document Clearing & Attestation</h3>
-      <p>Assistance coordinating document processing and attestation requirements.</p>
-      <ul>
-        <li>Document requirement review</li>
-        <li>Educational document attestation</li>
-        <li>Personal document attestation</li>
-        <li>Commercial document coordination</li>
-        <li>Translation and submission coordination</li>
-      </ul>
-    </article>
-
-  </div>
-</section>
-
-<section class="section section-light">
-  <div class="container section-heading">
-    <h2>Who We Support</h2>
-    <p>PRO and residency assistance for different UAE customer requirements.</p>
-  </div>
-
-  <div class="container pro-grid">
-    <article class="pro-card pro-highlight">
-      <h3>Business Owners</h3>
-      <p>Investor and partner residency coordination, establishment card and company-related PRO requirements.</p>
-    </article>
-
-    <article class="pro-card pro-highlight">
-      <h3>UAE Companies</h3>
-      <p>Employee visa coordination, renewals, cancellations and business documentation support.</p>
-    </article>
-
-    <article class="pro-card pro-highlight">
-      <h3>Individuals & Families</h3>
-      <p>Family residency, dependent visa, visit visa and other eligible individual application assistance.</p>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container section-heading">
-    <h2>PRO Support Across UAE Business Jurisdictions</h2>
-    <p>Requirements may differ depending on the issuing authority and type of establishment.</p>
-  </div>
-
-  <div class="container pro-grid">
-    <article class="pro-card">
-      <h3>Mainland Companies</h3>
-      <p>Assistance coordinating relevant employment, immigration and company-related documentation for eligible mainland establishments.</p>
-    </article>
-
-    <article class="pro-card">
-      <h3>Free Zone Companies</h3>
-      <p>Coordination of visa and establishment-related requirements according to the applicable Free Zone authority's procedures.</p>
-    </article>
-
-    <article class="pro-card">
-      <h3>Individual Applicants</h3>
-      <p>Assistance understanding personal, family, dependent and visit visa application requirements.</p>
-    </article>
-  </div>
-</section>
-
-<section class="section section-light">
-  <div class="container section-heading">
-    <h2>Our Service Process</h2>
-    <p>A clear process to help you understand requirements and next steps.</p>
-  </div>
-
-  <div class="container pro-process">
-    <article class="pro-step">
-      <strong>01</strong>
-      <h3>Requirement</h3>
-      <p>Tell us the visa, PRO or document service you require.</p>
-    </article>
-
-    <article class="pro-step">
-      <strong>02</strong>
-      <h3>Document Review</h3>
-      <p>We provide a relevant checklist and review the information supplied.</p>
-    </article>
-
-    <article class="pro-step">
-      <strong>03</strong>
-      <h3>Quotation</h3>
-      <p>Receive a service scope, applicable charges and expected process details.</p>
-    </article>
-
-    <article class="pro-step">
-      <strong>04</strong>
-      <h3>Service Coordination</h3>
-      <p>DUCES manages the customer-facing service and coordinates authorised processing channels where required.</p>
-    </article>
-
-    <article class="pro-step">
-      <strong>05</strong>
-      <h3>Follow-up</h3>
-      <p>We keep you informed about progress and any additional requirements.</p>
-    </article>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container section-heading">
-    <h2>Why Work with DUCES?</h2>
-    <p>Business-focused coordination with clear service communication.</p>
-  </div>
-
-  <div class="container pro-grid">
-    <article class="pro-card">
-      <h3>Single Point of Contact</h3>
-      <p>Coordinate multiple business and residency requirements through one consultancy contact.</p>
-    </article>
-
-    <article class="pro-card">
-      <h3>Clear Service Scope</h3>
-      <p>Understand the service, documents, charges and expected steps before proceeding.</p>
-    </article>
-
-    <article class="pro-card">
-      <h3>Business-Focused Support</h3>
-      <p>Connect company setup, banking, accounting and PRO requirements through one service journey.</p>
-    </article>
-  </div>
-</section>
-
-<section class="section section-light">
-  <div class="container section-heading">
-    <h2>Prepare Your Documents</h2>
-    <p>Common documents that may be requested depending on the service and applicant.</p>
-  </div>
-
-  <div class="container pro-grid">
-    <article class="pro-card">
-      <h3>Personal Documents</h3>
-      <ul>
-        <li>Passport copy</li>
-        <li>Recent photograph</li>
-        <li>Current UAE visa, if applicable</li>
-        <li>Emirates ID, if applicable</li>
-        <li>Contact and address details</li>
-      </ul>
-    </article>
-
-    <article class="pro-card">
-      <h3>Company Documents</h3>
-      <ul>
-        <li>Valid trade licence</li>
-        <li>Establishment card, if applicable</li>
-        <li>Company immigration details</li>
-        <li>Authorised signatory information</li>
-        <li>Employment or company records, if required</li>
-      </ul>
-    </article>
-
-    <article class="pro-card">
-      <h3>Family & Attestation Documents</h3>
-      <ul>
-        <li>Relationship proof, where required</li>
-        <li>Marriage or birth certificates</li>
-        <li>Educational or commercial documents</li>
-        <li>Translations, where required</li>
-        <li>Attestation records, where applicable</li>
-      </ul>
-    </article>
-  </div>
-
+<!-- SERVICE 01 -->
+<section class="section service-employment" id="services">
   <div class="container">
-    <p class="pro-note">
-      This is a general checklist, not a request to upload sensitive
-      documents through the public website enquiry form. Final
-      requirements depend on the relevant authority and application.
-    </p>
+    <div class="section-heading">
+      <span class="tag">SERVICE 01</span>
+      <h2>Employment Visa Assistance</h2>
+      <p>
+        Administrative coordination and documentation support
+        for employers and employees navigating UAE employment
+        visa procedures.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>New Employment Visa</h3>
+        <p>Support with understanding the documentation and process for a new employment visa.</p>
+        <ul>
+          <li>Document checklist</li>
+          <li>Application coordination</li>
+          <li>Status follow-up support</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Employment Visa Renewal</h3>
+        <p>Coordination support for employment visa renewal requirements and documentation.</p>
+        <ul>
+          <li>Renewal document preparation</li>
+          <li>Expiry date tracking support</li>
+          <li>Application follow-up</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Employment Visa Cancellation</h3>
+        <p>Administrative assistance with the cancellation process and related documentation.</p>
+        <ul>
+          <li>Document coordination</li>
+          <li>Application status follow-up</li>
+          <li>Next-step guidance</li>
+        </ul>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container section-heading">
-    <h2>Frequently Asked Questions</h2>
-  </div>
-
-  <div class="container faq-list">
-    <details>
-      <summary>Can DUCES arrange employment visas?</summary>
-      <p>DUCES provides customer-facing service management and coordination. Regulated applications and processing steps are handled through the relevant authorised channels where required.</p>
-    </details>
-
-    <details>
-      <summary>Can you assist with investor and partner visas?</summary>
-      <p>We can help explain requirements and coordinate the application process for eligible applicants, subject to the relevant authority's rules.</p>
-    </details>
-
-    <details>
-      <summary>Can you help with Emirates ID and medical appointments?</summary>
-      <p>Yes. We can help coordinate the required steps and document preparation. Medical examinations and official identity processes take place through designated authorities and centres.</p>
-    </details>
-
-    <details>
-      <summary>Can you assist with Free Zone employee visas?</summary>
-      <p>Yes. We can help coordinate requirements according to the relevant Free Zone authority's procedures and applicable permissions.</p>
-    </details>
-
-    <details>
-      <summary>Do you provide visa approval guarantees?</summary>
-      <p>No. Visa and residency decisions are made by the relevant UAE authorities. Processing times and outcomes depend on their requirements and approvals.</p>
-    </details>
-
-    <details>
-      <summary>Can you assist with document attestation?</summary>
-      <p>We can review requirements and coordinate document attestation through relevant authorised channels, depending on the document and issuing country.</p>
-    </details>
-
-    <details>
-      <summary>Can you assist with visa cancellation and renewal?</summary>
-      <p>Yes. We can help organise the required documents and coordinate renewal or cancellation processes according to the relevant authority's procedures.</p>
-    </details>
-
-    <details>
-      <summary>Are government fees included in your service charges?</summary>
-      <p>Any applicable government, authority, medical, insurance, typing, delivery and third-party charges will be clarified in the quotation according to the selected service.</p>
-    </details>
-  </div>
-</section>
-
-<section class="pro-cta">
+<!-- SUPPORT 01 -->
+<section class="section support-eligibility">
   <div class="container">
-    <h2>Need PRO or Visa Assistance?</h2>
-    <p>Share your requirement with DUCES. We will help you understand the documents, service scope and next steps.</p>
+    <div class="section-heading">
+      <h2>Visa Eligibility & Requirements</h2>
+      <p>
+        Visa eligibility depends on the applicant's circumstances,
+        sponsor, company status and the relevant UAE authority.
+      </p>
+    </div>
 
-    <a class="btn btn-primary" href="contact.html">Submit an Enquiry</a>
-    <a class="btn btn-outline"
-      href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20need%20PRO%20and%20visa%20assistance."
-      target="_blank" rel="noopener">WhatsApp DUCES</a>
+    <div class="info-grid">
+      <div class="info-panel">
+        <strong>Applicant Information</strong>
+        <p>Passport details, current UAE status and other applicant information may be required.</p>
+      </div>
+
+      <div class="info-panel">
+        <strong>Sponsor Information</strong>
+        <p>Company, employer or family sponsor information may be needed depending on the visa type.</p>
+      </div>
+
+      <div class="info-panel">
+        <strong>Authority Approval</strong>
+        <p>Applications remain subject to eligibility checks, approvals and applicable government requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 02 -->
+<section class="section service-investor">
+  <div class="container">
+    <div class="section-heading">
+      <span class="tag">SERVICE 02</span>
+      <h2>Investor & Partner Visa Assistance</h2>
+      <p>
+        Documentation and application coordination support
+        for eligible company owners, investors and business partners.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Investor Visa</h3>
+        <p>Guidance on the documentation and process for eligible investors seeking UAE residency.</p>
+      </article>
+
+      <article class="card">
+        <h3>Partner Visa</h3>
+        <p>Administrative coordination for eligible business partners and shareholders.</p>
+      </article>
+
+      <article class="card">
+        <h3>Company Owner Documentation</h3>
+        <p>Assistance organising company and personal documents for the relevant application process.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 03 -->
+<section class="section service-family">
+  <div class="container">
+    <div class="section-heading">
+      <span class="tag">SERVICE 03</span>
+      <h2>Family Visa Assistance</h2>
+      <p>
+        Administrative support for eligible UAE residents
+        wishing to sponsor family members.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Spouse Visa</h3>
+        <p>Documentation coordination for eligible spouse sponsorship applications.</p>
+      </article>
+
+      <article class="card">
+        <h3>Child Dependent Visa</h3>
+        <p>Support with organising relevant dependent documents and application information.</p>
+      </article>
+
+      <article class="card">
+        <h3>Family Visa Renewal</h3>
+        <p>Coordination support for family residency renewal and related documentation.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT 02 -->
+<section class="section support-documents">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Common Visa Document Checklist</h2>
+      <p>
+        The final document list depends on the visa category,
+        applicant profile and relevant authority.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="info-panel">
+        <strong>Personal Documents</strong>
+        <ul>
+          <li>Passport copy</li>
+          <li>Passport-size photograph</li>
+          <li>Current visa or entry status, if applicable</li>
+          <li>Relevant personal details</li>
+        </ul>
+      </article>
+
+      <article class="info-panel">
+        <strong>Company Documents</strong>
+        <ul>
+          <li>Valid trade licence, where applicable</li>
+          <li>Establishment or immigration details</li>
+          <li>Company-related supporting documents</li>
+          <li>Authorised signatory details, where required</li>
+        </ul>
+      </article>
+
+      <article class="info-panel">
+        <strong>Family Documents</strong>
+        <ul>
+          <li>Relationship proof, where required</li>
+          <li>Attested certificates, where applicable</li>
+          <li>Sponsor identification documents</li>
+          <li>Additional authority-specific documents</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 04 -->
+<section class="section service-visit">
+  <div class="container">
+    <div class="section-heading">
+      <span class="tag">SERVICE 04</span>
+      <h2>Visit Visa Assistance</h2>
+      <p>
+        Application documentation and coordination support
+        for visitors planning to travel to the UAE.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Tourist & Visit Visa</h3>
+        <p>Guidance on general application documentation and available visa routes.</p>
+      </article>
+
+      <article class="card">
+        <h3>Family Visit Visa</h3>
+        <p>Documentation support for eligible family visit applications.</p>
+      </article>
+
+      <article class="card">
+        <h3>Application Follow-up</h3>
+        <p>Coordination and status follow-up support for submitted applications.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT 03 -->
+<section class="section support-medical">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Medical Fitness & Application Coordination</h2>
+      <p>
+        Support with understanding the steps and coordinating
+        appointments or documents through the relevant authorised channels.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="info-panel">
+        <strong>Medical Fitness Process</strong>
+        <p>Guidance on the medical fitness process and appointment requirements for applicable residency applications.</p>
+      </article>
+
+      <article class="info-panel">
+        <strong>Medical Appointment Coordination</strong>
+        <p>Administrative coordination support for appointments through approved service channels.</p>
+      </article>
+
+      <article class="info-panel">
+        <strong>Application Follow-up</strong>
+        <p>Assistance tracking process stages and identifying outstanding requirements.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 05 -->
+<section class="section service-emirates">
+  <div class="container">
+    <div class="section-heading">
+      <span class="tag">SERVICE 05</span>
+      <h2>Emirates ID Assistance</h2>
+      <p>
+        Documentation and application coordination support
+        for Emirates ID-related procedures.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>New Emirates ID</h3>
+        <p>Guidance on the documentation and application steps for eligible applicants.</p>
+      </article>
+
+      <article class="card">
+        <h3>Emirates ID Renewal</h3>
+        <p>Administrative support for renewal documentation and application coordination.</p>
+      </article>
+
+      <article class="card">
+        <h3>Emirates ID Replacement</h3>
+        <p>Guidance on the replacement process for lost, damaged or other eligible cases.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 06 -->
+<section class="section service-establishment">
+  <div class="container">
+    <div class="section-heading">
+      <span class="tag">SERVICE 06</span>
+      <h2>Establishment Card & Company Immigration Support</h2>
+      <p>
+        Administrative coordination for company immigration-related
+        documentation and establishment records.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>New Establishment Card</h3>
+        <p>Documentation guidance and coordination for eligible new company establishment applications.</p>
+      </article>
+
+      <article class="card">
+        <h3>Establishment Card Renewal</h3>
+        <p>Support with renewal document organisation and application follow-up.</p>
+      </article>
+
+      <article class="card">
+        <h3>Company Immigration Records</h3>
+        <p>Assistance organising company immigration-related information and records.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 07 -->
+<section class="section service-renewal">
+  <div class="container">
+    <div class="section-heading">
+      <span class="tag">SERVICE 07</span>
+      <h2>Visa Renewal, Cancellation & Status Support</h2>
+      <p>
+        Administrative assistance for businesses and individuals
+        managing visa-related changes and application requirements.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Residency Visa Renewal</h3>
+        <p>Coordination support for eligible residency renewal applications.</p>
+      </article>
+
+      <article class="card">
+        <h3>Visa Cancellation</h3>
+        <p>Documentation coordination and process follow-up for applicable visa cancellations.</p>
+      </article>
+
+      <article class="card">
+        <h3>Visa Status Assistance</h3>
+        <p>Guidance on checking application status and identifying the next administrative step.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT 04 -->
+<section class="section support-process">
+  <div class="container">
+    <div class="section-heading">
+      <h2>How Our PRO & Visa Support Works</h2>
+      <p>
+        A structured process designed to make documentation
+        and administrative coordination easier.
+      </p>
+    </div>
+
+    <div class="process-grid">
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>Understand Requirements</h3>
+        <p>We discuss the applicant's situation and the required service.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>Document Checklist</h3>
+        <p>We identify the documents and information required for the process.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>Application Coordination</h3>
+        <p>We coordinate the agreed administrative steps through relevant channels.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">04</div>
+        <h3>Follow-up</h3>
+        <p>We assist with tracking progress and communicating outstanding requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT 05 -->
+<section class="section support-important">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Important Information Before Applying</h2>
+      <p>Visa and immigration applications are subject to government rules and approvals.</p>
+    </div>
+
+    <div class="notice">
+      <h3>Eligibility, Approvals & Service Scope</h3>
+      <p>
+        Visa eligibility, required documents, fees and processing
+        timelines depend on the applicant's circumstances and the
+        relevant UAE authority.
+      </p>
+      <p>
+        DUCES provides consultancy, document coordination and
+        administrative assistance within its authorised business
+        activities. Government application approval is not guaranteed.
+      </p>
+      <p>
+        Government fees, medical charges, insurance costs, deposits
+        and other third-party charges may be separate from DUCES
+        consultancy or coordination fees.
+      </p>
+      <p>
+        Where a service requires access or authorisation from a
+        government portal or regulated service provider, the process
+        must be completed through the appropriate authorised channel.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT 06 -->
+<section class="section support-faq">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Frequently Asked Questions</h2>
+      <p>Common questions about UAE PRO and visa assistance.</p>
+    </div>
+
+    <div class="faq-list">
+      <details>
+        <summary>What are PRO services in the UAE?</summary>
+        <p>PRO services generally refer to administrative support and coordination for government-related company documentation, immigration procedures and other official processes.</p>
+      </details>
+
+      <details>
+        <summary>Can you assist with employment visas?</summary>
+        <p>DUCES can assist with documentation guidance and administrative coordination for eligible employment visa processes.</p>
+      </details>
+
+      <details>
+        <summary>Can you assist with investor and partner visas?</summary>
+        <p>Yes, DUCES can provide documentation and application coordination support for eligible investor and partner visa processes.</p>
+      </details>
+
+      <details>
+        <summary>Can you help with family visa applications?</summary>
+        <p>DUCES can help organise documents and coordinate administrative steps for eligible family sponsorship applications.</p>
+      </details>
+
+      <details>
+        <summary>Can you assist with Emirates ID?</summary>
+        <p>DUCES can provide guidance and documentation coordination support for applicable Emirates ID procedures.</p>
+      </details>
+
+      <details>
+        <summary>Can you assist with medical fitness appointments?</summary>
+        <p>DUCES can help coordinate the administrative steps through the relevant approved channels. Medical examinations are performed by authorised medical facilities.</p>
+      </details>
+
+      <details>
+        <summary>How long does a UAE visa application take?</summary>
+        <p>Processing times vary by visa type, applicant circumstances, authority workload and document completeness. No fixed timeline can be guaranteed.</p>
+      </details>
+
+      <details>
+        <summary>Are government fees included in your service fee?</summary>
+        <p>Not necessarily. Government fees and third-party charges should be confirmed separately in the service quotation.</p>
+      </details>
+
+      <details>
+        <summary>Can you guarantee visa approval?</summary>
+        <p>No. Final decisions are made by the relevant UAE authorities. DUCES can assist with documentation and coordination but cannot guarantee approval.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT 07 -->
+<section class="section support-general">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Official UAE Government Resources</h2>
+      <p>Use official government channels for current rules, requirements and application information.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>ICP UAE</h3>
+        <p>Federal identity, citizenship, customs and port security services, including relevant residency and identity services.</p>
+        <p><a href="https://icp.gov.ae/" target="_blank" rel="noopener">Visit ICP Website</a></p>
+      </article>
+
+      <article class="card">
+        <h3>GDRFA Dubai</h3>
+        <p>Dubai residency and foreigners affairs information and services.</p>
+        <p><a href="https://www.gdrfad.gov.ae/" target="_blank" rel="noopener">Visit GDRFA Dubai</a></p>
+      </article>
+
+      <article class="card">
+        <h3>MOHRE</h3>
+        <p>UAE labour and employment-related information and services.</p>
+        <p><a href="https://www.mohre.gov.ae/" target="_blank" rel="noopener">Visit MOHRE Website</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Need PRO or Visa Assistance in the UAE?</h2>
+    <p>Discuss your company or personal documentation requirements with DUCES.</p>
+    <a href="contact.html" class="btn">Contact DUCES</a>
+    <a href="https://wa.me/971505356966" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp Us</a>
   </div>
 </section>
 
@@ -486,53 +915,38 @@
   <div class="container footer-grid">
     <div>
       <h3>DUCES Consultancy Services</h3>
-      <p>Business consultancy and support services in the UAE.</p>
-      <p><strong>START • MANAGE • GROW</strong></p>
+      <p>
+        Business consultancy, banking consultancy and documentation
+        support in the UAE.
+      </p>
+      <p>Contact: +971 50 535 6966</p>
     </div>
 
     <div>
-      <h4>Our Services</h4>
-      <ul>
-        <li><a href="company-formation.html">Business Setup</a></li>
-        <li><a href="business-banking.html">Business Banking</a></li>
-        <li><a href="business-loan.html">Business Loans</a></li>
-        <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
-        <li><a href="pro-visa-services.html">PRO & VISA</a></li>
-      </ul>
+      <h3>Our Services</h3>
+      <a href="mainland.html">Mainland Company Setup</a>
+      <a href="freezone.html">Free Zone Company Setup</a>
+      <a href="business-banking.html">Business Banking</a>
+      <a href="business-loan.html">Business Loans</a>
     </div>
 
     <div>
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4>Contact</h4>
-      <p><a href="tel:+971505356966">+971 50 535 6966</a></p>
-      <p><a href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp DUCES</a></p>
-      <p><a href="contact.html">Send an Enquiry</a></p>
+      <h3>More Information</h3>
+      <a href="taxation-accounting.html">Tax & Accounting</a>
+      <a href="pro-visa-services.html">PRO & Visa Services</a>
+      <a href="contact.html">Contact Us</a>
     </div>
   </div>
 
   <div class="container">
-    <p class="pro-note">
-      Visa, immigration, medical, Emirates ID and attestation
-      decisions or regulated processing are subject to relevant
-      UAE authorities and authorised service providers.
-      No approval is guaranteed.
-    </p>
-    <p>© <span data-current-year>2026</span> DUCES Consultancy Services. All rights reserved.</p>
+    <p>© <span id="currentYear"></span> DUCES Consultancy Services. All rights reserved.</p>
   </div>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/971505356966"
-  target="_blank" rel="noopener">WhatsApp</a>
+<script>
+  document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+</script>
 
 </body>
 </html>
