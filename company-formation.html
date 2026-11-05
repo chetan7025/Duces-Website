@@ -1,699 +1,735 @@
 
-/* =========================================
-   DUCES CONSULTANCY SERVICES
-   FINAL APPROVED DESIGN SYSTEM
-   ========================================= */
-
-:root {
-  --primary: #123B70;
-  --primary-dark: #0B2850;
-  --ocean: #1976B9;
-  --gold: #D9AD55;
-  --gold-soft: #F7F0E3;
-
-  --white: #FFFFFF;
-  --ice: #F5F7FA;
-  --charcoal: #263445;
-  --silver: #E5EBF1;
-  --muted: #64748B;
-
-  /* Service backgrounds */
-  --mainland-bg: #F3EBDD;
-  --freezone-bg: #EFF4E7;
-  --offshore-bg: #EAF1F8;
-  --banking-bg: #F7F0E3;
-  --loans-bg: #E9F0F8;
-  --tax-bg: #F0F0EB;
-  --visa-bg: #F5EBE7;
-
-  --shadow: 0 12px 35px rgba(18, 59, 112, 0.10);
-  --shadow-soft: 0 5px 20px rgba(18, 59, 112, 0.05);
-  --radius: 10px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--white);
-  color: var(--charcoal);
-  line-height: 1.7;
-  font-size: 16px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  color: var(--ocean);
-  text-decoration: none;
-  transition: 0.25s ease;
-}
-
-a:hover {
-  color: var(--primary-dark);
-}
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
-}
-
-.container {
-  width: min(1160px, 92%);
-  margin: auto;
-}
-
-/* TOP BAR */
-
-.top-bar {
-  background: var(--primary-dark);
-  color: var(--white);
-  padding: 9px 0;
-  font-size: 13px;
-}
-
-.top-bar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.top-bar a {
-  color: var(--white);
-}
-
-/* HEADER */
-
-.site-header,
-header {
-  background: var(--white);
-  position: relative;
-  z-index: 100;
-  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.06);
-}
-
-.nav-container {
-  min-height: 82px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
-}
-
-.logo,
-.site-logo {
-  color: var(--primary);
-  font-size: 27px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.logo span,
-.site-logo span {
-  color: var(--gold);
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 23px;
-  list-style: none;
-}
-
-.nav-menu a {
-  color: var(--primary);
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.nav-menu a:hover {
-  color: var(--ocean);
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 235px;
-  padding: 12px 0;
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  list-style: none;
-}
-
-.dropdown:hover > .dropdown-menu,
-.dropdown:focus-within > .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 9px 17px;
-  white-space: nowrap;
-}
-
-.dropdown-menu a:hover {
-  background: var(--ice);
-}
-
-/* HERO */
-
-.hero {
-  background: linear-gradient(
-    120deg,
-    var(--primary-dark),
-    var(--primary)
-  );
-  color: var(--white);
-  padding: 90px 0;
-  overflow: hidden;
-}
-
-.hero-content {
-  max-width: 760px;
-}
-
-.hero h1 {
-  font-size: clamp(34px, 5vw, 56px);
-  line-height: 1.15;
-  margin-bottom: 22px;
-  font-weight: 800;
-}
-
-.hero p {
-  font-size: 18px;
-  color: #E7F0FA;
-  max-width: 680px;
-  margin-bottom: 28px;
-}
-
-.hero .highlight {
-  color: var(--gold);
-}
-
-/* INNER PAGE BANNER */
-
-.page-banner {
-  background: var(--primary-dark);
-  padding: 62px 0;
-  color: var(--white);
-  text-align: center;
-}
-
-.page-banner h1 {
-  font-size: clamp(30px, 4vw, 44px);
-  margin-bottom: 12px;
-}
-
-.page-banner p {
-  color: #E7F0FA;
-  max-width: 760px;
-  margin: auto;
-}
-
-/* BUTTONS */
-
-.btn {
-  display: inline-block;
-  padding: 13px 25px;
-  border-radius: 7px;
-  font-weight: 700;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: 0.25s ease;
-  text-align: center;
-}
-
-.btn-primary {
-  background: var(--gold);
-  color: var(--primary-dark);
-}
-
-.btn-primary:hover {
-  background: var(--white);
-  color: var(--primary);
-}
-
-.btn-outline {
-  border-color: var(--white);
-  color: var(--white);
-}
-
-.btn-outline:hover {
-  background: var(--white);
-  color: var(--primary);
-}
-
-.btn-blue {
-  background: var(--primary);
-  color: var(--white);
-}
-
-.btn-blue:hover {
-  background: var(--ocean);
-  color: var(--white);
-}
-
-/* SECTIONS */
-
-.section {
-  padding: 75px 0;
-}
-
-.section-light {
-  background: var(--ice);
-}
-
-.section-heading {
-  max-width: 750px;
-  margin: 0 auto 42px;
-  text-align: center;
-}
-
-.section-heading h2 {
-  color: var(--primary);
-  font-size: clamp(27px, 4vw, 38px);
-  line-height: 1.25;
-  margin-bottom: 14px;
-}
-
-.section-heading p {
-  color: var(--muted);
-}
-
-/* SERVICE BACKGROUNDS */
-
-.bg-mainland { background: var(--mainland-bg); }
-.bg-freezone { background: var(--freezone-bg); }
-.bg-offshore { background: var(--offshore-bg); }
-.bg-banking { background: var(--banking-bg); }
-.bg-loans { background: var(--loans-bg); }
-.bg-tax { background: var(--tax-bg); }
-.bg-visa { background: var(--visa-bg); }
-
-/* SERVICE CARDS */
-
-.service-grid,
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.service-card,
-.card {
-  background: var(--white);
-  padding: 28px;
-  border: 1px solid var(--silver);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
-  transition: 0.25s ease;
-}
-
-.service-card:hover,
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
-  border-color: var(--gold);
-}
-
-.service-card h3,
-.card h3 {
-  color: var(--primary);
-  font-size: 21px;
-  margin-bottom: 12px;
-}
-
-.service-card p,
-.card p {
-  color: var(--muted);
-  margin-bottom: 15px;
-}
-
-/* CONTENT */
-
-.content-section {
-  padding: 55px 0;
-}
-
-.content-section h2,
-.content-section h3 {
-  color: var(--primary);
-  margin: 22px 0 12px;
-}
-
-.content-section p {
-  margin-bottom: 16px;
-}
-
-.content-section ul {
-  padding-left: 22px;
-  margin-bottom: 20px;
-}
-
-/* CALCULATORS AND FORMS */
-
-.calculator,
-.contact-form,
-.form-container {
-  background: var(--white);
-  padding: 32px;
-  border: 1px solid var(--silver);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
-  max-width: 850px;
-  margin: 25px auto;
-}
-
-.form-group {
-  margin-bottom: 18px;
-}
-
-.form-group label {
-  display: block;
-  color: var(--primary);
-  font-weight: 700;
-  margin-bottom: 7px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea,
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid #CBD5E1;
-  border-radius: 7px;
-  background: var(--white);
-  color: var(--charcoal);
-  outline: none;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: var(--ocean);
-  box-shadow: 0 0 0 3px rgba(25, 118, 185, 0.10);
-}
-
-textarea {
-  min-height: 130px;
-  resize: vertical;
-}
-
-.result-box {
-  background: var(--gold-soft);
-  border-left: 4px solid var(--gold);
-  padding: 20px;
-  border-radius: 7px;
-  margin-top: 20px;
-}
-
-/* CTA */
-
-.cta-section {
-  background: var(--primary);
-  color: var(--white);
-  padding: 65px 0;
-  text-align: center;
-}
-
-.cta-section h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.cta-section p {
-  color: #E7F0FA;
-  margin-bottom: 25px;
-}
-
-/* FOOTER */
-
-.site-footer,
-footer {
-  background: var(--primary-dark);
-  color: var(--white);
-  padding: 55px 0 20px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 35px;
-  margin-bottom: 35px;
-}
-
-.site-footer h3,
-.site-footer h4,
-footer h3,
-footer h4 {
-  color: var(--white);
-  margin-bottom: 15px;
-}
-
-.site-footer p,
-footer p {
-  color: #C8D7E8;
-}
-
-.site-footer ul,
-footer ul {
-  list-style: none;
-}
-
-.site-footer li,
-footer li {
-  margin-bottom: 9px;
-}
-
-.site-footer a,
-footer a {
-  color: #DCE8F5;
-}
-
-.site-footer a:hover,
-footer a:hover {
-  color: var(--gold);
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  padding-top: 18px;
-  text-align: center;
-  color: #C8D7E8;
-  font-size: 13px;
-}
-
-/* WHATSAPP */
-
-.whatsapp-float {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 999;
-  background: var(--primary-dark);
-  color: var(--white);
-  padding: 13px 18px;
-  border-radius: 50px;
-  font-weight: 700;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
-}
-
-.whatsapp-float:hover {
-  color: var(--white);
-  background: var(--ocean);
-  transform: translateY(-3px);
-}
-
-/* TABLES */
-
-.table-wrap {
-  width: 100%;
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 600px;
-  background: var(--white);
-}
-
-th,
-td {
-  padding: 13px 15px;
-  border: 1px solid var(--silver);
-  text-align: left;
-}
-
-th {
-  background: var(--primary);
-  color: var(--white);
-}
-
-/* UTILITIES */
-
-.text-center { text-align: center; }
-.text-blue { color: var(--primary); }
-.text-gold { color: var(--gold); }
-
-.mt-20 { margin-top: 20px; }
-.mb-20 { margin-bottom: 20px; }
-
-/* ACCESSIBILITY */
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: 3px solid rgba(217, 173, 85, 0.55);
-  outline-offset: 2px;
-}
-
-/* MOBILE NAVIGATION */
-
-.menu-toggle {
-  display: none;
-  background: var(--primary);
-  color: var(--white);
-  border: 0;
-  border-radius: 7px;
-  padding: 9px 14px;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-@media (max-width: 900px) {
-  .service-grid,
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .nav-container {
-    min-height: 75px;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    padding: 12px 0;
-    gap: 12px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-container nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    width: 100%;
-  }
-
-  .nav-menu {
-    display: none;
-    width: 100%;
-    background: var(--white);
-    padding: 18px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    box-shadow: var(--shadow);
-    border-radius: 0 0 10px 10px;
-    max-height: 75vh;
-    overflow-y: auto;
-  }
-
-  .nav-menu.is-open {
-    display: flex;
-  }
-
-  .nav-menu li,
-  .dropdown {
-    width: 100%;
-  }
-
-  .dropdown-menu {
-    position: static;
-    display: none;
-    width: 100%;
-    min-width: 0;
-    margin-top: 8px;
-    box-shadow: none;
-    border: 1px solid var(--silver);
-  }
-
-  .dropdown:hover > .dropdown-menu {
-    display: none;
-  }
-
-  .dropdown.open > .dropdown-menu,
-  .dropdown:focus-within > .dropdown-menu {
-    display: block;
-  }
-}
-
-@media (max-width: 650px) {
-  .top-bar .container {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .hero {
-    padding: 60px 0;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .section {
-    padding: 50px 0;
-  }
-
-  .service-grid,
-  .card-grid,
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .calculator,
-  .contact-form,
-  .form-container {
-    padding: 20px;
-  }
-
-  .cta-section h2 {
-    font-size: 26px;
-  }
-
-  .page-banner {
-    padding: 45px 0;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore UAE mainland, free zone and offshore company formation options with DUCES Consultancy Services. Get guidance on business activities, licensing and setup requirements.">
+  <title>UAE Business Setup & Company Formation | DUCES</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --royal:#123B70;
+      --navy:#0B2850;
+      --blue:#1976B9;
+      --gold:#D9AD55;
+      --charcoal:#263445;
+      --muted:#64748B;
+      --white:#FFFFFF;
+      --cloud:#F8FAFC;
+      --mist:#EDF2F7;
+      --border:#DCE4ED;
+
+      --mainland:#F3EBDD;
+      --freezone:#EFF4E7;
+      --offshore:#EAF1F8;
+
+      --yellow:#FFF1B8;
+      --pastel-green:#DDF0D5;
+      --sky:#D9EBFA;
+      --beige:#F3DDC5;
+      --lavender:#E9DFF5;
+      --rose:#F5DFE5;
+    }
+
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:90px; }
+    body {
+      margin:0;
+      color:var(--charcoal);
+      background:var(--white);
+      font-family:Arial, Helvetica, sans-serif;
+      line-height:1.65;
+    }
+    a { color:inherit; }
+    .site-header {
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:var(--white);
+      box-shadow:0 2px 14px rgba(11,40,80,.08);
+    }
+    .nav-container {
+      max-width:1180px;
+      min-height:76px;
+      margin:auto;
+      padding:12px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand {
+      color:var(--royal);
+      text-decoration:none;
+      font-size:25px;
+      font-weight:800;
+      letter-spacing:1px;
+    }
+    .brand small {
+      display:block;
+      color:var(--muted);
+      font-size:10px;
+      font-weight:600;
+      letter-spacing:2px;
+    }
+    .nav-menu {
+      display:flex;
+      align-items:center;
+      gap:22px;
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    .nav-menu a {
+      color:var(--charcoal);
+      text-decoration:none;
+      font-size:14px;
+      font-weight:700;
+    }
+    .nav-menu a:hover,
+    .nav-menu a:focus { color:var(--blue); }
+    .dropdown { position:relative; }
+    .dropdown-menu {
+      display:none;
+      position:absolute;
+      top:100%;
+      left:0;
+      min-width:210px;
+      padding:10px;
+      margin:0;
+      list-style:none;
+      background:var(--white);
+      box-shadow:0 8px 24px rgba(11,40,80,.14);
+      border:1px solid var(--border);
+      border-radius:10px;
+    }
+    .dropdown:hover > .dropdown-menu,
+    .dropdown:focus-within > .dropdown-menu,
+    .dropdown.open > .dropdown-menu { display:block; }
+    .dropdown-menu li a {
+      display:block;
+      padding:9px 10px;
+      border-radius:6px;
+    }
+    .dropdown-menu li a:hover { background:var(--mist); }
+    .menu-toggle {
+      display:none;
+      border:0;
+      background:var(--royal);
+      color:var(--white);
+      border-radius:7px;
+      padding:9px 13px;
+      font-size:19px;
+      cursor:pointer;
+    }
+
+    .container { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    .hero {
+      padding:85px 20px;
+      color:var(--white);
+      text-align:center;
+      background:linear-gradient(125deg,var(--navy),var(--royal),var(--blue));
+    }
+    .eyebrow {
+      display:inline-block;
+      margin-bottom:12px;
+      color:var(--gold);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+    .hero h1 {
+      max-width:850px;
+      margin:0 auto 18px;
+      font-size:clamp(34px,5vw,54px);
+      line-height:1.15;
+    }
+    .hero p {
+      max-width:760px;
+      margin:0 auto 28px;
+      color:#EAF1F8;
+      font-size:17px;
+    }
+    .button {
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:7px;
+      background:var(--gold);
+      color:var(--navy);
+      text-decoration:none;
+      font-weight:800;
+    }
+    .button-outline {
+      display:inline-block;
+      padding:11px 21px;
+      border:1px solid rgba(255,255,255,.75);
+      border-radius:7px;
+      color:var(--white);
+      text-decoration:none;
+      font-weight:700;
+      margin-left:8px;
+    }
+    .section { padding:68px 0; }
+    .section-heading { max-width:760px; margin:0 auto 35px; text-align:center; }
+    .section-heading h2 {
+      margin:0 0 12px;
+      color:var(--royal);
+      font-size:clamp(27px,3vw,36px);
+      line-height:1.2;
+    }
+    .section-heading p { margin:0; color:var(--muted); }
+    .service-section { padding:65px 0; }
+    .mainland-bg { background:var(--mainland); }
+    .freezone-bg { background:var(--freezone); }
+    .offshore-bg { background:var(--offshore); }
+    .neutral-bg { background:var(--cloud); }
+    .mist-bg { background:var(--mist); }
+    .yellow-bg { background:var(--yellow); }
+    .green-bg { background:var(--pastel-green); }
+    .sky-bg { background:var(--sky); }
+    .beige-bg { background:var(--beige); }
+    .lavender-bg { background:var(--lavender); }
+    .rose-bg { background:var(--rose); }
+
+    .service-layout {
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:35px;
+      align-items:center;
+    }
+    .service-copy h2 {
+      color:var(--royal);
+      font-size:34px;
+      line-height:1.2;
+      margin:0 0 15px;
+    }
+    .service-copy p { color:#465568; }
+    .service-copy ul { padding-left:20px; }
+    .service-copy li { margin:7px 0; }
+    .info-card {
+      padding:27px;
+      background:rgba(255,255,255,.88);
+      border:1px solid rgba(18,59,112,.10);
+      border-radius:13px;
+      box-shadow:0 8px 24px rgba(11,40,80,.06);
+    }
+    .info-card h3 { color:var(--royal); margin-top:0; }
+    .info-card ul { padding-left:19px; margin-bottom:0; }
+    .info-card li { margin:8px 0; }
+    .tag {
+      display:inline-block;
+      margin:0 6px 8px 0;
+      padding:5px 10px;
+      border-radius:20px;
+      background:var(--white);
+      color:var(--royal);
+      font-size:12px;
+      font-weight:700;
+    }
+    .grid-3 {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .grid-2 {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+    .pastel-card {
+      height:100%;
+      padding:23px;
+      border-radius:12px;
+      border:1px solid rgba(18,59,112,.08);
+    }
+    .pastel-card h3 { margin:0 0 9px; color:var(--royal); }
+    .pastel-card p { margin:0; color:#465568; }
+    .comparison-wrap {
+      overflow-x:auto;
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(11,40,80,.05);
+    }
+    table {
+      width:100%;
+      border-collapse:collapse;
+      min-width:650px;
+    }
+    th,td {
+      padding:16px;
+      text-align:left;
+      vertical-align:top;
+      border-bottom:1px solid var(--border);
+    }
+    th { background:var(--navy); color:var(--white); }
+    td:first-child { font-weight:700; color:var(--royal); }
+    tr:last-child td { border-bottom:0; }
+    .notice {
+      margin-top:22px;
+      padding:18px 20px;
+      border-left:4px solid var(--gold);
+      border-radius:7px;
+      background:var(--yellow);
+      color:var(--charcoal);
+    }
+    .step-number {
+      display:inline-flex;
+      width:36px;
+      height:36px;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:var(--royal);
+      color:var(--white);
+      font-weight:800;
+      margin-bottom:12px;
+    }
+    .faq-item {
+      padding:19px 21px;
+      margin-bottom:12px;
+      background:var(--white);
+      border:1px solid var(--border);
+      border-radius:9px;
+    }
+    .faq-item h3 { margin:0 0 7px; color:var(--royal); font-size:17px; }
+    .faq-item p { margin:0; color:var(--muted); }
+    .cta {
+      padding:65px 20px;
+      text-align:center;
+      background:var(--royal);
+      color:var(--white);
+    }
+    .cta h2 { margin:0 0 12px; font-size:32px; }
+    .cta p { max-width:700px; margin:0 auto 23px; color:#EAF1F8; }
+    .site-footer {
+      padding:30px 20px;
+      background:var(--navy);
+      color:#EAF1F8;
+      text-align:center;
+    }
+    .site-footer p { margin:6px 0; font-size:13px; }
+    .site-footer a { color:var(--white); text-decoration:none; }
+    .disclaimer { font-size:12px; color:var(--muted); }
+
+    @media(max-width:900px) {
+      .menu-toggle { display:block; }
+      .nav-menu {
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        padding:15px 22px 22px;
+        background:var(--white);
+        box-shadow:0 10px 15px rgba(11,40,80,.10);
+        align-items:stretch;
+        flex-direction:column;
+        gap:0;
+      }
+      .nav-menu.is-open { display:flex; }
+      .nav-menu > li { padding:10px 0; }
+      .dropdown-menu {
+        position:static;
+        box-shadow:none;
+        border:0;
+        padding:7px 0 0 14px;
+      }
+      .service-layout { grid-template-columns:1fr; }
+      .grid-3 { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:600px) {
+      .hero { padding:65px 15px; }
+      .hero p { font-size:15px; }
+      .button-outline { margin:10px 0 0; }
+      .section,.service-section { padding:48px 0; }
+      .grid-3,.grid-2 { grid-template-columns:1fr; }
+      .service-copy h2 { font-size:29px; }
+      .container { width:min(100% - 30px,1120px); }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="nav-container" aria-label="Main navigation">
+    <a class="brand" href="index.html">
+      DUCES
+      <small>CONSULTANCY SERVICES</small>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="company-formation.html">Business Setup ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#mainland">Mainland Company</a></li>
+          <li><a href="#free-zone">Free Zone Company</a></li>
+          <li><a href="#offshore">Offshore Company</a></li>
+        </ul>
+      </li>
+      <li><a href="business-banking.html">Business Banking</a></li>
+      <li><a href="business-loan.html">Business Loans</a></li>
+      <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
+      <li><a href="pro-visa-services.html">PRO & Visa</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <span class="eyebrow">UAE Business Setup Advisory</span>
+    <h1>Start Your Business in the UAE with the Right Setup</h1>
+    <p>
+      Explore Mainland, Free Zone and Offshore company structures.
+      DUCES helps you understand your options, documentation and setup process
+      before you make a decision.
+    </p>
+    <a class="button" href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20need%20guidance%20on%20UAE%20company%20formation.">Discuss Your Business Setup</a>
+    <a class="button-outline" href="#compare-options">Compare Options</a>
+  </section>
+
+  <section class="section neutral-bg">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Choose the Right UAE Business Structure</h2>
+        <p>
+          Your business activity, target customers, ownership plans, office needs
+          and visa requirements should guide the choice of jurisdiction.
+        </p>
+      </div>
+      <div class="grid-3">
+        <div class="pastel-card mainland-bg">
+          <h3>Mainland</h3>
+          <p>For businesses looking to operate in the UAE local market, subject to the relevant activity and regulatory requirements.</p>
+        </div>
+        <div class="pastel-card freezone-bg">
+          <h3>Free Zone</h3>
+          <p>For businesses considering a free zone authority, its permitted activities, facilities and licence packages.</p>
+        </div>
+        <div class="pastel-card offshore-bg">
+          <h3>Offshore</h3>
+          <p>For suitable holding, investment or international structuring purposes where permitted. Not a standard UAE operating licence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-section mainland-bg" id="mainland">
+    <div class="container service-layout">
+      <div class="service-copy">
+        <span class="tag">UAE Local Market</span>
+        <h2>Mainland Company Formation</h2>
+        <p>
+          A Mainland licence may suit businesses that intend to serve customers
+          across the UAE and operate within the scope of their approved activities.
+        </p>
+        <ul>
+          <li>Review of proposed business activities</li>
+          <li>Guidance on the relevant licensing authority</li>
+          <li>Trade name and initial approval guidance</li>
+          <li>Office or premises requirements, where applicable</li>
+          <li>Licence documentation and establishment process guidance</li>
+          <li>Visa and post-licensing requirement guidance</li>
+        </ul>
+        <a class="button" href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20am%20interested%20in%20Mainland%20company%20formation.">Enquire About Mainland</a>
+      </div>
+      <div class="info-card">
+        <h3>When to consider Mainland</h3>
+        <ul>
+          <li>You plan to serve customers in the UAE local market.</li>
+          <li>Your activity requires a specific Mainland licence.</li>
+          <li>You need premises or operational arrangements under the relevant authority.</li>
+          <li>You want to assess eligibility for government or private-sector contracts.</li>
+        </ul>
+        <div class="notice">
+          The exact activity, approvals, ownership rules and premises requirements
+          depend on the business and the relevant authority.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-section freezone-bg" id="free-zone">
+    <div class="container service-layout">
+      <div class="service-copy">
+        <span class="tag">Free Zone Authority</span>
+        <h2>Free Zone Company Formation</h2>
+        <p>
+          A Free Zone setup may be suitable for entrepreneurs, consultants,
+          trading businesses and service providers whose activities fit the
+          selected authority's permitted business categories.
+        </p>
+        <ul>
+          <li>Free zone and activity comparison</li>
+          <li>Licence package and facility guidance</li>
+          <li>Shareholder and company structure guidance</li>
+          <li>Visa package options, where available</li>
+          <li>Application and document coordination</li>
+          <li>Post-licensing banking and compliance guidance</li>
+        </ul>
+        <a class="button" href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20am%20interested%20in%20Free%20Zone%20company%20formation.">Enquire About Free Zone</a>
+      </div>
+      <div class="info-card">
+        <h3>Free Zone options to explore</h3>
+        <p>Depending on your activity and requirements, you may compare authorities such as:</p>
+        <span class="tag">RAKEZ</span>
+        <span class="tag">Ajman Free Zone</span>
+        <span class="tag">Dubai Free Zones</span>
+        <ul>
+          <li>Permitted activities and licence scope</li>
+          <li>Flexi-desk, shared facility or office options</li>
+          <li>Visa allocation and eligibility</li>
+          <li>Renewal costs and ongoing obligations</li>
+        </ul>
+        <p class="disclaimer">Package availability and conditions must be confirmed with the relevant free zone authority.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-section offshore-bg" id="offshore">
+    <div class="container service-layout">
+      <div class="service-copy">
+        <span class="tag">International Structuring</span>
+        <h2>Offshore Company Formation</h2>
+        <p>
+          Offshore structures may be considered for specific international
+          holding, investment or asset-structuring objectives, subject to the
+          rules of the chosen jurisdiction and the nature of the proposed activity.
+        </p>
+        <ul>
+          <li>Initial suitability discussion</li>
+          <li>Jurisdiction and structure considerations</li>
+          <li>Shareholder and beneficial ownership documentation guidance</li>
+          <li>Registered agent and registered office requirements</li>
+          <li>Compliance and ongoing obligations overview</li>
+        </ul>
+        <a class="button" href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20would%20like%20to%20discuss%20an%20Offshore%20company%20structure.">Discuss Offshore Options</a>
+      </div>
+      <div class="info-card">
+        <h3>Important Offshore considerations</h3>
+        <ul>
+          <li>An offshore company is not automatically authorised to conduct ordinary business inside the UAE.</li>
+          <li>Visa eligibility and local operating rights may be restricted.</li>
+          <li>Banking is subject to independent bank due diligence and approval.</li>
+          <li>Tax, reporting and economic substance obligations must be reviewed for the relevant jurisdiction.</li>
+        </ul>
+        <div class="notice">
+          Offshore incorporation should be assessed against your actual business
+          purpose. It is not a substitute for a Mainland or Free Zone operating licence.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="compare-options">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Mainland vs Free Zone vs Offshore</h2>
+        <p>Use this overview as a starting point. Final eligibility and requirements depend on the activity and authority.</p>
+      </div>
+      <div class="comparison-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Consideration</th>
+              <th>Mainland</th>
+              <th>Free Zone</th>
+              <th>Offshore</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Typical purpose</td>
+              <td>UAE local market operations</td>
+              <td>Activities permitted by the selected free zone</td>
+              <td>Holding or international structuring purposes</td>
+            </tr>
+            <tr>
+              <td>Licensing authority</td>
+              <td>Relevant Emirate licensing authority</td>
+              <td>Selected Free Zone authority</td>
+              <td>Relevant offshore registry or authority</td>
+            </tr>
+            <tr>
+              <td>UAE local operations</td>
+              <td>Subject to licence and activity permissions</td>
+              <td>Subject to free zone rules and applicable UAE requirements</td>
+              <td>Not generally a local operating licence</td>
+            </tr>
+            <tr>
+              <td>Office / facility</td>
+              <td>Depends on activity and authority</td>
+              <td>Depends on package and authority</td>
+              <td>Registered office requirements apply</td>
+            </tr>
+            <tr>
+              <td>Visa options</td>
+              <td>Subject to licence, premises and approvals</td>
+              <td>Subject to package and authority eligibility</td>
+              <td>Generally not intended as a standard UAE residence visa route</td>
+            </tr>
+            <tr>
+              <td>Bank account</td>
+              <td colspan="3">No structure guarantees account opening. Banks independently assess the business, shareholders, documents and risk profile.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="disclaimer" style="margin-top:14px;">
+        This is a general comparison, not legal, tax or regulatory advice. Rules and authority requirements can change.
+      </p>
+    </div>
+  </section>
+
+  <section class="section yellow-bg">
+    <div class="container">
+      <div class="section-heading">
+        <h2>What We Help You Review Before Setup</h2>
+        <p>Choosing a licence based only on the lowest advertised price can create avoidable costs later.</p>
+      </div>
+      <div class="grid-3">
+        <div class="pastel-card" style="background:#FFF9DF;">
+          <h3>Business Activity</h3>
+          <p>Check whether the intended services or trading activities are permitted under the proposed licence.</p>
+        </div>
+        <div class="pastel-card" style="background:#FFF9DF;">
+          <h3>Visa & Office Needs</h3>
+          <p>Review shareholder and employee visa plans, facility requirements and any related conditions.</p>
+        </div>
+        <div class="pastel-card" style="background:#FFF9DF;">
+          <h3>Ongoing Costs</h3>
+          <p>Consider renewals, establishment cards, visas, office arrangements, tax and compliance obligations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section neutral-bg">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Documents Commonly Requested</h2>
+        <p>The exact checklist varies by authority, activity, shareholder profile and company structure.</p>
+      </div>
+      <div class="grid-2">
+        <div class="pastel-card sky-bg">
+          <h3>For Individual Shareholders</h3>
+          <ul>
+            <li>Passport copy</li>
+            <li>UAE visa and Emirates ID, if applicable</li>
+            <li>Contact details and residential address</li>
+            <li>Proposed business activities</li>
+            <li>Shareholding details</li>
+          </ul>
+        </div>
+        <div class="pastel-card beige-bg">
+          <h3>For Corporate Shareholders</h3>
+          <ul>
+            <li>Parent company incorporation documents</li>
+            <li>Certificate of good standing, if required</li>
+            <li>Board resolution or authorisation</li>
+            <li>Shareholder and beneficial ownership details</li>
+            <li>Attestation or legalisation, where required</li>
+          </ul>
+        </div>
+      </div>
+      <div class="notice">
+        Do not arrange document attestation or translation until the relevant
+        authority confirms the required format and process.
+      </div>
+    </div>
+  </section>
+
+  <section class="section sky-bg">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Business Setup Support Process</h2>
+        <p>A structured process helps you compare options before committing to a licence package.</p>
+      </div>
+      <div class="grid-3">
+        <div class="pastel-card" style="background:#F1F8FE;">
+          <span class="step-number">1</span>
+          <h3>Understand Your Plan</h3>
+          <p>Discuss your business activity, customer market, ownership and visa requirements.</p>
+        </div>
+        <div class="pastel-card" style="background:#F1F8FE;">
+          <span class="step-number">2</span>
+          <h3>Compare Suitable Options</h3>
+          <p>Review relevant jurisdictions, licence scope, package conditions and ongoing costs.</p>
+        </div>
+        <div class="pastel-card" style="background:#F1F8FE;">
+          <span class="step-number">3</span>
+          <h3>Coordinate Documentation</h3>
+          <p>Help organise the application information and coordinate with the relevant service provider or authority.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Business Setup FAQs</h2>
+        <p>Answers to common questions about establishing a company in the UAE.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Which is better: Mainland or Free Zone?</h3>
+        <p>Neither is universally better. The right choice depends on your activities, customers, operating model, office needs and authority requirements.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can a Free Zone company do business in the UAE?</h3>
+        <p>It depends on the activity and applicable rules. Certain activities or arrangements may require additional permissions, approvals or a suitable local structure.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I open a bank account immediately after company formation?</h3>
+        <p>Company formation does not guarantee bank account approval. Banks conduct their own due diligence and may request business plans, contracts, invoices, source-of-funds information and other documents.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does every company setup package include a residence visa?</h3>
+        <p>No. Visa eligibility, allocation, costs and processing are subject to the selected authority, package and applicable immigration requirements.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does DUCES guarantee a licence, visa or bank account?</h3>
+        <p>No. DUCES provides consultancy and coordination support. Final decisions and approvals are made by the relevant authorities, immigration departments and financial institutions.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can DUCES help after the company is formed?</h3>
+        <p>Yes. You can also discuss business banking assistance, business finance guidance, tax and accounting support, and PRO and visa services.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Planning to Start a Business in the UAE?</h2>
+      <p>Share your business activity and requirements. We can help you understand which setup options are worth exploring.</p>
+      <a class="button" href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20want%20to%20discuss%20starting%20a%20business%20in%20the%20UAE.">Talk to a Business Consultant</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p><strong>DUCES Consultancy Services</strong></p>
+  <p>Management Consultancy | Documents Clearing Services | Banking Consultancy</p>
+  <p>UAE | <a href="tel:+971505356966">+971 50 535 6966</a></p>
+  <p>
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="terms-and-conditions.html">Terms & Conditions</a> |
+    <a href="contact.html">Contact</a>
+  </p>
+  <p>© <span data-current-year>2026</span> DUCES Consultancy Services. All rights reserved.</p>
+  <p class="disclaimer" style="color:#C9D5E3;">All services are subject to applicable laws, authority requirements and third-party approvals.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
