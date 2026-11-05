@@ -39,12 +39,23 @@
   border:1px solid #E5EBF1;
   border-radius:10px;
   padding:25px;
+  height:100%;
   box-shadow:0 5px 20px rgba(11,40,80,.05);
+  transition:0.25s ease;
+}
+.loan-card:hover {
+  border-color:#D9AD55;
+  transform:translateY(-4px);
+  box-shadow:0 12px 30px rgba(11,40,80,.09);
 }
 .loan-card h3 {color:#123B70;}
 .loan-card ul {padding-left:20px;}
 .loan-card li {margin:8px 0;line-height:1.6;}
 .loan-card p {line-height:1.7;}
+
+.loan-business {background:#E9F0F8;}
+.loan-trade {background:#F5F7FA;}
+.loan-property {background:#F7F0E3;}
 .loan-highlight {border-left:4px solid #D9AD55;}
 
 .calculator {
@@ -134,6 +145,7 @@
   background:#fff;
   border:1px solid #E5EBF1;
   border-radius:10px;
+  height:100%;
 }
 .loan-step strong {
   color:#1976B9;
@@ -219,6 +231,7 @@
 
 <main>
 
+<!-- HERO -->
 <section class="loan-hero">
   <div class="container">
     <p class="text-gold"><strong>UAE BUSINESS FINANCE & MORTGAGE ASSISTANCE</strong></p>
@@ -234,7 +247,8 @@
   </div>
 </section>
 
-<section class="section" id="finance-solutions">
+<!-- FINANCE SERVICES -->
+<section class="section bg-loans" id="finance-solutions">
   <div class="container section-heading">
     <h2>Our Finance Assistance Services</h2>
     <p>Explore financing categories according to your business or property requirements.</p>
@@ -242,7 +256,7 @@
 
   <div class="container loan-grid">
 
-    <article class="loan-card">
+    <article class="loan-card loan-business">
       <h3>Business Loans</h3>
       <p>Assistance for established businesses exploring suitable business financing options.</p>
       <ul>
@@ -251,9 +265,10 @@
         <li>Financial document checklist</li>
         <li>Application preparation support</li>
       </ul>
+      <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card">
+    <article class="loan-card loan-business">
       <h3>Working Capital Finance</h3>
       <p>Explore funding options for daily operations and business cash-flow requirements.</p>
       <ul>
@@ -262,9 +277,10 @@
         <li>Inventory and receivables requirements</li>
         <li>Finance option discussion</li>
       </ul>
+      <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card">
+    <article class="loan-card loan-trade">
       <h3>Letter of Credit</h3>
       <p>Understand trade finance options for eligible import and export transactions.</p>
       <ul>
@@ -273,9 +289,10 @@
         <li>Letter of Credit requirements</li>
         <li>Application coordination</li>
       </ul>
+      <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card">
+    <article class="loan-card loan-trade">
       <h3>Bank Guarantee</h3>
       <p>Explore bank guarantee requirements for eligible contracts and business transactions.</p>
       <ul>
@@ -284,9 +301,10 @@
         <li>Financial profile assessment</li>
         <li>Supporting document preparation</li>
       </ul>
+      <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card">
+    <article class="loan-card loan-property">
       <h3>Residential Mortgage</h3>
       <p>Assistance exploring residential property finance options in the UAE.</p>
       <ul>
@@ -295,9 +313,10 @@
         <li>Down payment considerations</li>
         <li>Mortgage application guidance</li>
       </ul>
+      <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card">
+    <article class="loan-card loan-property">
       <h3>Commercial Mortgage</h3>
       <p>Explore financing options for eligible commercial property purchases.</p>
       <ul>
@@ -306,9 +325,10 @@
         <li>Property documentation</li>
         <li>Financing requirement review</li>
       </ul>
+      <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card">
+    <article class="loan-card loan-property">
       <h3>Loan Against Property</h3>
       <p>Understand financing possibilities against eligible property assets.</p>
       <ul>
@@ -317,11 +337,13 @@
         <li>Income and repayment profile</li>
         <li>Documentation guidance</li>
       </ul>
+      <a href="contact.html">Enquire Now →</a>
     </article>
 
   </div>
 </section>
 
+<!-- WHO CAN APPLY -->
 <section class="section section-light">
   <div class="container section-heading">
     <h2>Who Can Explore Finance Options?</h2>
@@ -344,7 +366,8 @@
   </div>
 </section>
 
-<section class="section">
+<!-- LENDER EVALUATION -->
+<section class="section bg-offshore">
   <div class="container section-heading">
     <h2>What May Lenders Evaluate?</h2>
     <p>Each lender has its own credit policy, eligibility requirements and approval process.</p>
@@ -381,6 +404,7 @@
   </div>
 </section>
 
+<!-- DOCUMENT CHECKLIST -->
 <section class="section section-light">
   <div class="container section-heading">
     <h2>Common Document Checklist</h2>
@@ -421,7 +445,8 @@
   </div>
 </section>
 
-<section class="section">
+<!-- PROCESS -->
+<section class="section bg-banking">
   <div class="container section-heading">
     <h2>Our Finance Assistance Process</h2>
     <p>Structured support from initial discussion to application coordination.</p>
@@ -457,7 +482,7 @@
 </section>
 
 <!-- EMI CALCULATOR -->
-<section class="section section-light" id="emi-calculator">
+<section class="section bg-loans" id="emi-calculator">
   <div class="container section-heading">
     <h2>Loan EMI Calculator</h2>
     <p>Estimate monthly instalments, interest and indicative processing costs.</p>
@@ -504,7 +529,8 @@
   </div>
 </section>
 
-<section class="section">
+<!-- FAQ -->
+<section class="section section-light">
   <div class="container section-heading">
     <h2>Frequently Asked Questions</h2>
   </div>
@@ -541,6 +567,7 @@
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-section">
   <div class="container">
     <h2>Planning Your Next Business or Property Move?</h2>
@@ -554,12 +581,13 @@
 
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
       <h3>DUCES Consultancy Services</h3>
       <p>Business consultancy and support services in the UAE.</p>
-      <p><strong>START • MANAGE • GROW</strong></p>
+      <p class="text-gold"><strong>START • MANAGE • GROW</strong></p>
     </div>
 
     <div>
@@ -608,6 +636,7 @@
   href="https://wa.me/971505356966"
   target="_blank" rel="noopener">WhatsApp</a>
 
+<!-- EMI CALCULATOR SCRIPT -->
 <script>
 (function () {
   const amountInput = document.getElementById("loanAmount");
@@ -672,41 +701,51 @@
     const processingFeeAmount = principal * feeRate / 100;
     const totalEstimatedCost = totalRepayment + processingFeeAmount;
 
-    result.innerHTML = `
-      <h3>Estimated Monthly Instalment</h3>
-      <div class="emi-main">${formatAED(emi)}</div>
-      <div class="emi-breakdown">
-        <div class="emi-item">
-          <span>Loan Amount</span>
-          <strong>${formatAED(principal)}</strong>
-        </div>
-        <div class="emi-item">
-          <span>Total Interest</span>
-          <strong>${formatAED(totalInterest)}</strong>
-        </div>
-        <div class="emi-item">
-          <span>Total Repayment</span>
-          <strong>${formatAED(totalRepayment)}</strong>
-        </div>
-        <div class="emi-item">
-          <span>Processing Fee</span>
-          <strong>${formatAED(processingFeeAmount)}</strong>
-        </div>
-        <div class="emi-item">
-          <span>Estimated Total Cost</span>
-          <strong>${formatAED(totalEstimatedCost)}</strong>
-        </div>
-        <div class="emi-item">
-          <span>Loan Tenure</span>
-          <strong>${months} Months</strong>
-        </div>
-      </div>
-      <p class="calculator-note">
-        Processing fee is shown separately and is not included in the EMI.
-        This estimate assumes a fixed rate and equal monthly repayments.
-        Other lender charges may apply.
-      </p>
-    `;
+    result.replaceChildren();
+
+    const heading = document.createElement("h3");
+    heading.textContent = "Estimated Monthly Instalment";
+    result.appendChild(heading);
+
+    const main = document.createElement("div");
+    main.className = "emi-main";
+    main.textContent = formatAED(emi);
+    result.appendChild(main);
+
+    const breakdown = document.createElement("div");
+    breakdown.className = "emi-breakdown";
+
+    const items = [
+      ["Loan Amount", formatAED(principal)],
+      ["Total Interest", formatAED(totalInterest)],
+      ["Total Repayment", formatAED(totalRepayment)],
+      ["Processing Fee", formatAED(processingFeeAmount)],
+      ["Estimated Total Cost", formatAED(totalEstimatedCost)],
+      ["Loan Tenure", months + " Months"]
+    ];
+
+    items.forEach(function (item) {
+      const box = document.createElement("div");
+      box.className = "emi-item";
+
+      const label = document.createElement("span");
+      label.textContent = item[0];
+
+      const value = document.createElement("strong");
+      value.textContent = item[1];
+
+      box.appendChild(label);
+      box.appendChild(value);
+      breakdown.appendChild(box);
+    });
+
+    result.appendChild(breakdown);
+
+    const note = document.createElement("p");
+    note.className = "calculator-note";
+    note.textContent =
+      "Processing fee is shown separately and is not included in the EMI. This estimate assumes a fixed rate and equal monthly repayments. Other lender charges may apply.";
+    result.appendChild(note);
   }
 
   function resetCalculator() {
@@ -715,7 +754,7 @@
     yearsInput.value = "5";
     feeInput.value = "1";
     result.style.display = "none";
-    result.textContent = "";
+    result.replaceChildren();
   }
 
   calculateBtn.addEventListener("click", calculateEMI);
