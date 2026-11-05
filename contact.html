@@ -9,7 +9,153 @@
 <meta name="theme-color" content="#123B70">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/script.js" defer></script>
+
+<style>
+.contact-page-hero {
+  background: linear-gradient(120deg, #0B2850, #123B70 65%, #1976B9);
+  color: #fff;
+  padding: 75px 20px;
+}
+.contact-page-hero h1 {
+  max-width: 760px;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.15;
+}
+.contact-page-hero p {
+  max-width: 680px;
+  line-height: 1.7;
+}
+.contact-page-hero .text-gold {
+  color: #F4B942;
+}
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.contact-card {
+  padding: 24px;
+  border: 1px solid #E5EBF1;
+  border-radius: 12px;
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+.contact-card h3 {
+  color: #123B70;
+  margin-top: 0;
+}
+.contact-card a {
+  color: #1976B9;
+  font-weight: 600;
+}
+.contact-layout {
+  align-items: start;
+}
+.contact-info {
+  background: #123B70;
+  color: #fff;
+  padding: 28px;
+  border-radius: 12px;
+}
+.contact-info h2 {
+  color: #fff;
+}
+.contact-info a {
+  color: #F4B942;
+}
+.contact-info p {
+  line-height: 1.7;
+}
+.contact-info .contact-highlight {
+  color: #48C9B0;
+  font-weight: 700;
+}
+#enquiryForm {
+  background: #fff;
+  border: 1px solid #E5EBF1;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 8px 28px rgba(11,40,80,.06);
+}
+#enquiryForm h2 {
+  color: #123B70;
+  margin-top: 0;
+}
+#enquiryForm label {
+  display: block;
+  margin: 14px 0 7px;
+  font-weight: 600;
+  color: #263445;
+}
+#enquiryForm input:not([type="checkbox"]),
+#enquiryForm select,
+#enquiryForm textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #CBD5E1;
+  border-radius: 7px;
+  font: inherit;
+  box-sizing: border-box;
+  background: #fff;
+}
+#enquiryForm textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+#enquiryForm input:focus,
+#enquiryForm select:focus,
+#enquiryForm textarea:focus {
+  outline: 2px solid #48C9B0;
+  border-color: #1976B9;
+}
+#enquiryForm .consent-label {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-weight: 400;
+  line-height: 1.5;
+}
+#enquiryForm .consent-label input {
+  margin-top: 5px;
+}
+#enquiryForm button {
+  margin-top: 18px;
+  cursor: pointer;
+}
+.form-note {
+  color: #526274;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 12px 0;
+}
+.footer-legal-links a {
+  color: inherit;
+}
+@media (max-width: 900px) {
+  .contact-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+  .contact-page-hero {
+    padding: 55px 18px;
+  }
+  #enquiryForm,
+  .contact-info {
+    padding: 20px;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <div class="top-bar">
@@ -38,7 +184,9 @@
         <li><a href="business-loan.html">Business Loans</a></li>
         <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
         <li><a href="pro-visa-services.html">PRO & VISA</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -46,13 +194,18 @@
 
 <main>
 
-<section class="hero">
+<section class="contact-page-hero">
   <div class="container hero-content">
     <p class="text-gold"><strong>CONTACT DUCES</strong></p>
     <h1>Let's Discuss Your Business Requirements.</h1>
-    <p>Tell us what you need. Our team will understand your requirements and guide you towards the appropriate next steps.</p>
+    <p>
+      Tell us what you need. Our team will understand your requirements
+      and guide you towards the appropriate next steps.
+    </p>
     <a class="btn btn-primary" href="#enquiry">Send an Enquiry</a>
-    <a class="btn btn-outline" href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp Us</a>
+    <a class="btn btn-outline"
+       href="https://wa.me/971505356966"
+       target="_blank" rel="noopener">WhatsApp Us</a>
   </div>
 </section>
 
@@ -62,30 +215,35 @@
     <p>Connect with DUCES Consultancy Services for business support across the UAE.</p>
   </div>
 
-  <div class="container card-grid">
-    <article class="card">
+  <div class="container contact-cards">
+
+    <article class="contact-card">
       <h3>Call Us</h3>
       <p>Speak with our team about your requirements.</p>
       <p><a href="tel:+971505356966">+971 50 535 6966</a></p>
     </article>
 
-    <article class="card">
+    <article class="contact-card">
       <h3>WhatsApp</h3>
-      <p>Send us your enquiry directly.</p>
-      <p><a href="https://wa.me/971505356966" target="_blank" rel="noopener">Chat with DUCES</a></p>
+      <p>Send your business enquiry directly.</p>
+      <p>
+        <a href="https://wa.me/971505356966"
+           target="_blank" rel="noopener">Chat with DUCES</a>
+      </p>
     </article>
 
-    <article class="card">
+    <article class="contact-card">
       <h3>Email</h3>
       <p>Our official business email will be published here shortly.</p>
       <p>Email details coming soon.</p>
     </article>
 
-    <article class="card">
+    <article class="contact-card">
       <h3>Our Location</h3>
       <p>UAE business consultancy services.</p>
       <p>Office address and Google Maps location will be updated soon.</p>
     </article>
+
   </div>
 </section>
 
@@ -96,71 +254,129 @@
   </div>
 
   <div class="container contact-layout">
+
     <div class="contact-info">
       <h2>DUCES Consultancy Services</h2>
-      <p><strong>START</strong><br>Business Setup & Company Formation</p>
-      <p><strong>MANAGE</strong><br>Banking, Taxation, Accounting & PRO Services</p>
-      <p><strong>GROW</strong><br>Business Finance & Ongoing Business Support</p>
+
+      <p class="contact-highlight">START</p>
+      <p>Business Setup & Company Formation</p>
+
+      <p class="contact-highlight">MANAGE</p>
+      <p>Banking, Taxation, Accounting & PRO Services</p>
+
+      <p class="contact-highlight">GROW</p>
+      <p>Business Finance & Ongoing Business Support</p>
+
+      <hr>
+
       <p><strong>Call / WhatsApp</strong><br>
-      <a href="tel:+971505356966">+971 50 535 6966</a></p>
-      <p>We will review your enquiry and discuss the relevant service scope and next steps.</p>
+        <a href="tel:+971505356966">+971 50 535 6966</a>
+      </p>
+
+      <p>
+        We will review your enquiry and discuss the relevant service
+        scope, documents and next steps.
+      </p>
     </div>
 
     <form id="enquiryForm">
       <h2>Enquiry Form</h2>
 
       <label for="firstName">First Name *</label>
-      <input type="text" id="firstName" placeholder="Enter your first name" required>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        placeholder="Enter your first name"
+        autocomplete="given-name"
+        required>
 
       <label for="lastName">Last Name *</label>
-      <input type="text" id="lastName" placeholder="Enter your last name" required>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        placeholder="Enter your last name"
+        autocomplete="family-name"
+        required>
 
       <label for="email">Email ID *</label>
-      <input type="email" id="email" placeholder="Enter your email address" required>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email address"
+        autocomplete="email"
+        required>
 
       <label for="mobile">Mobile Number *</label>
-      <input type="tel" id="mobile" placeholder="Include country code, e.g. +971" required>
+      <input
+        type="tel"
+        id="mobile"
+        name="mobile"
+        placeholder="Include country code, e.g. +971"
+        autocomplete="tel"
+        required>
 
       <label for="service">Select Service *</label>
-      <select id="service" required>
+      <select id="service" name="service" required>
         <option value="">Choose a service</option>
-        <option>Business Setup & Company Formation</option>
-        <option>Business Banking Assistance</option>
-        <option>Business Loan Assistance</option>
-        <option>Taxation & Accounting</option>
-        <option>PRO & VISA Services</option>
-        <option>General Business Consultancy</option>
-        <option>Other Enquiry</option>
+        <option value="Business Setup & Company Formation">Business Setup & Company Formation</option>
+        <option value="Business Banking Assistance">Business Banking Assistance</option>
+        <option value="Business Loan Assistance">Business Loan Assistance</option>
+        <option value="Taxation & Accounting">Taxation & Accounting</option>
+        <option value="PRO & VISA Services">PRO & VISA Services</option>
+        <option value="General Business Consultancy">General Business Consultancy</option>
+        <option value="Other Enquiry">Other Enquiry</option>
       </select>
 
       <label for="description">Describe Your Requirements</label>
-      <textarea id="description" placeholder="Please share details about your requirements..."></textarea>
+      <textarea
+        id="description"
+        name="description"
+        placeholder="Please share details about your requirements..."></textarea>
 
-      <label class="consent-label">
-        <input type="checkbox" id="consent" required>
-        I agree to be contacted by DUCES regarding this enquiry.
+      <label class="consent-label" for="consent">
+        <input type="checkbox" id="consent" name="consent" required>
+        <span>
+          I agree to be contacted by DUCES regarding this enquiry.
+          I understand that selecting Continue to WhatsApp will open
+          WhatsApp with my enquiry details for me to review and send.
+        </span>
       </label>
 
-      <button type="submit" class="btn btn-primary">Continue to WhatsApp</button>
+      <button type="submit" class="btn btn-primary">
+        Continue to WhatsApp
+      </button>
 
-      <p class="form-note">Your enquiry details will be transferred to WhatsApp so you can review and send the message.</p>
+      <p class="form-note">
+        Your enquiry is not submitted to a DUCES database through this
+        website form. The details are placed into a WhatsApp message.
+        You must review and send that message yourself. Please do not
+        include passwords, bank login details or sensitive identity documents.
+      </p>
     </form>
+
   </div>
 </section>
 
 <section class="section">
   <div class="container section-heading">
     <h2>How We Handle Your Enquiry</h2>
+    <p>A clear process from your first message to the next steps.</p>
   </div>
+
   <div class="container card-grid">
     <article class="card">
       <h3>01. Enquiry</h3>
       <p>Share your contact details and service requirement.</p>
     </article>
+
     <article class="card">
       <h3>02. Discussion</h3>
-      <p>We understand your business needs and clarify the scope.</p>
+      <p>We understand your business needs and clarify the service scope.</p>
     </article>
+
     <article class="card">
       <h3>03. Proposal</h3>
       <p>We discuss the applicable service, documents, charges and next steps.</p>
@@ -172,7 +388,9 @@
   <div class="container">
     <h2>START • MANAGE • GROW</h2>
     <p>Your UAE business journey begins with the right conversation.</p>
-    <a class="btn btn-primary" href="https://wa.me/971505356966" target="_blank" rel="noopener">Chat with DUCES</a>
+    <a class="btn btn-primary"
+       href="https://wa.me/971505356966"
+       target="_blank" rel="noopener">Chat with DUCES</a>
   </div>
 </section>
 
@@ -180,11 +398,13 @@
 
 <footer class="site-footer">
   <div class="container footer-grid">
+
     <div>
       <h3>DUCES Consultancy Services</h3>
       <p>Business consultancy and support services in the UAE.</p>
       <p><strong>START • MANAGE • GROW</strong></p>
     </div>
+
     <div>
       <h4>Our Services</h4>
       <ul>
@@ -195,45 +415,69 @@
         <li><a href="pro-visa-services.html">PRO & VISA</a></li>
       </ul>
     </div>
+
     <div>
       <h4>Contact</h4>
       <p><a href="tel:+971505356966">+971 50 535 6966</a></p>
-      <p><a href="https://wa.me/971505356966">WhatsApp DUCES</a></p>
+      <p>
+        <a href="https://wa.me/971505356966"
+           target="_blank" rel="noopener">WhatsApp DUCES</a>
+      </p>
       <p><a href="contact.html">Contact Us</a></p>
+      <div class="footer-legal-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+      </div>
     </div>
+
   </div>
+
   <div class="container">
     <p>© <span data-current-year>2026</span> DUCES Consultancy Services. All rights reserved.</p>
   </div>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp</a>
+<a class="whatsapp-float"
+   href="https://wa.me/971505356966"
+   target="_blank" rel="noopener">WhatsApp</a>
 
 <script>
-document.getElementById("enquiryForm").addEventListener("submit", function(event) {
-  event.preventDefault();
+(function () {
+  const form = document.getElementById("enquiryForm");
 
-  const firstName = document.getElementById("firstName").value.trim();
-  const lastName = document.getElementById("lastName").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const mobile = document.getElementById("mobile").value.trim();
-  const service = document.getElementById("service").value;
-  const description = document.getElementById("description").value.trim();
+  if (!form) return;
 
-  const message = [
-    "Hello DUCES Consultancy Services,",
-    "",
-    "Website Enquiry",
-    "First Name: " + firstName,
-    "Last Name: " + lastName,
-    "Email: " + email,
-    "Mobile: " + mobile,
-    "Service: " + service,
-    "Requirements: " + (description || "Not provided")
-  ].join("\n");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  window.open("https://wa.me/971505356966?text=" + encodeURIComponent(message), "_blank");
-});
+    if (!form.reportValidity()) return;
+
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mobile = document.getElementById("mobile").value.trim();
+    const service = document.getElementById("service").value;
+    const description = document.getElementById("description").value.trim();
+
+    const message = [
+      "Hello DUCES Consultancy Services,",
+      "",
+      "Website Enquiry",
+      "First Name: " + firstName,
+      "Last Name: " + lastName,
+      "Email: " + email,
+      "Mobile: " + mobile,
+      "Service: " + service,
+      "Requirements: " + (description || "Not provided")
+    ].join("\n");
+
+    const whatsappURL =
+      "https://wa.me/971505356966?text=" +
+      encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank", "noopener");
+  });
+})();
 </script>
 
 </body>
