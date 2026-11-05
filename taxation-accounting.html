@@ -10,6 +10,7 @@
 
   <style>
     :root {
+      /* DUCES BRAND COLOURS */
       --royal:#123B70;
       --navy:#0B2850;
       --blue:#1976B9;
@@ -17,25 +18,25 @@
       --charcoal:#263445;
       --grey:#64748B;
       --white:#FFFFFF;
-      --border:#DCE3EB;
+      --border:#E5EBF1;
 
-      /* SERVICE-SPECIFIC COLOURS */
-      --service-accounting:#DCE5FA;
-      --service-vat:#D9EDF2;
-      --service-corporate:#F5D9DF;
-      --service-compliance:#E7D9F5;
-      --service-reporting:#F5DFC6;
-      --service-review:#D5EBDD;
+      /* TAX & ACCOUNTING SERVICE COLOURS */
+      --service-accounting:#F6EACB;
+      --service-vat:#E8EDCF;
+      --service-corporate:#F5E0D3;
+      --service-compliance:#E9E5D5;
+      --service-reporting:#E4EAD9;
+      --service-review:#F1E8D9;
 
       /* SEPARATE SUPPORTING COLOURS */
-      --support-eligibility:#FFF1B8;
-      --support-calculator:#EDE7D9;
-      --support-estimator:#DCE8E1;
-      --support-documents:#F1E2E8;
-      --support-process:#E2EAF5;
-      --support-important:#F2E8D9;
-      --support-faq:#EAE6F0;
-      --support-general:#F5F1E8;
+      --support-eligibility:#E3EDF5;
+      --support-calculator:#F7E8B9;
+      --support-estimator:#E5E1EF;
+      --support-documents:#E8E8E5;
+      --support-process:#DDE9E9;
+      --support-important:#F3E1E3;
+      --support-faq:#EEE9DF;
+      --support-general:#F5F3ED;
     }
 
     * { box-sizing:border-box; }
@@ -44,7 +45,7 @@
 
     body {
       margin:0;
-      font-family:Arial, Helvetica, sans-serif;
+      font-family:Arial,Helvetica,sans-serif;
       color:var(--charcoal);
       background:#FFFFFF;
       line-height:1.65;
@@ -57,6 +58,7 @@
       margin:auto;
     }
 
+    /* HEADER */
     .site-header {
       background:var(--navy);
       color:white;
@@ -80,6 +82,7 @@
       font-size:25px;
       font-weight:800;
       letter-spacing:2px;
+      white-space:nowrap;
     }
 
     .brand span { color:var(--gold); }
@@ -107,6 +110,7 @@
       border-radius:5px;
     }
 
+    /* HERO */
     .hero {
       background:linear-gradient(120deg,var(--navy),var(--royal));
       color:white;
@@ -152,9 +156,8 @@
       color:white;
     }
 
-    .section {
-      padding:64px 0;
-    }
+    /* COMMON SECTIONS */
+    .section { padding:64px 0; }
 
     .section-heading {
       max-width:780px;
@@ -170,6 +173,7 @@
 
     .section-heading p { color:#526174; }
 
+    /* SERVICE BACKGROUNDS */
     .service-accounting { background:var(--service-accounting); }
     .service-vat { background:var(--service-vat); }
     .service-corporate { background:var(--service-corporate); }
@@ -177,6 +181,7 @@
     .service-reporting { background:var(--service-reporting); }
     .service-review { background:var(--service-review); }
 
+    /* SUPPORTING BACKGROUNDS */
     .support-eligibility { background:var(--support-eligibility); }
     .support-calculator { background:var(--support-calculator); }
     .support-estimator { background:var(--support-estimator); }
@@ -186,6 +191,7 @@
     .support-faq { background:var(--support-faq); }
     .support-general { background:var(--support-general); }
 
+    /* CARDS */
     .grid {
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
@@ -193,11 +199,12 @@
     }
 
     .card {
-      background:rgba(255,255,255,.57);
-      border:1px solid rgba(18,59,112,.12);
+      background:rgba(255,255,255,.68);
+      border:1px solid rgba(18,59,112,.13);
       border-radius:12px;
       padding:23px;
       height:100%;
+      box-shadow:0 3px 12px rgba(11,40,80,.035);
     }
 
     .card h3 {
@@ -226,6 +233,7 @@
       margin-bottom:12px;
     }
 
+    /* INFORMATION PANELS */
     .info-grid {
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
@@ -233,7 +241,7 @@
     }
 
     .info-panel {
-      background:rgba(255,255,255,.48);
+      background:rgba(255,255,255,.68);
       border:1px solid rgba(38,52,69,.12);
       border-radius:10px;
       padding:20px;
@@ -254,12 +262,14 @@
       margin:7px 0;
     }
 
+    /* CALCULATORS */
     .calculator-box {
       max-width:760px;
-      background:rgba(255,255,255,.72);
+      background:rgba(255,255,255,.82);
       border:1px solid rgba(38,52,69,.14);
       border-radius:12px;
       padding:26px;
+      box-shadow:0 4px 14px rgba(11,40,80,.04);
     }
 
     .form-grid {
@@ -285,6 +295,11 @@
       font-size:15px;
     }
 
+    input:focus,select:focus {
+      outline:2px solid var(--blue);
+      outline-offset:2px;
+    }
+
     .action-btn {
       border:0;
       border-radius:5px;
@@ -295,6 +310,8 @@
       cursor:pointer;
       font-weight:700;
     }
+
+    .action-btn:hover { background:var(--navy); }
 
     .action-btn.secondary {
       background:#E5EAF0;
@@ -309,6 +326,7 @@
       border:1px solid var(--border);
       color:var(--navy);
       font-weight:700;
+      min-height:55px;
     }
 
     .note {
@@ -317,6 +335,7 @@
       margin-top:12px;
     }
 
+    /* PROCESS */
     .process-grid {
       display:grid;
       grid-template-columns:repeat(4,minmax(0,1fr));
@@ -324,10 +343,15 @@
     }
 
     .step {
-      background:rgba(255,255,255,.55);
+      background:rgba(255,255,255,.7);
       border:1px solid rgba(18,59,112,.12);
       padding:22px;
       border-radius:10px;
+    }
+
+    .step h3 {
+      color:var(--navy);
+      margin:10px 0;
     }
 
     .step-number {
@@ -339,16 +363,16 @@
       background:var(--royal);
       color:white;
       font-weight:800;
-      margin-bottom:13px;
     }
 
+    /* FAQ */
     .faq-list {
       display:grid;
       gap:12px;
     }
 
     details {
-      background:rgba(255,255,255,.62);
+      background:rgba(255,255,255,.76);
       border:1px solid rgba(38,52,69,.12);
       border-radius:8px;
       padding:17px 20px;
@@ -362,6 +386,7 @@
 
     details p { margin-bottom:0; }
 
+    /* CTA AND FOOTER */
     .cta {
       background:var(--navy);
       color:white;
@@ -392,10 +417,17 @@
       margin:6px 0;
     }
 
+    .site-footer a:hover { color:var(--gold); }
     .site-footer h3 { color:white; }
 
+    /* RESPONSIVE */
     @media(max-width:850px) {
-      .nav-wrap { align-items:flex-start; padding:16px 0; flex-direction:column; }
+      .nav-wrap {
+        align-items:flex-start;
+        padding:16px 0;
+        flex-direction:column;
+      }
+
       .nav-links { gap:12px; }
       .grid,.info-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
       .process-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -405,10 +437,13 @@
       .grid,.info-grid,.process-grid,.form-grid,.footer-grid {
         grid-template-columns:1fr;
       }
+
       .hero { padding:55px 0; }
       .section { padding:48px 0; }
       .nav-links { gap:10px; }
       .nav-links a { font-size:12px; }
+      .calculator-box { padding:18px; }
+      .cta h2 { font-size:26px; }
     }
   </style>
 </head>
@@ -434,6 +469,7 @@
 
 <main>
 
+<!-- HERO -->
 <section class="hero">
   <div class="container hero-content">
     <span class="eyebrow">DUCES Consultancy Services</span>
@@ -447,7 +483,7 @@
   </div>
 </section>
 
-<!-- SERVICE COLOUR: BLUE -->
+<!-- SERVICE 01: ACCOUNTING -->
 <section class="section service-accounting" id="services">
   <div class="container">
     <div class="section-heading">
@@ -493,7 +529,7 @@
   </div>
 </section>
 
-<!-- SUPPORT COLOUR: YELLOW -->
+<!-- SUPPORT: ELIGIBILITY -->
 <section class="section support-eligibility">
   <div class="container">
     <div class="section-heading">
@@ -526,7 +562,7 @@
   </div>
 </section>
 
-<!-- SERVICE COLOUR: ICE BLUE -->
+<!-- SERVICE 02: VAT -->
 <section class="section service-vat">
   <div class="container">
     <div class="section-heading">
@@ -557,14 +593,14 @@
   </div>
 </section>
 
-<!-- SUPPORT COLOUR: BEIGE -->
+<!-- SUPPORT: VAT CALCULATOR -->
 <section class="section support-calculator">
   <div class="container">
     <div class="section-heading">
       <h2>UAE VAT Calculator</h2>
       <p>
-        Use this basic calculator to estimate VAT at the standard
-        5% rate. It is an illustrative calculation, not a tax return.
+        Estimate VAT at the standard 5% rate. This is an illustrative
+        calculation, not a tax return.
       </p>
     </div>
 
@@ -599,7 +635,7 @@
   </div>
 </section>
 
-<!-- SERVICE COLOUR: DUSTY PINK -->
+<!-- SERVICE 03: CORPORATE TAX -->
 <section class="section service-corporate">
   <div class="container">
     <div class="section-heading">
@@ -630,7 +666,7 @@
   </div>
 </section>
 
-<!-- SUPPORT COLOUR: PALE GREEN-GREY -->
+<!-- SUPPORT: CORPORATE TAX ESTIMATOR -->
 <section class="section support-estimator">
   <div class="container">
     <div class="section-heading">
@@ -664,7 +700,7 @@
   </div>
 </section>
 
-<!-- SERVICE COLOUR: LAVENDER -->
+<!-- SERVICE 04: TAX COMPLIANCE -->
 <section class="section service-compliance">
   <div class="container">
     <div class="section-heading">
@@ -695,7 +731,7 @@
   </div>
 </section>
 
-<!-- SERVICE COLOUR: WARM SAND -->
+<!-- SERVICE 05: FINANCIAL REPORTING -->
 <section class="section service-reporting">
   <div class="container">
     <div class="section-heading">
@@ -726,7 +762,7 @@
   </div>
 </section>
 
-<!-- SUPPORT COLOUR: BLUSH -->
+<!-- SUPPORT: DOCUMENTS -->
 <section class="section support-documents">
   <div class="container">
     <div class="section-heading">
@@ -771,7 +807,7 @@
   </div>
 </section>
 
-<!-- SERVICE COLOUR: SAGE -->
+<!-- SERVICE 06: ACCOUNTING REVIEW -->
 <section class="section service-review">
   <div class="container">
     <div class="section-heading">
@@ -802,7 +838,7 @@
   </div>
 </section>
 
-<!-- SUPPORT COLOUR: POWDER BLUE -->
+<!-- SUPPORT: PROCESS -->
 <section class="section support-process">
   <div class="container">
     <div class="section-heading">
@@ -838,14 +874,12 @@
   </div>
 </section>
 
-<!-- SUPPORT COLOUR: WARM BEIGE -->
+<!-- SUPPORT: IMPORTANT INFORMATION -->
 <section class="section support-important">
   <div class="container">
     <div class="section-heading">
       <h2>Important Information</h2>
-      <p>
-        Understand the scope of DUCES services before engaging.
-      </p>
+      <p>Understand the scope of DUCES services before engaging.</p>
     </div>
 
     <div class="card">
@@ -870,7 +904,7 @@
   </div>
 </section>
 
-<!-- SUPPORT COLOUR: LILAC -->
+<!-- SUPPORT: FAQ -->
 <section class="section support-faq">
   <div class="container">
     <div class="section-heading">
@@ -927,7 +961,7 @@
   </div>
 </section>
 
-<!-- SUPPORT COLOUR: GENERAL -->
+<!-- SUPPORT: OFFICIAL RESOURCES -->
 <section class="section support-general">
   <div class="container">
     <div class="section-heading">
@@ -957,6 +991,7 @@
   </div>
 </section>
 
+<!-- CONTACT CTA -->
 <section class="cta">
   <div class="container">
     <h2>Need Support With Your UAE Business Accounts or Tax Requirements?</h2>
@@ -968,6 +1003,7 @@
 
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="container footer-grid">
     <div>
@@ -1010,6 +1046,7 @@
     }).format(value);
   }
 
+  /* VAT CALCULATOR */
   function calculateVAT() {
     const amount = Number(document.getElementById("vatAmount").value);
     const mode = document.getElementById("vatMode").value;
@@ -1045,6 +1082,7 @@
       "Your calculation will appear here.";
   }
 
+  /* CORPORATE TAX ESTIMATOR */
   function calculateCorporateTax() {
     const income = Number(document.getElementById("taxableIncome").value);
     const result = document.getElementById("corporateResult");
