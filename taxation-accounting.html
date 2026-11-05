@@ -2,1111 +2,1053 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="VAT, corporate tax, bookkeeping and accounting consultancy support in the UAE.">
-<title>Taxation & Accounting Services UAE | DUCES Consultancy Services</title>
-<link rel="stylesheet" href="css/style.css">
-
-<style>
-:root {
-  /* DUCES BRAND */
-  --royal:#123B70;
-  --navy:#0B2850;
-  --blue:#1976B9;
-  --gold:#D9AD55;
-  --charcoal:#263445;
-  --grey:#64748B;
-  --border:#E5EBF1;
-
-  /* BUSINESS BANKING-STYLE SERVICE PALETTE */
-  --service-accounting:#E5EAF7;
-  --service-vat:#DCEEF0;
-  --service-corporate:#F5E2E4;
-  --service-compliance:#E9E2F2;
-  --service-reporting:#F4E6D7;
-  --service-review:#D5EBDD;
-
-  /* SUPPORTING INFORMATION PALETTE */
-  --support-eligibility:#FFF0B8;
-  --support-calculator:#E4EEDC;
-  --support-estimator:#F6E1CF;
-  --support-documents:#E1E9F5;
-  --support-process:#E4EEDC;
-  --support-important:#F6E1CF;
-  --support-faq:#FFF0B8;
-  --support-general:#F5F7FA;
-}
-
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-
-body {
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--charcoal);
-  background:#fff;
-  line-height:1.65;
-}
-
-a { color:inherit; }
-
-.container {
-  width:min(1160px,92%);
-  margin:auto;
-}
-
-/* HEADER */
-.site-header {
-  background:var(--navy);
-  color:#fff;
-  position:sticky;
-  top:0;
-  z-index:100;
-  box-shadow:0 3px 14px rgba(0,0,0,.12);
-}
-
-.nav-wrap {
-  min-height:76px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-
-.brand {
-  color:#fff;
-  text-decoration:none;
-  font-size:25px;
-  font-weight:800;
-  letter-spacing:2px;
-  white-space:nowrap;
-}
-
-.brand span { color:var(--gold); }
-
-.nav-links {
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:18px;
-}
-
-.nav-links a {
-  color:#fff;
-  text-decoration:none;
-  font-size:13px;
-  font-weight:600;
-}
-
-.nav-links a:hover { color:var(--gold); }
-
-.nav-cta {
-  background:var(--gold);
-  color:var(--navy)!important;
-  padding:10px 16px;
-  border-radius:5px;
-}
-
-/* HERO */
-.hero {
-  background:linear-gradient(120deg,var(--navy),var(--royal));
-  color:#fff;
-  padding:78px 0;
-}
-
-.hero-content { max-width:780px; }
-
-.eyebrow {
-  color:var(--gold);
-  font-weight:700;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  font-size:12px;
-}
-
-h1 {
-  font-size:clamp(34px,5vw,54px);
-  line-height:1.12;
-  margin:15px 0;
-}
-
-.hero p {
-  color:#E8EEF6;
-  max-width:690px;
-  font-size:17px;
-}
-
-.btn {
-  display:inline-block;
-  padding:13px 21px;
-  margin:10px 10px 0 0;
-  border-radius:5px;
-  text-decoration:none;
-  font-weight:700;
-  background:var(--gold);
-  color:var(--navy);
-}
-
-.btn-outline {
-  border:1px solid #fff;
-  background:transparent;
-  color:#fff;
-}
-
-/* SECTIONS */
-.section { padding:64px 0; }
-
-.section-heading {
-  max-width:780px;
-  margin-bottom:30px;
-}
-
-.section-heading h2 {
-  color:var(--navy);
-  font-size:clamp(26px,3.5vw,36px);
-  line-height:1.2;
-  margin:0 0 12px;
-}
-
-.section-heading p { color:#526174; }
-
-/* SERVICE BACKGROUNDS */
-.service-accounting { background:var(--service-accounting); }
-.service-vat { background:var(--service-vat); }
-.service-corporate { background:var(--service-corporate); }
-.service-compliance { background:var(--service-compliance); }
-.service-reporting { background:var(--service-reporting); }
-.service-review { background:var(--service-review); }
-
-/* SUPPORTING BACKGROUNDS */
-.support-eligibility { background:var(--support-eligibility); }
-.support-calculator { background:var(--support-calculator); }
-.support-estimator { background:var(--support-estimator); }
-.support-documents { background:var(--support-documents); }
-.support-process { background:var(--support-process); }
-.support-important { background:var(--support-important); }
-.support-faq { background:var(--support-faq); }
-.support-general { background:var(--support-general); }
-
-/* CARDS */
-.grid {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:18px;
-}
-
-.card {
-  background:rgba(255,255,255,.68);
-  border:1px solid rgba(18,59,112,.13);
-  border-radius:12px;
-  padding:23px;
-  height:100%;
-  box-shadow:0 3px 12px rgba(11,40,80,.035);
-}
-
-.card h3 {
-  color:var(--navy);
-  margin:0 0 10px;
-  font-size:19px;
-}
-
-.card p { margin:0; }
-
-.card ul {
-  margin:12px 0 0;
-  padding-left:19px;
-}
-
-.card li { margin:6px 0; }
-
-.tag {
-  display:inline-block;
-  background:var(--navy);
-  color:#fff;
-  padding:5px 10px;
-  border-radius:30px;
-  font-size:11px;
-  font-weight:700;
-  margin-bottom:12px;
-}
-
-/* INFORMATION PANELS */
-.info-grid {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:16px;
-}
-
-.info-panel {
-  background:rgba(255,255,255,.72);
-  border:1px solid rgba(38,52,69,.12);
-  border-radius:10px;
-  padding:20px;
-}
-
-.info-panel strong {
-  display:block;
-  color:var(--navy);
-  font-size:17px;
-  margin-bottom:7px;
-}
-
-.highlight-number {
-  font-size:27px;
-  color:var(--navy);
-  font-weight:800;
-  display:block;
-  margin:7px 0;
-}
-
-/* CALCULATORS */
-.calculator-box {
-  max-width:760px;
-  background:rgba(255,255,255,.84);
-  border:1px solid rgba(38,52,69,.14);
-  border-radius:12px;
-  padding:26px;
-  box-shadow:0 4px 14px rgba(11,40,80,.04);
-}
-
-.form-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-}
-
-label {
-  display:block;
-  font-weight:700;
-  color:var(--navy);
-  margin-bottom:7px;
-}
-
-input,select {
-  width:100%;
-  padding:13px;
-  border:1px solid #B8C4D2;
-  border-radius:6px;
-  background:#fff;
-  color:var(--charcoal);
-  font-size:15px;
-}
-
-input:focus,select:focus {
-  outline:2px solid var(--blue);
-  outline-offset:2px;
-}
-
-.action-btn {
-  border:0;
-  border-radius:5px;
-  background:var(--royal);
-  color:#fff;
-  padding:12px 20px;
-  margin:16px 8px 0 0;
-  cursor:pointer;
-  font-weight:700;
-}
-
-.action-btn:hover { background:var(--navy); }
-
-.action-btn.secondary {
-  background:#E5EAF0;
-  color:var(--navy);
-}
-
-.result {
-  margin-top:18px;
-  padding:17px;
-  border-radius:8px;
-  background:#fff;
-  border:1px solid var(--border);
-  color:var(--navy);
-  font-weight:700;
-  min-height:55px;
-}
-
-.note {
-  font-size:13px;
-  color:#536174;
-  margin-top:12px;
-}
-
-/* PROCESS */
-.process-grid {
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:16px;
-}
-
-.step {
-  background:rgba(255,255,255,.72);
-  border:1px solid rgba(18,59,112,.12);
-  padding:22px;
-  border-radius:10px;
-}
-
-.step h3 {
-  color:var(--navy);
-  margin:10px 0;
-}
-
-.step-number {
-  width:38px;
-  height:38px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:var(--royal);
-  color:#fff;
-  font-weight:800;
-}
-
-/* FAQ */
-.faq-list {
-  display:grid;
-  gap:12px;
-}
-
-details {
-  background:rgba(255,255,255,.78);
-  border:1px solid rgba(38,52,69,.12);
-  border-radius:8px;
-  padding:17px 20px;
-}
-
-summary {
-  color:var(--navy);
-  font-weight:700;
-  cursor:pointer;
-}
-
-details p { margin-bottom:0; }
-
-/* CTA AND FOOTER */
-.cta {
-  background:var(--navy);
-  color:#fff;
-  padding:55px 0;
-  text-align:center;
-}
-
-.cta h2 { font-size:32px; margin:0 0 10px; }
-.cta p { color:#E4EAF2; }
-
-.site-footer {
-  background:#071C38;
-  color:#D8E1EC;
-  padding:35px 0;
-  font-size:13px;
-}
-
-.footer-grid {
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:25px;
-}
-
-.site-footer a {
-  display:block;
-  color:#D8E1EC;
-  text-decoration:none;
-  margin:6px 0;
-}
-
-.site-footer a:hover { color:var(--gold); }
-.site-footer h3 { color:#fff; }
-
-/* RESPONSIVE */
-@media(max-width:850px) {
-  .nav-wrap {
-    align-items:flex-start;
-    padding:16px 0;
-    flex-direction:column;
-  }
-
-  .nav-links { gap:12px; }
-  .grid,.info-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-  .process-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-}
-
-@media(max-width:580px) {
-  .grid,.info-grid,.process-grid,.form-grid,.footer-grid {
-    grid-template-columns:1fr;
-  }
-
-  .hero { padding:55px 0; }
-  .section { padding:48px 0; }
-  .nav-links { gap:10px; }
-  .nav-links a { font-size:12px; }
-  .calculator-box { padding:18px; }
-  .cta h2 { font-size:26px; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DUCES Consultancy Services provides UAE accounting, bookkeeping, VAT and corporate tax consultancy and documentation support.">
+  <title>Taxation & Accounting Services | DUCES Consultancy Services</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    :root {
+      --royal: #123B70;
+      --navy: #0B2850;
+      --ocean: #1976B9;
+      --gold: #D9AD55;
+      --charcoal: #263445;
+      --muted: #64748B;
+      --white: #FFFFFF;
+      --border: #E5EBF1;
+
+      /* Taxation-specific service palette */
+      --accounting: #EEE8F6;
+      --vat: #FBE8DA;
+      --corporate: #F5E2E8;
+      --compliance: #E4EFF8;
+      --reporting: #FFF2CC;
+      --review: #E8F0E4;
+
+      /* Supporting information palette */
+      --support-beige: #F4EBDD;
+      --support-blue: #EAF1F7;
+      --support-yellow: #FFF5D9;
+      --neutral: #F5F7FA;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--charcoal);
+      background: #FFFFFF;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1140px, 92%);
+      margin: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 3px 14px rgba(11, 40, 80, 0.06);
+    }
+
+    .nav-wrap {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--royal);
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-menu > li {
+      position: relative;
+    }
+
+    .nav-menu > li > a {
+      display: block;
+      padding: 25px 0;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a:focus {
+      color: var(--ocean);
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 220px;
+      padding: 10px;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 12px 28px rgba(11, 40, 80, 0.12);
+      list-style: none;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu,
+    .dropdown.open .dropdown-menu {
+      display: block;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: var(--royal);
+      color: #FFFFFF;
+      border-radius: 7px;
+      padding: 10px 13px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, var(--navy), var(--royal));
+      color: #FFFFFF;
+      padding: 78px 0;
+      text-align: center;
+    }
+
+    .hero-label {
+      display: inline-block;
+      padding: 7px 15px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 30px;
+      color: #F5DDAA;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 850px;
+      margin: 20px auto 15px;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.15;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 25px;
+      color: #E5EDF7;
+      font-size: 17px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .2s ease;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .btn-gold:hover {
+      background: #E8C477;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.7);
+      color: #FFFFFF;
+      margin-left: 8px;
+    }
+
+    .section {
+      padding: 65px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 35px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      color: var(--ocean);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      margin: 8px 0 12px;
+      color: var(--navy);
+      font-size: clamp(26px, 4vw, 35px);
+      line-height: 1.25;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .intro-panel {
+      background: var(--support-blue);
+      border-left: 5px solid var(--ocean);
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 35px;
+    }
+
+    .intro-panel h3 {
+      color: var(--navy);
+      margin-top: 0;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      padding: 25px;
+      border-radius: 13px;
+      border: 1px solid rgba(38, 52, 69, .08);
+      min-height: 245px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(11, 40, 80, .08);
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      margin: 12px 0;
+      font-size: 19px;
+    }
+
+    .service-card p {
+      color: #455468;
+      font-size: 14px;
+    }
+
+    .service-card ul {
+      padding-left: 19px;
+      color: #455468;
+      font-size: 13px;
+    }
+
+    .service-number {
+      display: inline-flex;
+      width: 37px;
+      height: 37px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,.75);
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .bg-accounting { background: var(--accounting); }
+    .bg-vat { background: var(--vat); }
+    .bg-corporate { background: var(--corporate); }
+    .bg-compliance { background: var(--compliance); }
+    .bg-reporting { background: var(--reporting); }
+    .bg-review { background: var(--review); }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .info-card {
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid rgba(38,52,69,.06);
+    }
+
+    .info-card h3 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .info-card p,
+    .info-card li {
+      font-size: 14px;
+      color: #455468;
+    }
+
+    .bg-beige { background: var(--support-beige); }
+    .bg-blue { background: var(--support-blue); }
+    .bg-yellow { background: var(--support-yellow); }
+    .bg-neutral { background: var(--neutral); }
+
+    .check-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .check-list li {
+      padding: 8px 0 8px 27px;
+      position: relative;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      color: var(--royal);
+      font-weight: 800;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .process-step {
+      background: var(--support-yellow);
+      border-radius: 12px;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .process-step strong {
+      display: inline-flex;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--royal);
+      color: #FFFFFF;
+    }
+
+    .process-step h3 {
+      color: var(--navy);
+      font-size: 16px;
+    }
+
+    .process-step p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .notice {
+      background: var(--support-beige);
+      border-left: 5px solid var(--gold);
+      padding: 22px;
+      border-radius: 9px;
+      font-size: 14px;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-list details {
+      background: var(--neutral);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 17px 20px;
+      margin-bottom: 12px;
+    }
+
+    .faq-list summary {
+      color: var(--navy);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .faq-list p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .cta {
+      background: var(--navy);
+      color: #FFFFFF;
+      padding: 55px 0;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      margin: 0 0 12px;
+    }
+
+    .cta p {
+      color: #DCE6F2;
+      margin: 0 auto 22px;
+      max-width: 650px;
+    }
+
+    .site-footer {
+      background: #071D39;
+      color: #FFFFFF;
+      padding: 38px 0 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    .site-footer h3,
+    .site-footer h4 {
+      color: #F1D69E;
+    }
+
+    .site-footer p,
+    .site-footer a {
+      color: #D3DCE8;
+      font-size: 13px;
+    }
+
+    .site-footer a:hover {
+      color: #FFFFFF;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin: 8px 0;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.15);
+      margin-top: 28px;
+      padding-top: 18px;
+      color: #B8C5D5;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: #FFFFFF;
+        padding: 12px 5%;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-menu.is-open {
+        display: flex;
+      }
+
+      .nav-menu > li > a {
+        padding: 12px 0;
+      }
+
+      .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: 0;
+        padding-left: 15px;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: none;
+      }
+
+      .dropdown.open .dropdown-menu,
+      .dropdown:focus-within .dropdown-menu {
+        display: block;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 58px 0;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .btn-outline {
+        margin: 10px 0 0;
+      }
+
+      .service-grid,
+      .info-grid,
+      .process-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 48px 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header class="site-header">
   <div class="container nav-wrap">
-    <a class="brand" href="index.html">DUC<span>ES</span></a>
+    <a href="index.html" class="brand">
+      DUCES
+      <span>CONSULTANCY SERVICES</span>
+    </a>
 
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="mainland.html">Mainland</a>
-      <a href="freezone.html">Free Zone</a>
-      <a href="business-banking.html">Business Banking</a>
-      <a href="business-loan.html">Business Loans</a>
-      <a href="taxation-accounting.html">Tax & Accounting</a>
-      <a href="pro-visa-services.html">PRO & Visa</a>
-      <a href="contact.html" class="nav-cta">Contact Us</a>
-    </nav>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+
+      <li class="dropdown">
+        <a href="company-formation.html">Business Setup ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="company-formation.html">Company Formation</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="business-banking.html">Business Accounts ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="business-banking.html">Business Banking</a></li>
+        </ul>
+      </li>
+
+      <li><a href="business-loan.html">Business Loans</a></li>
+      <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
+      <li><a href="pro-visa-services.html">PRO & Visa</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </div>
 </header>
 
 <main>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-content">
-    <span class="eyebrow">DUCES Consultancy Services</span>
-    <h1>Stay Organised. Stay Compliant. Grow with Confidence.</h1>
-    <p>
-      Practical VAT, corporate tax, bookkeeping and accounting
-      consultancy support for businesses operating in the UAE.
-    </p>
-    <a href="contact.html" class="btn">Request a Consultation</a>
-    <a href="#services" class="btn btn-outline">Explore Services</a>
-  </div>
-</section>
-
-<!-- SERVICE 01: ACCOUNTING -->
-<section class="section service-accounting" id="services">
-  <div class="container">
-    <div class="section-heading">
-      <span class="tag">SERVICE 01</span>
-      <h2>Accounting & Bookkeeping Services</h2>
+  <section class="hero">
+    <div class="container">
+      <span class="hero-label">UAE Tax & Accounting Consultancy</span>
+      <h1>Taxation, Accounting & Bookkeeping Services</h1>
       <p>
-        Organised financial records help business owners understand
-        their financial position and prepare for important decisions.
+        Organise your business finances, understand your UAE tax obligations
+        and maintain better financial records with practical consultancy
+        and documentation support.
       </p>
+      <a href="contact.html" class="btn btn-gold">Request a Consultation</a>
+      <a href="#services" class="btn btn-outline">Explore Services</a>
     </div>
+  </section>
 
-    <div class="grid">
-      <article class="card">
-        <h3>Bookkeeping Support</h3>
-        <p>Support with recording and organising day-to-day financial transactions.</p>
-        <ul>
-          <li>Sales and purchase records</li>
-          <li>Expense categorisation</li>
-          <li>Transaction organisation</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Accounting Support</h3>
-        <p>Assistance with maintaining structured accounting information.</p>
-        <ul>
-          <li>Income and expense summaries</li>
-          <li>Account reconciliation support</li>
-          <li>Financial record organisation</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Financial Reporting</h3>
-        <p>Preparation support for useful management-level financial information.</p>
-        <ul>
-          <li>Income and expense summaries</li>
-          <li>Cash-flow information</li>
-          <li>Management reporting support</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- SUPPORT: VAT THRESHOLDS -->
-<section class="section support-eligibility">
-  <div class="container">
-    <div class="section-heading">
-      <h2>UAE VAT Registration: Key Thresholds</h2>
-      <p>
-        Understand the general VAT registration thresholds before
-        assessing your business's registration requirements.
-      </p>
-    </div>
-
-    <div class="info-grid">
-      <div class="info-panel">
-        <strong>Mandatory Registration</strong>
-        <span class="highlight-number">AED 375,000</span>
-        <p>General mandatory registration threshold based on taxable supplies and imports.</p>
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Financial Support for Businesses</span>
+        <h2>Build Better Financial Management</h2>
+        <p>
+          Clear records and timely compliance support can help business owners
+          understand their financial position and plan their next steps.
+        </p>
       </div>
 
-      <div class="info-panel">
-        <strong>Voluntary Registration</strong>
-        <span class="highlight-number">AED 187,500</span>
-        <p>General voluntary registration threshold, subject to applicable conditions.</p>
-      </div>
-
-      <div class="info-panel">
-        <strong>Standard VAT Rate</strong>
-        <span class="highlight-number">5%</span>
-        <p>Standard VAT rate in the UAE. Different tax treatments may apply to certain supplies.</p>
+      <div class="intro-panel">
+        <h3>Tax and accounting support for UAE businesses</h3>
+        <p>
+          DUCES provides consultancy, bookkeeping coordination, accounting
+          support and tax-related documentation assistance. The exact scope
+          of work depends on the client's requirements and the applicable
+          regulatory authorisations.
+        </p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SERVICE 02: VAT -->
-<section class="section service-vat">
-  <div class="container">
-    <div class="section-heading">
-      <span class="tag">SERVICE 02</span>
-      <h2>VAT Consultancy & Filing Support</h2>
-      <p>
-        Support for businesses that need help understanding VAT
-        obligations and organising their tax-related records.
-      </p>
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Our Services</span>
+        <h2>Taxation & Accounting Solutions</h2>
+        <p>
+          Explore the key areas where your business may need accounting
+          and tax-related support.
+        </p>
+      </div>
+
+      <div class="service-grid">
+
+        <article class="service-card bg-accounting">
+          <span class="service-number">01</span>
+          <h3>Accounting & Bookkeeping</h3>
+          <p>
+            Support with organising financial records and maintaining
+            a clearer view of business transactions.
+          </p>
+          <ul>
+            <li>Bookkeeping coordination</li>
+            <li>Income and expense records</li>
+            <li>Transaction categorisation</li>
+            <li>Accounts record organisation</li>
+          </ul>
+        </article>
+
+        <article class="service-card bg-vat">
+          <span class="service-number">02</span>
+          <h3>VAT Services</h3>
+          <p>
+            Consultancy and documentation support relating to UAE
+            Value Added Tax requirements.
+          </p>
+          <ul>
+            <li>VAT registration guidance</li>
+            <li>VAT return preparation support</li>
+            <li>VAT record organisation</li>
+            <li>Input and output VAT review support</li>
+          </ul>
+        </article>
+
+        <article class="service-card bg-corporate">
+          <span class="service-number">03</span>
+          <h3>Corporate Tax</h3>
+          <p>
+            Understand the UAE Corporate Tax framework and organise
+            relevant business information.
+          </p>
+          <ul>
+            <li>Corporate Tax registration guidance</li>
+            <li>Taxable income information review</li>
+            <li>Record preparation support</li>
+            <li>Filing coordination, where authorised</li>
+          </ul>
+        </article>
+
+        <article class="service-card bg-compliance">
+          <span class="service-number">04</span>
+          <h3>Tax Compliance Support</h3>
+          <p>
+            Assistance with understanding applicable deadlines,
+            documentation requirements and compliance processes.
+          </p>
+          <ul>
+            <li>Compliance requirement guidance</li>
+            <li>Document checklist preparation</li>
+            <li>Deadline awareness</li>
+            <li>Record organisation</li>
+          </ul>
+        </article>
+
+        <article class="service-card bg-reporting">
+          <span class="service-number">05</span>
+          <h3>Financial Reporting</h3>
+          <p>
+            Organise financial information to help business owners
+            better understand business performance.
+          </p>
+          <ul>
+            <li>Income and expense summaries</li>
+            <li>Basic financial reports</li>
+            <li>Receivables and payables records</li>
+            <li>Management information support</li>
+          </ul>
+        </article>
+
+        <article class="service-card bg-review">
+          <span class="service-number">06</span>
+          <h3>Accounting Review</h3>
+          <p>
+            Review the organisation of available financial records
+            and identify information that may need attention.
+          </p>
+          <ul>
+            <li>Record completeness checks</li>
+            <li>Transaction documentation review</li>
+            <li>Accounts organisation</li>
+            <li>Recommendations for next steps</li>
+          </ul>
+        </article>
+
+      </div>
     </div>
+  </section>
 
-    <div class="grid">
-      <article class="card">
-        <h3>VAT Registration Support</h3>
-        <p>Guidance on registration requirements and documentation preparation.</p>
-      </article>
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">UAE Tax Information</span>
+        <h2>Understand the Main Tax Requirements</h2>
+        <p>
+          General information to help business owners understand
+          the main UAE tax concepts.
+        </p>
+      </div>
 
-      <article class="card">
-        <h3>VAT Return Preparation Support</h3>
-        <p>Assistance in organising sales, purchases and supporting information for VAT return preparation.</p>
-      </article>
-
-      <article class="card">
-        <h3>VAT Record Review</h3>
-        <p>Review support to identify missing information and inconsistencies in available records.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- SUPPORT: VAT CALCULATOR -->
-<section class="section support-calculator">
-  <div class="container">
-    <div class="section-heading">
-      <h2>UAE VAT Calculator</h2>
-      <p>
-        Estimate VAT at the standard 5% rate. This is an illustrative
-        calculation, not a tax return.
-      </p>
-    </div>
-
-    <div class="calculator-box">
-      <div class="form-grid">
-        <div>
-          <label for="vatAmount">Amount (AED)</label>
-          <input type="number" id="vatAmount" min="0" step="0.01" placeholder="Enter amount">
+      <div class="info-grid">
+        <div class="info-card bg-beige">
+          <h3>Value Added Tax (VAT)</h3>
+          <p>
+            The standard UAE VAT rate is 5%. Mandatory VAT registration
+            generally applies when taxable supplies and imports exceed
+            AED 375,000 over the relevant period.
+          </p>
+          <p>
+            Voluntary registration may be available when the relevant
+            threshold of AED 187,500 is met, subject to applicable rules.
+          </p>
         </div>
 
-        <div>
-          <label for="vatMode">Calculation</label>
-          <select id="vatMode">
-            <option value="add">Add 5% VAT</option>
-            <option value="extract">Extract VAT from VAT-inclusive amount</option>
-          </select>
+        <div class="info-card bg-blue">
+          <h3>UAE Corporate Tax</h3>
+          <p>
+            Under the general UAE Corporate Tax regime, the rate is 0%
+            on taxable income up to AED 375,000 and 9% on taxable income
+            above that amount, subject to applicable rules.
+          </p>
+          <p>
+            Qualifying Free Zone Persons may be subject to a separate
+            framework for qualifying income. Free Zone status alone
+            does not automatically mean all income is taxed at 0%.
+          </p>
+        </div>
+
+        <div class="info-card bg-yellow">
+          <h3>Financial Record Keeping</h3>
+          <p>
+            Businesses should maintain appropriate financial records,
+            invoices, supporting documents and transaction information
+            in line with applicable UAE requirements.
+          </p>
+        </div>
+
+        <div class="info-card bg-neutral">
+          <h3>Business-Specific Requirements</h3>
+          <p>
+            Tax treatment and filing obligations can differ depending
+            on the legal structure, business activity, turnover,
+            transactions and applicable exemptions.
+          </p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <button class="action-btn" type="button" onclick="calculateVAT()">Calculate VAT</button>
-      <button class="action-btn secondary" type="button" onclick="resetVAT()">Reset</button>
-
-      <div class="result" id="vatResult" aria-live="polite">
-        Your calculation will appear here.
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Getting Started</span>
+        <h2>Documents You May Need</h2>
+        <p>
+          The final document list depends on your business structure
+          and the service requested.
+        </p>
       </div>
 
-      <p class="note">
-        Assumes the standard 5% VAT rate. Actual VAT treatment depends
-        on the nature of the supply and applicable UAE tax rules.
-      </p>
-    </div>
-  </div>
-</section>
+      <div class="info-grid">
+        <div class="info-card bg-accounting">
+          <h3>Business Documents</h3>
+          <ul class="check-list">
+            <li>Valid Trade Licence</li>
+            <li>Company MOA or incorporation documents, where applicable</li>
+            <li>Shareholder or authorised signatory details</li>
+            <li>Emirates ID and passport copies, where required</li>
+            <li>Registered business address details</li>
+          </ul>
+        </div>
 
-<!-- SERVICE 03: CORPORATE TAX -->
-<section class="section service-corporate">
-  <div class="container">
-    <div class="section-heading">
-      <span class="tag">SERVICE 03</span>
-      <h2>UAE Corporate Tax Support</h2>
-      <p>
-        Understand the general UAE corporate tax framework and
-        organise your business information for compliance.
-      </p>
-    </div>
-
-    <div class="grid">
-      <article class="card">
-        <h3>Corporate Tax Registration Support</h3>
-        <p>Guidance on registration requirements and relevant business information.</p>
-      </article>
-
-      <article class="card">
-        <h3>Corporate Tax Record Preparation</h3>
-        <p>Assistance in organising financial records and supporting documents.</p>
-      </article>
-
-      <article class="card">
-        <h3>Corporate Tax Return Support</h3>
-        <p>Preparation support and coordination with appropriately qualified tax professionals where required.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- SUPPORT: CORPORATE TAX ESTIMATOR -->
-<section class="section support-estimator">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Corporate Tax Estimator</h2>
-      <p>
-        A simplified illustration of the general standard corporate
-        tax calculation for taxable income.
-      </p>
-    </div>
-
-    <div class="calculator-box">
-      <div>
-        <label for="taxableIncome">Estimated Taxable Income (AED)</label>
-        <input type="number" id="taxableIncome" min="0" step="0.01" placeholder="Enter taxable income">
-      </div>
-
-      <button class="action-btn" type="button" onclick="calculateCorporateTax()">Estimate Tax</button>
-      <button class="action-btn secondary" type="button" onclick="resetCorporateTax()">Reset</button>
-
-      <div class="result" id="corporateResult" aria-live="polite">
-        Your estimate will appear here.
-      </div>
-
-      <p class="note">
-        This simplified estimator applies 0% to the first AED 375,000
-        of taxable income and 9% to the amount above that threshold.
-        It does not calculate Free Zone qualifying income, tax adjustments,
-        reliefs, exemptions or other special rules.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 04: TAX COMPLIANCE -->
-<section class="section service-compliance">
-  <div class="container">
-    <div class="section-heading">
-      <span class="tag">SERVICE 04</span>
-      <h2>Tax Compliance Support</h2>
-      <p>
-        Practical assistance to help businesses organise records,
-        understand deadlines and prepare for compliance activities.
-      </p>
-    </div>
-
-    <div class="grid">
-      <article class="card">
-        <h3>Compliance Planning</h3>
-        <p>Understand relevant tax obligations and plan the information needed for compliance.</p>
-      </article>
-
-      <article class="card">
-        <h3>Documentation Coordination</h3>
-        <p>Organise business documents and coordinate information required for tax-related processes.</p>
-      </article>
-
-      <article class="card">
-        <h3>Professional Coordination</h3>
-        <p>Coordinate with appropriately licensed tax professionals where specialist or regulated services are required.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 05: FINANCIAL REPORTING -->
-<section class="section service-reporting">
-  <div class="container">
-    <div class="section-heading">
-      <span class="tag">SERVICE 05</span>
-      <h2>Financial Records & Reporting</h2>
-      <p>
-        Better organised records can help business owners monitor
-        operations and prepare information for professional review.
-      </p>
-    </div>
-
-    <div class="grid">
-      <article class="card">
-        <h3>Sales & Revenue Records</h3>
-        <p>Organising invoices, sales records and revenue information.</p>
-      </article>
-
-      <article class="card">
-        <h3>Purchases & Expenses</h3>
-        <p>Organising supplier invoices, expense records and supporting documents.</p>
-      </article>
-
-      <article class="card">
-        <h3>Banking & Financial Records</h3>
-        <p>Organising bank statements and transaction information for reconciliation and review.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- SUPPORT: DOCUMENTS -->
-<section class="section support-documents">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Documents & Information Checklist</h2>
-      <p>
-        The exact requirements depend on the service, business activity
-        and applicable authority or tax process.
-      </p>
-    </div>
-
-    <div class="grid">
-      <article class="info-panel">
-        <strong>Business Documents</strong>
-        <ul>
-          <li>Trade Licence</li>
-          <li>Company incorporation documents</li>
-          <li>Memorandum of Association, where applicable</li>
-          <li>Business contact details</li>
-        </ul>
-      </article>
-
-      <article class="info-panel">
-        <strong>Financial Information</strong>
-        <ul>
-          <li>Bank statements</li>
-          <li>Sales invoices</li>
-          <li>Purchase invoices</li>
-          <li>Expense records</li>
-        </ul>
-      </article>
-
-      <article class="info-panel">
-        <strong>Tax Information</strong>
-        <ul>
-          <li>VAT registration details, if applicable</li>
-          <li>Previous VAT returns, if applicable</li>
-          <li>Corporate tax registration details, if applicable</li>
-          <li>Relevant supporting records</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 06: ACCOUNTING REVIEW -->
-<section class="section service-review">
-  <div class="container">
-    <div class="section-heading">
-      <span class="tag">SERVICE 06</span>
-      <h2>Accounting Review & Business Support</h2>
-      <p>
-        Assistance in reviewing available financial information
-        and identifying areas that may need further attention.
-      </p>
-    </div>
-
-    <div class="grid">
-      <article class="card">
-        <h3>Record Organisation Review</h3>
-        <p>Check the structure and completeness of available business records.</p>
-      </article>
-
-      <article class="card">
-        <h3>Financial Information Review</h3>
-        <p>Help identify gaps, missing documents and information requiring clarification.</p>
-      </article>
-
-      <article class="card">
-        <h3>Business Readiness</h3>
-        <p>Help organise financial information for discussions with banks, accountants or other professional service providers.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- SUPPORT: PROCESS -->
-<section class="section support-process">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Our Working Process</h2>
-      <p>A straightforward approach to understanding your requirements and coordinating the next steps.</p>
-    </div>
-
-    <div class="process-grid">
-      <div class="step">
-        <div class="step-number">01</div>
-        <h3>Initial Discussion</h3>
-        <p>Understand your business, activity and support requirements.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">02</div>
-        <h3>Document Review</h3>
-        <p>Identify available documents and information gaps.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">03</div>
-        <h3>Service Coordination</h3>
-        <p>Explain the proposed scope, requirements and next steps.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">04</div>
-        <h3>Ongoing Support</h3>
-        <p>Coordinate agreed support and follow-up requirements.</p>
+        <div class="info-card bg-vat">
+          <h3>Financial Documents</h3>
+          <ul class="check-list">
+            <li>Business bank statements</li>
+            <li>Sales and purchase invoices</li>
+            <li>Expense receipts and supporting records</li>
+            <li>Previous VAT returns, if applicable</li>
+            <li>Existing accounting reports and ledgers</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SUPPORT: IMPORTANT INFORMATION -->
-<section class="section support-important">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Important Information</h2>
-      <p>Understand the scope of DUCES services before engaging.</p>
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Our Approach</span>
+        <h2>A Simple Four-Step Process</h2>
+        <p>
+          We begin by understanding your business and the support you need.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <strong>1</strong>
+          <h3>Initial Discussion</h3>
+          <p>Understand your business structure and requirements.</p>
+        </div>
+
+        <div class="process-step">
+          <strong>2</strong>
+          <h3>Document Review</h3>
+          <p>Identify the relevant records and documents required.</p>
+        </div>
+
+        <div class="process-step">
+          <strong>3</strong>
+          <h3>Service Coordination</h3>
+          <p>Agree on the appropriate support and scope of work.</p>
+        </div>
+
+        <div class="process-step">
+          <strong>4</strong>
+          <h3>Next Steps</h3>
+          <p>Coordinate the agreed work and communicate progress.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>Service Scope & Professional Responsibilities</h3>
+  <section class="section">
+    <div class="container">
+      <div class="notice">
+        <strong>Important information:</strong>
+        Tax rates, thresholds, exemptions and filing requirements may change
+        and depend on individual circumstances. Information on this page is
+        general guidance, not a substitute for professional tax advice.
+        DUCES is a consultancy service provider and does not guarantee
+        tax outcomes, refunds or regulatory approvals. Statutory audit
+        opinions and regulated tax-agent representation are not offered
+        unless performed by appropriately authorised professionals.
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Frequently Asked Questions</span>
+        <h2>Taxation & Accounting FAQs</h2>
+      </div>
+
+      <div class="faq-list">
+
+        <details>
+          <summary>Does every UAE business need to register for VAT?</summary>
+          <p>
+            Not every business must register immediately. Mandatory
+            registration generally applies when taxable supplies and
+            imports exceed AED 375,000 over the relevant period.
+            Voluntary registration may be possible subject to the
+            applicable AED 187,500 threshold and rules.
+          </p>
+        </details>
+
+        <details>
+          <summary>Is Corporate Tax applicable to Free Zone companies?</summary>
+          <p>
+            Free Zone companies are within the UAE Corporate Tax framework.
+            A Qualifying Free Zone Person may benefit from a 0% rate on
+            qualifying income if all relevant conditions are met.
+            Other income may be subject to different treatment.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can a small business maintain its own accounts?</summary>
+          <p>
+            Businesses may maintain their own records, but they should
+            ensure the records are complete, accurate and maintained
+            according to applicable requirements.
+          </p>
+        </details>
+
+        <details>
+          <summary>What documents are needed for accounting support?</summary>
+          <p>
+            Common documents include the Trade Licence, bank statements,
+            invoices, receipts, expense records and previous tax filings,
+            where applicable.
+          </p>
+        </details>
+
+        <details>
+          <summary>Does DUCES guarantee tax registration or approval?</summary>
+          <p>
+            No. DUCES can provide agreed consultancy and documentation
+            support, but registration decisions and regulatory outcomes
+            remain with the relevant UAE authorities.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Need Support With Your Business Accounts or Tax Requirements?</h2>
       <p>
-        DUCES Consultancy Services provides consultancy, bookkeeping
-        assistance, documentation support and service coordination
-        within its authorised business activities.
+        Discuss your business requirements with DUCES and identify
+        the appropriate next steps.
       </p>
-      <p>
-        Statutory audit services, formal audit opinions and regulated
-        tax-agent representation are not implied. Where required,
-        these services must be performed by appropriately licensed
-        or authorised professionals.
-      </p>
-      <p>
-        Tax calculations and examples on this page are general
-        information only. They do not replace professional advice
-        or official guidance from the UAE Federal Tax Authority.
-      </p>
+      <a href="https://wa.me/971505356966" class="btn btn-gold" target="_blank" rel="noopener">
+        Contact DUCES on WhatsApp
+      </a>
+      <a href="contact.html" class="btn btn-outline">Send an Enquiry</a>
     </div>
-  </div>
-</section>
-
-<!-- SUPPORT: FAQ -->
-<section class="section support-faq">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Frequently Asked Questions</h2>
-      <p>Common questions about VAT, corporate tax and accounting support in the UAE.</p>
-    </div>
-
-    <div class="faq-list">
-      <details>
-        <summary>What is the mandatory VAT registration threshold in the UAE?</summary>
-        <p>The general mandatory VAT registration threshold is AED 375,000 in taxable supplies and imports, subject to applicable rules.</p>
-      </details>
-
-      <details>
-        <summary>What is the voluntary VAT registration threshold?</summary>
-        <p>The general voluntary registration threshold is AED 187,500, subject to the applicable conditions.</p>
-      </details>
-
-      <details>
-        <summary>What is the standard UAE VAT rate?</summary>
-        <p>The standard VAT rate is 5%. Certain supplies may have different VAT treatments.</p>
-      </details>
-
-      <details>
-        <summary>What is the standard UAE corporate tax rate?</summary>
-        <p>Under the general regime, 0% applies to the first AED 375,000 of taxable income and 9% applies to taxable income exceeding that amount, subject to applicable rules.</p>
-      </details>
-
-      <details>
-        <summary>Do Free Zone companies pay corporate tax?</summary>
-        <p>Free Zone companies may qualify for 0% corporate tax on qualifying income if the applicable conditions are met. Non-qualifying income may be subject to 9% tax.</p>
-      </details>
-
-      <details>
-        <summary>Can DUCES help organise bookkeeping records?</summary>
-        <p>DUCES can provide bookkeeping and record-organisation support within its authorised service scope.</p>
-      </details>
-
-      <details>
-        <summary>Can DUCES provide statutory audit services?</summary>
-        <p>Statutory audit services must be performed by an appropriately licensed audit professional or firm. They are not implied by general bookkeeping or consultancy support.</p>
-      </details>
-
-      <details>
-        <summary>What documents are needed for accounting support?</summary>
-        <p>Requirements may include your trade licence, company documents, invoices, bank statements and relevant financial records.</p>
-      </details>
-
-      <details>
-        <summary>How can I discuss my business requirements?</summary>
-        <p>Contact DUCES through the contact page or WhatsApp to discuss your business requirements and the available scope of support.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- SUPPORT: OFFICIAL RESOURCES -->
-<section class="section support-general">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Official UAE Tax Resources</h2>
-      <p>For official legislation, guidance, registration and tax-related information, refer to the relevant government authority.</p>
-    </div>
-
-    <div class="grid">
-      <article class="card">
-        <h3>Federal Tax Authority</h3>
-        <p>Official UAE tax authority information and services.</p>
-        <p><a href="https://tax.gov.ae/" target="_blank" rel="noopener">Visit FTA Website</a></p>
-      </article>
-
-      <article class="card">
-        <h3>UAE Government Portal</h3>
-        <p>Government information about taxation and business in the UAE.</p>
-        <p><a href="https://u.ae/" target="_blank" rel="noopener">Visit UAE Government Portal</a></p>
-      </article>
-
-      <article class="card">
-        <h3>Ministry of Finance</h3>
-        <p>Official UAE Ministry of Finance announcements and resources.</p>
-        <p><a href="https://mof.gov.ae/" target="_blank" rel="noopener">Visit Ministry of Finance</a></p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <div class="container">
-    <h2>Need Support With Your UAE Business Accounts or Tax Requirements?</h2>
-    <p>Speak with DUCES Consultancy Services about your business requirements.</p>
-    <a href="contact.html" class="btn">Contact DUCES</a>
-    <a href="https://wa.me/971505356966" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp Us</a>
-  </div>
-</section>
+  </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h3>DUCES Consultancy Services</h3>
-      <p>
-        Business consultancy, banking consultancy and documentation
-        support in the UAE.
-      </p>
-      <p>Contact: +971 50 535 6966</p>
-    </div>
-
-    <div>
-      <h3>Our Services</h3>
-      <a href="mainland.html">Mainland Company Setup</a>
-      <a href="freezone.html">Free Zone Company Setup</a>
-      <a href="business-banking.html">Business Banking</a>
-      <a href="business-loan.html">Business Loans</a>
-    </div>
-
-    <div>
-      <h3>More Information</h3>
-      <a href="taxation-accounting.html">Tax & Accounting</a>
-      <a href="pro-visa-services.html">PRO & Visa Services</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-  </div>
-
   <div class="container">
-    <p>© <span id="currentYear"></span> DUCES Consultancy Services. All rights reserved.</p>
+    <div class="footer-grid">
+
+      <div>
+        <h3>DUCES Consultancy Services</h3>
+        <p>
+          Business consultancy and documentation support in the UAE.
+          Helping entrepreneurs and businesses understand their
+          requirements and coordinate their next steps.
+        </p>
+        <p><strong>Contact:</strong> +971 50 535 6966</p>
+      </div>
+
+      <div>
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="company-formation.html">Business Setup</a></li>
+          <li><a href="business-banking.html">Business Accounts</a></li>
+          <li><a href="business-loan.html">Business Loans</a></li>
+          <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
+          <li><a href="pro-visa-services.html">PRO & Visa Services</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Useful Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About DUCES</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © <span id="current-year"></span> DUCES Consultancy Services. All rights reserved.
+    </div>
   </div>
 </footer>
 
 <script>
-function formatAED(value) {
-  return new Intl.NumberFormat("en-AE", {
-    style:"currency",
-    currency:"AED",
-    minimumFractionDigits:2,
-    maximumFractionDigits:2
-  }).format(value);
-}
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector(".nav-menu");
 
-/* VAT CALCULATOR */
-function calculateVAT() {
-  const amount = Number(document.getElementById("vatAmount").value);
-  const mode = document.getElementById("vatMode").value;
-  const result = document.getElementById("vatResult");
-
-  if (!Number.isFinite(amount) || amount <= 0) {
-    result.textContent = "Please enter a valid amount greater than zero.";
-    return;
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", function () {
+      const isOpen = navMenu.classList.toggle("is-open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
   }
 
-  let net, vat, total;
+  document.querySelectorAll(".nav-menu .dropdown > a").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      if (window.innerWidth <= 900) {
+        const parent = link.parentElement;
+        if (!parent.classList.contains("open")) {
+          event.preventDefault();
+          parent.classList.add("open");
+        }
+      }
+    });
+  });
 
-  if (mode === "add") {
-    net = amount;
-    vat = amount * 0.05;
-    total = net + vat;
-  } else {
-    total = amount;
-    net = amount / 1.05;
-    vat = total - net;
-  }
-
-  result.innerHTML =
-    "Net Amount: " + formatAED(net) + "<br>" +
-    "VAT Amount (5%): " + formatAED(vat) + "<br>" +
-    "Total Amount: " + formatAED(total);
-}
-
-function resetVAT() {
-  document.getElementById("vatAmount").value = "";
-  document.getElementById("vatMode").value = "add";
-  document.getElementById("vatResult").textContent =
-    "Your calculation will appear here.";
-}
-
-/* CORPORATE TAX ESTIMATOR */
-function calculateCorporateTax() {
-  const income = Number(document.getElementById("taxableIncome").value);
-  const result = document.getElementById("corporateResult");
-
-  if (!Number.isFinite(income) || income < 0) {
-    result.textContent = "Please enter a valid taxable income amount.";
-    return;
-  }
-
-  const taxableAboveThreshold = Math.max(0, income - 375000);
-  const estimatedTax = taxableAboveThreshold * 0.09;
-
-  result.innerHTML =
-    "Estimated Taxable Income: " + formatAED(income) + "<br>" +
-    "Amount above AED 375,000: " + formatAED(taxableAboveThreshold) + "<br>" +
-    "Illustrative Corporate Tax: " + formatAED(estimatedTax);
-}
-
-function resetCorporateTax() {
-  document.getElementById("taxableIncome").value = "";
-  document.getElementById("corporateResult").textContent =
-    "Your estimate will appear here.";
-}
-
-document.getElementById("currentYear").textContent =
-  new Date().getFullYear();
+  document.getElementById("current-year").textContent =
+    new Date().getFullYear();
 </script>
 
 </body>
