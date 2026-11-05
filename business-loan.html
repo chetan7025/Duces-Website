@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Business Loans & Finance Assistance UAE | DUCES</title>
-  <meta name="description" content="Explore business finance, working capital, trade finance, property finance and loan application preparation support in the UAE with DUCES Consultancy Services.">
+  <title>Business Loan Assistance UAE | DUCES Consultancy Services</title>
+  <meta name="description" content="Explore business loan assistance, working capital, trade finance, mortgage and business loan eligibility guidance in the UAE with DUCES Consultancy Services.">
   <meta name="theme-color" content="#123B70">
 
   <link rel="stylesheet" href="css/style.css">
@@ -14,10 +13,10 @@
 
   <style>
     :root {
-      /* DUCES BRAND PALETTE */
+      /* DUCES BRAND COLOURS */
       --royal:#123B70;
       --navy:#0B2850;
-      --ocean:#1976B9;
+      --blue:#1976B9;
       --gold:#D9AD55;
       --charcoal:#263445;
       --muted:#64748B;
@@ -26,23 +25,18 @@
       --mist:#EDF2F7;
       --border:#DCE4ED;
 
-      /* BUSINESS FINANCE SERVICE PALETTE */
-      --business-loan:#E5EAF7;
-      --working-capital:#EAF1F8;
-      --trade-finance:#F4E6D7;
-      --property-finance:#F7F0E3;
-      --mortgage:#E9E2F2;
-      --equipment-finance:#F5E2E4;
-      --invoice-finance:#DCEEF0;
+      /* SAME SERVICE COLOURS AS BUSINESS SETUP */
+      --mainland:#F3EBDD;
+      --freezone:#EFF4E7;
+      --offshore:#EAF1F8;
 
-      /* SEPARATE SUPPORTING PALETTE */
-      --eligibility:#FFF1C9;
-      --documents:#E4EEDC;
-      --process:#F3E6D8;
-      --calculator:#E7EDF5;
-      --important:#F5DFE5;
-      --faq:#E9DFF5;
-      --general:#F5F1E8;
+      /* SAME SUPPORTING PASTEL STYLE AS BUSINESS SETUP */
+      --yellow:#FFF1B8;
+      --pastel-green:#DDF0D5;
+      --sky:#D9EBFA;
+      --beige:#F3DDC5;
+      --lavender:#E9DFF5;
+      --rose:#F5DFE5;
     }
 
     * { box-sizing:border-box; }
@@ -123,7 +117,7 @@
 
     .nav-menu a:hover,
     .nav-menu a:focus {
-      color:var(--ocean);
+      color:var(--blue);
     }
 
     .dropdown { position:relative; }
@@ -175,12 +169,7 @@
     .loan-hero {
       padding:84px 20px;
       color:var(--white);
-      background:linear-gradient(
-        125deg,
-        var(--navy),
-        var(--royal),
-        var(--ocean)
-      );
+      background:linear-gradient(125deg,var(--navy),var(--royal),var(--blue));
     }
 
     .hero-content {
@@ -241,22 +230,8 @@
       border-radius:7px;
       background:var(--royal);
       color:var(--white);
-      border:0;
       text-decoration:none;
       font-weight:700;
-      cursor:pointer;
-    }
-
-    .button-light {
-      display:inline-block;
-      padding:11px 20px;
-      border:1px solid var(--royal);
-      border-radius:7px;
-      color:var(--royal);
-      background:transparent;
-      text-decoration:none;
-      font-weight:700;
-      cursor:pointer;
     }
 
     /* SECTION STRUCTURE */
@@ -284,161 +259,113 @@
       line-height:1.75;
     }
 
-    /* SERVICE BACKGROUNDS */
+    /* SERVICE BACKGROUNDS: BUSINESS SETUP PALETTE */
 
-    .service-business-loan {
-      background:var(--business-loan);
-    }
-
-    .service-working-capital {
-      background:var(--working-capital);
-    }
-
-    .service-trade-finance {
-      background:var(--trade-finance);
-    }
-
-    .service-property {
-      background:var(--property-finance);
-    }
-
-    .service-mortgage {
-      background:var(--mortgage);
-    }
-
-    .service-equipment {
-      background:var(--equipment-finance);
-    }
-
-    .service-invoice {
-      background:var(--invoice-finance);
-    }
+    .mainland-bg { background:var(--mainland); }
+    .freezone-bg { background:var(--freezone); }
+    .offshore-bg { background:var(--offshore); }
 
     /* SUPPORTING BACKGROUNDS */
 
-    .support-eligibility {
-      background:var(--eligibility);
-    }
+    .yellow-bg { background:var(--yellow); }
+    .green-bg { background:var(--pastel-green); }
+    .sky-bg { background:var(--sky); }
+    .beige-bg { background:var(--beige); }
+    .lavender-bg { background:var(--lavender); }
+    .rose-bg { background:var(--rose); }
+    .neutral-bg { background:var(--cloud); }
 
-    .support-documents {
-      background:var(--documents);
-    }
+    /* CARDS */
 
-    .support-process {
-      background:var(--process);
-    }
-
-    .support-calculator {
-      background:var(--calculator);
-    }
-
-    .support-important {
-      background:var(--important);
-    }
-
-    .support-faq {
-      background:var(--faq);
-    }
-
-    .support-general {
-      background:var(--general);
-    }
-
-    /* CARDS AND GRIDS */
-
-    .loan-grid {
+    .grid-3 {
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
       gap:20px;
     }
 
-    .loan-card {
-      height:100%;
-      padding:24px;
-      border:1px solid rgba(18,59,112,.11);
-      border-radius:12px;
-      background:rgba(255,255,255,.58);
-      box-shadow:0 5px 18px rgba(18,59,112,.045);
-      transition:transform .2s ease,box-shadow .2s ease;
-    }
-
-    .loan-card:hover {
-      transform:translateY(-3px);
-      box-shadow:0 10px 24px rgba(18,59,112,.09);
-    }
-
-    .loan-card h3 {
-      margin:0 0 10px;
-      color:var(--royal);
-      font-size:19px;
-    }
-
-    .loan-card p,
-    .loan-card li {
-      color:var(--charcoal);
-      line-height:1.7;
-    }
-
-    .loan-card ul {
-      padding-left:20px;
-      margin:12px 0;
-    }
-
-    .loan-card li { margin:7px 0; }
-
-    .loan-card a {
-      display:inline-block;
-      margin-top:8px;
-      color:var(--royal);
-      font-weight:800;
-      text-decoration:none;
-    }
-
-    .loan-card a:hover { color:var(--ocean); }
-
-    .service-label {
-      display:inline-block;
-      margin-bottom:11px;
-      padding:5px 10px;
-      border-radius:20px;
-      background:rgba(255,255,255,.75);
-      color:var(--royal);
-      font-size:11px;
-      font-weight:800;
-      letter-spacing:.5px;
-      text-transform:uppercase;
-    }
-
-    /* INFORMATION PANELS */
-
-    .info-grid {
+    .grid-2 {
       display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:18px;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:20px;
     }
 
-    .info-panel {
-      padding:23px;
-      height:100%;
-      border:1px solid rgba(18,59,112,.10);
-      border-radius:11px;
-      background:rgba(255,255,255,.58);
+    .service-layout {
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:35px;
+      align-items:center;
     }
 
-    .info-panel h3 {
+    .service-copy h2 {
       color:var(--royal);
-      margin:0 0 9px;
-      font-size:18px;
+      font-size:34px;
+      line-height:1.2;
+      margin:0 0 15px;
     }
 
-    .info-panel p { margin:0; }
+    .service-copy p {
+      color:#465568;
+    }
 
-    .info-panel ul {
+    .service-copy ul {
+      padding-left:20px;
+    }
+
+    .service-copy li {
+      margin:7px 0;
+    }
+
+    .info-card {
+      padding:27px;
+      background:rgba(255,255,255,.88);
+      border:1px solid rgba(18,59,112,.10);
+      border-radius:13px;
+      box-shadow:0 8px 24px rgba(11,40,80,.06);
+    }
+
+    .info-card h3 {
+      color:var(--royal);
+      margin-top:0;
+    }
+
+    .info-card ul {
       padding-left:19px;
       margin-bottom:0;
     }
 
-    .info-panel li { margin:7px 0; }
+    .info-card li {
+      margin:8px 0;
+    }
+
+    .pastel-card {
+      height:100%;
+      padding:23px;
+      border-radius:12px;
+      border:1px solid rgba(18,59,112,.09);
+      background:rgba(255,255,255,.72);
+    }
+
+    .pastel-card h3 {
+      margin:0 0 9px;
+      color:var(--royal);
+      font-size:19px;
+    }
+
+    .pastel-card p {
+      margin:0;
+      color:#465568;
+    }
+
+    .tag {
+      display:inline-block;
+      margin:0 6px 8px 0;
+      padding:5px 10px;
+      border-radius:20px;
+      background:var(--white);
+      color:var(--royal);
+      font-size:12px;
+      font-weight:700;
+    }
 
     /* ELIGIBILITY */
 
@@ -447,13 +374,23 @@
       margin-top:24px;
       border-left:4px solid var(--gold);
       border-radius:8px;
-      background:rgba(255,255,255,.65);
+      background:rgba(255,255,255,.72);
       line-height:1.75;
     }
 
-    .eligibility-note strong { color:var(--navy); }
+    .eligibility-note strong {
+      color:var(--navy);
+    }
 
-    /* PROCESS */
+    /* DOCUMENTS AND PROCESS */
+
+    .document-list {
+      padding-left:20px;
+    }
+
+    .document-list li {
+      margin:9px 0;
+    }
 
     .process-grid {
       display:grid;
@@ -465,7 +402,7 @@
       padding:22px;
       border:1px solid rgba(18,59,112,.11);
       border-radius:11px;
-      background:rgba(255,255,255,.62);
+      background:rgba(255,255,255,.75);
     }
 
     .step-number {
@@ -487,15 +424,17 @@
       font-size:18px;
     }
 
-    .process-card p { margin:0; }
+    .process-card p {
+      margin:0;
+    }
 
-    /* CALCULATOR */
+    /* EMI CALCULATOR */
 
     .calculator-box {
       max-width:850px;
       margin:auto;
       padding:30px;
-      background:rgba(255,255,255,.8);
+      background:rgba(255,255,255,.88);
       border:1px solid rgba(18,59,112,.13);
       border-radius:14px;
       box-shadow:0 8px 26px rgba(11,40,80,.06);
@@ -548,7 +487,9 @@
       background:var(--white);
     }
 
-    .calculator-result[hidden] { display:none; }
+    .calculator-result[hidden] {
+      display:none;
+    }
 
     .calculator-result h3 {
       margin:0 0 14px;
@@ -597,7 +538,7 @@
     .faq-list details {
       padding:18px 20px;
       margin-bottom:12px;
-      background:rgba(255,255,255,.72);
+      background:rgba(255,255,255,.78);
       border:1px solid rgba(18,59,112,.12);
       border-radius:9px;
     }
@@ -606,34 +547,25 @@
       color:var(--royal);
       font-weight:800;
       cursor:pointer;
-      line-height:1.6;
     }
 
     .faq-list details p {
-      margin:12px 0 0;
-      color:var(--charcoal);
+      margin-bottom:0;
+      color:#465568;
+    }
+
+    /* NOTICE AND CTA */
+
+    .notice {
+      padding:20px 23px;
+      border-left:4px solid var(--gold);
+      border-radius:8px;
+      background:rgba(255,255,255,.78);
       line-height:1.75;
     }
 
-    /* IMPORTANT NOTICE */
-
-    .notice {
-      padding:23px;
-      border-left:5px solid var(--gold);
-      border-radius:9px;
-      background:rgba(255,255,255,.65);
-      line-height:1.8;
-    }
-
-    .notice h3 {
-      color:var(--navy);
-      margin-top:0;
-    }
-
-    /* CTA AND FOOTER */
-
     .cta-section {
-      padding:62px 20px;
+      padding:65px 20px;
       text-align:center;
       background:var(--royal);
       color:var(--white);
@@ -641,91 +573,96 @@
 
     .cta-section h2 {
       margin:0 0 12px;
-      font-size:clamp(26px,3vw,34px);
+      font-size:32px;
     }
 
     .cta-section p {
-      max-width:730px;
-      margin:0 auto 24px;
+      max-width:700px;
+      margin:0 auto 23px;
       color:#EAF1F8;
     }
 
+    /* FOOTER */
+
     .site-footer {
-      padding:38px 20px 22px;
+      padding:42px 20px 20px;
       background:var(--navy);
       color:#EAF1F8;
     }
 
     .footer-grid {
-      max-width:1180px;
+      max-width:1150px;
       margin:auto;
       display:grid;
-      grid-template-columns:2fr 1fr 1fr 1fr;
+      grid-template-columns:1.4fr 1fr 1fr 1fr;
       gap:25px;
     }
 
-    .site-footer h3,
-    .site-footer h4 {
+    .footer-grid h3,
+    .footer-grid h4 {
       color:var(--white);
       margin-top:0;
     }
 
-    .site-footer p {
+    .footer-grid p,
+    .footer-grid li {
       font-size:13px;
-      line-height:1.7;
+      line-height:1.8;
     }
 
-    .site-footer ul {
-      padding-left:18px;
+    .footer-grid ul {
+      list-style:none;
+      padding:0;
       margin:0;
     }
 
-    .site-footer li { margin:8px 0; }
-
-    .site-footer a {
+    .footer-grid a {
       color:#EAF1F8;
       text-decoration:none;
-      font-size:13px;
     }
 
-    .site-footer a:hover { color:var(--gold); }
-
-    .footer-bottom {
-      max-width:1180px;
-      margin:28px auto 0;
-      padding-top:17px;
-      border-top:1px solid rgba(255,255,255,.15);
-      color:#C7D4E3;
-      font-size:12px;
+    .footer-grid a:hover {
+      color:var(--gold);
     }
 
     .footer-disclaimer {
-      max-width:1180px;
-      margin:20px auto 0;
-      color:#C7D4E3;
+      max-width:1150px;
+      margin:28px auto 18px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.18);
+      color:#CBD5E1;
       font-size:12px;
       line-height:1.7;
+    }
+
+    .footer-bottom {
+      max-width:1150px;
+      margin:auto;
+      padding-top:15px;
+      border-top:1px solid rgba(255,255,255,.12);
+      text-align:center;
+      color:#CBD5E1;
+      font-size:12px;
     }
 
     .whatsapp-float {
       position:fixed;
       right:20px;
       bottom:20px;
-      z-index:900;
-      padding:13px 17px;
+      z-index:999;
+      padding:12px 17px;
       border-radius:30px;
-      background:#1F6B4A;
-      color:white;
+      background:var(--royal);
+      color:var(--white);
       text-decoration:none;
-      font-size:13px;
       font-weight:800;
-      box-shadow:0 5px 18px rgba(0,0,0,.2);
+      box-shadow:0 5px 18px rgba(11,40,80,.22);
     }
 
-    @media(max-width:950px) {
-      .menu-toggle { display:block; }
+    /* RESPONSIVE */
 
-      .nav-container { position:relative; }
+    @media(max-width:900px) {
+      .menu-toggle { display:block; }
 
       .nav-menu {
         display:none;
@@ -733,9 +670,9 @@
         top:100%;
         left:0;
         right:0;
-        padding:14px 22px 22px;
+        padding:15px 22px 22px;
         background:var(--white);
-        box-shadow:0 10px 18px rgba(11,40,80,.12);
+        box-shadow:0 10px 15px rgba(11,40,80,.10);
         align-items:stretch;
         flex-direction:column;
         gap:0;
@@ -752,70 +689,34 @@
         padding:7px 0 0 14px;
       }
 
-      .loan-grid,
-      .info-grid {
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-
-      .process-grid {
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-
-      .footer-grid {
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
+      .service-layout { grid-template-columns:1fr; }
+      .grid-3 { grid-template-columns:1fr 1fr; }
+      .process-grid { grid-template-columns:1fr 1fr; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
     }
 
     @media(max-width:600px) {
-      .container { width:min(100% - 30px,1120px); }
-
-      .loan-hero { padding:60px 15px; }
-
+      .loan-hero { padding:65px 15px; }
       .loan-hero p { font-size:15px; }
-
-      .button-outline {
-        margin:10px 0 0;
-      }
-
+      .button-outline { margin:10px 0 0; }
       .section { padding:48px 0; }
-
-      .loan-grid,
-      .info-grid,
+      .grid-3,
+      .grid-2,
       .process-grid,
       .calculator-grid,
       .result-grid,
       .footer-grid {
         grid-template-columns:1fr;
       }
-
-      .calculator-box { padding:19px; }
-
-      .calculator-actions {
-        flex-direction:column;
-      }
-
-      .calculator-actions button {
-        width:100%;
-      }
-
-      .loan-hero .button,
-      .loan-hero .button-outline {
-        display:block;
-        text-align:center;
-        margin:10px 0;
-      }
-
-      .whatsapp-float {
-        right:12px;
-        bottom:12px;
-      }
+      .service-copy h2 { font-size:29px; }
+      .container { width:min(100% - 30px,1120px); }
+      .calculator-box { padding:20px; }
     }
   </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
   <nav class="nav-container" aria-label="Main navigation">
 
@@ -841,7 +742,6 @@
           <li><a href="company-formation.html#mainland">Mainland</a></li>
           <li><a href="company-formation.html#free-zone">Free Zone</a></li>
           <li><a href="company-formation.html#offshore">Offshore</a></li>
-          <li><a href="company-formation.html#compare-options">Compare Options</a></li>
         </ul>
       </li>
 
@@ -850,7 +750,6 @@
       <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
       <li><a href="pro-visa-services.html">PRO & Visa</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="resources.html">Resources</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
 
@@ -859,992 +758,769 @@
 
 <main>
 
-<!-- HERO -->
-<section class="loan-hero">
-  <div class="container hero-content">
+  <!-- HERO -->
 
-    <span class="eyebrow">UAE Business Finance Consultancy</span>
+  <section class="loan-hero">
+    <div class="hero-content">
 
-    <h1>Business Loans & Finance Assistance in the UAE</h1>
+      <span class="eyebrow">Business Finance Assistance UAE</span>
 
-    <p>
-      Explore business finance options, understand lender requirements
-      and prepare your company documents with DUCES Consultancy Services.
-      From working capital to property finance, get structured support
-      before approaching a lender.
-    </p>
+      <h1>Business Loan & Finance Assistance in the UAE</h1>
 
-    <a class="button" href="#finance-services">
-      Explore Finance Solutions
-    </a>
-
-    <a class="button-outline" href="#emi-calculator">
-      Calculate Monthly EMI
-    </a>
-
-  </div>
-</section>
-
-<!-- OVERVIEW -->
-<section class="section support-general">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Find the Right Finance Route for Your Business</h2>
       <p>
-        Different financing requirements call for different lender
-        products. The right route depends on your business profile,
-        cash flow, financial records, security and repayment capacity.
+        Explore business loan assistance, working capital,
+        trade finance and mortgage options. DUCES helps
+        businesses understand finance requirements,
+        organise documents and prepare for lender discussions.
       </p>
+
+      <a class="button"
+         href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20need%20business%20loan%20assistance.">
+        Discuss Your Finance Requirement
+      </a>
+
+      <a class="button-outline" href="#finance-services">
+        Explore Services
+      </a>
+
     </div>
+  </section>
 
-    <div class="info-grid">
+  <!-- OVERVIEW -->
 
-      <article class="info-panel">
-        <h3>Business Growth</h3>
+  <section class="section neutral-bg">
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Find the Right Finance Route for Your Business</h2>
         <p>
-          Explore finance options for expansion, new projects,
-          additional stock and business development.
-        </p>
-      </article>
-
-      <article class="info-panel">
-        <h3>Cash Flow Management</h3>
-        <p>
-          Understand working capital and short-term funding options
-          for eligible business requirements.
-        </p>
-      </article>
-
-      <article class="info-panel">
-        <h3>Property & Asset Finance</h3>
-        <p>
-          Explore suitable property, equipment and asset-backed
-          finance options through relevant lenders.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 01 -->
-<section class="section service-business-loan" id="finance-services">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Business Loan Assistance</h2>
-      <p>
-        Consultancy and application preparation support for established
-        UAE businesses exploring suitable business finance options.
-      </p>
-    </div>
-
-    <div class="loan-grid">
-
-      <article class="loan-card">
-        <span class="service-label">Business Finance</span>
-        <h3>Business Term Loan</h3>
-        <p>
-          Explore term financing for eligible business expansion,
-          operational investment or other approved business purposes.
-        </p>
-        <ul>
-          <li>Company profile review</li>
-          <li>Financial document preparation</li>
-          <li>Repayment capacity discussion</li>
-          <li>Lender application coordination</li>
-        </ul>
-        <a href="contact.html">Discuss Business Finance →</a>
-      </article>
-
-      <article class="loan-card">
-        <span class="service-label">Business Expansion</span>
-        <h3>Business Expansion Finance</h3>
-        <p>
-          Explore financing requirements for businesses planning
-          to increase capacity or expand their operations.
-        </p>
-        <ul>
-          <li>Expansion purpose assessment</li>
-          <li>Financial information organisation</li>
-          <li>Business plan preparation support</li>
-          <li>Finance option discussion</li>
-        </ul>
-        <a href="contact.html">Discuss Expansion Finance →</a>
-      </article>
-
-      <article class="loan-card">
-        <span class="service-label">Business Funding</span>
-        <h3>Secured Business Finance</h3>
-        <p>
-          Understand finance options where a lender may require
-          collateral, guarantees or other security.
-        </p>
-        <ul>
-          <li>Security documentation checklist</li>
-          <li>Business financial profile</li>
-          <li>Facility requirement discussion</li>
-          <li>Lender assessment coordination</li>
-        </ul>
-        <a href="contact.html">Discuss Secured Finance →</a>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 02 -->
-<section class="section service-working-capital">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Working Capital & Business Cash Flow Finance</h2>
-      <p>
-        Explore financing routes that may help eligible businesses
-        manage day-to-day operations and short-term funding requirements.
-      </p>
-    </div>
-
-    <div class="loan-grid">
-
-      <article class="loan-card">
-        <h3>Working Capital Finance</h3>
-        <p>
-          Funding options designed to support eligible operating
-          expenses and working capital requirements.
-        </p>
-        <ul>
-          <li>Cash flow requirement review</li>
-          <li>Turnover and transaction assessment</li>
-          <li>Financial record preparation</li>
-          <li>Application coordination</li>
-        </ul>
-      </article>
-
-      <article class="loan-card">
-        <h3>Overdraft & Credit Facilities</h3>
-        <p>
-          Explore revolving or overdraft-style facilities where
-          offered and where the business meets lender criteria.
-        </p>
-        <ul>
-          <li>Facility requirement discussion</li>
-          <li>Account conduct review</li>
-          <li>Financial documentation</li>
-          <li>Repayment and limit considerations</li>
-        </ul>
-      </article>
-
-      <article class="loan-card">
-        <h3>Short-Term Business Finance</h3>
-        <p>
-          Discuss short-term finance requirements for eligible
-          business needs and cash flow cycles.
-        </p>
-        <ul>
-          <li>Funding purpose assessment</li>
-          <li>Repayment capacity review</li>
-          <li>Supporting records</li>
-          <li>Lender option discussion</li>
-        </ul>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SUPPORT 01 -->
-<section class="section support-eligibility">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Business Loan Eligibility: What Lenders May Review</h2>
-      <p>
-        Every lender has its own credit policy. These are common
-        factors that may be considered during a business finance assessment.
-      </p>
-    </div>
-
-    <div class="info-grid">
-
-      <article class="info-panel">
-        <h3>Business Track Record</h3>
-        <ul>
-          <li>Company establishment date</li>
-          <li>Trade licence and activity</li>
-          <li>Operating history</li>
-          <li>Customer and supplier profile</li>
-        </ul>
-      </article>
-
-      <article class="info-panel">
-        <h3>Financial Performance</h3>
-        <ul>
-          <li>Annual turnover</li>
-          <li>Bank statement activity</li>
-          <li>Cash flow and profitability</li>
-          <li>Existing loan obligations</li>
-        </ul>
-      </article>
-
-      <article class="info-panel">
-        <h3>Credit & Security</h3>
-        <ul>
-          <li>Credit history and repayment conduct</li>
-          <li>Shareholder or guarantor profile</li>
-          <li>Available collateral, if required</li>
-          <li>Debt servicing capacity</li>
-        </ul>
-      </article>
-
-    </div>
-
-    <div class="eligibility-note">
-      <strong>Important:</strong>
-      A company meeting some of these indicators does not automatically
-      qualify for finance. Each bank or finance provider applies its
-      own credit policy, due diligence and approval process.
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICE 03 -->
-<section class="section service-trade-finance">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Trade Finance & Business Transaction Facilities</h2>
-      <p>
-        Understand trade-related banking facilities that may support
-        eligible import, export and supplier transaction requirements.
-      </p>
-    </div>
-
-    <div class="loan-grid">
-
-      <article class="loan-card">
-        <span class="service-label">Trade Finance</span>
-        <h3>Letter of Credit (LC)</h3>
-        <p>
-          Guidance on documentary requirements and bank processes
-          for eligible letter of credit facilities.
-        </p>
-        <ul>
-          <li>Trade transaction overview</li>
-          <li>Buyer and supplier documentation</li>
-          <li>Commercial invoice coordination</li>
-          <li>Bank facility requirement discussion</li>
-        </ul>
-      </article>
-
-      <article class="loan-card">
-        <span class="service-label">Bank Guarantee</span>
-        <h3>Bank Guarantee (BG)</h3>
-        <p>
-          Documentation and coordination support for businesses
-          exploring eligible bank guarantee facilities.
-        </p>
-        <ul>
-          <li>Guarantee purpose review</li>
-          <li>Beneficiary details</li>
-          <li>Contract and supporting documents</li>
-          <li>Security requirement discussion</li>
-        </ul>
-      </article>
-
-      <article class="loan-card">
-        <span class="service-label">Trade Operations</span>
-        <h3>Import & Export Finance</h3>
-        <p>
-          Explore finance requirements linked to eligible
-          international trade transactions.
-        </p>
-        <ul>
-          <li>Purchase order review</li>
-          <li>Supplier and buyer information</li>
-          <li>Invoice and shipping records</li>
-          <li>Trade facility preparation</li>
-        </ul>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 04 -->
-<section class="section service-property">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Commercial Property Finance</h2>
-      <p>
-        Explore property finance requirements for eligible businesses
-        and investors purchasing commercial property.
-      </p>
-    </div>
-
-    <div class="loan-grid">
-
-      <article class="loan-card">
-        <h3>Commercial Property Finance</h3>
-        <p>
-          Financing options for eligible commercial property
-          purchases, subject to lender and property assessment.
-        </p>
-        <ul>
-          <li>Property details and valuation</li>
-          <li>Buyer and company profile</li>
-          <li>Down payment considerations</li>
-          <li>Income and repayment assessment</li>
-        </ul>
-      </article>
-
-      <article class="loan-card">
-        <h3>Business Property Purchase</h3>
-        <p>
-          Guidance on finance preparation for eligible companies
-          purchasing business premises or commercial assets.
-        </p>
-        <ul>
-          <li>Property purchase details</li>
-          <li>Business financial profile</li>
-          <li>Ownership structure</li>
-          <li>Supporting financial documents</li>
-        </ul>
-      </article>
-
-      <article class="loan-card">
-        <h3>Property Investment Finance</h3>
-        <p>
-          Discuss financing considerations for eligible investment
-          property purchases through relevant lenders.
-        </p>
-        <ul>
-          <li>Investment purpose</li>
-          <li>Property valuation information</li>
-          <li>Rental income evidence, if relevant</li>
-          <li>Borrower financial profile</li>
-        </ul>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 05 -->
-<section class="section service-mortgage">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Mortgage & Loan Against Property</h2>
-      <p>
-        Explore residential and property-backed finance options
-        for eligible UAE residents, investors and business owners.
-      </p>
-    </div>
-
-    <div class="loan-grid">
-
-      <article class="loan-card">
-        <span class="service-label">Residential Finance</span>
-        <h3>Residential Mortgage</h3>
-        <p>
-          Consultancy and document preparation support for
-          eligible residential property finance applications.
-        </p>
-        <ul>
-          <li>Applicant profile review</li>
-          <li>Income documentation</li>
-          <li>Property information</li>
-          <li>Down payment considerations</li>
-        </ul>
-      </article>
-
-      <article class="loan-card">
-        <span class="service-label">Property-backed Finance</span>
-        <h3>Loan Against Property</h3>
-        <p>
-          Explore finance options secured against eligible
-          property, subject to lender valuation and approval.
-        </p>
-        <ul>
-          <li>Property ownership documents</li>
-          <li>Existing mortgage information</li>
-          <li>Property valuation requirements</li>
-          <li>Borrowing capacity discussion</li>
-        </ul>
-      </article>
-
-      <article class="loan-card">
-        <span class="service-label">Existing Property Owners</span>
-        <h3>Mortgage Review & Refinance</h3>
-        <p>
-          Discuss available refinancing or mortgage review routes
-          where offered by the relevant lender.
-        </p>
-        <ul>
-          <li>Existing facility review</li>
-          <li>Outstanding balance information</li>
-          <li>Income and repayment assessment</li>
-          <li>Potential lender alternatives</li>
-        </ul>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 06 -->
-<section class="section service-equipment">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Equipment & Asset Finance</h2>
-      <p>
-        Explore finance requirements for eligible machinery,
-        commercial vehicles and business equipment.
-      </p>
-    </div>
-
-    <div class="loan-grid">
-
-      <article class="loan-card">
-        <h3>Machinery Finance</h3>
-        <p>Finance preparation support for eligible machinery and equipment purchases.</p>
-      </article>
-
-      <article class="loan-card">
-        <h3>Commercial Vehicle Finance</h3>
-        <p>Explore vehicle finance requirements for eligible business use and commercial operations.</p>
-      </article>
-
-      <article class="loan-card">
-        <h3>Business Asset Finance</h3>
-        <p>Understand asset finance documentation, supplier quotations and lender requirements.</p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 07 -->
-<section class="section service-invoice">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Invoice & Receivables Finance</h2>
-      <p>
-        Explore financing options linked to eligible business invoices
-        and receivables, where offered by lenders.
-      </p>
-    </div>
-
-    <div class="loan-grid">
-
-      <article class="loan-card">
-        <h3>Invoice Financing</h3>
-        <p>Understand funding options based on eligible outstanding business invoices.</p>
-      </article>
-
-      <article class="loan-card">
-        <h3>Receivables Finance</h3>
-        <p>Explore lender requirements for eligible business receivables and customer payment cycles.</p>
-      </article>
-
-      <article class="loan-card">
-        <h3>Contract-based Finance</h3>
-        <p>Prepare contract, purchase order and payment information for relevant lender discussions.</p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- SUPPORT 02 -->
-<section class="section support-documents">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Business Loan Document Checklist</h2>
-      <p>
-        Prepare your company, shareholder and financial information
-        before approaching a bank or finance provider.
-      </p>
-    </div>
-
-    <div class="info-grid">
-
-      <article class="info-panel">
-        <h3>Company Documents</h3>
-        <ul>
-          <li>Valid trade licence</li>
-          <li>MOA and incorporation documents, where applicable</li>
-          <li>Shareholder and UBO details</li>
-          <li>Office lease or Ejari, where applicable</li>
-          <li>Company profile and business activity details</li>
-        </ul>
-      </article>
-
-      <article class="info-panel">
-        <h3>Financial Documents</h3>
-        <ul>
-          <li>Business bank statements</li>
-          <li>Financial statements, if available</li>
-          <li>VAT returns, where applicable</li>
-          <li>Sales and purchase invoices</li>
-          <li>Existing loan and liability details</li>
-        </ul>
-      </article>
-
-      <article class="info-panel">
-        <h3>Shareholder Documents</h3>
-        <ul>
-          <li>Passport copies</li>
-          <li>Emirates ID, where applicable</li>
-          <li>UAE residence visa, where applicable</li>
-          <li>Personal financial information, if requested</li>
-          <li>Source of funds or wealth evidence, if requested</li>
-        </ul>
-      </article>
-
-    </div>
-
-    <div class="eligibility-note">
-      <strong>Facility-specific documents:</strong>
-      Property valuation, title deed, tenancy records, purchase orders,
-      supplier quotations, contracts, guarantees or collateral documents
-      may also be required depending on the finance product.
-    </div>
-
-  </div>
-</section>
-
-<!-- SUPPORT 03 -->
-<section class="section support-process">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>How DUCES Supports Your Finance Application</h2>
-      <p>
-        A structured consultancy and documentation preparation process
-        from initial discussion to lender follow-up.
-      </p>
-    </div>
-
-    <div class="process-grid">
-
-      <article class="process-card">
-        <span class="step-number">01</span>
-        <h3>Initial Discussion</h3>
-        <p>Understand your business, funding purpose and finance requirement.</p>
-      </article>
-
-      <article class="process-card">
-        <span class="step-number">02</span>
-        <h3>Business Profile Review</h3>
-        <p>Review company age, activity, turnover, bank conduct and financial information.</p>
-      </article>
-
-      <article class="process-card">
-        <span class="step-number">03</span>
-        <h3>Document Preparation</h3>
-        <p>Identify missing documents and organise the information required for lender discussions.</p>
-      </article>
-
-      <article class="process-card">
-        <span class="step-number">04</span>
-        <h3>Finance Option Discussion</h3>
-        <p>Discuss potentially relevant finance routes and lender requirements.</p>
-      </article>
-
-      <article class="process-card">
-        <span class="step-number">05</span>
-        <h3>Application Coordination</h3>
-        <p>Coordinate agreed application preparation and submission steps where authorised.</p>
-      </article>
-
-      <article class="process-card">
-        <span class="step-number">06</span>
-        <h3>Application Follow-up</h3>
-        <p>Assist with administrative follow-up and additional information requests.</p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- EMI CALCULATOR -->
-<section class="section support-calculator" id="emi-calculator">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Business Loan EMI Calculator</h2>
-      <p>
-        Estimate the monthly repayment for a reducing-balance loan
-        using an illustrative interest rate and loan tenure.
-      </p>
-    </div>
-
-    <div class="calculator-box">
-
-      <form id="emiForm">
-
-        <div class="calculator-grid">
-
-          <div class="form-field">
-            <label for="loanAmount">Loan Amount (AED)</label>
-            <input
-              type="number"
-              id="loanAmount"
-              min="1"
-              step="1000"
-              placeholder="e.g. 500000"
-              required>
-          </div>
-
-          <div class="form-field">
-            <label for="interestRate">Annual Interest Rate (%)</label>
-            <input
-              type="number"
-              id="interestRate"
-              min="0"
-              max="100"
-              step="0.01"
-              placeholder="e.g. 8"
-              required>
-          </div>
-
-          <div class="form-field">
-            <label for="loanTenure">Loan Tenure</label>
-            <select id="loanTenure" required>
-              <option value="">Select tenure</option>
-              <option value="12">1 year</option>
-              <option value="24">2 years</option>
-              <option value="36">3 years</option>
-              <option value="48">4 years</option>
-              <option value="60">5 years</option>
-              <option value="84">7 years</option>
-              <option value="120">10 years</option>
-              <option value="180">15 years</option>
-              <option value="240">20 years</option>
-              <option value="300">25 years</option>
-            </select>
-          </div>
-
-          <div class="form-field">
-            <label for="repaymentType">Repayment Calculation</label>
-            <select id="repaymentType">
-              <option value="reducing">Reducing balance EMI</option>
-              <option value="flat">Flat-rate illustration</option>
-            </select>
-          </div>
-
-        </div>
-
-        <div class="calculator-actions">
-          <button class="button-blue" type="submit">
-            Calculate EMI
-          </button>
-
-          <button class="button-light" type="reset">
-            Reset Calculator
-          </button>
-        </div>
-
-      </form>
-
-      <div id="emiResult" class="calculator-result" hidden>
-        <h3>Estimated Loan Repayment</h3>
-
-        <div class="result-grid">
-
-          <div class="result-item">
-            <span>Estimated Monthly EMI</span>
-            <strong id="monthlyEMI">AED 0.00</strong>
-          </div>
-
-          <div class="result-item">
-            <span>Total Repayment</span>
-            <strong id="totalRepayment">AED 0.00</strong>
-          </div>
-
-          <div class="result-item">
-            <span>Total Interest</span>
-            <strong id="totalInterest">AED 0.00</strong>
-          </div>
-
-          <div class="result-item">
-            <span>Loan Tenure</span>
-            <strong id="resultTenure">0 months</strong>
-          </div>
-
-        </div>
-
-        <p class="calculator-note">
-          This is an illustrative estimate only. Actual repayments may
-          differ because of bank pricing, fees, insurance, payment
-          frequency, rate changes, grace periods and facility terms.
-          The flat-rate illustration is not directly comparable with
-          a reducing-balance rate.
+          Finance requirements vary depending on business activity,
+          trading history, cash flow, facility purpose and lender
+          assessment. Understand the available routes before applying.
         </p>
       </div>
 
-      <p class="calculator-note">
-        This calculator does not represent a loan offer, approval,
-        quotation or commitment from any bank or finance provider.
-      </p>
+      <div class="grid-3">
+
+        <article class="pastel-card mainland-bg">
+          <h3>Business Loan Assistance</h3>
+          <p>
+            Guidance on business finance requirements,
+            application preparation and lender discussions.
+          </p>
+        </article>
+
+        <article class="pastel-card freezone-bg">
+          <h3>Working Capital</h3>
+          <p>
+            Explore funding options intended to support
+            day-to-day business cash flow and operations.
+          </p>
+        </article>
+
+        <article class="pastel-card offshore-bg">
+          <h3>Trade Finance</h3>
+          <p>
+            Understand trade-related banking facilities
+            for eligible import, export and business transactions.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS LOAN ASSISTANCE -->
+
+  <section class="section mainland-bg" id="finance-services">
+    <div class="container">
+
+      <div class="service-layout">
+
+        <div class="service-copy">
+          <span class="tag">Business Finance Support</span>
+
+          <h2>Business Loan Assistance</h2>
+
+          <p>
+            DUCES provides consultancy and documentation
+            assistance to businesses exploring finance
+            opportunities in the UAE.
+          </p>
+
+          <p>
+            We help you organise your business profile,
+            understand common lender requirements and
+            prepare information for discussions with
+            banks and finance providers.
+          </p>
+
+          <ul>
+            <li>Business finance requirement discussion</li>
+            <li>Business profile and document review</li>
+            <li>Financial information organisation</li>
+            <li>Finance option discussion</li>
+            <li>Application coordination and follow-up support</li>
+          </ul>
+
+          <a class="button-blue"
+             href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20need%20business%20loan%20assistance.">
+            Enquire About Business Loans
+          </a>
+        </div>
+
+        <div class="info-card">
+          <h3>Business Finance Requirements</h3>
+          <ul>
+            <li>Valid UAE trade licence</li>
+            <li>Business bank statements</li>
+            <li>Business turnover and transaction history</li>
+            <li>VAT returns, where applicable</li>
+            <li>Financial statements or management accounts</li>
+            <li>Shareholder and authorised signatory documents</li>
+            <li>Details of the proposed finance requirement</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKING CAPITAL -->
+
+  <section class="section freezone-bg">
+    <div class="container">
+
+      <div class="service-layout">
+
+        <div class="service-copy">
+          <span class="tag">Cash Flow Support</span>
+
+          <h2>Working Capital Finance</h2>
+
+          <p>
+            Working capital finance may help eligible businesses
+            manage operating expenses, supplier payments,
+            inventory purchases and temporary cash flow gaps.
+          </p>
+
+          <p>
+            The suitable facility depends on the business's
+            financial position, banking history, cash flow
+            and lender assessment.
+          </p>
+
+          <ul>
+            <li>Working capital finance enquiries</li>
+            <li>Overdraft and credit facility discussions</li>
+            <li>Short-term business funding options</li>
+            <li>Cash flow information preparation</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>What May Be Reviewed?</h3>
+          <ul>
+            <li>Monthly business cash flow</li>
+            <li>Existing business commitments</li>
+            <li>Bank statement transaction patterns</li>
+            <li>Customer and supplier payment cycles</li>
+            <li>Business operating history</li>
+            <li>Repayment capacity</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRADE FINANCE -->
+
+  <section class="section offshore-bg">
+    <div class="container">
+
+      <div class="service-layout">
+
+        <div class="service-copy">
+          <span class="tag">Import & Export Finance</span>
+
+          <h2>Trade Finance</h2>
+
+          <p>
+            Trade finance facilities can support eligible
+            businesses involved in domestic and international
+            trade transactions.
+          </p>
+
+          <p>
+            DUCES can help businesses understand common
+            documentation requirements and prepare for
+            discussions with banks and financial institutions.
+          </p>
+
+          <ul>
+            <li>Letter of Credit (LC) enquiries</li>
+            <li>Bank Guarantee (BG) enquiries</li>
+            <li>Import finance discussions</li>
+            <li>Export finance discussions</li>
+            <li>Trade transaction document preparation</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>Common Trade Documents</h3>
+          <ul>
+            <li>Trade licence and company documents</li>
+            <li>Purchase orders and sales contracts</li>
+            <li>Commercial invoices</li>
+            <li>Shipping and transport documents</li>
+            <li>Supplier and buyer information</li>
+            <li>Relevant bank and financial records</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MORTGAGE -->
+
+  <section class="section mainland-bg">
+    <div class="container">
+
+      <div class="service-layout">
+
+        <div class="service-copy">
+          <span class="tag">Property Finance</span>
+
+          <h2>Mortgage Assistance</h2>
+
+          <p>
+            DUCES provides guidance and documentation
+            assistance for individuals and business owners
+            exploring eligible mortgage and property finance
+            options in the UAE.
+          </p>
+
+          <ul>
+            <li>Residential mortgage enquiries</li>
+            <li>Mortgage eligibility discussions</li>
+            <li>Loan Against Property enquiries</li>
+            <li>Mortgage document preparation</li>
+            <li>Application coordination support</li>
+          </ul>
+
+          <p>
+            The available options depend on the applicant's
+            income, liabilities, property details, residency
+            status and lender policies.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h3>Mortgage Documents May Include</h3>
+          <ul>
+            <li>Passport and Emirates ID</li>
+            <li>Residence visa, where applicable</li>
+            <li>Salary certificate or business income evidence</li>
+            <li>Personal or business bank statements</li>
+            <li>Existing liability details</li>
+            <li>Property details and valuation documents</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ELIGIBILITY -->
+
+  <section class="section yellow-bg">
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Business Loan Eligibility</h2>
+        <p>
+          Banks and finance providers assess each application
+          independently. The following areas may influence
+          eligibility and facility terms.
+        </p>
+      </div>
+
+      <div class="grid-3">
+
+        <article class="pastel-card">
+          <h3>Business Track Record</h3>
+          <p>
+            Business age, licence validity, ownership structure,
+            operating activity and trading history.
+          </p>
+        </article>
+
+        <article class="pastel-card">
+          <h3>Financial Performance</h3>
+          <p>
+            Turnover, account conduct, cash flow, profitability,
+            financial statements and existing commitments.
+          </p>
+        </article>
+
+        <article class="pastel-card">
+          <h3>Credit & Security</h3>
+          <p>
+            Credit history, repayment capacity, guarantees,
+            collateral and other lender-specific requirements.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="eligibility-note">
+        <strong>Important:</strong>
+        There is no single eligibility rule applicable to
+        every UAE bank or finance provider. Minimum turnover,
+        business age, security, pricing and facility limits
+        vary by lender and product.
+      </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SUPPORT 04 -->
-<section class="section support-important">
-  <div class="container">
+  <!-- DOCUMENT CHECKLIST -->
 
-    <div class="section-heading">
-      <h2>Important Finance Considerations</h2>
-      <p>
-        Understand the key points before applying for a business
-        loan or property finance facility.
-      </p>
-    </div>
+  <section class="section sky-bg">
+    <div class="container">
 
-    <div class="notice">
-      <h3>Loan Approval, Pricing & Repayment Responsibilities</h3>
-
-      <p>
-        DUCES Consultancy Services is an independent consultancy.
-        It is not a bank or lender and does not itself approve or
-        disburse finance.
-      </p>
-
-      <p>
-        All finance applications are subject to the lender's
-        independent credit assessment, KYC, compliance checks,
-        documentation requirements and approval policy.
-      </p>
-
-      <p>
-        Interest or profit rates, fees, security requirements,
-        guarantees, repayment periods and facility limits vary
-        by lender and applicant profile.
-      </p>
-
-      <p>
-        Do not rely only on the advertised monthly instalment.
-        Review the total repayment, all fees, security obligations
-        and consequences of late or missed payments before accepting
-        any finance offer.
-      </p>
-
-      <p>
-        Any consultancy fee payable to DUCES should be explained
-        separately from bank charges, government fees and lender
-        facility costs.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section support-faq">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Frequently Asked Questions</h2>
-      <p>
-        Common questions about business loans and finance assistance
-        in the UAE.
-      </p>
-    </div>
-
-    <div class="faq-list">
-
-      <details>
-        <summary>Can a newly established UAE company apply for a business loan?</summary>
+      <div class="section-heading">
+        <h2>Business Loan Document Checklist</h2>
         <p>
-          Some lenders may consider newer businesses for selected
-          facilities, but many business finance products require
-          an operating history and financial records. Requirements
-          differ between lenders.
+          Preparing complete and consistent information can
+          help make the application review process more organised.
+          Final requirements depend on the lender and facility.
         </p>
-      </details>
+      </div>
 
-      <details>
-        <summary>What turnover is required for a business loan?</summary>
-        <p>
-          There is no single turnover threshold that applies to every
-          bank or finance product. Lenders may assess annual turnover,
-          profitability, cash flow, account conduct, existing liabilities
-          and the requested facility.
-        </p>
-      </details>
+      <div class="grid-2">
 
-      <details>
-        <summary>Can a Free Zone company apply for business finance?</summary>
-        <p>
-          Some lenders consider UAE Free Zone entities, subject to
-          their own eligibility criteria, company activity, ownership
-          structure and documentation.
-        </p>
-      </details>
+        <article class="info-card">
+          <h3>Company Documents</h3>
+          <ul class="document-list">
+            <li>Valid trade licence</li>
+            <li>Memorandum of Association, where applicable</li>
+            <li>Shareholder and ownership details</li>
+            <li>Office lease or Ejari, where required</li>
+            <li>Company profile and business activity details</li>
+          </ul>
+        </article>
 
-      <details>
-        <summary>Can I apply for working capital finance?</summary>
-        <p>
-          Eligible businesses may explore working capital facilities.
-          Lenders may review business turnover, cash flow, bank statements,
-          financial records and repayment capacity.
-        </p>
-      </details>
+        <article class="info-card">
+          <h3>Financial Documents</h3>
+          <ul class="document-list">
+            <li>Business bank statements</li>
+            <li>VAT returns, where applicable</li>
+            <li>Financial statements or management accounts</li>
+            <li>Sales and purchase records</li>
+            <li>Existing loan and liability details</li>
+          </ul>
+        </article>
 
-      <details>
-        <summary>What is the difference between a business loan and working capital finance?</summary>
-        <p>
-          A term loan is generally structured around a defined borrowing
-          amount and repayment schedule. Working capital facilities
-          are intended to support short-term operating cash flow.
-          Product terms vary by lender.
-        </p>
-      </details>
+      </div>
 
-      <details>
-        <summary>Can DUCES help with a Letter of Credit or Bank Guarantee?</summary>
-        <p>
-          DUCES can assist with understanding requirements and
-          organising documentation for discussions with relevant
-          banks. Issuance and approval are controlled by the bank.
-        </p>
-      </details>
-
-      <details>
-        <summary>Can I get a loan against my UAE property?</summary>
-        <p>
-          Some lenders offer property-backed finance to eligible
-          applicants. Approval may depend on property valuation,
-          ownership, existing liabilities, borrower income and
-          lender policy.
-        </p>
-      </details>
-
-      <details>
-        <summary>Can DUCES guarantee loan approval?</summary>
-        <p>
-          No. DUCES provides consultancy and application preparation
-          support. The bank or finance provider independently decides
-          whether to approve or decline a facility.
-        </p>
-      </details>
-
-      <details>
-        <summary>How long does a business loan application take?</summary>
-        <p>
-          Processing time depends on the lender, facility type,
-          completeness of documents, credit assessment and any
-          additional information requested.
-        </p>
-      </details>
-
-      <details>
-        <summary>Does the EMI calculator show the final bank repayment?</summary>
-        <p>
-          No. It provides an estimate based on the values entered.
-          The lender's official repayment schedule and facility
-          agreement determine the actual repayment.
-        </p>
-      </details>
+      <div class="notice" style="margin-top:22px;">
+        <strong>Document accuracy matters.</strong>
+        Information supplied to banks must be genuine,
+        consistent and supported by appropriate records.
+      </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- OFFICIAL RESOURCES -->
-<section class="section support-general">
-  <div class="container">
+  <!-- PROCESS -->
 
-    <div class="section-heading">
-      <h2>UAE Financial & Business Resources</h2>
+  <section class="section beige-bg">
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>How DUCES Supports Your Finance Application</h2>
+        <p>
+          A structured consultancy and documentation support
+          process from initial discussion to application follow-up.
+        </p>
+      </div>
+
+      <div class="process-grid">
+
+        <article class="process-card">
+          <span class="step-number">01</span>
+          <h3>Initial Discussion</h3>
+          <p>
+            Understand your business, finance purpose
+            and funding requirement.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <span class="step-number">02</span>
+          <h3>Business Review</h3>
+          <p>
+            Organise available business, banking
+            and financial information.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <span class="step-number">03</span>
+          <h3>Document Preparation</h3>
+          <p>
+            Help prepare and organise the documents
+            required for lender discussions.
+          </p>
+        </article>
+
+        <article class="process-card">
+          <span class="step-number">04</span>
+          <h3>Finance Discussion</h3>
+          <p>
+            Coordinate discussions and follow-ups
+            with relevant finance providers.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EMI CALCULATOR -->
+
+  <section class="section lavender-bg" id="emi-calculator">
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Business Loan EMI Calculator</h2>
+        <p>
+          Estimate monthly repayments using an indicative
+          loan amount, annual interest rate and repayment period.
+        </p>
+      </div>
+
+      <div class="calculator-box">
+
+        <form id="emiForm">
+
+          <div class="calculator-grid">
+
+            <div class="form-field">
+              <label for="loanAmount">Loan Amount (AED)</label>
+              <input
+                type="number"
+                id="loanAmount"
+                min="1"
+                step="1000"
+                placeholder="Example: 250000"
+                required>
+            </div>
+
+            <div class="form-field">
+              <label for="interestRate">Annual Interest Rate (%)</label>
+              <input
+                type="number"
+                id="interestRate"
+                min="0"
+                max="100"
+                step="0.01"
+                placeholder="Example: 8"
+                required>
+            </div>
+
+            <div class="form-field">
+              <label for="loanTenure">Repayment Period (Months)</label>
+              <input
+                type="number"
+                id="loanTenure"
+                min="1"
+                max="600"
+                step="1"
+                placeholder="Example: 36"
+                required>
+            </div>
+
+            <div class="form-field">
+              <label for="repaymentType">Interest Calculation</label>
+              <select id="repaymentType" required>
+                <option value="reducing">Reducing Balance</option>
+                <option value="flat">Flat Rate</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="calculator-actions">
+            <button class="button-blue" type="submit">
+              Calculate Repayment
+            </button>
+
+            <button class="button-light" type="reset">
+              Reset
+            </button>
+          </div>
+
+        </form>
+
+        <div class="calculator-result" id="emiResult" hidden>
+          <h3>Estimated Repayment</h3>
+
+          <div class="result-grid">
+
+            <div class="result-item">
+              <span>Estimated Monthly Payment</span>
+              <strong id="monthlyEMI">AED 0.00</strong>
+            </div>
+
+            <div class="result-item">
+              <span>Total Repayment</span>
+              <strong id="totalRepayment">AED 0.00</strong>
+            </div>
+
+            <div class="result-item">
+              <span>Total Interest</span>
+              <strong id="totalInterest">AED 0.00</strong>
+            </div>
+
+            <div class="result-item">
+              <span>Repayment Period</span>
+              <strong id="resultTenure">0 months</strong>
+            </div>
+
+          </div>
+        </div>
+
+        <p class="calculator-note">
+          This calculator provides an illustration only.
+          Actual repayments may differ due to lender pricing,
+          fees, insurance, repayment schedules and facility terms.
+          Flat and reducing-balance rates are not directly comparable.
+          Always refer to the lender's official repayment schedule.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPORTANT INFORMATION -->
+
+  <section class="section rose-bg">
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Important Finance Considerations</h2>
+        <p>
+          Understand the responsibilities and limitations
+          before proceeding with a finance application.
+        </p>
+      </div>
+
+      <div class="grid-2">
+
+        <article class="pastel-card">
+          <h3>Approval & Facility Terms</h3>
+          <p>
+            Banks and finance providers independently decide
+            eligibility, approval, facility limits, interest
+            or profit rates, security requirements and terms.
+            DUCES does not guarantee approval or disbursement.
+          </p>
+        </article>
+
+        <article class="pastel-card">
+          <h3>Repayment Responsibility</h3>
+          <p>
+            Borrowers are responsible for understanding
+            repayment obligations, fees, charges, security
+            requirements and the full facility agreement
+            before accepting an offer.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="notice" style="margin-top:22px;">
+        DUCES is an independent consultancy and is not a bank,
+        lender or finance provider. Services are limited to
+        consultancy, document preparation assistance and
+        coordination within applicable authorised activities.
+        All finance facilities are subject to the relevant
+        provider's assessment and approval.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+
+  <section class="section neutral-bg">
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Common questions about business finance assistance
+          and loan preparation in the UAE.
+        </p>
+      </div>
+
+      <div class="faq-list">
+
+        <details>
+          <summary>Does DUCES provide business loans directly?</summary>
+          <p>
+            No. DUCES is an independent consultancy, not a bank
+            or lender. We provide consultancy, documentation
+            assistance and coordination within our authorised scope.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can a newly established company apply for a business loan?</summary>
+          <p>
+            Requirements vary by lender and facility. Some providers
+            may require an operating history, while other products
+            may have different eligibility conditions. The lender
+            determines the final requirements.
+          </p>
+        </details>
+
+        <details>
+          <summary>What documents are normally required?</summary>
+          <p>
+            Common documents may include a trade licence, ownership
+            documents, business bank statements, VAT records where
+            applicable and financial statements. The final checklist
+            depends on the lender.
+          </p>
+        </details>
+
+        <details>
+          <summary>Does DUCES guarantee loan approval?</summary>
+          <p>
+            No. Approval, pricing, limits, security and terms are
+            determined solely by the relevant bank or finance provider.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I calculate my estimated monthly repayment?</summary>
+          <p>
+            Yes. Use the EMI calculator on this page for an indicative
+            estimate. The lender's official repayment schedule and
+            facility agreement determine the actual repayment.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can DUCES assist with mortgage enquiries?</summary>
+          <p>
+            DUCES can provide consultancy and documentation assistance
+            for mortgage enquiries, subject to applicable authorised
+            activities and the requirements of the relevant provider.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFICIAL RESOURCES -->
+
+  <section class="section neutral-bg">
+    <div class="container">
+
+      <div class="section-heading">
+        <h2>UAE Financial & Business Resources</h2>
+        <p>
+          Refer to official UAE resources for financial regulation,
+          government information and business guidance.
+        </p>
+      </div>
+
+      <div class="grid-3">
+
+        <article class="pastel-card">
+          <h3>Central Bank of the UAE</h3>
+          <p>
+            Official information about UAE banking regulation
+            and financial services supervision.
+          </p>
+          <a class="button-blue"
+             href="https://www.centralbank.ae/"
+             target="_blank"
+             rel="noopener">
+            Visit Website
+          </a>
+        </article>
+
+        <article class="pastel-card">
+          <h3>UAE Government Portal</h3>
+          <p>
+            Government information about business,
+            finance and services in the UAE.
+          </p>
+          <a class="button-blue"
+             href="https://u.ae/"
+             target="_blank"
+             rel="noopener">
+            Visit Website
+          </a>
+        </article>
+
+        <article class="pastel-card">
+          <h3>Ministry of Finance</h3>
+          <p>
+            Official UAE Ministry of Finance information
+            and government resources.
+          </p>
+          <a class="button-blue"
+             href="https://mof.gov.ae/"
+             target="_blank"
+             rel="noopener">
+            Visit Website
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta-section">
+    <div class="container">
+
+      <h2>Planning to Finance Your Business in the UAE?</h2>
+
       <p>
-        Refer to official UAE resources for financial regulation,
-        consumer information and business guidance.
+        Tell us about your business, funding purpose and finance
+        requirement. DUCES can help you organise the next steps.
       </p>
-    </div>
 
-    <div class="loan-grid">
+      <a class="button" href="contact.html">
+        Request a Consultation
+      </a>
 
-      <article class="loan-card">
-        <h3>Central Bank of the UAE</h3>
-        <p>
-          Official information about UAE banking regulation
-          and financial services supervision.
-        </p>
-        <a href="https://www.centralbank.ae/"
-           target="_blank" rel="noopener">
-          Visit Central Bank Website →
-        </a>
-      </article>
-
-      <article class="loan-card">
-        <h3>UAE Government Portal</h3>
-        <p>
-          Government information about business, finance
-          and services in the UAE.
-        </p>
-        <a href="https://u.ae/"
-           target="_blank" rel="noopener">
-          Visit UAE Government Portal →
-        </a>
-      </article>
-
-      <article class="loan-card">
-        <h3>Ministry of Finance</h3>
-        <p>
-          Official UAE Ministry of Finance information
-          and government resources.
-        </p>
-        <a href="https://mof.gov.ae/"
-           target="_blank" rel="noopener">
-          Visit Ministry of Finance →
-        </a>
-      </article>
+      <a
+        class="button-outline"
+        href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20would%20like%20to%20discuss%20business%20finance%20assistance."
+        target="_blank"
+        rel="noopener">
+        WhatsApp DUCES
+      </a>
 
     </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container">
-
-    <h2>Planning to Finance Your Business in the UAE?</h2>
-
-    <p>
-      Tell us about your business, funding purpose and finance
-      requirement. DUCES can help you organise the next steps.
-    </p>
-
-    <a class="button" href="contact.html">
-      Request a Consultation
-    </a>
-
-    <a
-      class="button-outline"
-      href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20would%20like%20to%20discuss%20business%20finance%20assistance."
-      target="_blank"
-      rel="noopener">
-      WhatsApp DUCES
-    </a>
-
-  </div>
-</section>
+  </section>
 
 </main>
 
 <!-- FOOTER -->
+
 <footer class="site-footer">
 
   <div class="footer-grid">
@@ -1885,7 +1561,8 @@
         <li><a href="tel:+971505356966">+971 50 535 6966</a></li>
         <li>
           <a href="https://wa.me/971505356966"
-             target="_blank" rel="noopener">
+             target="_blank"
+             rel="noopener">
             WhatsApp
           </a>
         </li>
@@ -1919,7 +1596,8 @@
   WhatsApp
 </a>
 
-<!-- EMI CALCULATOR -->
+<!-- EMI CALCULATOR SCRIPT -->
+
 <script>
 (function () {
   "use strict";
@@ -1955,7 +1633,8 @@
       document.getElementById("loanTenure").value
     );
 
-    const repaymentType = document.getElementById("repaymentType").value;
+    const repaymentType =
+      document.getElementById("repaymentType").value;
 
     if (
       !Number.isFinite(principal) ||
@@ -1964,7 +1643,8 @@
       annualRate < 0 ||
       annualRate > 100 ||
       !Number.isFinite(months) ||
-      months <= 0
+      months <= 0 ||
+      months > 600
     ) {
       alert("Please enter valid loan details.");
       return;
