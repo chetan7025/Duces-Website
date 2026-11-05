@@ -1,4 +1,3 @@
-
 /* =========================================
    DUCES CONSULTANCY SERVICES
    Main Website JavaScript
@@ -6,7 +5,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  // MOBILE NAVIGATION
   const menuToggle = document.querySelector(
     ".menu-toggle, .nav-toggle, #menuToggle, [data-menu-toggle]"
   );
@@ -15,57 +13,112 @@ document.addEventListener("DOMContentLoaded", function () {
     ".nav-menu, #navMenu, [data-nav-menu]"
   );
 
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  function closeDropdowns(except = null) {
+    dropdowns.forEach(function (dropdown) {
+      if (dropdown !== except) {
+        dropdown.classList.remove("open");
+        const trigger = dropdown.querySelector(":scope > a");
+        if (trigger) trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  function closeMobileMenu() {
+    if (navMenu) navMenu.classList.remove("is-open");
+
+    if (menuToggle) {
+      menuToggle.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
+
+    closeDropdowns();
+  }
+
+  // MOBILE MAIN MENU
   if (menuToggle && navMenu) {
     menuToggle.addEventListener("click", function () {
       const isOpen = navMenu.classList.toggle("is-open");
 
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
       menuToggle.classList.toggle("active", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
   }
 
-  // MOBILE DROPDOWN MENUS
-  document.querySelectorAll(".dropdown > a").forEach(function (link) {
-    link.addEventListener("click", function (event) {
+  // BUSINESS SETUP AND OTHER DROPDOWNS
+  dropdowns.forEach(function (dropdown) {
+    const trigger = dropdown.querySelector(":scope > a");
+    const submenu = dropdown.querySelector(":scope > .dropdown-menu");
+
+    if (!trigger || !submenu) return;
+
+    trigger.setAttribute("aria-haspopup", "true");
+    trigger.setAttribute("aria-expanded", "false");
+
+    trigger.addEventListener("click", function (event) {
       if (window.innerWidth <= 900) {
-        const parent = link.parentElement;
-        const submenu = parent.querySelector(".dropdown-menu");
-
-        if (submenu) {
+        if (!dropdown.classList.contains("open")) {
           event.preventDefault();
-
-          document.querySelectorAll(".dropdown.open").forEach(function (item) {
-            if (item !== parent) {
-              item.classList.remove("open");
-            }
-          });
-
-          parent.classList.toggle("open");
+          closeDropdowns(dropdown);
+          dropdown.classList.add("open");
+          trigger.setAttribute("aria-expanded", "true");
         }
+        // If already open, the parent link works normally.
+      }
+    });
+
+    trigger.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        closeDropdowns(dropdown);
+        dropdown.classList.add("open");
+        trigger.setAttribute("aria-expanded", "true");
+
+        const firstLink = submenu.querySelector("a");
+        if (firstLink) firstLink.focus();
       }
     });
   });
 
-  // CLOSE MOBILE MENU AFTER NAVIGATION
+  // CLOSE MENU AFTER SELECTING A LINK
   document.querySelectorAll(".nav-menu a").forEach(function (link) {
     link.addEventListener("click", function () {
-      if (
-        window.innerWidth <= 900 &&
-        !link.parentElement.classList.contains("dropdown")
-      ) {
-        navMenu?.classList.remove("is-open");
-        menuToggle?.classList.remove("active");
-        menuToggle?.setAttribute("aria-expanded", "false");
+      if (link.parentElement.classList.contains("dropdown")) return;
+
+      if (window.innerWidth <= 900) {
+        closeMobileMenu();
+      } else {
+        closeDropdowns();
       }
     });
   });
 
-  // AUTOMATIC COPYRIGHT YEAR
+  // CLOSE WHEN CLICKING OUTSIDE NAVIGATION
+  document.addEventListener("click", function (event) {
+    const insideNavigation =
+      event.target.closest(".site-header") ||
+      event.target.closest(".nav-container");
+
+    if (!insideNavigation) {
+      closeMobileMenu();
+    }
+  });
+
+  // ESCAPE KEY
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeMobileMenu();
+      if (menuToggle) menuToggle.focus();
+    }
+  });
+
+  // COPYRIGHT YEAR
   document.querySelectorAll("[data-current-year]").forEach(function (element) {
     element.textContent = new Date().getFullYear();
   });
 
-  // SMOOTH SCROLL FOR PAGE ANCHORS
+  // SMOOTH PAGE ANCHORS
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (event) {
       const targetId = link.getAttribute("href");
