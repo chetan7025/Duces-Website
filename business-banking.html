@@ -1,243 +1,492 @@
 
-<section class="section section-light" id="banking-checker">
-  <div class="container section-heading">
-    <h2>Business Banking Readiness Checker</h2>
-    <p>Answer a few questions to identify document gaps and prepare for your UAE business bank account application.</p>
-  </div>
-
-  <div class="container">
-    <div class="card banking-checker">
-      <form id="bankingReadinessForm">
-
-        <div class="form-group">
-          <label for="companyAge">Company age</label>
-          <select id="companyAge" required>
-            <option value="">Select company age</option>
-            <option value="new">New company / Not yet established</option>
-            <option value="under1">Less than 1 year</option>
-            <option value="1to2">1–2 years</option>
-            <option value="2plus">More than 2 years</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="jurisdiction">Company jurisdiction</label>
-          <select id="jurisdiction" required>
-            <option value="">Select jurisdiction</option>
-            <option>Mainland</option>
-            <option>Dubai Free Zone</option>
-            <option>Sharjah Free Zone</option>
-            <option>Other UAE Free Zone</option>
-            <option>Offshore</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="activity">Business activity</label>
-          <input id="activity" type="text" placeholder="e.g. Trading, Consultancy, Services" required>
-        </div>
-
-        <div class="form-group">
-          <label for="turnover">Annual turnover (AED)</label>
-          <select id="turnover" required>
-            <option value="">Select turnover range</option>
-            <option value="zero">No turnover yet</option>
-            <option value="under250">Below AED 250,000</option>
-            <option value="250to500">AED 250,000–500,000</option>
-            <option value="500to1m">AED 500,000–1 million</option>
-            <option value="1mplus">Above AED 1 million</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="balance">Average monthly bank balance (AED)</label>
-          <select id="balance" required>
-            <option value="">Select balance range</option>
-            <option value="under5">Below AED 5,000</option>
-            <option value="5to10">AED 5,000–10,000</option>
-            <option value="10to25">AED 10,000–25,000</option>
-            <option value="25plus">Above AED 25,000</option>
-            <option value="new">No business bank account yet</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="vatStatus">VAT registration status</label>
-          <select id="vatStatus" required>
-            <option value="">Select VAT status</option>
-            <option value="registered">VAT registered</option>
-            <option value="notrequired">Not registered / Not currently required</option>
-            <option value="pending">Registration in progress</option>
-            <option value="unknown">Not sure</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="transactions">Main countries of business transactions</label>
-          <input id="transactions" type="text" placeholder="e.g. UAE, India, Saudi Arabia" required>
-        </div>
-
-        <div class="form-group">
-          <label for="accountType">Bank account requirement</label>
-          <select id="accountType" required>
-            <option value="">Select requirement</option>
-            <option>New business account</option>
-            <option>Additional business account</option>
-            <option>Existing account support</option>
-            <option>Account review / alternatives</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Check My Readiness</button>
-        <button type="reset" class="btn btn-outline">Reset</button>
-
-      </form>
-
-      <div id="bankingResult" class="banking-result" aria-live="polite" hidden>
-        <h3>Your Banking Preparation Report</h3>
-        <p id="readinessSummary"></p>
-        <h4>Recommended preparation checklist</h4>
-        <ul id="readinessChecklist"></ul>
-        <p class="small-text">
-          This is a general preparation assessment, not a bank eligibility
-          decision or approval prediction. Each bank independently applies
-          its own KYC, compliance and risk requirements.
-        </p>
-        <a id="bankingWhatsApp" class="btn btn-primary" target="_blank" rel="noopener">Discuss My Requirements on WhatsApp</a>
-      </div>
-    </div>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UAE Business Banking Assistance | DUCES</title>
+<meta name="description" content="UAE business banking consultancy, account readiness assessment and documentation assistance by DUCES Consultancy Services.">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
 
 <style>
-.banking-checker {
-  max-width: 850px;
-  margin: auto;
-  padding: 28px;
-}
-.banking-checker .form-group {
-  margin-bottom: 18px;
-}
-.banking-checker label {
-  display: block;
-  margin-bottom: 7px;
-  font-weight: 600;
-}
-.banking-checker input,
-.banking-checker select {
-  width: 100%;
-  padding: 13px;
-  border: 1px solid #cbd5e1;
-  border-radius: 7px;
-  background: #fff;
-  color: #263445;
-  font: inherit;
-}
-.banking-result {
-  margin-top: 28px;
-  padding: 22px;
-  background: #f1f7fc;
-  border-left: 4px solid #48c9b0;
-  border-radius: 8px;
-}
-.banking-result[hidden] {
-  display: none;
-}
-.banking-result li {
-  margin-bottom: 9px;
-}
-.banking-result .small-text {
-  font-size: 13px;
-  color: #526174;
-  margin: 18px 0;
-}
+.banking-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.banking-card{background:#fff;padding:24px;border-radius:12px;border:1px solid #e5ebf1}
+.banking-card h3{color:#123b70}
+.banking-checker{max-width:850px;margin:auto;padding:25px;background:#fff;border-radius:12px;border:1px solid #e5ebf1}
+.banking-checker label{display:block;font-weight:600;margin:14px 0 6px}
+.banking-checker input,.banking-checker select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:7px;font:inherit;background:white}
+.banking-checker button{margin-top:18px;cursor:pointer}
+.banking-result{margin-top:25px;padding:22px;background:#f1f7fc;border-left:4px solid #48c9b0;border-radius:8px}
+.banking-result[hidden]{display:none}
+.banking-result li{margin:9px 0}
+.faq-list details{padding:16px;margin:10px 0;border:1px solid #e5ebf1;border-radius:8px;background:#fff}
+.faq-list summary{font-weight:600;cursor:pointer;color:#123b70}
+.banking-note{font-size:13px;color:#526174;margin-top:18px}
+@media(max-width:600px){.banking-checker{padding:16px}.banking-card{padding:18px}}
 </style>
+</head>
+
+<body>
+
+<div class="top-bar">
+ <div class="container">
+  <span>START • MANAGE • GROW</span>
+  <a href="tel:+971505356966">+971 50 535 6966</a>
+ </div>
+</div>
+
+<header class="site-header">
+ <div class="container nav-container">
+  <a class="site-logo" href="index.html">DUC<span>ES</span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav>
+   <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown">
+     <a href="company-formation.html">Business Setup ▾</a>
+     <ul class="dropdown-menu">
+      <li><a href="company-formation.html#mainland">Mainland</a></li>
+      <li><a href="company-formation.html#freezone">Free Zone</a></li>
+      <li><a href="company-formation.html#offshore">Offshore</a></li>
+      <li><a href="company-formation.html#jurisdictions">Free Zone Options</a></li>
+      <li><a href="company-formation.html#process">Setup Process</a></li>
+     </ul>
+    </li>
+    <li><a href="business-banking.html">Business Banking</a></li>
+    <li><a href="business-loan.html">Business Loans</a></li>
+    <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
+    <li><a href="pro-visa-services.html">PRO & VISA</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="contact.html">Contact</a></li>
+   </ul>
+  </nav>
+ </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+ <div class="container hero-content">
+  <p class="text-gold"><strong>UAE BUSINESS BANKING CONSULTANCY</strong></p>
+  <h1>Business Banking Assistance in the UAE</h1>
+  <p>Understand banking requirements, prepare your company profile and explore suitable business banking options with DUCES.</p>
+  <a class="btn btn-primary" href="#banking-checker">Check Banking Readiness</a>
+  <a class="btn btn-outline" href="contact.html">Request Consultation</a>
+ </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="banking-options">
+ <div class="container section-heading">
+  <h2>Our Banking Assistance Services</h2>
+  <p>Support for businesses and individuals exploring banking options in the UAE.</p>
+ </div>
+
+ <div class="container banking-grid">
+
+  <article class="banking-card">
+   <h3>Mainland Business Account</h3>
+   <p>Assistance for eligible UAE mainland companies.</p>
+   <ul>
+    <li>Company profile assessment</li>
+    <li>Business activity review</li>
+    <li>Bank document checklist</li>
+    <li>Application preparation</li>
+   </ul>
+   <a href="contact.html">Enquire Now →</a>
+  </article>
+
+  <article class="banking-card">
+   <h3>Free Zone Business Account</h3>
+   <p>Banking assistance for UAE Free Zone entities.</p>
+   <ul>
+    <li>Free Zone licence review</li>
+    <li>Shareholder and UBO details</li>
+    <li>Business activity explanation</li>
+    <li>Documentation assistance</li>
+   </ul>
+   <a href="contact.html">Enquire Now →</a>
+  </article>
+
+  <article class="banking-card">
+   <h3>Offshore Business Banking</h3>
+   <p>Guidance on banking considerations for eligible offshore entities.</p>
+   <ul>
+    <li>Entity structure review</li>
+    <li>Jurisdiction information</li>
+    <li>Source of funds documents</li>
+    <li>Bank policy considerations</li>
+   </ul>
+   <a href="contact.html">Enquire Now →</a>
+  </article>
+
+  <article class="banking-card">
+   <h3>Personal Banking</h3>
+   <p>Assistance for individuals exploring personal account options.</p>
+   <ul>
+    <li>Account type requirements</li>
+    <li>Identification documents</li>
+    <li>Income and employment details</li>
+    <li>Application preparation</li>
+   </ul>
+   <a href="contact.html">Enquire Now →</a>
+  </article>
+
+  <article class="banking-card">
+   <h3>NRI Banking Assistance</h3>
+   <p>Guidance for Non-Resident Indians with cross-border banking needs.</p>
+   <ul>
+    <li>NRI banking requirements</li>
+    <li>Residency considerations</li>
+    <li>Documentation guidance</li>
+    <li>Relevant banking options</li>
+   </ul>
+   <a href="contact.html">Enquire Now →</a>
+  </article>
+
+  <article class="banking-card">
+   <h3>Banking Readiness Assessment</h3>
+   <p>Identify information and documentation gaps before applying.</p>
+   <ul>
+    <li>Company age and activity</li>
+    <li>Turnover and transactions</li>
+    <li>Shareholder information</li>
+    <li>Source of funds preparation</li>
+   </ul>
+   <a href="#banking-checker">Check Now →</a>
+  </article>
+
+ </div>
+</section>
+
+<!-- BANKS -->
+<section class="section section-light">
+ <div class="container section-heading">
+  <h2>Explore UAE Banking Institutions</h2>
+  <p>We assist clients in understanding relevant banking options and general requirements.</p>
+ </div>
+
+ <div class="container banking-grid">
+  <article class="banking-card"><h3>Wio Bank</h3><p>Digital business banking options and account requirements.</p></article>
+  <article class="banking-card"><h3>First Abu Dhabi Bank</h3><p>Business banking options and documentation requirements.</p></article>
+  <article class="banking-card"><h3>Mashreq</h3><p>Business account products and application requirements.</p></article>
+  <article class="banking-card"><h3>RAKBANK</h3><p>Business banking products and eligibility considerations.</p></article>
+  <article class="banking-card"><h3>Emirates Islamic</h3><p>Islamic banking solutions for eligible businesses.</p></article>
+  <article class="banking-card"><h3>ADIB</h3><p>Islamic banking options and business account requirements.</p></article>
+ </div>
+
+ <div class="container">
+  <p class="text-center banking-note">DUCES is an independent consultancy. Listing a bank does not imply a partnership, endorsement or guaranteed account access. Banks independently assess all applications.</p>
+ </div>
+</section>
+
+<!-- READINESS CHECKER -->
+<section class="section" id="banking-checker">
+ <div class="container section-heading">
+  <h2>Business Banking Readiness Checker</h2>
+  <p>Answer the questions to receive an instant document preparation report.</p>
+ </div>
+
+ <div class="container">
+  <div class="banking-checker">
+   <form id="bankingReadinessForm">
+
+    <label for="companyAge">Company age</label>
+    <select id="companyAge" required>
+     <option value="">Select company age</option>
+     <option value="new">New / Not yet established</option>
+     <option value="under1">Less than 1 year</option>
+     <option value="1to2">1–2 years</option>
+     <option value="2plus">More than 2 years</option>
+    </select>
+
+    <label for="jurisdiction">Company jurisdiction</label>
+    <select id="jurisdiction" required>
+     <option value="">Select jurisdiction</option>
+     <option>Mainland</option>
+     <option>Dubai Free Zone</option>
+     <option>Sharjah Free Zone</option>
+     <option>Other UAE Free Zone</option>
+     <option>Offshore</option>
+    </select>
+
+    <label for="activity">Business activity</label>
+    <input id="activity" type="text" placeholder="e.g. Trading, Consultancy, Services" required>
+
+    <label for="turnover">Annual turnover (AED)</label>
+    <select id="turnover" required>
+     <option value="">Select turnover</option>
+     <option value="zero">No turnover yet</option>
+     <option>Below AED 250,000</option>
+     <option>AED 250,000–500,000</option>
+     <option>AED 500,000–1 million</option>
+     <option>Above AED 1 million</option>
+    </select>
+
+    <label for="balance">Average monthly bank balance (AED)</label>
+    <select id="balance" required>
+     <option value="">Select balance</option>
+     <option>Below AED 5,000</option>
+     <option>AED 5,000–10,000</option>
+     <option>AED 10,000–25,000</option>
+     <option>Above AED 25,000</option>
+     <option value="noaccount">No business account yet</option>
+    </select>
+
+    <label for="vatStatus">VAT registration status</label>
+    <select id="vatStatus" required>
+     <option value="">Select VAT status</option>
+     <option>VAT registered</option>
+     <option>Not registered / Not currently required</option>
+     <option>Registration in progress</option>
+     <option>Not sure</option>
+    </select>
+
+    <label for="transactions">Main transaction countries</label>
+    <input id="transactions" type="text" placeholder="e.g. UAE, India, Saudi Arabia" required>
+
+    <label for="accountType">Banking requirement</label>
+    <select id="accountType" required>
+     <option value="">Select requirement</option>
+     <option>New business account</option>
+     <option>Additional business account</option>
+     <option>Existing account support</option>
+     <option>Account review / alternatives</option>
+    </select>
+
+    <button class="btn btn-primary" type="submit">Check My Readiness</button>
+    <button class="btn btn-outline" type="reset">Reset</button>
+   </form>
+
+   <div id="bankingResult" class="banking-result" hidden>
+    <h3>Your Banking Preparation Report</h3>
+    <p id="readinessSummary"></p>
+    <h4>Recommended preparation checklist</h4>
+    <ul id="readinessChecklist"></ul>
+    <p class="banking-note">This is an indicative document preparation assessment only. It does not determine bank eligibility or predict approval. Each bank independently applies its own KYC, compliance and risk requirements.</p>
+    <a id="bankingWhatsApp" class="btn btn-primary" target="_blank" rel="noopener">Discuss My Requirements on WhatsApp</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- DOCUMENT CHECKLIST -->
+<section class="section section-light">
+ <div class="container section-heading">
+  <h2>Common Banking Document Checklist</h2>
+  <p>Actual requirements vary by bank, company structure and business activity.</p>
+ </div>
+
+ <div class="container banking-grid">
+  <article class="banking-card">
+   <h3>Company Documents</h3>
+   <ul>
+    <li>Valid trade licence</li>
+    <li>MOA / incorporation documents, where applicable</li>
+    <li>Lease or facility agreement, if required</li>
+    <li>Shareholder and UBO information</li>
+   </ul>
+  </article>
+  <article class="banking-card">
+   <h3>Business Profile</h3>
+   <ul>
+    <li>Business model and activity explanation</li>
+    <li>Products or services offered</li>
+    <li>Supplier and customer information</li>
+    <li>Expected transaction countries</li>
+   </ul>
+  </article>
+  <article class="banking-card">
+   <h3>Financial Information</h3>
+   <ul>
+    <li>Expected annual turnover</li>
+    <li>Source of funds and wealth evidence</li>
+    <li>Bank statements, if available</li>
+    <li>Invoices and supporting contracts</li>
+   </ul>
+  </article>
+ </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+ <div class="container section-heading">
+  <h2>How DUCES Supports Your Application</h2>
+  <p>A structured consultancy and documentation assistance process.</p>
+ </div>
+
+ <div class="container banking-grid">
+  <article class="banking-card"><h3>01. Initial Discussion</h3><p>Understand your company structure and banking requirements.</p></article>
+  <article class="banking-card"><h3>02. Profile Assessment</h3><p>Review business activity, documents and financial information.</p></article>
+  <article class="banking-card"><h3>03. Banking Options</h3><p>Discuss potentially relevant institutions and account types.</p></article>
+  <article class="banking-card"><h3>04. Documentation</h3><p>Organise application information and supporting documents.</p></article>
+  <article class="banking-card"><h3>05. Application Coordination</h3><p>Assist with communication and follow-up where authorised and permitted.</p></article>
+ </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-light">
+ <div class="container section-heading">
+  <h2>Frequently Asked Questions</h2>
+ </div>
+
+ <div class="container faq-list">
+  <details><summary>Does a UAE trade licence guarantee a business bank account?</summary><p>No. Banks independently assess applications based on KYC, compliance, risk, business activity and other criteria.</p></details>
+  <details><summary>Can a newly established company apply?</summary><p>Some banks consider newly established businesses. Requirements and acceptance depend on the institution and applicant profile.</p></details>
+  <details><summary>Can a Free Zone company open a UAE business account?</summary><p>Free Zone companies may apply to banks that accept their structure and activity. Approval remains subject to the bank's assessment.</p></details>
+  <details><summary>What documents should I prepare?</summary><p>Common documents include the trade licence, incorporation documents, shareholder identification, business profile and supporting financial or transaction evidence.</p></details>
+  <details><summary>How long does account opening take?</summary><p>Timelines vary according to bank processes, document completeness, compliance checks and additional information requests.</p></details>
+  <details><summary>Can DUCES guarantee approval?</summary><p>No. DUCES provides consultancy and application assistance. The bank independently decides whether to approve or decline an application.</p></details>
+ </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+ <div class="container">
+  <h2>Need Help with Your UAE Business Bank Account?</h2>
+  <p>Tell us about your company and banking requirement.</p>
+  <a class="btn btn-primary" href="contact.html">Submit an Enquiry</a>
+  <a class="btn btn-outline" href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20need%20business%20banking%20assistance." target="_blank" rel="noopener">WhatsApp DUCES</a>
+ </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+ <div class="container footer-grid">
+  <div>
+   <h3>DUCES Consultancy Services</h3>
+   <p>Business consultancy and support services in the United Arab Emirates.</p>
+   <p class="text-gold"><strong>START • MANAGE • GROW</strong></p>
+  </div>
+
+  <div>
+   <h4>Our Services</h4>
+   <ul>
+    <li><a href="company-formation.html">Business Setup</a></li>
+    <li><a href="business-banking.html">Business Banking</a></li>
+    <li><a href="business-loan.html">Business Loans</a></li>
+    <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
+    <li><a href="pro-visa-services.html">PRO & VISA</a></li>
+   </ul>
+  </div>
+
+  <div>
+   <h4>Quick Links</h4>
+   <ul>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+    <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+   </ul>
+   <h4>Contact</h4>
+   <ul>
+    <li><a href="tel:+971505356966">+971 50 535 6966</a></li>
+    <li><a href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp DUCES</a></li>
+   </ul>
+  </div>
+ </div>
+
+ <div class="container">
+  <p class="banking-note">Disclaimer: DUCES is an independent consultancy. Banking applications are subject to each bank's KYC, compliance, due diligence and approval process. No approval is guaranteed.</p>
+  <div class="footer-bottom">© <span data-current-year>2026</span> DUCES Consultancy Services. All rights reserved.</div>
+ </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp</a>
 
 <script>
-(function () {
-  const form = document.getElementById("bankingReadinessForm");
-  if (!form) return;
+(function(){
+ const form=document.getElementById("bankingReadinessForm");
+ if(!form)return;
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+ form.addEventListener("submit",function(e){
+  e.preventDefault();
 
-    const value = id => document.getElementById(id).value;
-    const age = value("companyAge");
-    const jurisdiction = value("jurisdiction");
-    const activity = value("activity").trim();
-    const turnover = value("turnover");
-    const balance = value("balance");
-    const vat = value("vatStatus");
-    const transactions = value("transactions").trim();
-    const account = value("accountType");
+  const get=id=>document.getElementById(id).value.trim();
+  const age=get("companyAge");
+  const jurisdiction=get("jurisdiction");
+  const activity=get("activity");
+  const turnover=get("turnover");
+  const balance=get("balance");
+  const vat=get("vatStatus");
+  const countries=get("transactions");
+  const account=get("accountType");
 
-    const checklist = [
-      "Valid trade licence and company incorporation documents, where applicable",
-      "Passport, identification and contact details of shareholders and UBOs",
-      "Clear business activity profile and explanation of business model",
-      "Expected customer, supplier and transaction-country details",
-      "Source of funds and source of wealth supporting documents, where applicable"
-    ];
+  const checklist=[
+   "Valid trade licence and incorporation documents, where applicable",
+   "Shareholder identification and UBO information",
+   "Clear business model and activity explanation",
+   "Customer, supplier and transaction-country details",
+   "Source of funds and source of wealth supporting evidence"
+  ];
 
-    if (age !== "new" && age !== "under1") {
-      checklist.push("Available business bank statements and financial records");
-    } else {
-      checklist.push("Business plan, expected turnover and initial funding evidence");
-    }
+  if(age==="new"||age==="under1"){
+   checklist.push("Business plan, expected turnover and initial funding evidence");
+  }else{
+   checklist.push("Available business bank statements and financial records");
+  }
 
-    if (turnover !== "zero") {
-      checklist.push("Invoices, contracts or other evidence supporting reported turnover");
-    }
+  if(turnover!=="zero"){
+   checklist.push("Invoices, contracts or other evidence supporting reported turnover");
+  }
 
-    if (vat === "registered") {
-      checklist.push("VAT registration certificate and available VAT returns");
-    } else if (vat === "pending") {
-      checklist.push("VAT registration application status and supporting records");
-    } else if (vat === "unknown") {
-      checklist.push("Review whether VAT registration is required for your business");
-    }
+  if(vat==="VAT registered"){
+   checklist.push("VAT registration certificate and available VAT returns");
+  }else if(vat==="Registration in progress"){
+   checklist.push("VAT registration application status and supporting records");
+  }else if(vat==="Not sure"){
+   checklist.push("Review whether VAT registration is required for your business");
+  }
 
-    if (balance === "new") {
-      checklist.push("Prepare an explanation of expected opening deposits and funding");
-    }
+  if(balance==="noaccount"){
+   checklist.push("Prepare evidence explaining expected opening deposits and funding");
+  }
 
-    const summary = [
-      "Company age: " + document.getElementById("companyAge").selectedOptions[0].text,
-      "Jurisdiction: " + jurisdiction,
-      "Business activity: " + activity,
-      "Annual turnover: " + document.getElementById("turnover").selectedOptions[0].text,
-      "Average balance: " + document.getElementById("balance").selectedOptions[0].text,
-      "VAT status: " + document.getElementById("vatStatus").selectedOptions[0].text,
-      "Transaction countries: " + transactions,
-      "Requirement: " + account
-    ];
+  document.getElementById("readinessSummary").textContent=
+   "Your information has been collected. Review the suggested checklist and prepare the relevant evidence. This report does not score or predict bank approval.";
 
-    document.getElementById("readinessSummary").textContent =
-      "Your profile information has been collected. Review the checklist below and prepare the relevant evidence before approaching a bank. This assessment does not score or predict bank approval.";
+  const list=document.getElementById("readinessChecklist");
+  list.replaceChildren();
 
-    const list = document.getElementById("readinessChecklist");
-    list.replaceChildren();
-
-    checklist.forEach(function (item) {
-      const li = document.createElement("li");
-      li.textContent = item;
-      list.appendChild(li);
-    });
-
-    const message = "Hello DUCES, I completed the Business Banking Readiness Checker.\n\n" +
-      summary.join("\n") +
-      "\n\nPlease help me review my banking documentation and next steps.";
-
-    document.getElementById("bankingWhatsApp").href =
-      "https://wa.me/971505356966?text=" + encodeURIComponent(message);
-
-    const result = document.getElementById("bankingResult");
-    result.hidden = false;
-    result.scrollIntoView({ behavior: "smooth", block: "start" });
+  checklist.forEach(item=>{
+   const li=document.createElement("li");
+   li.textContent=item;
+   list.appendChild(li);
   });
 
-  form.addEventListener("reset", function () {
-    document.getElementById("bankingResult").hidden = true;
-  });
+  const message=[
+   "Hello DUCES, I completed the Business Banking Readiness Checker.",
+   "",
+   "Company age: "+age,
+   "Jurisdiction: "+jurisdiction,
+   "Business activity: "+activity,
+   "Annual turnover: "+turnover,
+   "Average monthly balance: "+balance,
+   "VAT status: "+vat,
+   "Transaction countries: "+countries,
+   "Banking requirement: "+account,
+   "",
+   "Please assist me with reviewing my banking requirements."
+  ].join("\n");
+
+  document.getElementById("bankingWhatsApp").href=
+   "https://wa.me/971505356966?text="+encodeURIComponent(message);
+
+  const result=document.getElementById("bankingResult");
+  result.hidden=false;
+  result.scrollIntoView({behavior:"smooth",block:"start"});
+ });
+
+ form.addEventListener("reset",function(){
+  document.getElementById("bankingResult").hidden=true;
+ });
 })();
 </script>
+
+</body>
+</html>
