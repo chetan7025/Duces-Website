@@ -19,11 +19,12 @@
 }
 
 .banking-card {
-  background: #FFFFFF;
   padding: 24px;
   border: 1px solid #E5EBF1;
   border-radius: 10px;
   height: 100%;
+  transition: 0.25s ease;
+  box-shadow: 0 5px 20px rgba(18,59,112,0.05);
 }
 
 .banking-card h3 {
@@ -49,7 +50,37 @@
 
 .banking-card:hover {
   border-color: #D9AD55;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(18,59,112,0.10);
 }
+
+/* INDIVIDUAL BANKING SERVICE COLOURS */
+
+.banking-mainland {
+  background: #F3EBDD;
+}
+
+.banking-freezone {
+  background: #EFF4E7;
+}
+
+.banking-offshore {
+  background: #EAF1F8;
+}
+
+.banking-personal {
+  background: #F7F0E3;
+}
+
+.banking-nri {
+  background: #F5F7FA;
+}
+
+.banking-readiness {
+  background: #EAF1F8;
+}
+
+/* BANKING CHECKER */
 
 .banking-checker {
   max-width: 850px;
@@ -58,6 +89,7 @@
   background: #FFFFFF;
   border: 1px solid #E5EBF1;
   border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(18,59,112,0.05);
 }
 
 .banking-checker label {
@@ -130,6 +162,17 @@
   margin-top: 18px;
 }
 
+.banking-section-note {
+  max-width: 850px;
+  margin: 22px auto 0;
+  text-align: center;
+  color: #64748B;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* FAQ */
+
 .faq-list details {
   padding: 17px;
   margin: 11px 0;
@@ -149,27 +192,6 @@
   margin-top: 12px;
   line-height: 1.7;
   color: #263445;
-}
-
-.banking-highlight {
-  background: #F7F0E3;
-}
-
-.banking-blue {
-  background: #EAF1F8;
-}
-
-.banking-soft {
-  background: #F5F7FA;
-}
-
-.banking-section-note {
-  max-width: 850px;
-  margin: 22px auto 0;
-  text-align: center;
-  color: #64748B;
-  font-size: 13px;
-  line-height: 1.7;
 }
 
 @media (max-width: 600px) {
@@ -257,7 +279,7 @@
 </section>
 
 <!-- BANKING SERVICES -->
-<section class="section" id="banking-options">
+<section class="section section-light" id="banking-options">
   <div class="container section-heading">
     <h2>Our Banking Assistance Services</h2>
     <p>
@@ -268,7 +290,7 @@
 
   <div class="container banking-grid">
 
-    <article class="banking-card banking-blue">
+    <article class="banking-card banking-mainland">
       <h3>Mainland Business Banking</h3>
       <p>Assistance for eligible UAE mainland companies.</p>
       <ul>
@@ -280,7 +302,7 @@
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="banking-card banking-highlight">
+    <article class="banking-card banking-freezone">
       <h3>Free Zone Business Banking</h3>
       <p>Banking assistance for UAE Free Zone entities.</p>
       <ul>
@@ -292,7 +314,7 @@
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="banking-card">
+    <article class="banking-card banking-offshore">
       <h3>Offshore Business Banking</h3>
       <p>Guidance on banking considerations for eligible offshore entities.</p>
       <ul>
@@ -304,7 +326,7 @@
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="banking-card">
+    <article class="banking-card banking-personal">
       <h3>Personal Banking Assistance</h3>
       <p>Support for individuals exploring personal banking options.</p>
       <ul>
@@ -316,7 +338,7 @@
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="banking-card banking-soft">
+    <article class="banking-card banking-nri">
       <h3>NRI Banking Assistance</h3>
       <p>Guidance for Non-Resident Indians with cross-border banking needs.</p>
       <ul>
@@ -328,7 +350,7 @@
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="banking-card">
+    <article class="banking-card banking-readiness">
       <h3>Banking Readiness Assessment</h3>
       <p>Identify information and documentation gaps before applying.</p>
       <ul>
@@ -344,7 +366,7 @@
 </section>
 
 <!-- BANKING INSTITUTIONS -->
-<section class="section section-light">
+<section class="section">
   <div class="container section-heading">
     <h2>Explore UAE Banking Institutions</h2>
     <p>
@@ -355,32 +377,32 @@
 
   <div class="container banking-grid">
 
-    <article class="banking-card">
+    <article class="banking-card" style="background:#F5F7FA">
       <h3>Wio Bank</h3>
       <p>Digital business banking options and account requirements.</p>
     </article>
 
-    <article class="banking-card">
+    <article class="banking-card" style="background:#F5F7FA">
       <h3>First Abu Dhabi Bank</h3>
       <p>Business banking products and documentation considerations.</p>
     </article>
 
-    <article class="banking-card">
+    <article class="banking-card" style="background:#F5F7FA">
       <h3>Mashreq</h3>
       <p>Business account options and application requirements.</p>
     </article>
 
-    <article class="banking-card">
+    <article class="banking-card" style="background:#F5F7FA">
       <h3>RAKBANK</h3>
       <p>Business banking products and eligibility considerations.</p>
     </article>
 
-    <article class="banking-card">
+    <article class="banking-card" style="background:#F5F7FA">
       <h3>Emirates Islamic</h3>
       <p>Islamic banking solutions for eligible businesses.</p>
     </article>
 
-    <article class="banking-card">
+    <article class="banking-card" style="background:#F5F7FA">
       <h3>ADIB</h3>
       <p>Islamic banking options and business account requirements.</p>
     </article>
@@ -397,7 +419,7 @@
 </section>
 
 <!-- BANKING READINESS CHECKER -->
-<section class="section" id="banking-checker">
+<section class="section bg-banking" id="banking-checker">
 
   <div class="container section-heading">
     <h2>Business Banking Readiness Checker</h2>
@@ -432,12 +454,8 @@
         </select>
 
         <label for="activity">Business activity</label>
-        <input
-          id="activity"
-          type="text"
-          placeholder="e.g. Trading, Consultancy, Services"
-          required
-        >
+        <input id="activity" type="text"
+          placeholder="e.g. Trading, Consultancy, Services" required>
 
         <label for="turnover">Annual turnover (AED)</label>
         <select id="turnover" required>
@@ -469,12 +487,8 @@
         </select>
 
         <label for="transactions">Main transaction countries</label>
-        <input
-          id="transactions"
-          type="text"
-          placeholder="e.g. UAE, India, Saudi Arabia"
-          required
-        >
+        <input id="transactions" type="text"
+          placeholder="e.g. UAE, India, Saudi Arabia" required>
 
         <label for="accountType">Banking requirement</label>
         <select id="accountType" required>
@@ -495,7 +509,6 @@
 
       </form>
 
-      <!-- RESULT -->
       <div id="bankingResult" class="banking-result" hidden>
 
         <h3>Your Banking Preparation Report</h3>
@@ -519,13 +532,8 @@
           and risk requirements.
         </p>
 
-        <a
-          id="bankingWhatsApp"
-          class="btn btn-primary"
-          href="#"
-          target="_blank"
-          rel="noopener"
-        >
+        <a id="bankingWhatsApp" class="btn btn-primary"
+          href="#" target="_blank" rel="noopener">
           Discuss My Requirements on WhatsApp
         </a>
 
@@ -585,7 +593,7 @@
 </section>
 
 <!-- PROCESS -->
-<section class="section">
+<section class="section bg-offshore">
 
   <div class="container section-heading">
     <h2>How DUCES Supports Your Banking Application</h2>
@@ -596,44 +604,29 @@
 
   <div class="container banking-grid">
 
-    <article class="banking-card">
+    <article class="banking-card" style="background:#FFFFFF">
       <h3>01. Initial Discussion</h3>
-      <p>
-        Understand your company structure, business activity
-        and banking requirements.
-      </p>
+      <p>Understand your company structure, business activity and banking requirements.</p>
     </article>
 
-    <article class="banking-card">
+    <article class="banking-card" style="background:#FFFFFF">
       <h3>02. Profile Assessment</h3>
-      <p>
-        Review available documents, financial information
-        and business activity.
-      </p>
+      <p>Review available documents, financial information and business activity.</p>
     </article>
 
-    <article class="banking-card">
+    <article class="banking-card" style="background:#FFFFFF">
       <h3>03. Banking Options</h3>
-      <p>
-        Discuss potentially relevant institutions and
-        available account types.
-      </p>
+      <p>Discuss potentially relevant institutions and available account types.</p>
     </article>
 
-    <article class="banking-card">
+    <article class="banking-card" style="background:#FFFFFF">
       <h3>04. Documentation</h3>
-      <p>
-        Organise application information and supporting
-        documents for submission.
-      </p>
+      <p>Organise application information and supporting documents for submission.</p>
     </article>
 
-    <article class="banking-card">
+    <article class="banking-card" style="background:#FFFFFF">
       <h3>05. Application Coordination</h3>
-      <p>
-        Assist with communication and follow-up where
-        authorised and permitted.
-      </p>
+      <p>Assist with communication and follow-up where authorised and permitted.</p>
     </article>
 
   </div>
@@ -651,75 +644,42 @@
 
     <details>
       <summary>Does a UAE trade licence guarantee a business bank account?</summary>
-      <p>
-        No. Banks independently assess applications based on KYC,
-        compliance, business activity, risk and other internal criteria.
-        A trade licence alone does not guarantee account opening.
-      </p>
+      <p>No. Banks independently assess applications based on KYC, compliance, business activity, risk and other internal criteria. A trade licence alone does not guarantee account opening.</p>
     </details>
 
     <details>
       <summary>Can a newly established company apply for a bank account?</summary>
-      <p>
-        Some banks consider newly established businesses. Requirements
-        and acceptance depend on the institution, company structure
-        and applicant profile.
-      </p>
+      <p>Some banks consider newly established businesses. Requirements and acceptance depend on the institution, company structure and applicant profile.</p>
     </details>
 
     <details>
       <summary>Can a Free Zone company open a UAE business account?</summary>
-      <p>
-        Free Zone companies may apply to banks that accept their
-        structure and activity. Approval remains subject to the
-        bank's independent assessment.
-      </p>
+      <p>Free Zone companies may apply to banks that accept their structure and activity. Approval remains subject to the bank's independent assessment.</p>
     </details>
 
     <details>
       <summary>What documents should I prepare?</summary>
-      <p>
-        Common documents include the trade licence, incorporation
-        documents, shareholder identification, business profile
-        and supporting financial or transaction evidence.
-      </p>
+      <p>Common documents include the trade licence, incorporation documents, shareholder identification, business profile and supporting financial or transaction evidence.</p>
     </details>
 
     <details>
       <summary>How long does business account opening take?</summary>
-      <p>
-        Timelines vary according to bank processes, document
-        completeness, compliance checks and additional
-        information requests.
-      </p>
+      <p>Timelines vary according to bank processes, document completeness, compliance checks and additional information requests.</p>
     </details>
 
     <details>
       <summary>Can DUCES guarantee bank account approval?</summary>
-      <p>
-        No. DUCES provides consultancy and documentation assistance.
-        The bank independently decides whether to approve or
-        decline an application.
-      </p>
+      <p>No. DUCES provides consultancy and documentation assistance. The bank independently decides whether to approve or decline an application.</p>
     </details>
 
     <details>
       <summary>Does DUCES work with only one bank?</summary>
-      <p>
-        DUCES provides independent consultancy on banking options.
-        The relevant institution depends on the company profile,
-        requirements and the bank's current policies.
-      </p>
+      <p>DUCES provides independent consultancy on banking options. The relevant institution depends on the company profile, requirements and the bank's current policies.</p>
     </details>
 
     <details>
       <summary>Can I apply for an account before starting business operations?</summary>
-      <p>
-        Some institutions consider applications from newly
-        established companies. They may request a business plan,
-        expected transaction details, source of funds and
-        other supporting documents.
-      </p>
+      <p>Some institutions consider applications from newly established companies. They may request a business plan, expected transaction details, source of funds and other supporting documents.</p>
     </details>
 
   </div>
@@ -740,12 +700,9 @@
       Submit an Enquiry
     </a>
 
-    <a
-      class="btn btn-outline"
+    <a class="btn btn-outline"
       href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20need%20business%20banking%20assistance."
-      target="_blank"
-      rel="noopener"
-    >
+      target="_blank" rel="noopener">
       WhatsApp DUCES
     </a>
 
@@ -761,13 +718,8 @@
 
     <div>
       <h3>DUCES Consultancy Services</h3>
-      <p>
-        Business consultancy and support services
-        in the United Arab Emirates.
-      </p>
-      <p class="text-gold">
-        <strong>START • MANAGE • GROW</strong>
-      </p>
+      <p>Business consultancy and support services in the United Arab Emirates.</p>
+      <p class="text-gold"><strong>START • MANAGE • GROW</strong></p>
     </div>
 
     <div>
@@ -794,12 +746,7 @@
       <h4>Contact</h4>
       <ul>
         <li><a href="tel:+971505356966">+971 50 535 6966</a></li>
-        <li>
-          <a href="https://wa.me/971505356966"
-             target="_blank" rel="noopener">
-            WhatsApp DUCES
-          </a>
-        </li>
+        <li><a href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp DUCES</a></li>
       </ul>
     </div>
 
@@ -824,8 +771,7 @@
 
 <a class="whatsapp-float"
    href="https://wa.me/971505356966"
-   target="_blank"
-   rel="noopener">
+   target="_blank" rel="noopener">
   WhatsApp
 </a>
 
@@ -842,6 +788,8 @@
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
+
+    if (!form.reportValidity()) return;
 
     const age = field("companyAge");
     const jurisdiction = field("jurisdiction");
@@ -904,6 +852,7 @@
     }
 
     const summary = document.getElementById("bankingSummary");
+    summary.replaceChildren();
 
     const summaryItems = [
       ["Company age", age],
@@ -916,8 +865,6 @@
       ["Banking requirement", account]
     ];
 
-    summary.replaceChildren();
-
     summaryItems.forEach(function (item) {
       const line = document.createElement("p");
       const label = document.createElement("strong");
@@ -925,7 +872,6 @@
       label.textContent = item[0] + ": ";
       line.appendChild(label);
       line.appendChild(document.createTextNode(item[1]));
-
       summary.appendChild(line);
     });
 
