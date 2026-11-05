@@ -4,80 +4,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business Loan & Mortgage Assistance UAE | DUCES</title>
-<meta name="description" content="Explore business loans, working capital, trade finance, mortgages and loan against property in the UAE with DUCES Consultancy Services.">
+
+<title>Business Loans & Mortgage Assistance UAE | DUCES</title>
+<meta name="description" content="Explore business loans, working capital, trade finance, residential and commercial mortgages in the UAE with DUCES Consultancy Services.">
 <meta name="theme-color" content="#123B70">
 
 <link rel="stylesheet" href="css/style.css">
 <script src="js/script.js" defer></script>
 
 <style>
+:root {
+  --royal-blue:#123B70;
+  --navy:#0B2850;
+  --ocean-blue:#1976B9;
+  --gold:#D9AD55;
+  --charcoal:#263445;
+  --grey:#64748B;
+  --white:#FFFFFF;
+  --cloud:#F8FAFC;
+  --mist:#EDF2F7;
+  --slate:#DCE4ED;
+
+  --loan-blue:#E9F0F8;
+  --butter-yellow:#FFF1B8;
+  --fresh-green:#DDF0D5;
+  --sky-blue:#D9EBFA;
+  --peach:#F3DDC5;
+  --lavender:#E9DFF5;
+  --champagne:#F7F0E3;
+}
+
 .loan-hero {
-  background: linear-gradient(120deg,#0B2850,#123B70 65%,#1976B9);
-  color:#fff;
+  background:linear-gradient(120deg,var(--navy),var(--royal-blue) 65%,var(--ocean-blue));
+  color:var(--white);
   padding:85px 0;
 }
 .loan-hero h1 {
-  max-width:800px;
+  max-width:820px;
   font-size:clamp(32px,5vw,52px);
   line-height:1.15;
+  margin:12px 0 20px;
 }
 .loan-hero p {
-  max-width:720px;
+  max-width:740px;
   line-height:1.8;
 }
-.loan-hero .text-gold {color:#D9AD55;}
+.loan-hero .text-gold {color:var(--gold);}
 .loan-hero .btn {margin:8px 8px 0 0;}
+
+.loan-section {
+  padding:65px 0;
+}
+.loan-section-heading {
+  text-align:center;
+  max-width:850px;
+  margin:0 auto 32px;
+}
+.loan-section-heading h2 {
+  color:var(--royal-blue);
+  margin-bottom:10px;
+}
+.loan-section-heading p {
+  color:var(--grey);
+  line-height:1.7;
+}
+
+.loan-solutions {background:var(--loan-blue);}
+.loan-eligibility {background:var(--cloud);}
+.loan-evaluation {background:var(--sky-blue);}
+.loan-documents {background:var(--mist);}
+.loan-process-section {background:var(--butter-yellow);}
+.loan-calculator-section {background:#DCEAF7;}
+.loan-faq-section {background:var(--cloud);}
 
 .loan-grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
   gap:22px;
 }
 .loan-card {
-  background:#fff;
-  border:1px solid #E5EBF1;
-  border-radius:10px;
+  background:var(--white);
+  border:1px solid rgba(18,59,112,.10);
+  border-radius:12px;
   padding:25px;
   height:100%;
-  box-shadow:0 5px 20px rgba(11,40,80,.05);
-  transition:0.25s ease;
+  box-shadow:0 5px 18px rgba(11,40,80,.05);
+  transition:transform .25s ease,box-shadow .25s ease;
 }
 .loan-card:hover {
-  border-color:#D9AD55;
   transform:translateY(-4px);
-  box-shadow:0 12px 30px rgba(11,40,80,.09);
+  box-shadow:0 12px 28px rgba(11,40,80,.10);
 }
-.loan-card h3 {color:#123B70;}
-.loan-card ul {padding-left:20px;}
-.loan-card li {margin:8px 0;line-height:1.6;}
-.loan-card p {line-height:1.7;}
+.loan-card h3 {
+  color:var(--royal-blue);
+  margin:0 0 12px;
+}
+.loan-card p {
+  color:var(--charcoal);
+  line-height:1.7;
+}
+.loan-card ul {
+  padding-left:20px;
+  margin:14px 0;
+}
+.loan-card li {
+  color:var(--charcoal);
+  margin:8px 0;
+  line-height:1.6;
+}
+.loan-card a {
+  color:var(--royal-blue);
+  font-weight:700;
+  text-decoration:none;
+}
+.loan-card a:hover {color:var(--ocean-blue);}
 
-.loan-business {background:#E9F0F8;}
-.loan-trade {background:#F5F7FA;}
-.loan-property {background:#F7F0E3;}
-.loan-highlight {border-left:4px solid #D9AD55;}
+.loan-business-card {background:var(--white);}
+.loan-trade-card {background:var(--butter-yellow);}
+.loan-property-card {background:var(--champagne);}
+.loan-eligibility-card {background:var(--white);}
+.loan-evaluation-card {background:var(--white);}
+.loan-doc-card {background:var(--white);}
+
+.loan-highlight {
+  border-top:4px solid var(--gold);
+}
+.loan-card-label {
+  display:inline-block;
+  color:var(--royal-blue);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+
+.loan-note {
+  background:var(--peach);
+  border-left:4px solid var(--gold);
+  padding:20px 22px;
+  border-radius:8px;
+  margin-top:25px;
+  color:var(--charcoal);
+  line-height:1.7;
+}
+
+.loan-process {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(175px,1fr));
+  gap:17px;
+}
+.loan-step {
+  padding:22px;
+  background:var(--white);
+  border:1px solid rgba(18,59,112,.10);
+  border-radius:10px;
+  height:100%;
+}
+.loan-step strong {
+  color:var(--ocean-blue);
+  font-size:25px;
+}
+.loan-step h3 {
+  color:var(--royal-blue);
+  margin:10px 0;
+}
+.loan-step p {
+  color:var(--charcoal);
+  line-height:1.7;
+}
 
 .calculator {
-  max-width:850px;
+  max-width:880px;
   margin:auto;
-  padding:28px;
-  background:#fff;
-  border:1px solid #E5EBF1;
-  border-radius:10px;
-  box-shadow:0 8px 25px rgba(11,40,80,.07);
+  padding:30px;
+  background:var(--white);
+  border:1px solid var(--slate);
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(11,40,80,.10);
 }
 .calculator-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
   gap:18px;
-  margin-bottom:20px;
+  margin-bottom:22px;
 }
 .calculator label {
   display:block;
   font-weight:600;
-  margin-bottom:7px;
-  color:#263445;
+  margin-bottom:8px;
+  color:var(--charcoal);
 }
 .calculator input {
   width:100%;
@@ -86,31 +202,33 @@
   border:1px solid #CBD5E1;
   border-radius:7px;
   font:inherit;
-  color:#263445;
-  background:#fff;
+  color:var(--charcoal);
+  background:var(--white);
 }
 .calculator input:focus {
-  outline:2px solid #D9AD55;
+  outline:2px solid var(--gold);
   outline-offset:2px;
 }
+.calculator button {margin:5px 7px 5px 0;}
+
 .calculator-note {
-  color:#64748B;
+  color:var(--grey);
   font-size:13px;
   line-height:1.7;
   margin-top:18px;
 }
 .emi-result {
   display:none;
-  margin-top:24px;
+  margin-top:25px;
   padding:22px;
   border-radius:10px;
-  background:#F7F0E3;
-  border:1px solid #D9AD55;
+  background:var(--champagne);
+  border:1px solid var(--gold);
 }
-.emi-result h3 {color:#123B70;}
+.emi-result h3 {color:var(--royal-blue);}
 .emi-main {
-  color:#123B70;
-  font-size:clamp(25px,5vw,32px);
+  color:var(--royal-blue);
+  font-size:clamp(25px,5vw,34px);
   font-weight:700;
   margin:8px 0 18px;
 }
@@ -120,70 +238,60 @@
   gap:12px;
 }
 .emi-item {
-  background:#fff;
+  background:var(--white);
   padding:14px;
   border-radius:8px;
+  border:1px solid var(--slate);
 }
 .emi-item span {
   display:block;
   font-size:13px;
-  color:#64748B;
+  color:var(--grey);
 }
 .emi-item strong {
   display:block;
-  margin-top:5px;
-  color:#263445;
+  margin-top:6px;
+  color:var(--charcoal);
   overflow-wrap:anywhere;
 }
-.loan-process {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:18px;
+
+.loan-faq details {
+  padding:18px;
+  margin:12px 0;
+  border:1px solid var(--slate);
+  border-radius:9px;
+  background:var(--white);
 }
-.loan-step {
-  padding:20px;
-  background:#fff;
-  border:1px solid #E5EBF1;
-  border-radius:10px;
-  height:100%;
-}
-.loan-step strong {
-  color:#1976B9;
-  font-size:22px;
-}
-.loan-disclaimer {
-  font-size:13px;
-  line-height:1.7;
-  color:#64748B;
-}
-.faq-list details {
-  padding:17px;
-  margin:11px 0;
-  border:1px solid #E5EBF1;
-  border-radius:8px;
-  background:#fff;
-}
-.faq-list summary {
-  font-weight:600;
-  color:#123B70;
+.loan-faq summary {
+  font-weight:700;
+  color:var(--royal-blue);
   cursor:pointer;
   line-height:1.6;
 }
-.faq-list details p {
+.loan-faq details p {
   margin-top:12px;
   line-height:1.7;
-  color:#263445;
+  color:var(--charcoal);
 }
+
+.loan-disclaimer {
+  font-size:13px;
+  line-height:1.7;
+  color:var(--grey);
+}
+
 @media(max-width:600px) {
   .loan-hero {padding:55px 0;}
-  .calculator {padding:18px;}
+  .loan-section {padding:48px 0;}
+  .calculator {padding:19px;}
   .loan-hero .btn {
     display:block;
     text-align:center;
+    margin:10px 0;
   }
   .calculator button {
     width:100%;
-    margin:6px 0;
+    margin:7px 0;
   }
 }
 </style>
@@ -208,15 +316,17 @@
     <nav>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html">Home</a></li>
+
         <li class="dropdown">
           <a href="company-formation.html">Business Setup ▾</a>
           <ul class="dropdown-menu">
             <li><a href="company-formation.html#mainland">Mainland</a></li>
-            <li><a href="company-formation.html#freezone">Free Zone</a></li>
+            <li><a href="company-formation.html#free-zone">Free Zone</a></li>
             <li><a href="company-formation.html#offshore">Offshore</a></li>
-            <li><a href="company-formation.html#jurisdictions">Jurisdiction Comparison</a></li>
+            <li><a href="company-formation.html#compare-options">Jurisdiction Comparison</a></li>
           </ul>
         </li>
+
         <li><a href="business-banking.html">Business Banking</a></li>
         <li><a href="business-loan.html">Business Loans</a></li>
         <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
@@ -235,30 +345,40 @@
 <section class="loan-hero">
   <div class="container">
     <p class="text-gold"><strong>UAE BUSINESS FINANCE & MORTGAGE ASSISTANCE</strong></p>
+
     <h1>Finance Your Next Business Move with the Right Guidance.</h1>
+
     <p>
       Explore business finance, working capital, trade finance and
       property financing options. DUCES helps you understand
       requirements, organise documentation and navigate the
       application process.
     </p>
+
     <a class="btn btn-primary" href="contact.html">Discuss Your Requirement</a>
     <a class="btn btn-outline" href="#finance-solutions">Explore Finance Solutions</a>
   </div>
 </section>
 
-<!-- FINANCE SERVICES -->
-<section class="section bg-loans" id="finance-solutions">
-  <div class="container section-heading">
+<!-- FINANCE SOLUTIONS -->
+<section class="loan-section loan-solutions" id="finance-solutions">
+  <div class="container loan-section-heading">
     <h2>Our Finance Assistance Services</h2>
-    <p>Explore financing categories according to your business or property requirements.</p>
+    <p>
+      Explore financing categories according to your business,
+      working capital, trade or property requirements.
+    </p>
   </div>
 
   <div class="container loan-grid">
 
-    <article class="loan-card loan-business">
+    <article class="loan-card loan-business-card">
+      <span class="loan-card-label">Business Finance</span>
       <h3>Business Loans</h3>
-      <p>Assistance for established businesses exploring suitable business financing options.</p>
+      <p>
+        Assistance for established businesses exploring suitable
+        business financing options.
+      </p>
       <ul>
         <li>Business profile assessment</li>
         <li>Turnover and banking review</li>
@@ -268,9 +388,13 @@
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card loan-business">
+    <article class="loan-card loan-business-card">
+      <span class="loan-card-label">Cash Flow</span>
       <h3>Working Capital Finance</h3>
-      <p>Explore funding options for daily operations and business cash-flow requirements.</p>
+      <p>
+        Explore funding options for daily operations and
+        business cash-flow requirements.
+      </p>
       <ul>
         <li>Operational funding assessment</li>
         <li>Cash-flow profile review</li>
@@ -280,9 +404,13 @@
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card loan-trade">
+    <article class="loan-card loan-trade-card">
+      <span class="loan-card-label">Trade Finance</span>
       <h3>Letter of Credit</h3>
-      <p>Understand trade finance options for eligible import and export transactions.</p>
+      <p>
+        Understand trade finance options for eligible import
+        and export transactions.
+      </p>
       <ul>
         <li>Trade transaction review</li>
         <li>Buyer and supplier documentation</li>
@@ -292,9 +420,13 @@
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card loan-trade">
+    <article class="loan-card loan-trade-card">
+      <span class="loan-card-label">Trade Finance</span>
       <h3>Bank Guarantee</h3>
-      <p>Explore bank guarantee requirements for eligible contracts and business transactions.</p>
+      <p>
+        Explore bank guarantee requirements for eligible
+        contracts and business transactions.
+      </p>
       <ul>
         <li>Contract requirement review</li>
         <li>Guarantee type discussion</li>
@@ -304,9 +436,13 @@
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card loan-property">
+    <article class="loan-card loan-property-card">
+      <span class="loan-card-label">Property Finance</span>
       <h3>Residential Mortgage</h3>
-      <p>Assistance exploring residential property finance options in the UAE.</p>
+      <p>
+        Assistance exploring residential property finance
+        options in the UAE.
+      </p>
       <ul>
         <li>Applicant profile review</li>
         <li>Income documentation</li>
@@ -316,9 +452,13 @@
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card loan-property">
+    <article class="loan-card loan-property-card">
+      <span class="loan-card-label">Property Finance</span>
       <h3>Commercial Mortgage</h3>
-      <p>Explore financing options for eligible commercial property purchases.</p>
+      <p>
+        Explore financing options for eligible commercial
+        property purchases.
+      </p>
       <ul>
         <li>Commercial property assessment</li>
         <li>Business financial profile</li>
@@ -328,9 +468,13 @@
       <a href="contact.html">Enquire Now →</a>
     </article>
 
-    <article class="loan-card loan-property">
+    <article class="loan-card loan-property-card">
+      <span class="loan-card-label">Property Finance</span>
       <h3>Loan Against Property</h3>
-      <p>Understand financing possibilities against eligible property assets.</p>
+      <p>
+        Understand financing possibilities against eligible
+        property assets.
+      </p>
       <ul>
         <li>Property ownership review</li>
         <li>Existing liability assessment</li>
@@ -343,38 +487,67 @@
   </div>
 </section>
 
-<!-- WHO CAN APPLY -->
-<section class="section section-light">
-  <div class="container section-heading">
+<!-- ELIGIBILITY -->
+<section class="loan-section loan-eligibility">
+  <div class="container loan-section-heading">
     <h2>Who Can Explore Finance Options?</h2>
-    <p>Eligibility varies according to the lender, product, applicant and supporting documents.</p>
+    <p>
+      Eligibility varies according to the lender, product,
+      applicant profile and supporting documents.
+    </p>
   </div>
 
   <div class="container loan-grid">
-    <article class="loan-card loan-highlight">
+
+    <article class="loan-card loan-eligibility-card loan-highlight">
       <h3>Established Businesses</h3>
-      <p>Companies with operating history, regular business transactions and financial records.</p>
+      <p>
+        Companies with operating history, regular business
+        transactions and financial records.
+      </p>
     </article>
-    <article class="loan-card loan-highlight">
+
+    <article class="loan-card loan-eligibility-card loan-highlight">
       <h3>Growing Businesses</h3>
-      <p>Businesses exploring funding for expansion, inventory, equipment or operations.</p>
+      <p>
+        Businesses exploring funding for expansion,
+        inventory, equipment or operations.
+      </p>
     </article>
-    <article class="loan-card loan-highlight">
+
+    <article class="loan-card loan-eligibility-card loan-highlight">
       <h3>Property Applicants</h3>
-      <p>Eligible individuals and businesses exploring residential or commercial property finance.</p>
+      <p>
+        Eligible individuals and businesses exploring
+        residential or commercial property finance.
+      </p>
     </article>
+
+  </div>
+
+  <div class="container">
+    <div class="loan-note">
+      <strong>Important:</strong>
+      A new company may not qualify for every business finance
+      product. Some lenders require an established operating
+      history, regular account activity and financial records.
+    </div>
   </div>
 </section>
 
 <!-- LENDER EVALUATION -->
-<section class="section bg-offshore">
-  <div class="container section-heading">
+<section class="loan-section loan-evaluation" id="lender-evaluation">
+  <div class="container loan-section-heading">
     <h2>What May Lenders Evaluate?</h2>
-    <p>Each lender has its own credit policy, eligibility requirements and approval process.</p>
+    <p>
+      Each lender has its own credit policy, eligibility
+      requirements and approval process.
+    </p>
   </div>
 
   <div class="container loan-grid">
-    <article class="loan-card">
+
+    <article class="loan-card loan-evaluation-card">
       <h3>Business Performance</h3>
       <ul>
         <li>Business operating history</li>
@@ -383,7 +556,8 @@
         <li>Business activity and industry</li>
       </ul>
     </article>
-    <article class="loan-card">
+
+    <article class="loan-card loan-evaluation-card">
       <h3>Banking & Financial Records</h3>
       <ul>
         <li>Business bank statements</li>
@@ -392,7 +566,8 @@
         <li>Existing loan obligations</li>
       </ul>
     </article>
-    <article class="loan-card">
+
+    <article class="loan-card loan-evaluation-card">
       <h3>Applicant & Security</h3>
       <ul>
         <li>Shareholder and UBO details</li>
@@ -401,18 +576,23 @@
         <li>Collateral or guarantees, if required</li>
       </ul>
     </article>
+
   </div>
 </section>
 
 <!-- DOCUMENT CHECKLIST -->
-<section class="section section-light">
-  <div class="container section-heading">
+<section class="loan-section loan-documents">
+  <div class="container loan-section-heading">
     <h2>Common Document Checklist</h2>
-    <p>The final checklist depends on the financing product and lender requirements.</p>
+    <p>
+      The final checklist depends on the financing product
+      and the lender's requirements.
+    </p>
   </div>
 
   <div class="container loan-grid">
-    <article class="loan-card">
+
+    <article class="loan-card loan-doc-card">
       <h3>Business Documents</h3>
       <ul>
         <li>Valid trade licence</li>
@@ -422,7 +602,8 @@
         <li>VAT returns, where applicable</li>
       </ul>
     </article>
-    <article class="loan-card">
+
+    <article class="loan-card loan-doc-card">
       <h3>Financial Documents</h3>
       <ul>
         <li>Financial statements</li>
@@ -432,7 +613,8 @@
         <li>Purpose and amount of finance required</li>
       </ul>
     </article>
-    <article class="loan-card">
+
+    <article class="loan-card loan-doc-card">
       <h3>Property Finance Documents</h3>
       <ul>
         <li>Applicant identification</li>
@@ -442,128 +624,210 @@
         <li>Down payment information</li>
       </ul>
     </article>
+
   </div>
 </section>
 
 <!-- PROCESS -->
-<section class="section bg-banking">
-  <div class="container section-heading">
+<section class="loan-section loan-process-section">
+  <div class="container loan-section-heading">
     <h2>Our Finance Assistance Process</h2>
-    <p>Structured support from initial discussion to application coordination.</p>
+    <p>
+      Structured support from initial discussion
+      to application coordination.
+    </p>
   </div>
 
   <div class="container loan-process">
+
     <article class="loan-step">
       <strong>01</strong>
       <h3>Understand</h3>
-      <p>Discuss your financing requirement, business activity and funding purpose.</p>
+      <p>
+        Discuss your financing requirement,
+        business activity and funding purpose.
+      </p>
     </article>
+
     <article class="loan-step">
       <strong>02</strong>
       <h3>Assess</h3>
-      <p>Review your business profile, financial records and existing obligations.</p>
+      <p>
+        Review your business profile,
+        financial records and existing obligations.
+      </p>
     </article>
+
     <article class="loan-step">
       <strong>03</strong>
       <h3>Explore</h3>
-      <p>Identify potentially relevant financing categories and lender requirements.</p>
+      <p>
+        Identify potentially relevant financing
+        categories and lender requirements.
+      </p>
     </article>
+
     <article class="loan-step">
       <strong>04</strong>
       <h3>Prepare</h3>
-      <p>Organise the required information and supporting documentation.</p>
+      <p>
+        Organise the required information
+        and supporting documentation.
+      </p>
     </article>
+
     <article class="loan-step">
       <strong>05</strong>
       <h3>Coordinate</h3>
-      <p>Support application communication and follow-up where authorised and permitted.</p>
+      <p>
+        Support application communication and follow-up
+        where authorised and permitted.
+      </p>
     </article>
+
   </div>
 </section>
 
 <!-- EMI CALCULATOR -->
-<section class="section bg-loans" id="emi-calculator">
-  <div class="container section-heading">
+<section class="loan-section loan-calculator-section" id="emi-calculator">
+  <div class="container loan-section-heading">
     <h2>Loan EMI Calculator</h2>
-    <p>Estimate monthly instalments, interest and indicative processing costs.</p>
+    <p>
+      Estimate monthly instalments, total interest
+      and indicative processing costs.
+    </p>
   </div>
 
   <div class="container">
     <div class="calculator">
 
       <div class="calculator-grid">
+
         <div>
           <label for="loanAmount">Loan Amount (AED)</label>
-          <input type="number" id="loanAmount" value="500000" min="1" step="1000">
+          <input type="number" id="loanAmount"
+            value="500000" min="1" step="1000">
         </div>
+
         <div>
           <label for="interestRate">Annual Interest Rate (%)</label>
-          <input type="number" id="interestRate" value="8" min="0" max="100" step="0.1">
+          <input type="number" id="interestRate"
+            value="8" min="0" max="100" step="0.1">
         </div>
+
         <div>
           <label for="loanYears">Loan Tenure (Years)</label>
-          <input type="number" id="loanYears" value="5" min="1" max="30" step="1">
+          <input type="number" id="loanYears"
+            value="5" min="1" max="30" step="1">
         </div>
+
         <div>
           <label for="processingFee">Processing Fee (%)</label>
-          <input type="number" id="processingFee" value="1" min="0" max="100" step="0.1">
+          <input type="number" id="processingFee"
+            value="1" min="0" max="100" step="0.1">
         </div>
+
       </div>
 
-      <button class="btn btn-primary" type="button" id="calculateEmiBtn">
+      <button class="btn btn-primary"
+        type="button" id="calculateEmiBtn">
         Calculate EMI
       </button>
 
-      <button class="btn btn-outline" type="button" id="resetEmiBtn">
+      <button class="btn btn-outline"
+        type="button" id="resetEmiBtn">
         Reset Calculator
       </button>
 
-      <div id="emiResult" class="emi-result" aria-live="polite"></div>
+      <div id="emiResult"
+        class="emi-result" aria-live="polite"></div>
 
       <p class="calculator-note">
-        This calculator provides an illustrative reducing-balance estimate.
-        It does not represent a lender quotation or approval. Actual rates,
-        fees, insurance, taxes and repayment structures may differ.
+        This calculator provides an illustrative reducing-balance
+        estimate. It does not represent a lender quotation or
+        approval. Actual rates, fees, insurance, taxes and
+        repayment structures may differ.
       </p>
+
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section section-light">
-  <div class="container section-heading">
+<section class="loan-section loan-faq-section">
+  <div class="container loan-section-heading">
     <h2>Frequently Asked Questions</h2>
+    <p>
+      Common questions about business finance
+      and mortgage assistance in the UAE.
+    </p>
   </div>
 
-  <div class="container faq-list">
+  <div class="container loan-faq">
+
     <details>
       <summary>Can a newly established company get a business loan?</summary>
-      <p>Eligibility depends on the lender and product. Many financing options require an operating history and supporting financial information.</p>
+      <p>
+        Eligibility depends on the lender and product.
+        Many financing options require an operating history
+        and supporting financial information.
+      </p>
     </details>
+
     <details>
       <summary>What turnover is required for a business loan?</summary>
-      <p>There is no single turnover requirement across all lenders. Minimum criteria vary by product, lender and business profile.</p>
+      <p>
+        There is no single turnover requirement across all
+        lenders. Minimum criteria vary by product, lender
+        and business profile.
+      </p>
     </details>
+
     <details>
       <summary>Can a Free Zone company apply for business finance?</summary>
-      <p>Some lenders consider eligible Free Zone companies. Acceptance depends on lender policies and the company's profile.</p>
+      <p>
+        Some lenders consider eligible Free Zone companies.
+        Acceptance depends on lender policies and the
+        company's profile.
+      </p>
     </details>
+
     <details>
       <summary>Can I apply for working capital finance?</summary>
-      <p>Eligible businesses may explore working capital products. Lenders assess business activity, cash flow, turnover and repayment capacity.</p>
+      <p>
+        Eligible businesses may explore working capital
+        products. Lenders assess business activity,
+        cash flow, turnover and repayment capacity.
+      </p>
     </details>
+
     <details>
       <summary>Can DUCES guarantee loan approval?</summary>
-      <p>No. DUCES provides consultancy and application assistance. All financing decisions remain with the relevant lender.</p>
+      <p>
+        No. DUCES provides consultancy and application
+        assistance. All financing decisions remain
+        with the relevant lender.
+      </p>
     </details>
+
     <details>
       <summary>Can I explore residential or commercial mortgages?</summary>
-      <p>DUCES can help you understand requirements and explore relevant mortgage application routes, subject to lender eligibility and applicable permissions.</p>
+      <p>
+        DUCES can help you understand requirements and
+        explore relevant mortgage application routes,
+        subject to lender eligibility and applicable permissions.
+      </p>
     </details>
+
     <details>
       <summary>Does the EMI calculator include all loan charges?</summary>
-      <p>The calculator includes the processing fee percentage entered by the user. It does not automatically include insurance, valuation charges, taxes or other lender fees.</p>
+      <p>
+        The calculator includes the processing fee percentage
+        entered by the user. It does not automatically include
+        insurance, valuation charges, taxes or other lender fees.
+      </p>
     </details>
+
   </div>
 </section>
 
@@ -571,11 +835,18 @@
 <section class="cta-section">
   <div class="container">
     <h2>Planning Your Next Business or Property Move?</h2>
-    <p>Share your funding requirement with DUCES and discuss possible next steps.</p>
+    <p>
+      Share your funding requirement with DUCES
+      and discuss possible next steps.
+    </p>
+
     <a class="btn btn-primary" href="contact.html">Submit an Enquiry</a>
+
     <a class="btn btn-outline"
       href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20need%20finance%20assistance."
-      target="_blank" rel="noopener">WhatsApp DUCES</a>
+      target="_blank" rel="noopener">
+      WhatsApp DUCES
+    </a>
   </div>
 </section>
 
@@ -584,6 +855,7 @@
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="container footer-grid">
+
     <div>
       <h3>DUCES Consultancy Services</h3>
       <p>Business consultancy and support services in the UAE.</p>
@@ -615,9 +887,13 @@
     <div>
       <h4>Contact</h4>
       <p><a href="tel:+971505356966">+971 50 535 6966</a></p>
-      <p><a href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp DUCES</a></p>
+      <p>
+        <a href="https://wa.me/971505356966"
+          target="_blank" rel="noopener">WhatsApp DUCES</a>
+      </p>
       <p><a href="contact.html">Send an Enquiry</a></p>
     </div>
+
   </div>
 
   <div class="container">
@@ -628,7 +904,11 @@
       is guaranteed. Services are subject to applicable laws
       and permissions.
     </p>
-    <p>© <span data-current-year>2026</span> DUCES Consultancy Services. All rights reserved.</p>
+
+    <p>
+      © <span data-current-year>2026</span>
+      DUCES Consultancy Services. All rights reserved.
+    </p>
   </div>
 </footer>
 
@@ -636,7 +916,7 @@
   href="https://wa.me/971505356966"
   target="_blank" rel="noopener">WhatsApp</a>
 
-<!-- EMI CALCULATOR SCRIPT -->
+<!-- EMI CALCULATOR -->
 <script>
 (function () {
   const amountInput = document.getElementById("loanAmount");
@@ -647,13 +927,15 @@
   const calculateBtn = document.getElementById("calculateEmiBtn");
   const resetBtn = document.getElementById("resetEmiBtn");
 
-  if (!amountInput || !rateInput || !yearsInput || !feeInput ||
-      !result || !calculateBtn || !resetBtn) return;
+  if (
+    !amountInput || !rateInput || !yearsInput ||
+    !feeInput || !result || !calculateBtn || !resetBtn
+  ) return;
 
   function formatAED(value) {
     return "AED " + value.toLocaleString("en-AE", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2
+      minimumFractionDigits:2,
+      maximumFractionDigits:2
     });
   }
 
@@ -689,6 +971,7 @@
     const monthlyRate = annualRate / 1200;
 
     let emi;
+
     if (monthlyRate === 0) {
       emi = principal / months;
     } else {
@@ -716,12 +999,12 @@
     breakdown.className = "emi-breakdown";
 
     const items = [
-      ["Loan Amount", formatAED(principal)],
-      ["Total Interest", formatAED(totalInterest)],
-      ["Total Repayment", formatAED(totalRepayment)],
-      ["Processing Fee", formatAED(processingFeeAmount)],
-      ["Estimated Total Cost", formatAED(totalEstimatedCost)],
-      ["Loan Tenure", months + " Months"]
+      ["Loan Amount",formatAED(principal)],
+      ["Total Interest",formatAED(totalInterest)],
+      ["Total Repayment",formatAED(totalRepayment)],
+      ["Processing Fee",formatAED(processingFeeAmount)],
+      ["Estimated Total Cost",formatAED(totalEstimatedCost)],
+      ["Loan Tenure",months + " Months"]
     ];
 
     items.forEach(function (item) {
@@ -745,6 +1028,7 @@
     note.className = "calculator-note";
     note.textContent =
       "Processing fee is shown separately and is not included in the EMI. This estimate assumes a fixed rate and equal monthly repayments. Other lender charges may apply.";
+
     result.appendChild(note);
   }
 
@@ -757,12 +1041,14 @@
     result.replaceChildren();
   }
 
-  calculateBtn.addEventListener("click", calculateEMI);
-  resetBtn.addEventListener("click", resetCalculator);
+  calculateBtn.addEventListener("click",calculateEMI);
+  resetBtn.addEventListener("click",resetCalculator);
 
-  [amountInput, rateInput, yearsInput, feeInput].forEach(function (input) {
-    input.addEventListener("input", function () {
-      if (result.style.display === "block") calculateEMI();
+  [amountInput,rateInput,yearsInput,feeInput].forEach(function (input) {
+    input.addEventListener("input",function () {
+      if (result.style.display === "block") {
+        calculateEMI();
+      }
     });
   });
 })();
