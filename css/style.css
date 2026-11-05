@@ -1,22 +1,34 @@
 
 /* =========================================
    DUCES CONSULTANCY SERVICES
-   Main Website Design System
+   FINAL APPROVED DESIGN SYSTEM
    ========================================= */
 
 :root {
   --primary: #123B70;
   --primary-dark: #0B2850;
   --ocean: #1976B9;
-  --teal: #48C9B0;
-  --gold: #F4B942;
+  --gold: #D9AD55;
+  --gold-soft: #F7F0E3;
+
   --white: #FFFFFF;
-  --ice: #F1F7FC;
+  --ice: #F5F7FA;
   --charcoal: #263445;
   --silver: #E5EBF1;
-  --muted: #65758A;
+  --muted: #64748B;
+
+  /* Service backgrounds */
+  --mainland-bg: #F3EBDD;
+  --freezone-bg: #EFF4E7;
+  --offshore-bg: #EAF1F8;
+  --banking-bg: #F7F0E3;
+  --loans-bg: #E9F0F8;
+  --tax-bg: #F0F0EB;
+  --visa-bg: #F5EBE7;
+
   --shadow: 0 12px 35px rgba(18, 59, 112, 0.10);
-  --radius: 14px;
+  --shadow-soft: 0 5px 20px rgba(18, 59, 112, 0.05);
+  --radius: 10px;
 }
 
 * {
@@ -50,7 +62,7 @@ a {
 }
 
 a:hover {
-  color: var(--teal);
+  color: var(--primary-dark);
 }
 
 button,
@@ -86,14 +98,14 @@ textarea {
   color: var(--white);
 }
 
-/* HEADER AND NAVIGATION */
+/* HEADER */
 
 .site-header,
 header {
   background: var(--white);
   position: relative;
   z-index: 100;
-  box-shadow: 0 3px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.06);
 }
 
 .nav-container {
@@ -146,12 +158,13 @@ header {
   min-width: 235px;
   padding: 12px 0;
   background: var(--white);
-  border-radius: 10px;
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
   list-style: none;
 }
 
-.dropdown:hover > .dropdown-menu {
+.dropdown:hover > .dropdown-menu,
+.dropdown:focus-within > .dropdown-menu {
   display: block;
 }
 
@@ -165,17 +178,16 @@ header {
   background: var(--ice);
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero {
   background: linear-gradient(
     120deg,
     var(--primary-dark),
-    var(--primary),
-    var(--ocean)
+    var(--primary)
   );
   color: var(--white);
-  padding: 100px 0;
+  padding: 90px 0;
   overflow: hidden;
 }
 
@@ -184,7 +196,7 @@ header {
 }
 
 .hero h1 {
-  font-size: clamp(34px, 5vw, 58px);
+  font-size: clamp(34px, 5vw, 56px);
   line-height: 1.15;
   margin-bottom: 22px;
   font-weight: 800;
@@ -199,6 +211,26 @@ header {
 
 .hero .highlight {
   color: var(--gold);
+}
+
+/* INNER PAGE BANNER */
+
+.page-banner {
+  background: var(--primary-dark);
+  padding: 62px 0;
+  color: var(--white);
+  text-align: center;
+}
+
+.page-banner h1 {
+  font-size: clamp(30px, 4vw, 44px);
+  margin-bottom: 12px;
+}
+
+.page-banner p {
+  color: #E7F0FA;
+  max-width: 760px;
+  margin: auto;
 }
 
 /* BUTTONS */
@@ -271,6 +303,16 @@ header {
   color: var(--muted);
 }
 
+/* SERVICE BACKGROUNDS */
+
+.bg-mainland { background: var(--mainland-bg); }
+.bg-freezone { background: var(--freezone-bg); }
+.bg-offshore { background: var(--offshore-bg); }
+.bg-banking { background: var(--banking-bg); }
+.bg-loans { background: var(--loans-bg); }
+.bg-tax { background: var(--tax-bg); }
+.bg-visa { background: var(--visa-bg); }
+
 /* SERVICE CARDS */
 
 .service-grid,
@@ -286,15 +328,15 @@ header {
   padding: 28px;
   border: 1px solid var(--silver);
   border-radius: var(--radius);
-  box-shadow: 0 5px 20px rgba(18,59,112,0.04);
-  transition: 0.3s ease;
+  box-shadow: var(--shadow-soft);
+  transition: 0.25s ease;
 }
 
 .service-card:hover,
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow);
-  border-color: var(--teal);
+  border-color: var(--gold);
 }
 
 .service-card h3,
@@ -308,24 +350,6 @@ header {
 .card p {
   color: var(--muted);
   margin-bottom: 15px;
-}
-
-/* INNER PAGE BANNER */
-
-.page-banner {
-  background: linear-gradient(120deg, var(--primary-dark), var(--ocean));
-  padding: 65px 0;
-  color: var(--white);
-  text-align: center;
-}
-
-.page-banner h1 {
-  font-size: clamp(30px, 4vw, 44px);
-  margin-bottom: 12px;
-}
-
-.page-banner p {
-  color: #E7F0FA;
 }
 
 /* CONTENT */
@@ -358,7 +382,7 @@ header {
   padding: 32px;
   border: 1px solid var(--silver);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-soft);
   max-width: 850px;
   margin: 25px auto;
 }
@@ -389,14 +413,11 @@ textarea {
   outline: none;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus,
 input:focus,
 select:focus,
 textarea:focus {
   border-color: var(--ocean);
-  box-shadow: 0 0 0 3px rgba(25,118,185,0.10);
+  box-shadow: 0 0 0 3px rgba(25, 118, 185, 0.10);
 }
 
 textarea {
@@ -405,10 +426,10 @@ textarea {
 }
 
 .result-box {
-  background: var(--ice);
-  border-left: 4px solid var(--teal);
+  background: var(--gold-soft);
+  border-left: 4px solid var(--gold);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 7px;
   margin-top: 20px;
 }
 
@@ -481,34 +502,35 @@ footer a:hover {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.18);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   padding-top: 18px;
   text-align: center;
   color: #C8D7E8;
   font-size: 13px;
 }
 
-/* WHATSAPP FLOATING BUTTON */
+/* WHATSAPP */
 
 .whatsapp-float {
   position: fixed;
   right: 20px;
   bottom: 20px;
   z-index: 999;
-  background: #25D366;
+  background: var(--primary-dark);
   color: var(--white);
   padding: 13px 18px;
   border-radius: 50px;
   font-weight: 700;
-  box-shadow: 0 5px 18px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
 }
 
 .whatsapp-float:hover {
   color: var(--white);
+  background: var(--ocean);
   transform: translateY(-3px);
 }
 
-/* RESPONSIVE TABLES */
+/* TABLES */
 
 .table-wrap {
   width: 100%;
@@ -536,104 +558,25 @@ th {
 
 /* UTILITIES */
 
-.text-center {
-  text-align: center;
+.text-center { text-align: center; }
+.text-blue { color: var(--primary); }
+.text-gold { color: var(--gold); }
+
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+
+/* ACCESSIBILITY */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(217, 173, 85, 0.55);
+  outline-offset: 2px;
 }
 
-.text-blue {
-  color: var(--primary);
-}
-
-.text-gold {
-  color: var(--gold);
-}
-
-.mt-20 {
-  margin-top: 20px;
-}
-
-.mb-20 {
-  margin-bottom: 20px;
-}
-
-/* MOBILE RESPONSIVE */
-
-@media (max-width: 900px) {
-  .service-grid,
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .nav-menu {
-    gap: 12px;
-  }
-}
-
-@media (max-width: 650px) {
-  .top-bar .container {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .nav-container {
-    flex-direction: column;
-    padding: 16px 0;
-    gap: 14px;
-  }
-
-  .nav-menu {
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px 16px;
-  }
-
-  .nav-menu a {
-    font-size: 13px;
-  }
-
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    border: 1px solid var(--silver);
-  }
-
-  .dropdown:hover > .dropdown-menu {
-    display: block;
-  }
-
-  .hero {
-    padding: 65px 0;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .section {
-    padding: 50px 0;
-  }
-
-  .service-grid,
-  .card-grid,
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .calculator,
-  .contact-form,
-  .form-container {
-    padding: 20px;
-  }
-
-  .cta-section h2 {
-    font-size: 26px;
-  }
-}
-
-/* =========================================
-   DUCES FINAL MOBILE NAVIGATION FIX
-   ========================================= */
+/* MOBILE NAVIGATION */
 
 .menu-toggle {
   display: none;
@@ -647,6 +590,11 @@ th {
 }
 
 @media (max-width: 900px) {
+  .service-grid,
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .nav-container {
     min-height: 75px;
     flex-direction: row;
@@ -675,11 +623,9 @@ th {
     padding: 18px;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
     gap: 15px;
     box-shadow: var(--shadow);
     border-radius: 0 0 10px 10px;
-    flex-wrap: nowrap;
     max-height: 75vh;
     overflow-y: auto;
   }
@@ -688,10 +634,7 @@ th {
     display: flex;
   }
 
-  .nav-menu li {
-    width: 100%;
-  }
-
+  .nav-menu li,
   .dropdown {
     width: 100%;
   }
@@ -710,7 +653,47 @@ th {
     display: none;
   }
 
-  .dropdown.open > .dropdown-menu {
+  .dropdown.open > .dropdown-menu,
+  .dropdown:focus-within > .dropdown-menu {
     display: block;
+  }
+}
+
+@media (max-width: 650px) {
+  .top-bar .container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .service-grid,
+  .card-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator,
+  .contact-form,
+  .form-container {
+    padding: 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 26px;
+  }
+
+  .page-banner {
+    padding: 45px 0;
   }
 }
