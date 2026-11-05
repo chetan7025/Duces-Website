@@ -4,12 +4,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About DUCES | UAE Business Consultancy</title>
-<meta name="description" content="Discover DUCES Consultancy Services and our START, MANAGE and GROW approach to UAE business support.">
+
+<title>About DUCES | UAE Business Consultancy Services</title>
+<meta name="description" content="Learn about DUCES Consultancy Services, a UAE-focused business consultancy supporting company formation, banking, finance, taxation, accounting and PRO services.">
 <meta name="theme-color" content="#123B70">
+
 <link rel="stylesheet" href="css/style.css">
 <script src="js/script.js" defer></script>
+
+<style>
+.about-hero {
+  background:linear-gradient(120deg,#0B2850,#123B70 65%,#1976B9);
+  color:#fff;
+  padding:85px 0;
+}
+.about-hero h1 {
+  max-width:850px;
+  font-size:clamp(32px,5vw,52px);
+  line-height:1.15;
+}
+.about-hero p {
+  max-width:760px;
+  line-height:1.8;
+}
+.about-gold {color:#D9AD55;}
+
+.about-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+.about-card {
+  background:#fff;
+  border:1px solid #E5EBF1;
+  border-radius:10px;
+  padding:25px;
+  box-shadow:0 5px 20px rgba(11,40,80,.05);
+}
+.about-card h3 {color:#123B70;}
+.about-card li {margin:8px 0;}
+.about-card-accent {border-top:4px solid #D9AD55;}
+
+.about-panel {
+  background:#fff;
+  border:1px solid #E5EBF1;
+  border-radius:10px;
+  padding:30px;
+  line-height:1.8;
+}
+.about-number {
+  color:#1976B9;
+  font-size:28px;
+  font-weight:700;
+}
+.about-presence {
+  background:#F7F0E3;
+  border-left:4px solid #D9AD55;
+  padding:24px;
+  border-radius:8px;
+  line-height:1.8;
+}
+.about-note {
+  color:#64748B;
+  font-size:13px;
+  line-height:1.7;
+}
+.about-cta {
+  background:#0B2850;
+  color:#fff;
+  padding:55px 0;
+  text-align:center;
+}
+.about-cta p {
+  max-width:650px;
+  margin:12px auto 22px;
+  line-height:1.7;
+}
+@media(max-width:600px) {
+  .about-hero {padding:55px 0;}
+  .about-panel {padding:20px;}
+}
+</style>
 </head>
+
 <body>
 
 <div class="top-bar">
@@ -22,10 +99,14 @@
 <header class="site-header">
   <div class="container nav-container">
     <a class="site-logo" href="index.html">DUC<span>ES</span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open menu" aria-expanded="false">☰</button>
+
     <nav>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html">Home</a></li>
+
         <li class="dropdown">
           <a href="company-formation.html">Business Setup ▾</a>
           <ul class="dropdown-menu">
@@ -34,12 +115,14 @@
             <li><a href="company-formation.html#offshore">Offshore</a></li>
           </ul>
         </li>
+
         <li><a href="business-banking.html">Business Banking</a></li>
         <li><a href="business-loan.html">Business Loans</a></li>
         <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
         <li><a href="pro-visa-services.html">PRO & VISA</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </div>
@@ -47,143 +130,299 @@
 
 <main>
 
-<section class="hero">
-  <div class="container hero-content">
-    <p class="text-gold"><strong>ABOUT DUCES</strong></p>
-    <h1>Business Support That Moves With Your Journey.</h1>
-    <p>DUCES Consultancy Services helps entrepreneurs, business owners and companies navigate essential business requirements in the UAE through coordinated consultancy and support services.</p>
+<!-- HERO -->
+
+<section class="about-hero">
+  <div class="container">
+    <p class="about-gold"><strong>ABOUT DUCES CONSULTANCY SERVICES</strong></p>
+
+    <h1>Your UAE Business Journey, Supported at Every Stage.</h1>
+
+    <p>
+      DUCES Consultancy Services helps entrepreneurs, business owners
+      and companies understand and coordinate essential business
+      requirements in the United Arab Emirates.
+    </p>
+
+    <p>
+      From business setup to banking assistance, finance enquiries,
+      taxation, accounting and PRO services, our approach is built
+      around clarity, coordination and practical support.
+    </p>
+
     <a class="btn btn-primary" href="contact.html">Talk to Our Team</a>
+    <a class="btn btn-outline" href="#our-approach">Discover Our Approach</a>
   </div>
 </section>
+
+<!-- WHO WE ARE -->
 
 <section class="section">
   <div class="container section-heading">
     <h2>Who We Are</h2>
-    <p>One consultancy contact for multiple stages of your business journey.</p>
+    <p>A UAE-focused consultancy for connected business support services.</p>
   </div>
 
   <div class="container">
-    <div class="card">
-      <p>Starting and managing a business involves more than obtaining a trade licence. Business owners may also need banking assistance, financial support, accounting, taxation, documentation and residency-related services.</p>
-      <br>
-      <p>DUCES Consultancy Services is structured to help clients understand these requirements and coordinate the appropriate services according to their individual business needs.</p>
-      <br>
-      <p>Our approach focuses on clear communication, practical guidance, transparent service scope and organised follow-up.</p>
+    <div class="about-panel">
+      <p>
+        Starting and managing a business involves more than obtaining
+        a trade licence. Business owners may also need banking
+        assistance, financial guidance, accounting, taxation,
+        documentation and residency-related services.
+      </p>
+
+      <p>
+        DUCES is structured to help clients understand these
+        requirements and coordinate appropriate services according
+        to their business needs.
+      </p>
+
+      <p>
+        Our focus is on clear communication, practical guidance,
+        transparent service scope and organised follow-up.
+      </p>
     </div>
   </div>
 </section>
 
-<section class="section section-light">
+<!-- START MANAGE GROW -->
+
+<section class="section section-light" id="our-approach">
   <div class="container section-heading">
     <h2>Our Approach: START • MANAGE • GROW</h2>
     <p>Three connected stages of business support.</p>
   </div>
 
-  <div class="container card-grid">
-    <article class="service-card">
-      <h3>01. START</h3>
+  <div class="container about-grid">
+
+    <article class="about-card about-card-accent">
+      <div class="about-number">01</div>
+      <h3>START</h3>
       <p>Build the foundation for your UAE business.</p>
       <ul>
         <li>Mainland company formation</li>
         <li>Free Zone company formation</li>
-        <li>Offshore company setup assistance</li>
-        <li>Business activity and jurisdiction guidance</li>
+        <li>Offshore setup assistance</li>
+        <li>Business activity guidance</li>
+        <li>Jurisdiction comparison</li>
       </ul>
       <a href="company-formation.html">Explore Business Setup</a>
     </article>
 
-    <article class="service-card">
-      <h3>02. MANAGE</h3>
-      <p>Organise the essential services required to operate.</p>
+    <article class="about-card about-card-accent">
+      <div class="about-number">02</div>
+      <h3>MANAGE</h3>
+      <p>Organise essential services required to operate.</p>
       <ul>
         <li>Business banking assistance</li>
         <li>Taxation and accounting support</li>
         <li>Bookkeeping and compliance coordination</li>
         <li>PRO and visa services</li>
+        <li>Business documentation</li>
       </ul>
       <a href="business-banking.html">Explore Business Services</a>
     </article>
 
-    <article class="service-card">
-      <h3>03. GROW</h3>
+    <article class="about-card about-card-accent">
+      <div class="about-number">03</div>
+      <h3>GROW</h3>
       <p>Explore financial options and ongoing business support.</p>
       <ul>
         <li>Business loan assistance</li>
         <li>Working capital finance enquiries</li>
         <li>Residential mortgage assistance</li>
         <li>Commercial finance enquiries</li>
+        <li>Business growth support</li>
       </ul>
       <a href="business-loan.html">Explore Finance Assistance</a>
     </article>
+
   </div>
 </section>
 
+<!-- OUR SERVICES -->
+
 <section class="section">
+  <div class="container section-heading">
+    <h2>Our Core Services</h2>
+    <p>Five service categories designed around the business lifecycle.</p>
+  </div>
+
+  <div class="container about-grid">
+
+    <article class="about-card">
+      <h3>Business Setup</h3>
+      <p>
+        Assistance understanding UAE mainland, Free Zone and
+        offshore company formation options.
+      </p>
+      <a href="company-formation.html">Learn More</a>
+    </article>
+
+    <article class="about-card">
+      <h3>Business Banking</h3>
+      <p>
+        Guidance on business account requirements, documentation
+        and banking application preparation.
+      </p>
+      <a href="business-banking.html">Learn More</a>
+    </article>
+
+    <article class="about-card">
+      <h3>Business Loans</h3>
+      <p>
+        Assistance exploring business finance, working capital,
+        mortgage and other financing enquiries.
+      </p>
+      <a href="business-loan.html">Learn More</a>
+    </article>
+
+    <article class="about-card">
+      <h3>Taxation & Accounting</h3>
+      <p>
+        Bookkeeping, accounting, VAT and corporate tax-related
+        support and coordination.
+      </p>
+      <a href="taxation-accounting.html">Learn More</a>
+    </article>
+
+    <article class="about-card">
+      <h3>PRO & VISA Services</h3>
+      <p>
+        Assistance coordinating residency, employment,
+        documentation and company-related PRO requirements.
+      </p>
+      <a href="pro-visa-services.html">Learn More</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+
+<section class="section section-light">
   <div class="container section-heading">
     <h2>What We Focus On</h2>
     <p>The principles that guide the way we work with clients.</p>
   </div>
 
-  <div class="container card-grid">
-    <article class="card">
+  <div class="container about-grid">
+
+    <article class="about-card">
       <h3>Understanding Requirements</h3>
       <p>We begin by understanding the client's business activity, objectives and service requirements.</p>
     </article>
 
-    <article class="card">
+    <article class="about-card">
       <h3>Clear Communication</h3>
       <p>We explain the expected process, documents, service scope and applicable charges before proceeding.</p>
     </article>
 
-    <article class="card">
+    <article class="about-card">
       <h3>Coordinated Support</h3>
       <p>We help coordinate related services so clients have a clearer point of contact throughout the process.</p>
     </article>
 
-    <article class="card">
+    <article class="about-card">
       <h3>Responsible Guidance</h3>
-      <p>We communicate limitations and distinguish consultancy assistance from decisions made by banks and government authorities.</p>
+      <p>We distinguish consultancy assistance from decisions made by banks and government authorities.</p>
     </article>
 
-    <article class="card">
+    <article class="about-card">
       <h3>Practical Solutions</h3>
-      <p>We discuss service options according to the client's actual requirements rather than assuming one solution fits everyone.</p>
+      <p>We discuss options according to actual requirements rather than assuming one solution fits everyone.</p>
     </article>
 
-    <article class="card">
+    <article class="about-card">
       <h3>Ongoing Communication</h3>
       <p>We aim to keep clients informed about requirements, progress and relevant next steps.</p>
     </article>
+
   </div>
 </section>
 
-<section class="section section-light">
+<!-- WHO WE SUPPORT -->
+
+<section class="section">
   <div class="container section-heading">
     <h2>Who We Support</h2>
+    <p>Business and individual customers with UAE-related requirements.</p>
   </div>
 
-  <div class="container card-grid">
-    <article class="card">
+  <div class="container about-grid">
+
+    <article class="about-card">
       <h3>Entrepreneurs</h3>
       <p>Individuals planning to establish a new business in the UAE.</p>
     </article>
 
-    <article class="card">
+    <article class="about-card">
       <h3>Business Owners</h3>
       <p>Existing companies exploring banking, finance, accounting and operational support.</p>
     </article>
 
-    <article class="card">
+    <article class="about-card">
       <h3>Growing Companies</h3>
       <p>Businesses seeking organised assistance with ongoing business requirements.</p>
     </article>
 
-    <article class="card">
+    <article class="about-card">
       <h3>Individuals & Investors</h3>
       <p>Eligible individuals seeking assistance with relevant banking, mortgage and residency-related requirements.</p>
     </article>
+
   </div>
 </section>
+
+<!-- UAE OPERATIONS AND INDIA MARKETING -->
+
+<section class="section section-light">
+  <div class="container section-heading">
+    <h2>Our Business Presence</h2>
+    <p>UAE-led consultancy operations with a separate marketing and lead-generation focus in India.</p>
+  </div>
+
+  <div class="container about-grid">
+
+    <article class="about-card about-card-accent">
+      <h3>United Arab Emirates</h3>
+      <p><strong>Primary Operating Market</strong></p>
+      <p>
+        The UAE is the primary market for DUCES consultancy
+        services. Customer enquiries, service discussions,
+        engagement, invoicing and service coordination are
+        handled through the UAE operation.
+      </p>
+      <p>
+        <a href="tel:+971505356966">+971 50 535 6966</a>
+      </p>
+      <a href="contact.html">Contact UAE Team</a>
+    </article>
+
+    <article class="about-card">
+      <h3>India</h3>
+      <p><strong>Marketing & Lead Generation</strong></p>
+      <p>
+        India's role is limited to marketing support and
+        generating enquiries for UAE services.
+      </p>
+      <p>
+        Consultancy delivery, customer contracts, service
+        payments and customer support are directed to the
+        UAE operation.
+      </p>
+      <p class="about-note">
+        India marketing presence should not be interpreted
+        as a separate UAE consultancy service office or
+        service-delivery branch.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- SERVICE COMMITMENT -->
 
 <section class="section">
   <div class="container section-heading">
@@ -191,21 +430,45 @@
     <p>Professional communication and clarity at every stage.</p>
   </div>
 
-  <div class="container card">
-    <p>DUCES aims to provide clients with a clear understanding of the service they request, the documents involved, applicable charges and expected next steps.</p>
-    <br>
-    <p>Where a service requires approval, regulated activity or official processing by a bank, government authority or authorised specialist, the relevant organisation remains responsible for its decision and processing.</p>
-    <br>
-    <p>We do not promise guaranteed bank accounts, finance, licences, visas or government approvals.</p>
+  <div class="container">
+    <div class="about-panel">
+      <p>
+        DUCES aims to provide clients with a clear understanding
+        of the service they request, the documents involved,
+        applicable charges and expected next steps.
+      </p>
+
+      <p>
+        Where a service requires approval, regulated activity
+        or official processing by a bank, government authority
+        or authorised specialist, the relevant organisation
+        remains responsible for its decision and processing.
+      </p>
+
+      <p>
+        We do not promise guaranteed bank accounts, finance,
+        licences, visas or government approvals. Service scope
+        is subject to applicable permissions and requirements.
+      </p>
+    </div>
   </div>
 </section>
 
-<section class="cta-section">
+<!-- CTA -->
+
+<section class="about-cta">
   <div class="container">
     <h2>Let's Build Your Next Business Step.</h2>
-    <p>Tell us where you are in your business journey and how DUCES can assist.</p>
+    <p>
+      Tell us where you are in your business journey and
+      how DUCES can assist with your UAE requirements.
+    </p>
+
     <a class="btn btn-primary" href="contact.html">Request a Consultation</a>
-    <a class="btn btn-outline" href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp DUCES</a>
+
+    <a class="btn btn-outline"
+      href="https://wa.me/971505356966"
+      target="_blank" rel="noopener">WhatsApp DUCES</a>
   </div>
 </section>
 
@@ -213,11 +476,13 @@
 
 <footer class="site-footer">
   <div class="container footer-grid">
+
     <div>
       <h3>DUCES Consultancy Services</h3>
       <p>Business consultancy and support services in the UAE.</p>
       <p><strong>START • MANAGE • GROW</strong></p>
     </div>
+
     <div>
       <h4>Our Services</h4>
       <ul>
@@ -228,19 +493,40 @@
         <li><a href="pro-visa-services.html">PRO & VISA</a></li>
       </ul>
     </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+
     <div>
       <h4>Contact</h4>
       <p><a href="tel:+971505356966">+971 50 535 6966</a></p>
-      <p><a href="https://wa.me/971505356966">WhatsApp DUCES</a></p>
+      <p><a href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp DUCES</a></p>
       <p><a href="contact.html">Contact Us</a></p>
     </div>
+
   </div>
+
   <div class="container">
+    <p class="about-note">
+      Services are subject to applicable licensing, permissions,
+      bank requirements and government authority approvals.
+      No financial, visa, licence or regulatory approval is guaranteed.
+    </p>
     <p>© <span data-current-year>2026</span> DUCES Consultancy Services. All rights reserved.</p>
   </div>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp</a>
+<a class="whatsapp-float"
+  href="https://wa.me/971505356966"
+  target="_blank" rel="noopener">WhatsApp</a>
 
 </body>
 </html>
