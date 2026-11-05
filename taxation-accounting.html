@@ -4,155 +4,318 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Taxation & Accounting Services UAE | DUCES</title>
-<meta name="description" content="UAE bookkeeping, accounting, VAT registration and filing, corporate tax and financial compliance assistance with DUCES Consultancy Services.">
+<title>Taxation & Accounting Services UAE | DUCES Consultancy Services</title>
+<meta name="description" content="UAE bookkeeping, accounting, VAT registration and filing support, corporate tax and financial record assistance with DUCES Consultancy Services.">
 <meta name="theme-color" content="#123B70">
 
 <link rel="stylesheet" href="css/style.css">
 <script src="js/script.js" defer></script>
 
 <style>
+:root {
+  --tax-royal:#123B70;
+  --tax-navy:#0B2850;
+  --tax-ocean:#1976B9;
+  --tax-gold:#D9AD55;
+  --tax-charcoal:#263445;
+  --tax-muted:#64748B;
+  --tax-border:#E5EBF1;
+
+  /* Tax page section palette */
+  --tax-main:#F0F0EB;
+  --vat-framework:#E5EFF4;
+  --calculator-bg:#E8E5DE;
+  --corporate-framework:#F3E2D4;
+  --records-bg:#F8FAFC;
+  --process-bg:#FFF1C9;
+  --faq-bg:#F8FAFC;
+}
+
 .tax-hero {
-  background:linear-gradient(120deg,#0B2850,#123B70 65%,#1976B9);
+  background:linear-gradient(120deg,var(--tax-navy),var(--tax-royal) 65%,var(--tax-ocean));
   color:#fff;
-  padding:85px 0;
+  padding:82px 0;
 }
 .tax-hero h1 {
   max-width:850px;
   font-size:clamp(32px,5vw,52px);
   line-height:1.15;
+  margin:12px 0 18px;
 }
-.tax-hero p {max-width:750px;line-height:1.8;}
-.tax-gold {color:#D9AD55;}
+.tax-hero p {
+  max-width:760px;
+  line-height:1.8;
+  margin-bottom:22px;
+}
+.tax-gold {color:var(--tax-gold);}
+
+.tax-section {
+  padding:68px 0;
+}
+.tax-services-section {background:var(--tax-main);}
+.vat-framework-section {background:var(--vat-framework);}
+.vat-calculator-section {background:var(--calculator-bg);}
+.corporate-framework-section {background:var(--corporate-framework);}
+.corporate-estimator-section {background:var(--calculator-bg);}
+.records-section {background:var(--records-bg);}
+.tax-process-section {background:var(--process-bg);}
+.tax-faq-section {background:var(--faq-bg);}
+
+.tax-heading {
+  max-width:820px;
+  margin:0 auto 36px;
+  text-align:center;
+}
+.tax-heading h2 {
+  color:var(--tax-royal);
+  font-size:clamp(26px,4vw,36px);
+  line-height:1.25;
+  margin-bottom:12px;
+}
+.tax-heading p {
+  color:var(--tax-muted);
+  line-height:1.75;
+}
 
 .tax-grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
   gap:22px;
 }
 .tax-card {
-  background:#fff;
+  height:100%;
   padding:25px;
-  border:1px solid #E5EBF1;
-  border-radius:10px;
-  box-shadow:0 5px 20px rgba(11,40,80,.05);
-}
-.tax-card h3 {color:#123B70;}
-.tax-card li {margin:8px 0;}
-.tax-highlight {border-left:4px solid #D9AD55;}
-
-.tax-calculator {
-  max-width:850px;
-  margin:auto;
-  padding:28px;
   background:#fff;
-  border:1px solid #E5EBF1;
-  border-radius:10px;
+  border:1px solid rgba(18,59,112,.12);
+  border-radius:11px;
+  box-shadow:0 5px 20px rgba(11,40,80,.05);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.tax-card:hover {
+  transform:translateY(-4px);
+  box-shadow:0 12px 28px rgba(11,40,80,.10);
+  border-color:var(--tax-gold);
+}
+.tax-card h3 {
+  color:var(--tax-royal);
+  font-size:20px;
+  margin-bottom:12px;
+}
+.tax-card p {
+  color:var(--tax-charcoal);
+  line-height:1.7;
+}
+.tax-card ul {
+  padding-left:20px;
+  margin-top:12px;
+}
+.tax-card li {
+  color:var(--tax-charcoal);
+  margin:8px 0;
+  line-height:1.6;
+}
+.tax-tag {
+  display:inline-block;
+  color:var(--tax-royal);
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin-bottom:10px;
+}
+.tax-rate {
+  color:var(--tax-royal);
+  font-size:30px;
+  font-weight:800;
+  line-height:1.3;
+  margin:12px 0;
+}
+.tax-highlight {
+  border-top:4px solid var(--tax-gold);
+}
+
+/* Calculator panels */
+.tax-calculator {
+  max-width:900px;
+  margin:auto;
+  padding:30px;
+  background:#fff;
+  border:1px solid rgba(18,59,112,.13);
+  border-radius:13px;
   box-shadow:0 8px 25px rgba(11,40,80,.07);
 }
 .tax-fields {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:18px;
   margin:20px 0;
 }
 .tax-calculator label {
   display:block;
   margin-bottom:7px;
-  font-weight:600;
-  color:#263445;
+  font-weight:700;
+  color:var(--tax-charcoal);
 }
 .tax-calculator input,
 .tax-calculator select {
   width:100%;
-  padding:12px;
-  border:1px solid #E5EBF1;
-  border-radius:6px;
-  font:inherit;
+  min-height:46px;
+  padding:11px 13px;
+  border:1px solid #CBD5E1;
+  border-radius:7px;
   background:#fff;
+  color:var(--tax-charcoal);
+  font:inherit;
 }
 .tax-calculator input:focus,
 .tax-calculator select:focus {
-  outline:2px solid #D9AD55;
+  outline:2px solid var(--tax-gold);
   outline-offset:2px;
+}
+.tax-calculator button {
+  margin:5px 8px 5px 0;
 }
 .tax-result {
   display:none;
-  margin-top:22px;
-  padding:22px;
-  background:#F0F0EB;
-  border:1px solid #E5EBF1;
-  border-left:4px solid #D9AD55;
-  border-radius:8px;
+  margin-top:24px;
+  padding:23px;
+  background:#F8FAFC;
+  border:1px solid var(--tax-border);
+  border-left:4px solid var(--tax-gold);
+  border-radius:9px;
 }
-.tax-result h3 {color:#123B70;}
+.tax-result h3 {
+  color:var(--tax-royal);
+  margin-bottom:12px;
+}
 .tax-result-grid {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(155px,1fr));
   gap:12px;
   margin-top:16px;
 }
 .tax-result-item {
   background:#fff;
-  padding:14px;
-  border-radius:6px;
+  padding:15px;
+  border:1px solid var(--tax-border);
+  border-radius:7px;
 }
 .tax-result-item span {
   display:block;
   font-size:13px;
-  color:#64748B;
+  color:var(--tax-muted);
 }
 .tax-result-item strong {
   display:block;
   margin-top:6px;
-  color:#123B70;
+  color:var(--tax-royal);
+  overflow-wrap:anywhere;
 }
 .tax-note {
   font-size:13px;
-  line-height:1.7;
-  color:#64748B;
+  line-height:1.75;
+  color:var(--tax-muted);
+  margin-top:18px;
 }
-.tax-process {
+.tax-error {
+  color:#9B2C2C;
+  font-weight:600;
+}
+
+/* Process */
+.tax-process-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
   gap:18px;
 }
 .tax-step {
+  padding:22px;
   background:#fff;
-  border:1px solid #E5EBF1;
+  border:1px solid rgba(18,59,112,.12);
   border-radius:10px;
-  padding:20px;
 }
-.tax-step strong {
-  font-size:23px;
-  color:#1976B9;
+.tax-step-number {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  margin-bottom:15px;
+  border-radius:50%;
+  background:var(--tax-royal);
+  color:#fff;
+  font-size:15px;
+  font-weight:800;
 }
-.tax-rate {
-  color:#123B70;
-  font-size:30px;
-  font-weight:700;
-  margin:12px 0;
+.tax-step h3 {
+  color:var(--tax-royal);
+  margin-bottom:8px;
 }
-.faq-list details {
-  background:#fff;
-  border:1px solid #E5EBF1;
+.tax-step p {
+  color:var(--tax-charcoal);
+  line-height:1.7;
+}
+
+/* Notes and official references */
+.tax-information-note {
+  max-width:950px;
+  margin:28px auto 0;
+  padding:20px 22px;
+  border-left:4px solid var(--tax-gold);
   border-radius:8px;
+  background:#fff;
+  color:var(--tax-charcoal);
+  line-height:1.75;
+}
+.tax-information-note strong {color:var(--tax-royal);}
+.tax-official-links {
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+.tax-official-links a {
+  display:inline-block;
+  padding:10px 15px;
+  border:1px solid var(--tax-royal);
+  border-radius:7px;
+  color:var(--tax-royal);
+  font-weight:700;
+  background:#fff;
+}
+.tax-official-links a:hover {
+  background:var(--tax-royal);
+  color:#fff;
+}
+
+/* FAQ */
+.tax-faq details {
+  background:#fff;
+  border:1px solid var(--tax-border);
+  border-radius:9px;
   padding:18px 20px;
   margin-bottom:12px;
 }
-.faq-list summary {
-  color:#123B70;
-  font-weight:600;
+.tax-faq summary {
+  color:var(--tax-royal);
+  font-weight:700;
   cursor:pointer;
+  line-height:1.6;
 }
-.faq-list details p {
-  color:#64748B;
-  line-height:1.7;
+.tax-faq details p {
+  color:var(--tax-charcoal);
+  line-height:1.75;
   margin-top:12px;
 }
-@media(max-width:600px) {
+
+@media(max-width:650px) {
   .tax-hero {padding:55px 0;}
-  .tax-calculator {padding:18px;}
+  .tax-section {padding:48px 0;}
+  .tax-calculator {padding:19px;}
+  .tax-fields {grid-template-columns:1fr;}
+  .tax-calculator button {width:100%;margin:7px 0;}
+  .tax-official-links a {width:100%;text-align:center;}
 }
 </style>
 </head>
@@ -169,28 +332,31 @@
 <header class="site-header">
   <div class="container nav-container">
     <a class="site-logo" href="index.html">DUC<span>ES</span></a>
+
     <button class="menu-toggle" id="menuToggle"
       aria-label="Open menu" aria-expanded="false">☰</button>
 
     <nav>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html">Home</a></li>
+
         <li class="dropdown">
           <a href="company-formation.html">Business Setup ▾</a>
           <ul class="dropdown-menu">
             <li><a href="company-formation.html#mainland">Mainland</a></li>
-            <li><a href="company-formation.html#freezone">Free Zone</a></li>
+            <li><a href="company-formation.html#free-zone">Free Zone</a></li>
             <li><a href="company-formation.html#offshore">Offshore</a></li>
-            <li><a href="company-formation.html#jurisdictions">Jurisdiction Comparison</a></li>
+            <li><a href="company-formation.html#compare-options">Jurisdiction Comparison</a></li>
           </ul>
         </li>
+
         <li><a href="business-banking.html">Business Banking</a></li>
         <li><a href="business-loan.html">Business Loans</a></li>
         <li><a href="taxation-accounting.html">Tax & Accounting</a></li>
         <li><a href="pro-visa-services.html">PRO & VISA</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="resources.html">Resources</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -198,28 +364,35 @@
 
 <main>
 
+<!-- HERO -->
 <section class="tax-hero">
   <div class="container">
     <p class="tax-gold"><strong>UAE TAXATION & ACCOUNTING</strong></p>
     <h1>Stay Organised. Stay Compliant. Grow with Confidence.</h1>
     <p>
       Practical support for bookkeeping, accounting, VAT,
-      corporate tax and ongoing financial compliance
-      requirements for UAE businesses.
+      corporate tax documentation and ongoing financial
+      record management for UAE businesses.
     </p>
     <a class="btn btn-primary" href="contact.html">Discuss Your Requirements</a>
     <a class="btn btn-outline" href="#tax-services">Explore Our Services</a>
   </div>
 </section>
 
-<section class="section" id="tax-services">
-  <div class="container section-heading">
+<!-- TAX AND ACCOUNTING SERVICES -->
+<section class="tax-section tax-services-section" id="tax-services">
+  <div class="container tax-heading">
     <h2>Our Taxation & Accounting Services</h2>
-    <p>Support designed around your business activity, records and compliance requirements.</p>
+    <p>
+      Organised financial records and practical compliance support
+      designed around your business activity and requirements.
+    </p>
   </div>
 
   <div class="container tax-grid">
+
     <article class="tax-card">
+      <span class="tax-tag">Financial Records</span>
       <h3>Bookkeeping</h3>
       <p>Maintain organised and consistent financial records.</p>
       <ul>
@@ -232,10 +405,11 @@
     </article>
 
     <article class="tax-card">
+      <span class="tax-tag">Financial Reporting</span>
       <h3>Accounting & Financial Reporting</h3>
-      <p>Understand your business performance through structured financial information.</p>
+      <p>Understand business performance through structured financial information.</p>
       <ul>
-        <li>Financial statement preparation</li>
+        <li>Financial statement preparation support</li>
         <li>Profit and loss reporting</li>
         <li>Balance sheet support</li>
         <li>Cash-flow reporting</li>
@@ -244,10 +418,11 @@
     </article>
 
     <article class="tax-card">
-      <h3>VAT Registration & Filing</h3>
-      <p>Assistance with VAT-related records and compliance processes.</p>
+      <span class="tax-tag">Value Added Tax</span>
+      <h3>VAT Registration & Filing Support</h3>
+      <p>Assistance with VAT-related records and compliance preparation.</p>
       <ul>
-        <li>VAT registration guidance</li>
+        <li>VAT registration documentation</li>
         <li>VAT return preparation support</li>
         <li>Input and output VAT review</li>
         <li>VAT reconciliation</li>
@@ -256,18 +431,20 @@
     </article>
 
     <article class="tax-card">
-      <h3>Corporate Tax</h3>
+      <span class="tax-tag">Corporate Tax</span>
+      <h3>Corporate Tax Support</h3>
       <p>Understand corporate tax registration, records and filing requirements.</p>
       <ul>
         <li>Corporate tax registration guidance</li>
-        <li>Taxable income assessment support</li>
-        <li>Tax return preparation coordination</li>
-        <li>Tax adjustments documentation</li>
+        <li>Taxable income information review</li>
+        <li>Tax return documentation support</li>
+        <li>Tax adjustment record organisation</li>
         <li>Compliance calendar guidance</li>
       </ul>
     </article>
 
     <article class="tax-card">
+      <span class="tax-tag">Compliance Preparation</span>
       <h3>Tax Compliance Support</h3>
       <p>Organise records and understand important tax compliance responsibilities.</p>
       <ul>
@@ -280,6 +457,7 @@
     </article>
 
     <article class="tax-card">
+      <span class="tax-tag">Business Review</span>
       <h3>Accounting Review</h3>
       <p>Review available financial records and identify areas requiring attention.</p>
       <ul>
@@ -290,49 +468,105 @@
         <li>Reporting support</li>
       </ul>
     </article>
+
+  </div>
+
+  <div class="container">
+    <div class="tax-information-note">
+      <strong>Service scope:</strong> DUCES provides consultancy,
+      bookkeeping and documentation support within its authorised
+      scope. Statutory audits and regulated tax-agent representation
+      must be handled by appropriately licensed professionals.
+    </div>
   </div>
 </section>
 
-<section class="section section-light">
-  <div class="container section-heading">
+<!-- VAT FRAMEWORK -->
+<section class="tax-section vat-framework-section" id="vat-framework">
+  <div class="container tax-heading">
     <h2>Understanding VAT in the UAE</h2>
-    <p>General VAT registration thresholds and the standard VAT rate.</p>
+    <p>
+      General VAT registration thresholds and the standard VAT rate
+      for businesses operating in the UAE.
+    </p>
   </div>
 
   <div class="container tax-grid">
-    <article class="tax-card">
-      <h3>Mandatory Registration</h3>
+
+    <article class="tax-card tax-highlight">
+      <span class="tax-tag">Mandatory Registration</span>
+      <h3>Mandatory VAT Threshold</h3>
       <div class="tax-rate">AED 375,000</div>
-      <p>Generally, taxable supplies and imports exceeding the mandatory threshold over the relevant period require VAT registration, subject to applicable rules.</p>
+      <p>
+        UAE-resident businesses generally need to register when
+        the value of taxable supplies and imports exceeds this
+        threshold over the relevant previous 12-month period,
+        or is expected to exceed it in the next 30 days.
+      </p>
     </article>
 
-    <article class="tax-card">
-      <h3>Voluntary Registration</h3>
+    <article class="tax-card tax-highlight">
+      <span class="tax-tag">Voluntary Registration</span>
+      <h3>Voluntary VAT Threshold</h3>
       <div class="tax-rate">AED 187,500</div>
-      <p>Eligible businesses may apply voluntarily when they meet the applicable taxable supplies or expenses criteria.</p>
+      <p>
+        Eligible businesses may apply voluntarily when the relevant
+        taxable supplies, imports or taxable expenses meet the
+        applicable voluntary registration criteria.
+      </p>
     </article>
 
-    <article class="tax-card">
+    <article class="tax-card tax-highlight">
+      <span class="tax-tag">Standard VAT Rate</span>
       <h3>Standard VAT Rate</h3>
       <div class="tax-rate">5%</div>
-      <p>The standard VAT rate applies to taxable supplies unless a specific zero-rating or exemption rule applies.</p>
+      <p>
+        The standard VAT rate applies to standard-rated taxable
+        supplies. Specific transactions may be zero-rated or exempt
+        under the applicable VAT rules.
+      </p>
     </article>
+
+  </div>
+
+  <div class="container">
+    <div class="tax-information-note">
+      <strong>Important:</strong> VAT registration thresholds are
+      not simply based on total sales or bank deposits. The relevant
+      taxable supplies, imports and qualifying expenses must be
+      assessed under UAE VAT rules. Special rules may apply to
+      non-resident businesses.
+    </div>
+
+    <div class="tax-official-links">
+      <a href="https://tax.gov.ae/en/services/vat.registration.aspx"
+        target="_blank" rel="noopener">FTA VAT Registration</a>
+      <a href="https://tax.gov.ae/en/faq.aspx"
+        target="_blank" rel="noopener">FTA Tax FAQs</a>
+    </div>
   </div>
 </section>
 
-<section class="section" id="vat-calculator">
-  <div class="container section-heading">
-    <h2>VAT Calculator</h2>
-    <p>Calculate VAT addition or extract VAT from a VAT-inclusive amount.</p>
+<!-- VAT CALCULATOR -->
+<section class="tax-section vat-calculator-section" id="vat-calculator">
+  <div class="container tax-heading">
+    <h2>UAE VAT Calculator</h2>
+    <p>
+      Calculate VAT addition or extract VAT from a VAT-inclusive amount.
+    </p>
   </div>
 
   <div class="container">
     <div class="tax-calculator">
+
       <div class="tax-fields">
         <div>
           <label for="vatAmount">Amount (AED)</label>
-          <input type="number" id="vatAmount" min="0" step="0.01" value="10000">
+          <input type="number" id="vatAmount"
+            min="0" step="0.01" value="10000"
+            inputmode="decimal">
         </div>
+
         <div>
           <label for="vatMode">Calculation Type</label>
           <select id="vatMode">
@@ -342,209 +576,359 @@
         </div>
       </div>
 
-      <button class="btn btn-primary" type="button" id="calculateVatBtn">Calculate VAT</button>
-      <button class="btn btn-blue" type="button" id="resetVatBtn">Reset</button>
+      <button class="btn btn-primary" type="button" id="calculateVatBtn">
+        Calculate VAT
+      </button>
+
+      <button class="btn btn-blue" type="button" id="resetVatBtn">
+        Reset
+      </button>
 
       <div id="vatResult" class="tax-result" aria-live="polite"></div>
 
       <p class="tax-note">
         This calculator assumes the standard 5% VAT rate.
-        It does not determine whether a transaction is taxable,
-        zero-rated or exempt. Confirm the correct VAT treatment
-        before issuing invoices or submitting returns.
+        It does not determine whether a transaction is standard-rated,
+        zero-rated or exempt. Confirm the correct VAT treatment before
+        issuing invoices or submitting returns.
       </p>
     </div>
   </div>
 </section>
 
-<section class="section section-light">
-  <div class="container section-heading">
-    <h2>UAE Corporate Tax Framework</h2>
-    <p>Understand the general corporate tax rates and the importance of taxable income.</p>
+<!-- CORPORATE TAX FRAMEWORK -->
+<section class="tax-section corporate-framework-section" id="corporate-tax">
+  <div class="container tax-heading">
+    <h2>Understanding UAE Corporate Tax</h2>
+    <p>
+      The standard corporate tax framework and the separate
+      considerations applicable to qualifying Free Zone entities.
+    </p>
   </div>
 
   <div class="container tax-grid">
-    <article class="tax-card">
+
+    <article class="tax-card tax-highlight">
+      <span class="tax-tag">Standard Regime</span>
       <h3>0% Corporate Tax Rate</h3>
       <div class="tax-rate">0%</div>
-      <p>Generally applies to the first AED 375,000 of taxable income under the standard corporate tax regime.</p>
+      <p>
+        Generally applies to the first AED 375,000 of taxable
+        income under the standard corporate tax regime.
+      </p>
     </article>
 
-    <article class="tax-card">
+    <article class="tax-card tax-highlight">
+      <span class="tax-tag">Standard Regime</span>
       <h3>9% Corporate Tax Rate</h3>
       <div class="tax-rate">9%</div>
-      <p>Generally applies to the portion of taxable income exceeding AED 375,000 under the standard regime.</p>
+      <p>
+        Generally applies to the portion of taxable income
+        exceeding AED 375,000 under the standard regime.
+      </p>
     </article>
 
-    <article class="tax-card">
-      <h3>Qualifying Free Zone Persons</h3>
-      <div class="tax-rate">Conditional</div>
-      <p>A 0% rate may apply to qualifying income when all relevant conditions are met. It is not automatic for every Free Zone company.</p>
+    <article class="tax-card tax-highlight">
+      <span class="tax-tag">Free Zone Regime</span>
+      <h3>Qualifying Free Zone Person</h3>
+      <div class="tax-rate">Conditional 0%</div>
+      <p>
+        A Qualifying Free Zone Person may benefit from 0% on
+        qualifying income and 9% on non-qualifying taxable income,
+        subject to the applicable conditions.
+      </p>
     </article>
+
+  </div>
+
+  <div class="container">
+    <div class="tax-information-note">
+      <strong>Do not assume a Free Zone company is automatically tax-free.</strong>
+      Qualifying Free Zone Person status depends on meeting the
+      relevant legal conditions. The standard AED 375,000 threshold
+      calculation in the estimator below is not designed for
+      Qualifying Free Zone Person calculations.
+    </div>
+
+    <div class="tax-official-links">
+      <a href="https://mof.gov.ae/en/public-finance/tax/corporate-tax/"
+        target="_blank" rel="noopener">Ministry of Finance – Corporate Tax</a>
+      <a href="https://tax.gov.ae/en/"
+        target="_blank" rel="noopener">Federal Tax Authority</a>
+    </div>
   </div>
 </section>
 
-<section class="section" id="corporate-tax-calculator">
-  <div class="container section-heading">
+<!-- CORPORATE TAX ESTIMATOR -->
+<section class="tax-section corporate-estimator-section" id="corporate-tax-calculator">
+  <div class="container tax-heading">
     <h2>Corporate Tax Estimator</h2>
-    <p>Estimate standard-regime corporate tax using taxable income.</p>
+    <p>
+      Estimate corporate tax under the standard UAE corporate
+      tax regime using an assumed taxable income figure.
+    </p>
   </div>
 
   <div class="container">
     <div class="tax-calculator">
+
       <div class="tax-fields">
         <div>
           <label for="taxableIncome">Estimated Taxable Income (AED)</label>
-          <input type="number" id="taxableIncome" min="0" step="0.01" value="500000">
+          <input type="number" id="taxableIncome"
+            min="0" step="0.01" value="500000"
+            inputmode="decimal">
         </div>
       </div>
 
-      <button class="btn btn-primary" type="button" id="calculateTaxBtn">Estimate Corporate Tax</button>
-      <button class="btn btn-blue" type="button" id="resetTaxBtn">Reset</button>
+      <button class="btn btn-primary" type="button" id="calculateTaxBtn">
+        Estimate Corporate Tax
+      </button>
+
+      <button class="btn btn-blue" type="button" id="resetTaxBtn">
+        Reset
+      </button>
 
       <div id="corporateTaxResult" class="tax-result" aria-live="polite"></div>
 
       <p class="tax-note">
         This is a simplified estimate under the standard corporate
-        tax regime. It does not calculate accounting profit adjustments,
+        tax regime. It does not calculate accounting-to-tax adjustments,
         reliefs, exemptions, special categories or Qualifying Free Zone
-        Person treatment. Actual taxable income and tax liability must
-        be determined under applicable UAE legislation.
+        Person treatment. Actual taxable income must be determined
+        under applicable UAE legislation.
       </p>
     </div>
   </div>
 </section>
 
-<section class="section section-light">
-  <div class="container section-heading">
-    <h2>Records Your Business Should Maintain</h2>
-    <p>Good financial records help support accurate reporting and compliance.</p>
+<!-- FINANCIAL RECORDS -->
+<section class="tax-section records-section" id="financial-records">
+  <div class="container tax-heading">
+    <h2>Financial Records Your Business Should Maintain</h2>
+    <p>
+      Good financial records support accurate reporting,
+      reconciliations and tax compliance preparation.
+    </p>
   </div>
 
   <div class="container tax-grid">
+
     <article class="tax-card tax-highlight">
+      <span class="tax-tag">Revenue Records</span>
       <h3>Sales & Revenue</h3>
       <ul>
         <li>Sales invoices</li>
         <li>Customer statements</li>
         <li>Credit notes</li>
-        <li>Sales contracts and supporting records</li>
+        <li>Sales contracts</li>
+        <li>Supporting transaction records</li>
       </ul>
     </article>
 
     <article class="tax-card tax-highlight">
+      <span class="tax-tag">Expense Records</span>
       <h3>Purchases & Expenses</h3>
       <ul>
         <li>Supplier invoices</li>
         <li>Expense receipts</li>
         <li>Payment records</li>
         <li>Purchase contracts</li>
+        <li>Supporting expense documents</li>
       </ul>
     </article>
 
     <article class="tax-card tax-highlight">
+      <span class="tax-tag">Financial Records</span>
       <h3>Banking & Financials</h3>
       <ul>
         <li>Bank statements</li>
-        <li>Reconciliation records</li>
+        <li>Bank reconciliation records</li>
         <li>Loan and liability details</li>
         <li>Financial statements</li>
+        <li>Asset and depreciation records</li>
       </ul>
     </article>
+
   </div>
 </section>
 
-<section class="section">
-  <div class="container section-heading">
+<!-- PROCESS -->
+<section class="tax-section tax-process-section" id="tax-process">
+  <div class="container tax-heading">
     <h2>How DUCES Supports Your Business</h2>
-    <p>A structured approach to accounting and tax-related support.</p>
+    <p>
+      A structured approach to accounting, financial records
+      and tax-related documentation support.
+    </p>
   </div>
 
-  <div class="container tax-process">
+  <div class="container tax-process-grid">
+
     <article class="tax-step">
-      <strong>01</strong>
+      <span class="tax-step-number">01</span>
       <h3>Understand</h3>
-      <p>Discuss your business activity, records and compliance requirements.</p>
+      <p>
+        Discuss your business activity, records and
+        compliance requirements.
+      </p>
     </article>
+
     <article class="tax-step">
-      <strong>02</strong>
+      <span class="tax-step-number">02</span>
       <h3>Review</h3>
-      <p>Identify available records, missing documents and areas requiring attention.</p>
+      <p>
+        Identify available records, missing documents
+        and areas requiring attention.
+      </p>
     </article>
+
     <article class="tax-step">
-      <strong>03</strong>
+      <span class="tax-step-number">03</span>
       <h3>Organise</h3>
-      <p>Support bookkeeping, accounting information and tax documentation.</p>
+      <p>
+        Support bookkeeping, accounting information
+        and tax documentation preparation.
+      </p>
     </article>
+
     <article class="tax-step">
-      <strong>04</strong>
+      <span class="tax-step-number">04</span>
       <h3>Coordinate</h3>
-      <p>Coordinate relevant filings and specialist support where required and permitted.</p>
+      <p>
+        Coordinate relevant filings and specialist
+        support where required and permitted.
+      </p>
     </article>
+
   </div>
 </section>
 
-<section class="section section-light">
-  <div class="container section-heading">
+<!-- FAQ -->
+<section class="tax-section tax-faq-section" id="tax-faq">
+  <div class="container tax-heading">
     <h2>Frequently Asked Questions</h2>
+    <p>Answers to common UAE taxation and accounting questions.</p>
   </div>
 
-  <div class="container faq-list">
+  <div class="container tax-faq">
+
     <details>
       <summary>Is VAT registration mandatory for every UAE company?</summary>
-      <p>No. Mandatory registration generally depends on taxable supplies and imports meeting the applicable threshold. Specific rules and exceptions may apply.</p>
+      <p>
+        No. Mandatory registration generally depends on taxable
+        supplies and imports meeting the applicable threshold.
+        Specific rules and exceptions may apply.
+      </p>
+    </details>
+
+    <details>
+      <summary>What is the UAE mandatory VAT registration threshold?</summary>
+      <p>
+        For UAE-resident businesses, the mandatory threshold is
+        generally AED 375,000 of taxable supplies and imports
+        over the relevant previous 12 months, or expected in
+        the next 30 days.
+      </p>
+    </details>
+
+    <details>
+      <summary>What is the voluntary VAT registration threshold?</summary>
+      <p>
+        The voluntary threshold is AED 187,500. Eligibility may
+        be based on taxable supplies, imports or qualifying
+        taxable expenses, subject to applicable conditions.
+      </p>
     </details>
 
     <details>
       <summary>Does every Free Zone company qualify for 0% corporate tax?</summary>
-      <p>No. A Free Zone company must meet the conditions for Qualifying Free Zone Person status and qualifying income treatment. The 0% rate is not automatic.</p>
+      <p>
+        No. A Free Zone company must meet the conditions for
+        Qualifying Free Zone Person status and qualifying income
+        treatment. The 0% rate is not automatic.
+      </p>
     </details>
 
     <details>
       <summary>Can a business outsource bookkeeping?</summary>
-      <p>Businesses may engage external service providers for bookkeeping and accounting support, subject to applicable licensing and professional requirements.</p>
+      <p>
+        Businesses may engage external service providers for
+        bookkeeping and accounting support, subject to
+        applicable licensing and professional requirements.
+      </p>
     </details>
 
     <details>
       <summary>Does DUCES provide statutory audit services?</summary>
-      <p>Statutory audit work must be performed by an appropriately licensed auditor. DUCES can help coordinate with qualified professionals where required.</p>
+      <p>
+        Statutory audit work must be performed by an appropriately
+        licensed auditor. DUCES can help coordinate with qualified
+        professionals where required.
+      </p>
     </details>
 
     <details>
-      <summary>Can DUCES represent a business before the FTA?</summary>
-      <p>Formal tax-agent representation is subject to applicable registration and appointment requirements. The scope of assistance will be clarified for each engagement.</p>
+      <summary>Can DUCES act as my registered tax agent?</summary>
+      <p>
+        Formal tax-agent representation is subject to applicable
+        registration and appointment requirements. The scope of
+        assistance will be clarified for each engagement.
+      </p>
     </details>
 
     <details>
       <summary>What is the difference between accounting profit and taxable income?</summary>
-      <p>Taxable income is determined after applying relevant corporate tax adjustments, exemptions, reliefs and applicable rules. It may differ from accounting profit.</p>
+      <p>
+        Taxable income is determined after applying relevant
+        corporate tax adjustments, exemptions, reliefs and
+        applicable rules. It may differ from accounting profit.
+      </p>
     </details>
 
     <details>
       <summary>Can I use the calculators for an official tax filing?</summary>
-      <p>No. These calculators provide illustrative estimates only. Actual VAT treatment and corporate tax liability require review of the underlying business transactions and applicable law.</p>
+      <p>
+        No. These calculators provide illustrative estimates only.
+        Actual VAT treatment and corporate tax liability require
+        review of the underlying business transactions and
+        applicable law.
+      </p>
     </details>
+
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-section">
   <div class="container">
     <h2>Need Accounting or Tax Support?</h2>
-    <p>Tell us about your business and the support you require.</p>
-    <a class="btn btn-primary" href="contact.html">Submit an Enquiry</a>
+    <p>
+      Tell us about your business and the support you require.
+      Our UAE team can discuss the next steps.
+    </p>
+
+    <a class="btn btn-primary" href="contact.html">
+      Submit an Enquiry
+    </a>
+
     <a class="btn btn-outline"
       href="https://wa.me/971505356966?text=Hello%20DUCES%2C%20I%20need%20taxation%20and%20accounting%20assistance."
-      target="_blank" rel="noopener">WhatsApp DUCES</a>
+      target="_blank" rel="noopener">
+      WhatsApp DUCES
+    </a>
   </div>
 </section>
 
 </main>
 
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="container footer-grid">
+
     <div>
       <h3>DUCES Consultancy Services</h3>
-      <p>Business consultancy and support services in the UAE.</p>
+      <p>Business consultancy and support services in the United Arab Emirates.</p>
       <p><strong>START • MANAGE • GROW</strong></p>
     </div>
 
@@ -573,25 +957,38 @@
     <div>
       <h4>Contact</h4>
       <p><a href="tel:+971505356966">+971 50 535 6966</a></p>
-      <p><a href="https://wa.me/971505356966" target="_blank" rel="noopener">WhatsApp DUCES</a></p>
+      <p>
+        <a href="https://wa.me/971505356966"
+          target="_blank" rel="noopener">WhatsApp DUCES</a>
+      </p>
       <p><a href="contact.html">Send an Enquiry</a></p>
     </div>
+
   </div>
 
   <div class="container">
     <p class="tax-note">
-      Tax outcomes depend on current UAE legislation and the facts of each business.
-      Calculators are indicative only and do not constitute tax or legal advice.
-      Audit and regulated tax-agent services must be performed by appropriately
-      authorised professionals where required.
+      Tax outcomes depend on current UAE legislation and the facts
+      of each business. Calculators are indicative only and do not
+      constitute tax or legal advice. Audit and regulated tax-agent
+      services must be performed by appropriately authorised
+      professionals where required.
     </p>
-    <p>© <span data-current-year>2026</span> DUCES Consultancy Services. All rights reserved.</p>
+
+    <p>
+      © <span data-current-year>2026</span>
+      DUCES Consultancy Services. All rights reserved.
+    </p>
   </div>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/971505356966"
-  target="_blank" rel="noopener">WhatsApp</a>
+<a class="whatsapp-float"
+  href="https://wa.me/971505356966"
+  target="_blank" rel="noopener">
+  WhatsApp
+</a>
 
+<!-- CALCULATOR FUNCTIONALITY -->
 <script>
 (function () {
   "use strict";
@@ -603,24 +1000,73 @@
     });
   };
 
-  function showError(element, message) {
+  function displayError(element, message) {
     element.style.display = "block";
-    element.textContent = message;
+    element.replaceChildren();
+
+    const paragraph = document.createElement("p");
+    paragraph.className = "tax-error";
+    paragraph.textContent = message;
+
+    element.appendChild(paragraph);
   }
 
+  function createResultItem(label, value) {
+    const item = document.createElement("div");
+    item.className = "tax-result-item";
+
+    const span = document.createElement("span");
+    span.textContent = label;
+
+    const strong = document.createElement("strong");
+    strong.textContent = value;
+
+    item.append(span, strong);
+    return item;
+  }
+
+  function renderResult(element, heading, items, note) {
+    element.replaceChildren();
+    element.style.display = "block";
+
+    const title = document.createElement("h3");
+    title.textContent = heading;
+
+    const grid = document.createElement("div");
+    grid.className = "tax-result-grid";
+
+    items.forEach(function(item) {
+      grid.appendChild(createResultItem(item.label,item.value));
+    });
+
+    element.append(title,grid);
+
+    if (note) {
+      const paragraph = document.createElement("p");
+      paragraph.className = "tax-note";
+      paragraph.textContent = note;
+      element.appendChild(paragraph);
+    }
+  }
+
+  /* VAT CALCULATOR */
   const vatAmount = document.getElementById("vatAmount");
   const vatMode = document.getElementById("vatMode");
   const vatResult = document.getElementById("vatResult");
 
   function calculateVAT() {
-    const amount = Number(vatAmount.value);
+    const rawAmount = vatAmount.value;
+    const amount = Number(rawAmount);
 
-    if (vatAmount.value === "" || !Number.isFinite(amount) || amount < 0) {
-      showError(vatResult,"Please enter a valid amount greater than or equal to zero.");
+    if (rawAmount === "" || !Number.isFinite(amount) || amount < 0) {
+      displayError(vatResult,
+        "Please enter a valid amount greater than or equal to zero.");
       return;
     }
 
-    let netAmount, vat, grossAmount;
+    let netAmount;
+    let vat;
+    let grossAmount;
 
     if (vatMode.value === "add") {
       netAmount = amount;
@@ -632,85 +1078,76 @@
       vat = grossAmount - netAmount;
     }
 
-    vatResult.style.display = "block";
-    vatResult.innerHTML = `
-      <h3>VAT Calculation Result</h3>
-      <div class="tax-result-grid">
-        <div class="tax-result-item">
-          <span>Net Amount</span>
-          <strong>${formatAED(netAmount)}</strong>
-        </div>
-        <div class="tax-result-item">
-          <span>VAT at 5%</span>
-          <strong>${formatAED(vat)}</strong>
-        </div>
-        <div class="tax-result-item">
-          <span>Total Including VAT</span>
-          <strong>${formatAED(grossAmount)}</strong>
-        </div>
-      </div>`;
+    renderResult(
+      vatResult,
+      "VAT Calculation Result",
+      [
+        {label:"Net Amount",value:formatAED(netAmount)},
+        {label:"VAT at 5%",value:formatAED(vat)},
+        {label:"Total Including VAT",value:formatAED(grossAmount)}
+      ],
+      "Illustrative calculation using the standard 5% VAT rate."
+    );
   }
 
   function resetVAT() {
     vatAmount.value = "10000";
     vatMode.value = "add";
     vatResult.style.display = "none";
-    vatResult.innerHTML = "";
+    vatResult.replaceChildren();
   }
 
+  /* CORPORATE TAX ESTIMATOR */
   const taxableIncome = document.getElementById("taxableIncome");
-  const corporateTaxResult = document.getElementById("corporateTaxResult");
+  const corporateTaxResult =
+    document.getElementById("corporateTaxResult");
 
   function calculateCorporateTax() {
-    const income = Number(taxableIncome.value);
+    const rawIncome = taxableIncome.value;
+    const income = Number(rawIncome);
 
-    if (taxableIncome.value === "" || !Number.isFinite(income) || income < 0) {
-      showError(corporateTaxResult,"Please enter a valid taxable income greater than or equal to zero.");
+    if (rawIncome === "" || !Number.isFinite(income) || income < 0) {
+      displayError(corporateTaxResult,
+        "Please enter a valid taxable income greater than or equal to zero.");
       return;
     }
 
     const threshold = 375000;
-    const amountAtZeroRate = Math.min(income,threshold);
-    const amountAtNinePercent = Math.max(0,income-threshold);
-    const estimatedTax = amountAtNinePercent * 0.09;
+    const incomeAtZeroRate = Math.min(income,threshold);
+    const incomeAtNinePercent = Math.max(0,income-threshold);
+    const estimatedTax = incomeAtNinePercent * 0.09;
 
-    corporateTaxResult.style.display = "block";
-    corporateTaxResult.innerHTML = `
-      <h3>Corporate Tax Estimate</h3>
-      <div class="tax-result-grid">
-        <div class="tax-result-item">
-          <span>Taxable Income</span>
-          <strong>${formatAED(income)}</strong>
-        </div>
-        <div class="tax-result-item">
-          <span>Income at 0% Rate</span>
-          <strong>${formatAED(amountAtZeroRate)}</strong>
-        </div>
-        <div class="tax-result-item">
-          <span>Income at 9% Rate</span>
-          <strong>${formatAED(amountAtNinePercent)}</strong>
-        </div>
-        <div class="tax-result-item">
-          <span>Estimated Corporate Tax</span>
-          <strong>${formatAED(estimatedTax)}</strong>
-        </div>
-      </div>
-      <p class="tax-note">
-        Simplified standard-regime estimate only. Reliefs, exemptions,
-        adjustments and Qualifying Free Zone Person treatment are not included.
-      </p>`;
+    renderResult(
+      corporateTaxResult,
+      "Corporate Tax Estimate",
+      [
+        {label:"Taxable Income",value:formatAED(income)},
+        {label:"Income at 0% Rate",value:formatAED(incomeAtZeroRate)},
+        {label:"Income at 9% Rate",value:formatAED(incomeAtNinePercent)},
+        {label:"Estimated Corporate Tax",value:formatAED(estimatedTax)}
+      ],
+      "Simplified standard-regime estimate only. Does not include reliefs, exemptions, tax adjustments or Qualifying Free Zone Person treatment."
+    );
   }
 
   function resetCorporateTax() {
     taxableIncome.value = "500000";
     corporateTaxResult.style.display = "none";
-    corporateTaxResult.innerHTML = "";
+    corporateTaxResult.replaceChildren();
   }
 
-  document.getElementById("calculateVatBtn").addEventListener("click",calculateVAT);
-  document.getElementById("resetVatBtn").addEventListener("click",resetVAT);
-  document.getElementById("calculateTaxBtn").addEventListener("click",calculateCorporateTax);
-  document.getElementById("resetTaxBtn").addEventListener("click",resetCorporateTax);
+  document.getElementById("calculateVatBtn")
+    .addEventListener("click",calculateVAT);
+
+  document.getElementById("resetVatBtn")
+    .addEventListener("click",resetVAT);
+
+  document.getElementById("calculateTaxBtn")
+    .addEventListener("click",calculateCorporateTax);
+
+  document.getElementById("resetTaxBtn")
+    .addEventListener("click",resetCorporateTax);
+
 })();
 </script>
 
